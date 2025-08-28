@@ -3807,15 +3807,19 @@
   .iput-flex-1 input{
     width: 100%;
   }
-  .privacy{
-    /* width: 100%; */
-  }
+
   .login-footer--mobile{
     display: flex;
     width: 49%;
     margin: auto;
     justify-content: space-between;
     margin-top: 10px;
+  }
+  .login-input{
+    font-size: 18px;
+  }
+  .back-txt{
+    font-size: 16px;
   }
   
 }

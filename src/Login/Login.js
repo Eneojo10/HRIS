@@ -112,7 +112,7 @@ function Login() {
                                     <div className='login----text-'>
                                         <h4>What's my EnesHR domain?</h4>
                                         <div className='flip-input'>
-                                            <input type='text' placeholder='https://companyeneshr.com' disabled></input>
+                                            <input type='text' placeholder='https://companyeneshr.com'className='back-txt' disabled></input>
                                         </div><br />
                                         <p>Take a look at the address bar when you are logged in to EnesHR (or ask a colleague, since you are not logged in). The text just before .eneshr.com is your domain.</p>
                                     </div>
