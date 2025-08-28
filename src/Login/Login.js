@@ -84,7 +84,7 @@ function Login() {
                                         <span className="text-3xl font-bold text-gray-700 hr-">HR</span>
                                     </div>
                                 </div>
-                                <div className='login-footer'>
+                                <div className='login-footer--mobile'>
                                     <div className='privacy'>
                                         <p>Privacy Policy</p>
                                     </div>
