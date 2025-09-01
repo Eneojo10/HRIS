@@ -3091,13 +3091,13 @@
   border-radius: 8px;
 }
 .weekdays-table th {
-  border: 1px solid #e5e7eb; /* Border only for th in this table */
+  border: 1px solid #e5e7eb; 
   padding: 8px;
   text-align: center;
   background-color: #f3f5f7;
 }
 .weekdays-table td {
-  border: 1px solid #e5e7eb; /* Border only for th in this table */
+  border: 1px solid #e5e7eb; 
   height: 100px;
 }
 
