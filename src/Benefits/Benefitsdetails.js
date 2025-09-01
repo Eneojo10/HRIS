@@ -73,7 +73,7 @@ function Benefitsdetails() {
                                         <span>Engineering • Senior Developer</span>
                                     </div>
                                 </div>
-                                <div className='open-enrollment' style={{ display: 'flex', width: '45%', justifyContent: 'space-between' }}>
+                                <div className='open-enrollment' style={{ display: 'flex', width: '55%', justifyContent: 'space-between' }}>
                                     <div>
                                         <p>2024 Open Enrollment</p>
                                     </div>
