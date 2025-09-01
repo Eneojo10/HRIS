@@ -2990,13 +2990,13 @@
   font-size: 13px;
 }
 .bottom-border-table {
-  border-collapse: collapse; /* ensures borders don’t double up */
+  border-collapse: collapse; 
   width: 100%;
 }
 
 .bottom-border-table th,
 .bottom-border-table td {
-  border-bottom: 1px solid #ccc; /* only bottom border */
+  border-bottom: 1px solid #ccc; 
   padding: 8px;
   text-align: left;
 }
