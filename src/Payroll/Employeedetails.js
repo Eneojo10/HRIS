@@ -27,7 +27,7 @@ function Employeedetails() {
             <div className='pay_bigbox1'><br />
               <div className='payroll_' style={{ width: '92%', margin: 'auto' }}>
                 <div className='pay_roll' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <div className='j-24' style={{ display: 'flex', width: '45%', justifyContent: 'space-between' }}>
+                  <div className='j-24' style={{ display: 'flex', width: '47%', justifyContent: 'space-between' }}>
                     <div className='pay-image'>
                       <img src={image} alt='' />
                     </div>
@@ -79,7 +79,7 @@ function Employeedetails() {
             <div className='pay_bigbox1'><br />
               <div className='payroll_' style={{ width: '92%', margin: 'auto' }}>
                 <div className='pay_roll' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <div className='j-24' style={{ width: '45%', display: 'flex', justifyContent: 'space-between' }}>
+                  <div className='j-24' style={{ width: '47%', display: 'flex', justifyContent: 'space-between' }}>
                     <div className='pay-image'>
                       <img src={image} alt='' />
                     </div>
@@ -131,7 +131,7 @@ function Employeedetails() {
             <div className='pay_bigbox1'><br />
               <div className='payroll_' style={{ width: '92%', margin: 'auto' }}>
                 <div className='pay_roll' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <div className='j-24' style={{ width: '45%', display: 'flex', justifyContent: 'space-between' }}>
+                  <div className='j-24' style={{ width: '47%', display: 'flex', justifyContent: 'space-between' }}>
                     <div className='pay-image'>
                       <img src={image} alt='' />
                     </div>
