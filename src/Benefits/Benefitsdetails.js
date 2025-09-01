@@ -85,7 +85,7 @@ function Benefitsdetails() {
                             </div><br/>
                             <div className='d-line'></div>
                             <div className='vision-stand'style={{display:'flex',justifyContent:'space-between'}}>
-                                <div className='health-plus'style={{display:'flex',justifyContent:'space-between',width:'35%'}}>
+                                <div className='health-plus'style={{display:'flex',gap:'20px',width:'45%'}}>
                                     <div className='hp1'>
                                         <p>Health Plus</p>
                                     </div>
