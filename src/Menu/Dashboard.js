@@ -31,7 +31,7 @@ function Dashboard() {
                         <div className='overview'>
                             <h5>Overview</h5>
                         </div>
-                        <a href='/' className='a-line'>
+                        <a href='/mainboard' className='a-line'>
                             <div className='list-item'>
                                 <div className='icons'>
                                     <RxDashboard />
@@ -167,6 +167,25 @@ function Dashboard() {
                                     <span>Settings</span>
                                 </div>
                             </div></a>
+
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div className='d-line'>
+                        
+                    </div>
+                    <div className='admn-container'style={{width:'93%',margin:'auto'}}>
+                        <div className='admin-flex'style={{display:'flex',gap:'10px'}}>
+                            <div className='admin-img'>
+
+                            </div>
+                            <div className='ad-user'>
+                                <h4>Admin User</h4>
+                                <p>admin@company.com</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

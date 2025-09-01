@@ -84,7 +84,7 @@
 .list-item7 {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 73%;
 }
 .list-item8 {
   display: flex;
@@ -396,7 +396,7 @@
 .recent-bg-1 {
   background-color: #eaeaea;
   height: 70px;
-  width: 14%;
+  width: 13%;
   border-radius: 36px;
 }
 .r1 {
@@ -953,7 +953,7 @@
 .leave-bgg {
   background-color: black;
   height: 35px;
-  width: 80%;
+  width: 70%;
   color: white;
   border-radius: 8px;
 }
@@ -1516,6 +1516,22 @@
   width: 30%;
   margin-top: 15px;
 }
+.cycle-plus {
+  font-size: 21px;
+}
+.cycle-flex {
+  margin-top: 7px;
+}
+.cycle--flex {
+  background-color: black;
+  height: 38px;
+  width: 55%;
+  color: white;
+  border-radius: 8px;
+}
+.er-export {
+  margin-top: 7px;
+}
 .goal {
   display: flex;
   justify-content: space-between;
@@ -1545,9 +1561,7 @@
 .t1:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.leave-card1:hover {
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-}
+
 .schdule-card1:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -1918,7 +1932,7 @@
 .payroll-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
 .p-card1 {
   border: 1px solid #ccc;
@@ -1930,7 +1944,7 @@
 .pay_bg {
   background-color: #f4f4f5;
   height: 50px;
-  width: 75%;
+  width: 66%;
   border-radius: 8px;
 }
 .pay_list {
@@ -1945,12 +1959,18 @@
   width: 65%;
   border-radius: 6px;
 }
+.pay_big-box {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 70%;
+  border-radius: 6px;
+}
 .pay_smallbox {
   border: 1px solid #ccc;
-  height: 300px;
+  height: auto;
   width: 35%;
   border-radius: 6px;
-  background-color: white;
+  /* background-color: white; */
 }
 .pay_boxes_flex {
   display: flex;
@@ -1958,12 +1978,12 @@
 }
 .pay_bigbox1 {
   border: 1px solid #ccc;
-  height: 150px;
+  height: auto;
   width: 92%;
   margin: auto;
   margin-bottom: 15px;
   border-radius: 6px;
-  background-color: white;
+  /* background-color: white; */
 }
 .pay__box {
   padding-top: 20px;
@@ -2072,10 +2092,10 @@
 .benefits__insidebox {
   border: 1px solid #ccc;
   width: 100%;
-  height: 150px;
+  height: auto;
   border-radius: 6px;
   margin-bottom: 15px;
-  background-color: white;
+  /* background-color: white; */
 }
 .dept_sect {
   width: 80%;
@@ -2940,6 +2960,7 @@
   height: auto;
   width: 100%;
   border-radius: 4px;
+  margin-top: 30px;
 }
 .t-border-flex {
   display: flex;
@@ -3773,6 +3794,581 @@
 .mobile-view {
   display: none;
 }
+.gt h2 {
+  font-weight: 500;
+}
+.goals-table {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+.goals-table1 {
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+}
+.gt-img {
+  width: 25%;
+}
+.gt-img img {
+  width: 100%;
+  border-radius: 24px;
+}
+.gt-userimg {
+  width: 18%;
+  display: flex;
+  justify-content: space-between;
+}
+.gt-text-1 h3 {
+  font-weight: 500;
+}
+.gt-text-2 {
+  background-color: #fee2e2;
+  color: #c91515;
+  height: 30px;
+  width: 10%;
+  text-align: center;
+  border-radius: 16px;
+}
+.gt-text-3 {
+  background-color: #dbeafe;
+  color: #2050d9;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+}
+.gt-text-3 p {
+  margin-top: 4px;
+  font-weight: 600;
+}
+.gt-text-2 p {
+  margin-top: 4px;
+  font-weight: 600;
+}
+text p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.performance-p {
+  background-color: #f3f4f6;
+  height: 29px;
+  width: 35%;
+  text-align: center;
+}
+.performance-p p {
+  padding-top: 3px;
+  font-size: 14px;
+}
+.gt-performce {
+  margin-top: 10px;
+}
+.feedback-card1 {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+.pen--ding h2 {
+  font-weight: 500;
+}
+.pend-icon {
+  font-size: 22px;
+  color: #2563eb;
+  margin-top: 5px;
+}
+.pend--icon {
+  font-size: 22px;
+  color: green;
+  margin-top: 5px;
+}
+.fed-inside-border {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.fedd-image {
+  width: 13%;
+}
+.fedd-image img {
+  width: 100%;
+  border-radius: 26px;
+}
+.pend---time {
+  background-color: #fef9c3;
+  width: 25%;
+  height: 25px;
+  border-radius: 16px;
+}
+.pend---times {
+  background-color: #dcfce7;
+  width: 30%;
+  height: 25px;
+  border-radius: 16px;
+}
+.fed_pen_ding h4 {
+  font-size: 13px;
+  color: #a16207;
+}
+.fed_pen_dings h4 {
+  font-size: 13px;
+  color: #15803d;
+}
+.p-ending {
+  width: 65%;
+  margin: auto;
+  margin-top: 4px;
+}
+.name-designation p {
+  font-size: 14px;
+  color: #6c7381;
+}
+.feed-request p {
+  font-size: 13px;
+}
+.colabo {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 27%;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.col_abo {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 40%;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.col_aboo {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 25%;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.colab-text {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  outline: none;
+}
+.submit-feedback {
+  background: transparent;
+  border: none;
+  padding: 10px 10px;
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.star__icon {
+  font-size: 21px;
+}
+.feed_date {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #6b7280;
+}
+.pend---ti-me {
+  width: 50%;
+}
+.thumbs-up {
+  color: green;
+}
+.thumbs--up {
+  font-size: 20px;
+  margin-top: 5px;
+  color: green;
+}
+.star__ic-on {
+  margin-top: 5px;
+}
+.admin-img {
+  background-color: #d1d5db;
+  height: 41px;
+  width: 15%;
+  border-radius: 24px;
+}
+.ad-user h4 {
+  font-weight: 500;
+}
+.bottom-border-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bottom-border-table th,
+.bottom-border-table td {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.bottom-border-table th {
+  font-weight: 500;
+  color: #787880;
+}
+
+.bottom-border-table tr:last-child td {
+  border-bottom: none; /* Remove border on last row if desired */
+}
+.ts--tab {
+  width: 95%;
+  margin: auto;
+}
+.btn_btn {
+  background: transparent;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.pss {
+  background-color: #dcfce7;
+  width: 90%;
+  height: 30px;
+  border-radius: 16px;
+}
+.pss_ {
+  background-color: #fee2e2;
+  width: 85%;
+  height: 30px;
+  border-radius: 16px;
+}
+.pss-late {
+  background-color: #fef9c3;
+  width: 70%;
+  height: 30px;
+  border-radius: 16px;
+}
+.p-resent {
+  color: #166534;
+  font-weight: 600;
+  font-size: 15px;
+}
+.p-resent-late {
+  color: #854d0e;
+  font-weight: 600;
+  font-size: 15px;
+}
+.bsfill {
+  color: #166534;
+}
+.iomdtime{
+  padding-top: 2px;
+  color: #854d0e;
+}
+.p--resent {
+  color: #991b1b;
+  font-weight: 600;
+  font-size: 15px;
+}
+.bsperson {
+  color: #991b1b;
+}
+.monthly_{
+  border: 1px solid #ccc;
+  width: 34%;
+  height: 26px;
+  text-align: center;
+  border-radius: 16px;
+  margin-top: 15px;
+}
+.monthly__{
+  border: 1px solid #ccc;
+  width: 34%;
+  height: 26px;
+  text-align: center;
+  border-radius: 16px;
+  margin-top: 15px;
+}
+.monthly_ p{
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 3px;
+}
+.monthly__ p{
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 3px;
+}
+.etd-1 h4{
+  font-weight: 400;
+  color: #71717a;
+}
+.etd-1 p{
+  font-weight: 500;
+  font-size: 16px;
+}
+.pay-view{
+  border: 1px solid #ccc;
+  height: 35px;
+  width:35%;
+  text-align: center;
+}
+.pay-download{
+  border: 1px solid #ccc;
+  height: 35px;
+  width:56%;
+  text-align: center;
+}
+.pay-download p{
+  margin-top: 4px;
+}
+.pay-view p{
+  margin-top: 5px;
+}
+.pay-process{
+  background-color: #f4f4f5;
+  height: 30px;
+  width: 55%;
+  text-align: center;
+  border-radius: 16px;
+}
+.pay-ready{
+  background-color: black;
+  height: 25px;
+  width: 33%;
+  text-align: center;
+  border-radius: 16px;
+  color: white;
+}
+.pay-ready p{
+  font-size: 14px;
+  margin-top: 2px;
+  font-weight: 600;
+}
+.pay-process p{
+  margin-top: 4px;
+  font-size: 15px;
+}
+.payroll {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.payroll-fill {
+  height: 100%;
+  background-color: black; 
+  transition: width 0.4s ease-in-out;
+}
+.payrollprogress p{
+  color: #71717a;
+  font-weight: 400;
+}
+.data-validation{
+  margin-bottom: 15px;
+}
+.data-validation p{
+  font-size: 13px;
+}
+.data-validation h4{
+  font-weight: 400;
+}
+.val-icon{
+  margin-top: 8px;
+  font-size: 21px;
+  color: green;
+}
+.val_icon{
+  margin-top: 8px;
+  font-size: 21px;
+  color: #ca8a04;
+}
+.val__icon{
+  margin-top: 8px;
+  font-size: 22px;
+  color: blue;
+}
+.val__icon_{
+  margin-top: 8px;
+  font-size: 22px;
+}
+.em-payroll-input{
+  width: 85%;
+}
+.em-payroll-input input{
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+.pay-image{
+  width: 20%;
+}
+.pay-image img{
+  width: 100%;
+  border-radius: 26px;
+}
+.curr-pay{
+  width: 80%;
+}
+
+.gen-rate-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+}
+.generate-border{
+  border: 1px solid #ccc;
+  height: 100px;
+  width: 100%;
+}
+.payroll_reg h4{
+  font-weight: 500;
+}
+.payroll_reg p{
+  font-size: 14px;
+}
+.panalytics{
+  border: 1px solid #ccc;
+  height: 200px;
+  width: 100%;
+  border-radius: 8px;
+}
+.payroll-analytics{
+  display: flex;
+  gap: 20px;
+}
+.payroll-naira{
+  font-size: 24px;
+}
+.payroll-total h3{
+  font-weight: 400;
+  font-size: 18px;
+}
+.payroll-de-tails{
+  border: 1px solid #ccc;
+  height: 100vh;
+  width: 100%;
+  border-radius: 8px;
+}
+.edit-pay{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.download-paystub{
+  background: transparent;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.netpay p{
+  color: green;
+  font-weight: 800;
+}
+.employee-pay-gross h3{
+  margin-bottom: 15px;
+}
+.td {
+  font-weight: 700;
+}
+.bimage{
+  width: 7%;
+}
+.bimage img{
+  width: 100%;
+  border-radius: 26px;
+}
+.hp1{
+  border: 1px solid #ccc;
+  height: 26px;
+  width: 28%;
+  text-align: center;
+  border-radius: 16px;
+}
+.hp2{
+  border: 1px solid #ccc;
+  height: 26px;
+  width: 28%;
+  text-align: center;
+  border-radius: 16px;
+}
+.hp3{
+  border: 1px solid #ccc;
+  height: 26px;
+  width: 35%;
+  text-align: center;
+  border-radius: 16px;
+}
+.health-plus p{
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 428px) {
@@ -3804,24 +4400,23 @@
   .iput-flex-1 {
     width: 100%;
   }
-  .iput-flex-1 input{
+  .iput-flex-1 input {
     width: 100%;
   }
 
-  .login-footer--mobile{
+  .login-footer--mobile {
     display: flex;
     width: 49%;
     margin: auto;
     justify-content: space-between;
     margin-top: 10px;
   }
-  .login-input{
+  .login-input {
     font-size: 18px;
   }
-  .back-txt{
+  .back-txt {
     font-size: 16px;
   }
-  
 }
 
 @media (max-width: 1114px) {

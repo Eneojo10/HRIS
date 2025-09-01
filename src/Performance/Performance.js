@@ -3,6 +3,8 @@ import Dashboard from '../Menu/Dashboard';
 import Performancedetails from '../Performance/Performancedetails';
 import Feedback from './Feedback';
 import Performanceanalytics from './Performanceanalytics';
+import Goals from './Goals';
+import { BsPlus } from "react-icons/bs";
 
 function Performance() {
     const [activeTab, setActiveTab] = useState('Performance'); // Default tab
@@ -26,8 +28,16 @@ function Performance() {
                             </span>
                         </div>
                         <div className='performance-right'>
-                            <div><h4>Export Report</h4></div>
-                            <div><h4>New Review Cycle</h4></div>
+                            <div className='er-export'><h4>Export Report</h4></div>
+                            <div className='cycle--flex'>
+                                <div className='cycle-flex' style={{ display: 'flex', gap: '10px' }}>
+                                    <div className='cycle-plus'>
+                                        <BsPlus />
+                                    </div>
+                                    <div><h4>New Review Cycle</h4></div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
@@ -99,11 +109,7 @@ function Performance() {
                     {activeTab === 'Performance' && <Performancedetails />}
                     {activeTab === 'Feedback' && <Feedback />}
                     {activeTab === 'Analytics' && <Performanceanalytics />}
-                    {activeTab === 'Goals' && (
-                        <div style={{ padding: '20px' }}>
-                            <h3>Goal Tracking content goes here...</h3>
-                        </div>
-                    )}
+                    {activeTab === 'Goals' && <Goals />}
                 </div>
             </div>
         </div>

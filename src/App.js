@@ -54,6 +54,7 @@ import All from './Recruitment center/All';
 import Chart from './Pages/Chart'
 import HiringTrends from './Pages/Hiringtrends';
 import Login from './Login/Login';
+import PayrollDetails from './Payroll/PayrollDetails';
 
 
 function App() {
@@ -117,6 +118,7 @@ function App() {
           <Route path="chart" element={<Chart />} />
           <Route path="pie" element={<HiringTrends />} />
           <Route path="/" element={<Login />} />
+          <Route path="payrolldetails" element={<PayrollDetails />} />
           
 
         </Routes>
