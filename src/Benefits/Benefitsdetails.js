@@ -39,7 +39,7 @@ function Benefitsdetails() {
                             </div><br/>
                             <div className='d-line'></div>
                             <div className='vision-stand'style={{display:'flex',justifyContent:'space-between'}}>
-                                <div className='health-plus'style={{display:'flex',justifyContent:'space-between',width:'35%'}}>
+                               <div className='health-plus'style={{display:'flex',gap:'15px',width:'45%'}}>
                                     <div className='hp1'>
                                         <p>Health Plus</p>
                                     </div>
@@ -73,7 +73,7 @@ function Benefitsdetails() {
                                         <span>Engineering • Senior Developer</span>
                                     </div>
                                 </div>
-                                <div className='open-enrollment' style={{ display: 'flex', width: '55%', justifyContent: 'space-between' }}>
+                                <div className='open-enrollment' style={{ display: 'flex', width: '60%', justifyContent: 'space-between' }}>
                                     <div>
                                         <p>2024 Open Enrollment</p>
                                     </div>
@@ -85,7 +85,7 @@ function Benefitsdetails() {
                             </div><br/>
                             <div className='d-line'></div>
                             <div className='vision-stand'style={{display:'flex',justifyContent:'space-between'}}>
-                                <div className='health-plus'style={{display:'flex',gap:'20px',width:'45%'}}>
+                                <div className='health-plus'style={{display:'flex',gap:'15px',width:'45%'}}>
                                     <div className='hp1'>
                                         <p>Health Plus</p>
                                     </div>
@@ -131,7 +131,7 @@ function Benefitsdetails() {
                             </div><br/>
                             <div className='d-line'></div>
                             <div className='vision-stand'style={{display:'flex',justifyContent:'space-between'}}>
-                                <div className='health-plus'style={{display:'flex',justifyContent:'space-between',width:'35%'}}>
+                                <div className='health-plus'style={{display:'flex',gap:'15px',width:'45%'}}>
                                     <div className='hp1'>
                                         <p>Health Plus</p>
                                     </div>
