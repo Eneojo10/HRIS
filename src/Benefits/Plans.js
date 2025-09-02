@@ -9,7 +9,7 @@ function Plans() {
         <div className='sub-ben'>
           <div className='subben'>
             <div>
-              <h3>Benefit Plans</h3>
+              <h2>Benefit Plans</h2>
               <p>Manage and configure employee benefit plans</p>
             </div>
             <div className='right-benefit'>

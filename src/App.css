@@ -4463,6 +4463,117 @@ text p {
 .ben-total h3{
   font-size: 14px;
 }
+.benefitreport{
+  border: 1px solid #ccc;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.benreport-one{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.ben-report{
+  width: 70%;
+  margin-bottom: 15px;
+}
+.br{
+  display: flex;
+  gap: 15px;
+}
+.ben-inside-border{
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 370px;
+}
+.benefitinput{
+  width: 55%;
+}
+.benefitinput input{
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.benefitreportselect{
+  width: 35%;
+}
+.benefitreportselect select{
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fits-report{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.reports_wan{
+  border: 1px solid #ccc;
+  height: 38px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+.survey-border{
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.sur-one{
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+.sur-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.srv{
+  width: 95%;
+  margin: auto;
+}
+.sur-one p{
+  font-size: 15px;
+}
+.rd{
+  display: flex;
+  margin-top: 35px;
+  width: 20%;
+  justify-content: space-between;
+}
+.benefit_download{
+  background: transparent;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.ces{
+  text-align: center;
+  margin-top: 6px;
+}
+.ces h4{
+  font-weight: 500;
+}
+.solidreport{
+  color: #2563eb;
+  font-size: 27px;
+  background-color: #dbeafe;
+  width: 10%;
+  height: 40px;
+  text-align: center;
+  padding-top: 5px;
+  border-radius: 4px;
+}
 
 
 
