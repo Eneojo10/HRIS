@@ -4341,7 +4341,128 @@ text p {
   font-weight: 700;
   margin-top: 3px;
 }
-
+.benefits-hol-der{
+  border: 1px solid #ccc;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  
+}
+.sub-ben{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.subben{
+  display: flex;
+  justify-content: space-between;
+}
+.right-benefit{
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+}
+.benefit-under{
+  border: 1px solid #ccc;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.u-benefit{
+  width: 95%;
+  margin: auto;
+  margin-top: 15px;
+}
+.u-ben-details{
+  display: flex;
+  justify-content: space-between;
+}
+.u-right{
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+}
+.pce{
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+.main-plan{
+  width: 50%;
+}
+.main-plan h4{
+  margin-bottom: 10px;
+}
+.plan-one{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.plan-two{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.plan-one p{
+  margin-bottom: 10px;
+  color: #7c848e;
+}
+.plan-one h4{
+  font-weight: 400;
+}
+.plan-two p{
+  margin-bottom: 10px;
+  color: #7c848e;
+}
+.plan-two h4{
+  font-weight: 400;
+}
+.plan-three{
+  display: flex;
+  gap: 7px;
+  margin-top: 10px;
+}
+.ben-btn{
+  background: transparent;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+.planselect{
+  width: 30%;
+}
+.planselect select{
+  padding: 10px 10px;
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+}
+.bene-input{
+  width: 50%;
+}
+.bene-input input{
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.benicon{
+  margin-top: 2px;
+}
+.ben-total{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -12px;
+}
+.ben-total h3{
+  font-size: 14px;
+}
 
 
 
