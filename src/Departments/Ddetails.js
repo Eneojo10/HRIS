@@ -13,7 +13,7 @@ function Ddetails() {
                     <div className='dcs-box-container'>
                         <div className='dcs_flex' style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
                             <div>
-                                <div className='dept-title'style={{backgroundColor:'#dbeafe',width:'37%',textAlign:'center',height:'28px',borderRadius:'16px',paddingTop:'2px'}}><p>Engineering</p></div><br />
+                                <div className='dept-title'style={{backgroundColor:'#dbeafe',width:'40%',textAlign:'center',height:'28px',borderRadius:'16px',paddingTop:'2px'}}><p>Engineering</p></div><br />
                                 <h3>Engineering</h3>
                                 <p className='dcs-para'>Software development and technical operations</p>
                             </div>
@@ -247,7 +247,7 @@ function Ddetails() {
                     <div className='dcs-box-container'>
                         <div className='dcs_flex' style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
                             <div>
-                                <div className='dept-title'style={{backgroundColor:'#ffedd5',color:'#9a3412',width:'54%',textAlign:'center',height:'28px',borderRadius:'16px',paddingTop:'2px'}}><p>Human Resources</p></div><br />
+                                <div className='dept-title'style={{backgroundColor:'#ffedd5',color:'#9a3412',width:'56%',textAlign:'center',height:'28px',borderRadius:'16px',paddingTop:'2px'}}><p>Human Resources</p></div><br />
                                 <h3>Human Resources</h3>
                                 <p className='dcs-para'>Software development and technical operations</p>
                             </div>
@@ -398,6 +398,7 @@ function Ddetails() {
 
 
                     </div>
+                    <br/>
                 </div>
                 <div className='dcs'>
                     <div className='dcs-box-container'>
