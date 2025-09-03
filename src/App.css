@@ -2195,7 +2195,7 @@
 }
 .dcs {
   border: 1px solid #ccc;
-  height: 400px;
+  height: auto;
   width: 100%;
   border-radius: 8px;
   background-color: white;
