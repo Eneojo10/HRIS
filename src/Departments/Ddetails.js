@@ -83,7 +83,7 @@ function Ddetails() {
                             </div>
                            
                         </div>
-
+                        <br/>
 
                     </div>
                 </div>
