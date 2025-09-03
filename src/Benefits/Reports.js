@@ -17,7 +17,15 @@ function Reports() {
                 <input type='text' placeholder='Search reports...'></input>
               </div>
               <div className='benefitreportselect'>
-                <select></select>
+                <select>
+                  <option>All Types</option>
+                  <option>Summary</option>
+                  <option>Enrollment</option>
+                  <option>Analysis</option>
+                  <option>Utilization</option>
+                  <option>Tax</option>
+                  <option>Survey</option>
+                </select>
               </div>
             </div><br />
             <div className='survey-border'>

@@ -7,6 +7,9 @@ import Ddetails from './Ddetails';
 import Structure from './Structure';
 import Budgets from './Budgets';
 import Banalytics from './Banalytics';
+import { TbCurrencyNaira } from "react-icons/tb";
+import { SiClickhouse } from "react-icons/si";
+import { IoPeopleOutline } from "react-icons/io5";
 
 function Departments() {
 
@@ -60,10 +63,58 @@ function Departments() {
                     <div className='dept-back-ground-color'>
                         <div className='dept--main'><br />
                             <div className='dept--cards'>
-                                <div className='dept-card010'></div>
-                                <div className='dept-card010'></div>
-                                <div className='dept-card010'></div>
-                                <div className='dept-card010'></div>
+                                <div className='dept-card010'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex'style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
+                                            <div>
+                                                <h4>Total Departments</h4>
+                                                <p>12</p>
+                                            </div>
+                                            <div className='icon-dept'style={{marginTop:'20px',color:'#2563eb',backgroundColor:'#eff6ff',width:'19%',height:'40px',textAlign:'center',paddingTop:'9px',fontSize:'20px',borderRadius:'8px'}}>
+                                                <SiClickhouse/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='dept-card010'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex'style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
+                                            <div>
+                                                <h4>Total Employees</h4>
+                                                <p>1,247</p>
+                                            </div>
+                                            <div className='icon-dept'style={{marginTop:'20px',color:'#23a854',backgroundColor:'#f0fdf4',width:'19%',height:'40px',textAlign:'center',paddingTop:'9px',fontSize:'20px',borderRadius:'8px'}}>
+                                                <IoPeopleOutline/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='dept-card010'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex'style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
+                                            <div>
+                                                <h4>Total Budget</h4>
+                                                <p>$12.4M</p>
+                                            </div>
+                                            <div className='icon-dept'style={{marginTop:'20px',color:'purple',backgroundColor:'#eee7f4',width:'19%',height:'40px',textAlign:'center',paddingTop:'9px',fontSize:'20px',borderRadius:'8px'}}>
+                                                <TbCurrencyNaira/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='dept-card010'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex'style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
+                                            <div>
+                                                <h4>Avg Performance</h4>
+                                                <p>87.3%</p>
+                                            </div>
+                                            <div className='icon-dept'style={{marginTop:'20px',color:'#ea580c',backgroundColor:'#fff7ed',width:'19%',height:'40px',textAlign:'center',paddingTop:'9px',fontSize:'20px',borderRadius:'8px'}}>
+                                                <TbCurrencyNaira/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
                             </div>
