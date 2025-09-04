@@ -89,7 +89,7 @@ function Settings() {
                         </div><br /><br /><br />
                         <div className='settings-big-border'>
                             <div className='setting_lists'>
-                                <div className='st-one' style={{ display: 'flex', width: '16%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '15%', justifyContent: 'space-between' }}>
                                     <div className='st-one-icon' style={{ fontSize: '19px' }}>
                                         <TbSettings />
                                     </div>
