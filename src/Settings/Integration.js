@@ -77,7 +77,7 @@ function Integration() {
                             </div>
                             <div className='window-one'>
                                 <h4>
-                                    1000
+                                    
                                     Window (seconds)</h4>
                                 <input value='30'></input>
                             </div>
