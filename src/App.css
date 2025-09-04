@@ -228,11 +228,11 @@
   margin-top: 30px;
 }
 .span-text {
-  font-size: 12px;
+  font-size: 14px;
   color: #3ba44a;
 }
 .span--text {
-  font-size: 12px;
+  font-size: 14px;
   color: #e43426;
 }
 .big-borders {
@@ -291,7 +291,7 @@
   gap: 20px;
 }
 .on-board {
-  font-size: 13px;
+  font-size: 14px;
   color: #71717e;
 }
 .add-1 {
@@ -5306,9 +5306,21 @@ text p {
   height: 30px;
   border-radius: 16px;
 }
+.connect--int{
+  background-color: #f3f4f6;
+  width: 35%;
+  height: 30px;
+  border-radius: 16px;
+}
+.connect---int{
+  background-color: #fee2e2;
+  width: 20%;
+  height: 30px;
+  border-radius: 16px;
+}
 .sub-teams{
   display: flex;
-  /* gap: 100px; */
+  gap: 15px;
 }
 .stb h4{
   font-weight: 400;
@@ -5316,13 +5328,30 @@ text p {
 }
 .cal-sync{
   border: 1px solid #ccc;
-  width: 45%;
+  width: 40%;
   height: 28px;
   text-align: center;
   border-radius: 16px;
+  margin-bottom: 10px;
 }
+.cal--sync{
+border: 1px solid #ccc;
+  width: 47%;
+  height: 28px;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+
 .cal-sync p{
   margin-top: 3px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.cal--sync p{
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: 500;
 }
 .webhook_events{
   border: 1px solid #ccc;

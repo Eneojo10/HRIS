@@ -7,6 +7,7 @@ import { SiQuickbooks } from "react-icons/si";
 import { BsEnvelopeAt } from "react-icons/bs";
 import { LiaJira } from "react-icons/lia";
 import { FaSalesforce } from "react-icons/fa";
+import { MdOutlineCancel } from "react-icons/md";
 
 function Integration() {
     return (
@@ -99,19 +100,7 @@ function Integration() {
                                                     <p>Video conferencing and<br /> collaboration</p>
                                                     <div className='stb' style={{ marginTop: '3px' }}>
                                                         <h4>Last sync: 5 minutes ago</h4><br />
-                                                        <div className='sub-teams'>
-                                                            <div className='cal-sync'>
-                                                                <p>Calendar sync</p>
-                                                            </div>
-                                                            <div className='cal-sync'>
-                                                                <p>Meeting rooms</p>
-                                                            </div>
 
-
-                                                        </div>
-                                                        <div>
-                                                            <p>User presence</p>
-                                                        </div>
 
                                                     </div>
                                                 </div>
@@ -119,7 +108,7 @@ function Integration() {
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px', color: '#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -127,6 +116,18 @@ function Integration() {
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div className='sub-teams'>
+                                            <div className='cal-sync'>
+                                                <p>Calendar sync</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Meeting rooms</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>User presence</p>
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -144,25 +145,14 @@ function Integration() {
                                                     <p>Video conferencing and<br /> collaboration</p>
                                                     <div className='stb' style={{ marginTop: '3px' }}>
                                                         <h4>Last sync: 5 minutes ago</h4><br />
-                                                        <div className='sub-teams'>
-                                                            <div className='cal-sync'>
-                                                                <p>Calendar sync</p>
-                                                            </div>
-                                                            <div className='cal-sync'>
-                                                                <p>Meeting rooms</p>
-                                                            </div>
 
-                                                        </div>
-                                                        <div>
-                                                            <p>User presence</p>
-                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px', color: '#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -171,6 +161,19 @@ function Integration() {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div className='sub-teams'>
+                                            <div className='cal-sync'>
+                                                <p>Notifications</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>User sync</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Channel mapping</p>
+                                            </div>
+
+                                        </div>
+
 
                                     </div>
 
@@ -187,32 +190,33 @@ function Integration() {
                                                     <p>Video conferencing and<br /> collaboration</p>
                                                     <div className='stb' style={{ marginTop: '3px' }}>
                                                         <h4>Last sync: 5 minutes ago</h4><br />
-                                                        <div className='sub-teams'>
-                                                            <div className='cal-sync'>
-                                                                <p>Calendar sync</p>
-                                                            </div>
-                                                            <div className='cal-sync'>
-                                                                <p>Meeting rooms</p>
-                                                            </div>
 
-                                                        </div>
-                                                        <div>
-                                                            <p>User presence</p>
-                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-                                            <div className='connect-int'>
+                                            <div className='connect--int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
-                                                        <IoMdCheckmarkCircleOutline />
+                                                    <div className='t-logo' style={{ marginTop: '3px', color: '#166534' }}>
+                                                        <MdOutlineCancel />
                                                     </div>
                                                     <div>
-                                                        <p>connected</p>
+                                                        <p>disconnected</p>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div className='sub-teams'>
+                                            <div className='cal-sync'>
+                                                <p>Payroll sync</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Expense tracking</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Tax reporting</p>
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -230,25 +234,14 @@ function Integration() {
                                                     <p>Video conferencing and<br /> collaboration</p>
                                                     <div className='stb' style={{ marginTop: '3px' }}>
                                                         <h4>Last sync: 5 minutes ago</h4><br />
-                                                        <div className='sub-teams'>
-                                                            <div className='cal-sync'>
-                                                                <p>Calendar sync</p>
-                                                            </div>
-                                                            <div className='cal-sync'>
-                                                                <p>Meeting rooms</p>
-                                                            </div>
 
-                                                        </div>
-                                                        <div>
-                                                            <p>User presence</p>
-                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px', color: '#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -256,6 +249,18 @@ function Integration() {
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div className='sub-teams'>
+                                            <div className='cal-sync'>
+                                                <p>Email sync</p>
+                                            </div>
+                                            <div className='cal--sync'>
+                                                <p>Calender integration</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Drive access</p>
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -273,25 +278,14 @@ function Integration() {
                                                     <p>Video conferencing and<br /> collaboration</p>
                                                     <div className='stb' style={{ marginTop: '3px' }}>
                                                         <h4>Last sync: 5 minutes ago</h4><br />
-                                                        <div className='sub-teams'>
-                                                            <div className='cal-sync'>
-                                                                <p>Calendar sync</p>
-                                                            </div>
-                                                            <div className='cal-sync'>
-                                                                <p>Meeting rooms</p>
-                                                            </div>
 
-                                                        </div>
-                                                        <div>
-                                                            <p>User presence</p>
-                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px', color: '#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -300,8 +294,21 @@ function Integration() {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div className='sub-teams'>
+                                            <div className='cal-sync'>
+                                                <p>Project sync</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Issue tracking</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Time logging</p>
+                                            </div>
+
+                                        </div>
 
                                     </div>
+
 
                                 </div>
                                 <div className='avail-one'>
@@ -316,32 +323,33 @@ function Integration() {
                                                     <p>Video conferencing and<br /> collaboration</p>
                                                     <div className='stb' style={{ marginTop: '3px' }}>
                                                         <h4>Last sync: 5 minutes ago</h4><br />
-                                                        <div className='sub-teams'>
-                                                            <div className='cal-sync'>
-                                                                <p>Calendar sync</p>
-                                                            </div>
-                                                            <div className='cal-sync'>
-                                                                <p>Meeting rooms</p>
-                                                            </div>
 
-                                                        </div>
-                                                        <div>
-                                                            <p>User presence</p>
-                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-                                            <div className='connect-int'>
+                                            <div className='connect---int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
-                                                        <IoMdCheckmarkCircleOutline />
+                                                    <div className='t-logo' style={{ marginTop: '3px', color: '#9c1b1b' }}>
+                                                        <MdOutlineCancel />
                                                     </div>
                                                     <div>
-                                                        <p>connected</p>
+                                                        <p>error</p>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div className='sub-teams'>
+                                            <div className='cal-sync'>
+                                                <p>Calendar sync</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>Meeting rooms</p>
+                                            </div>
+                                            <div className='cal-sync'>
+                                                <p>User presence</p>
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -389,6 +397,7 @@ payroll.processed"></textarea>
                 </div>
 
             </div>
+            <br />
         </div>
     )
 }

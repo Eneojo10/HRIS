@@ -144,8 +144,7 @@ function Settings() {
                                                 cursor: 'pointer',
                                                 color: activeTab === "Integration" ? 'blue' : '#6b7280',
                                                 transition: 'color 0.3s ease',
-                                                // textDecoration: activeTab === "Integration" ? 'underline' : 'none'
-                                                // textDecoration:'underline'
+                                                
                                             }}
                                         >Integration</h4>
                                     </div>
