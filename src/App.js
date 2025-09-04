@@ -13,7 +13,7 @@ import Schedules from './Schedules/Schedules';
 import Payroll from './Payroll/Payroll'
 import Benefits from './Benefits/Benefits';
 import Departments from './Departments/Departments'
-import Settings from './Pages/Settings';
+import Settings from './Settings/Settings';
 import Performancedetails from './Performance/Performancedetails';
 import Analyticsdetails from './Analytics/Analyticsdetails';
 import Workforce from './Analytics/Workforce';
@@ -55,6 +55,8 @@ import Chart from './Pages/Chart'
 import HiringTrends from './Pages/Hiringtrends';
 import Login from './Login/Login';
 import PayrollDetails from './Payroll/PayrollDetails';
+import System from './Settings/System';
+import Umanagement from './Settings/Umanagement';
 
 
 function App() {
@@ -119,6 +121,8 @@ function App() {
           <Route path="pie" element={<HiringTrends />} />
           <Route path="/" element={<Login />} />
           <Route path="payrolldetails" element={<PayrollDetails />} />
+          <Route path="system" element={<System />} />
+          <Route path="management" element={<Umanagement />} />
           
 
         </Routes>
