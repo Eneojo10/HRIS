@@ -57,6 +57,7 @@ import Login from './Login/Login';
 import PayrollDetails from './Payroll/PayrollDetails';
 import System from './Settings/System';
 import Umanagement from './Settings/Umanagement';
+import Security from './Settings/Security';
 
 
 function App() {
@@ -123,6 +124,7 @@ function App() {
           <Route path="payrolldetails" element={<PayrollDetails />} />
           <Route path="system" element={<System />} />
           <Route path="management" element={<Umanagement />} />
+          <Route path="security" element={<Security />} />
           
 
         </Routes>

@@ -87,7 +87,7 @@ function Settings() {
                         </div><br /><br /><br />
                         <div className='settings-big-border'>
                             <div className='setting_lists'>
-                                <div className='st-one' style={{ display: 'flex', width: '15%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '16%', justifyContent: 'space-between' }}>
                                     <div className='st-one-icon' style={{ fontSize: '19px' }}>
                                         <TbSettings />
                                     </div>
@@ -117,7 +117,7 @@ function Settings() {
                                             >User Management</h4>
                                     </div>
                                 </div>
-                                <div className='st-one' style={{ display: 'flex', width: '9%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '10%', justifyContent: 'space-between' }}>
                                     <div className='st-one-icon' style={{ fontSize: '17px' }}>
                                         <LuLockKeyhole />
                                     </div>
@@ -125,7 +125,7 @@ function Settings() {
                                         <h4>Security</h4>
                                     </div>
                                 </div>
-                                <div className='st-one' style={{ display: 'flex', width: '11%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '13%', justifyContent: 'space-between' }}>
                                     <div>
                                         <PiLinkSimpleBold />
                                     </div>
