@@ -9,6 +9,7 @@ import { LuLockKeyhole } from "react-icons/lu";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import System from './System';
 import Umanagement from './Umanagement';
+import Security from './Security';
 
 function Settings() {
 
@@ -117,15 +118,20 @@ function Settings() {
                                             >User Management</h4>
                                     </div>
                                 </div>
-                                <div className='st-one' style={{ display: 'flex', width: '10%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '9%', justifyContent: 'space-between' }}>
                                     <div className='st-one-icon' style={{ fontSize: '17px' }}>
                                         <LuLockKeyhole />
                                     </div>
                                     <div>
-                                        <h4>Security</h4>
+                                        <h4 onClick={() => handleTabClick('Security')}
+                                        style={{
+                                            cursor:'pointer',
+                                            backgroundColor: activeTab === "Security" ? 'white' : 'transparent'
+                                        }}
+                                            >Security</h4>
                                     </div>
                                 </div>
-                                <div className='st-one' style={{ display: 'flex', width: '13%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '12%', justifyContent: 'space-between' }}>
                                     <div>
                                         <PiLinkSimpleBold />
                                     </div>
@@ -140,6 +146,7 @@ function Settings() {
                                 <div className='performance-content'>
                                     {activeTab === 'System' && <System />}
                                     {activeTab === 'Management' && <Umanagement />}
+                                    {activeTab === 'Security' && <Security />}
 
                                 </div>
 

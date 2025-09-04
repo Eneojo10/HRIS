@@ -60,7 +60,7 @@ function Umanagement() {
                                         <span>HR</span>
                                     </div>
                                 </div>
-                                <div className='right_side-mgt'style={{display:'flex',width:'70%',justifyContent:'space-between'}}>
+                                <div className='right_side-mgt'style={{display:'flex',width:'95%',justifyContent:'space-between'}}>
                                     <div>
                                         <p>Admin</p>
                                     </div>
@@ -92,7 +92,7 @@ function Umanagement() {
                                         <span>Finance</span>
                                     </div>
                                 </div>
-                                <div className='right_side-mgt'style={{display:'flex',width:'70%',justifyContent:'space-between'}}>
+                                <div className='right_side-mgt'style={{display:'flex',width:'95%',justifyContent:'space-between'}}>
                                     <div>
                                         <p>Manager</p>
                                     </div>
@@ -156,7 +156,7 @@ function Umanagement() {
                                         <span>Engineering</span>
                                     </div>
                                 </div>
-                                <div className='right_side-mgt'style={{display:'flex',width:'70%',justifyContent:'space-between'}}>
+                                <div className='right_side-mgt'style={{display:'flex',width:'95%',justifyContent:'space-between'}}>
                                     <div>
                                         <p>Employee</p>
                                     </div>
