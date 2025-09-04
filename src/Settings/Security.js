@@ -135,7 +135,7 @@ function Security() {
                                 </div>
                             </div>
                             <div className='error-date'>
-                                <div>
+                                <div className='high-error'>
                                     <h4>high</h4>
                                 </div>
                                 <div>
@@ -158,7 +158,7 @@ function Security() {
                                 </div>
                             </div>
                             <div className='error-date'>
-                                <div>
+                                <div className='medium-error'>
                                     <h4>medium</h4>
                                 </div>
                                 <div>
@@ -181,7 +181,7 @@ function Security() {
                                 </div>
                             </div>
                             <div className='error-date'>
-                                <div>
+                                <div className='medium-error'>
                                     <h4>medium</h4>
                                 </div>
                                 <div>
@@ -204,7 +204,7 @@ function Security() {
                                 </div>
                             </div>
                             <div className='error-date'>
-                                <div>
+                                <div className='low-error'>
                                     <h4>low</h4>
                                 </div>
                                 <div>
