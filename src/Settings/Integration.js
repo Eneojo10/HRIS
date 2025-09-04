@@ -129,6 +129,7 @@ function Integration() {
                                             </div>
 
                                         </div>
+                                        <br/>
 
                                     </div>
 
@@ -173,7 +174,7 @@ function Integration() {
                                             </div>
 
                                         </div>
-
+                                        
 
                                     </div>
 
@@ -218,6 +219,7 @@ function Integration() {
                                             </div>
 
                                         </div>
+                                        <br/>
 
                                     </div>
 
@@ -306,6 +308,7 @@ function Integration() {
                                             </div>
 
                                         </div>
+                                        <br/>
 
                                     </div>
 
