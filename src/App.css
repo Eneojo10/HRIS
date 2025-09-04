@@ -5311,7 +5311,8 @@ text p {
   /* gap: 100px; */
 }
 .stb h4{
-  font-weight: 500;
+  font-weight: 400;
+  color: #707b88;
 }
 .cal-sync{
   border: 1px solid #ccc;
