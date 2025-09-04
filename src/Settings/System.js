@@ -40,13 +40,13 @@ function System() {
                         <div className='cominfo-two'>
                             <h4>Currency</h4>
                             <select>
-                                <option>
-                                    USD
-                                </option>
-                                <option>EUR</option>
-                                <option>GBP</option>
-                                <option>CAD</option>
+                                <option value="USD">USD ($)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="GBP">GBP (£)</option>
+                                <option value="CAD">CAD (C$)</option>
+                                <option value="NGN">NGN (₦)</option>
                             </select>
+
                         </div>
                         <div className='cominfo-two'>
                             <h4>Language</h4>
@@ -147,16 +147,16 @@ Acme Coporation"></textarea>
                     </div>
                     <div className='settings-defaults'>
                         <button className='defaultz'>Reset to Defaults</button>
-                       <button className='save-changes'>Save Changes</button>
+                        <button className='save-changes'>Save Changes</button>
                     </div>
 
 
                 </div><br />
-                
+
 
 
             </div>
-            <br/>
+            <br />
         </div>
     )
 }

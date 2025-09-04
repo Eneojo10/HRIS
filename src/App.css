@@ -5180,6 +5180,206 @@ text p {
 .api p{
   color: #4b5568;
 }
+.api_configuration{
+  border: 1px solid #ccc;
+  height: auto;
+  border-radius: 8px;
+}
+.a-p-i{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.input_api{
+  width: 95%;
+}
+.input_apii{
+  width: 100%;
+}
+.input_api input{
+  width: 100%;
+  outline: none;
+  padding: 11px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.input_apii input{
+  width: 100%;
+  outline: none;
+  padding: 11px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.re-fresh{
+  display: flex;
+  gap: 10px;
+}
+.refresh-btn{
+  width: 5%;
+  font-size: 22px;
+  padding-top: 5px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.api_input h4{
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.api_input{
+  margin-bottom: 15px;
+}
+.windows{
+  display: flex;
+  gap: 15px;
+}
+.window-one{
+  width: 50%;
+}
+.window-one input{
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+}
+.window-one h4{
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.available-integration{
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.avail{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.avail-one{
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+.avail-boxes{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.m-team{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.mteams{
+  display: flex;
+  gap: 10px;
+  /* width: 90%; */
+}
+.mteams h4{
+  font-weight: 500;
+}
+.mteams p{
+  font-size: 14px;
+}
+.m--teams{
+  display: flex;
+  justify-content: space-between;
+}
+.t-m-logo{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 3px;
+}
+.connect-int{
+  background-color: #dcfce7;
+  width: 30%;
+  height: 30px;
+  border-radius: 16px;
+}
+.sub-teams{
+  display: flex;
+  /* gap: 100px; */
+}
+.stb h4{
+  font-weight: 500;
+}
+.cal-sync{
+  border: 1px solid #ccc;
+  width: 45%;
+  height: 28px;
+  text-align: center;
+  border-radius: 16px;
+}
+.cal-sync p{
+  margin-top: 3px;
+}
+.webhook_events{
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+.webhooksevents{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.event_types textarea{
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  height: 120px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.webhooksevents p{
+  margin-bottom: 3px;
+}
+.web-s input{
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+.text-hook{
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.testhook-btn{
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.testhookbtn{
+  background: transparent;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
 
 
 
