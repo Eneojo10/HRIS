@@ -97,10 +97,10 @@ function Settings() {
                                         <h4 onClick={() => handleTabClick('System')}
                                             style={{
                                                 cursor: 'pointer',
-                                                backgroundColor: activeTab === "System" ? 'white' : 'transparent',
+                                                color: activeTab === "System" ? 'blue' : '#6b7280',
                                                 // padding: '7px 35px',
                                                 // borderRadius: '6px',
-                                                // transition: 'background-color 0.3s ease',
+                                                transition: 'color 0.3s ease',
                                                 // marginTop: '-6px'
                                             }}
                                         >System Settings</h4>
@@ -112,11 +112,12 @@ function Settings() {
                                     </div>
                                     <div>
                                         <h4 onClick={() => handleTabClick('Management')}
-                                        style={{
-                                            cursor:'pointer',
-                                            backgroundColor: activeTab === "Management" ? 'white' : 'transparent'
-                                        }}
-                                            >User Management</h4>
+                                            style={{
+                                                cursor: 'pointer',
+                                                color: activeTab === "Management" ? 'blue' : '#6b7280',
+                                                transition: 'color 0.3s ease',
+                                            }}
+                                        >User Management</h4>
                                     </div>
                                 </div>
                                 <div className='st-one' style={{ display: 'flex', width: '9%', justifyContent: 'space-between' }}>
@@ -125,11 +126,12 @@ function Settings() {
                                     </div>
                                     <div>
                                         <h4 onClick={() => handleTabClick('Security')}
-                                        style={{
-                                            cursor:'pointer',
-                                            backgroundColor: activeTab === "Security" ? 'white' : 'transparent'
-                                        }}
-                                            >Security</h4>
+                                            style={{
+                                                cursor: 'pointer',
+                                                color: activeTab === "Security" ? 'blue' : '#6b7280',
+                                                transition: 'color 0.3s ease',
+                                            }}
+                                        >Security</h4>
                                     </div>
                                 </div>
                                 <div className='st-one' style={{ display: 'flex', width: '11%', justifyContent: 'space-between' }}>
@@ -138,12 +140,16 @@ function Settings() {
                                     </div>
                                     <div>
                                         <h4 onClick={() => handleTabClick('Integration')}
-                                        style={{
-                                            cursor:'pointer',
-                                            backgroundColor: activeTab === "Integration" ? 'white' : 'transparent'
-                                        }}
-                                            >Integration</h4>
+                                            style={{
+                                                cursor: 'pointer',
+                                                color: activeTab === "Integration" ? 'blue' : '#6b7280',
+                                                transition: 'color 0.3s ease',
+                                                // textDecoration: activeTab === "Integration" ? 'underline' : 'none'
+                                                // textDecoration:'underline'
+                                            }}
+                                        >Integration</h4>
                                     </div>
+
                                 </div>
 
                             </div>
@@ -160,7 +166,7 @@ function Settings() {
                             </div>
 
                         </div>
-                        <br/>
+                        <br />
 
 
                     </div>
