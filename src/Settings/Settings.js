@@ -104,7 +104,7 @@ function Settings() {
                                         >System Settings</h4>
                                     </div>
                                 </div>
-                                <div className='st-one' style={{ display: 'flex', width: '16%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '20%', justifyContent: 'space-between' }}>
                                     <div className='st-one-icon' style={{ fontSize: '19px' }}>
                                         <HiOutlineUsers />
                                     </div>

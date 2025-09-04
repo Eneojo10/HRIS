@@ -5006,6 +5006,17 @@ text p {
 .mi p{
   color: #6b7688;
 }
+.mgt_HR{
+  background-color: #dcfce7;
+  width: 33%;
+  height: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
+.mgt_HR p{
+  color: #166534;
+  margin-top: 3px;
+}
 
 
 

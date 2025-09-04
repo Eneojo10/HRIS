@@ -124,8 +124,8 @@ function Umanagement() {
                                         <span>Marketing</span>
                                     </div>
                                 </div>
-                                <div className='right_side-mgt'style={{display:'flex',width:'70%',justifyContent:'space-between'}}>
-                                    <div>
+                                <div className='right_side-mgt'style={{display:'flex',width:'95%',justifyContent:'space-between'}}>
+                                    <div className='mgt_HR'>
                                         <p>HR Specialist</p>
                                     </div>
                                     <div>
