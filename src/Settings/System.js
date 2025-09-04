@@ -135,7 +135,7 @@ function System() {
                         </div>
                         <div className='smtp-server'>
                             <h4>Password</h4>
-                            <input placeholder='********'></input>
+                            <input type='password' placeholder='********'></input>
                         </div>
                     </div>
                     <div className='company-sig'>

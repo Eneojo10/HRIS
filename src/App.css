@@ -5035,12 +5035,150 @@ text p {
   border: 1px solid #ccc;
   width: 100%;
   border-radius: 8px;
-  height: 200px;
+  height: auto;
+  margin-bottom: 30px;
 }
 .authentication{
   width: 95%;
   margin: auto;
   margin-top: 20px;
+}
+.securities-input{
+  display: flex;
+  gap: 15px;
+}
+.secone-input{
+  width: 50%;
+  
+}
+.secone-input input{
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.secone-input h4{
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.max-login select{
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+.max-login h4{
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.data-protection{
+  border: 1px solid #ccc;
+  height: auto;
+  border-radius: 8px;
+}
+.data-p{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.ip-white h4{
+  font-weight: 500;
+}
+.ip-white p{
+  color: #6b7280;
+}
+.security-event{
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+.sec-event{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+.recent_flex{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  margin-top: 15px;
+}
+.error-login{
+  display: flex;
+  gap: 15px;
+}
+.error--icon{
+  font-size: 21px;
+  font-weight: 500;
+  color: red;
+  margin-top: 7px;
+}
+.error-login h4{
+  font-weight: 500;
+}
+.error-login p{
+  color: #6b7280;
+}
+.error-date{
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+.error-date h4{
+  font-weight: 500;
+}
+.error_border{
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.sss{
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.sss-btn{
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+.sss_btn{
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 10px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+.integration-one{
+  border: 1px solid #ccc;
+  height: 100px;
+  width: 100%;
+    border-radius: 8px;
+}
+.inte-gration{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+.api{
+  padding: 20px;
+}
+.api p{
+  color: #4b5568;
 }
 
 

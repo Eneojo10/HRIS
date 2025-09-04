@@ -10,6 +10,7 @@ import { PiLinkSimpleBold } from "react-icons/pi";
 import System from './System';
 import Umanagement from './Umanagement';
 import Security from './Security';
+import Integration from './Integration';
 
 function Settings() {
 
@@ -136,7 +137,12 @@ function Settings() {
                                         <PiLinkSimpleBold />
                                     </div>
                                     <div>
-                                        <h4>Integration</h4>
+                                        <h4 onClick={() => handleTabClick('Integration')}
+                                        style={{
+                                            cursor:'pointer',
+                                            backgroundColor: activeTab === "Integration" ? 'white' : 'transparent'
+                                        }}
+                                            >Integration</h4>
                                     </div>
                                 </div>
 
@@ -147,6 +153,7 @@ function Settings() {
                                     {activeTab === 'System' && <System />}
                                     {activeTab === 'Management' && <Umanagement />}
                                     {activeTab === 'Security' && <Security />}
+                                    {activeTab === 'Integration' && <Integration />}
 
                                 </div>
 
