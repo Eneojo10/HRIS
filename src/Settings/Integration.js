@@ -106,10 +106,11 @@ function Integration() {
                                                             <div className='cal-sync'>
                                                                 <p>Meeting rooms</p>
                                                             </div>
-                                                            <div>
-                                                                <p>User presence</p>
-                                                            </div>
 
+
+                                                        </div>
+                                                        <div>
+                                                            <p>User presence</p>
                                                         </div>
 
                                                     </div>
@@ -118,7 +119,7 @@ function Integration() {
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -161,7 +162,7 @@ function Integration() {
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -204,7 +205,7 @@ function Integration() {
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -247,7 +248,7 @@ function Integration() {
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -290,7 +291,7 @@ function Integration() {
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -333,7 +334,7 @@ function Integration() {
                                             </div>
                                             <div className='connect-int'>
                                                 <div className='t-m-logo'>
-                                                    <div className='t-logo' style={{ marginTop: '3px' }}>
+                                                    <div className='t-logo' style={{ marginTop: '3px',color:'#166534' }}>
                                                         <IoMdCheckmarkCircleOutline />
                                                     </div>
                                                     <div>
@@ -383,6 +384,7 @@ payroll.processed"></textarea>
                         <button className='testhook-btn'>Test Webhook</button>
                         <button className='testhookbtn'>Save Integration Settings</button>
                     </div>
+                    <br />
 
                 </div>
 

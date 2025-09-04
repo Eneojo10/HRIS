@@ -106,7 +106,7 @@ function Settings() {
                                         >System Settings</h4>
                                     </div>
                                 </div>
-                                <div className='st-one' style={{ display: 'flex', width: '18%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '17%', justifyContent: 'space-between' }}>
                                     <div className='st-one-icon' style={{ fontSize: '19px' }}>
                                         <HiOutlineUsers />
                                     </div>
@@ -132,7 +132,7 @@ function Settings() {
                                             >Security</h4>
                                     </div>
                                 </div>
-                                <div className='st-one' style={{ display: 'flex', width: '12%', justifyContent: 'space-between' }}>
+                                <div className='st-one' style={{ display: 'flex', width: '11%', justifyContent: 'space-between' }}>
                                     <div>
                                         <PiLinkSimpleBold />
                                     </div>
