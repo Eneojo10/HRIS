@@ -196,7 +196,7 @@ function Integration() {
 
                                             </div>
                                             <div className='connect--int'>
-                                                <div className='t-m-logo'>
+                                                <div className='t-m-lo-go'>
                                                     <div className='t-logo' style={{ marginTop: '3px', color: '#3e4652' }}>
                                                         <MdOutlineCancel />
                                                     </div>

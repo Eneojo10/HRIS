@@ -5300,6 +5300,13 @@ text p {
   margin: auto;
   margin-top: 3px;
 }
+.t-m-lo-go{
+  display: flex;
+  width: 81%;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 3px;
+}
 .connect-int{
   background-color: #dcfce7;
   width: 30%;
