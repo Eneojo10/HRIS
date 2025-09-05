@@ -2789,6 +2789,9 @@
 .flex-number {
   margin-bottom: 5px;
 }
+.flex-number p{
+  font-size: 14px;
+}
 .can-bottom-icon {
   display: flex;
   justify-content: space-between;
