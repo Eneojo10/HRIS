@@ -3,6 +3,8 @@ import { IoPeopleOutline } from "react-icons/io5";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import image from '../Images/user2.jpg'
+import { SlCalender } from "react-icons/sl";
+import { IoMdTime } from "react-icons/io";
 
 function Taskdetails() {
   const cards = [
@@ -215,7 +217,54 @@ function Taskdetails() {
                     <p>Engineering</p>
                   </div>
                 </div>
+                <br/>
+                <div className='tsk-date-time'>
+                  <div className='date-tsk'>
+                    <div>
+                      <SlCalender/>
+                    </div>
+                    <div>
+                      <p>Due: 1/30/2024</p>
+                    </div>
+                  </div>
+                  <div className='date-tsk'>
+                    <div>
+                      <IoMdTime/>
+                    </div>
+                    <div>
+                      <p>Est: time: 15 min</p>
+                    </div>
+                  </div>
+                  <div className='date-tsk'>
+                    <div>
+                      <IoMdTime/>
+                    </div>
+                    <div>
+                      <p>Stage: pre boarding</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div className='tsk_bg'>
+                  <div className='verify'style={{padding:'15px'}}>
+                    <p>Requires valid ID and work authorization documents</p>
+                  </div>
+
+                </div>
+                <div className='tsk-list-butons'>
+                  <div>
+                    <button className='tsk-complete'>Complete</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Edit</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Details</button>
+                  </div>
+                </div>
+                <br/>
               </div>
+              <br/><br/>
 
             </div>
             <div className='tsk-form-one'>
