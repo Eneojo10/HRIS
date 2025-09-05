@@ -5674,8 +5674,15 @@ text p {
 }
 .tsk-form{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  grid-auto-flow: column;       
+  grid-auto-columns: calc(50% - 10px); 
+   grid-template-rows: repeat(4, auto); 
+  gap: 20px;
+  overflow-x: auto;              
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+
+ 
 }
 .f-orm{
   width: 90%;
