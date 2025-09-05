@@ -31,7 +31,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <IoPeopleOutline />
@@ -40,7 +40,7 @@ function Ddetails() {
                                     <p>342 employees</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <CiLocationOn />
@@ -51,7 +51,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '24%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '19%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <SlCalender />
@@ -60,7 +60,7 @@ function Ddetails() {
                                     <p>Est. 2018</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '33%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
                                     <p>$4.2M
@@ -109,7 +109,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <IoPeopleOutline />
@@ -118,7 +118,7 @@ function Ddetails() {
                                     <p>342 employees</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <CiLocationOn />
@@ -129,7 +129,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '24%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '19%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <SlCalender />
@@ -138,7 +138,7 @@ function Ddetails() {
                                     <p>Est. 2018</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '33%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
                                     <p>$4.2M
@@ -161,6 +161,7 @@ function Ddetails() {
                             </div>
                            
                         </div>
+                        <br/>
 
 
                     </div>
@@ -187,7 +188,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <IoPeopleOutline />
@@ -196,7 +197,7 @@ function Ddetails() {
                                     <p>342 employees</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <CiLocationOn />
@@ -207,7 +208,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '24%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '19%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <SlCalender />
@@ -216,7 +217,7 @@ function Ddetails() {
                                     <p>Est. 2018</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '33%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
                                     <p>$4.2M
@@ -239,6 +240,7 @@ function Ddetails() {
                             </div>
                            
                         </div>
+                        <br/>
 
 
                     </div>
@@ -265,7 +267,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <IoPeopleOutline />
@@ -274,7 +276,7 @@ function Ddetails() {
                                     <p>342 employees</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <CiLocationOn />
@@ -285,7 +287,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '24%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '19%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <SlCalender />
@@ -294,7 +296,7 @@ function Ddetails() {
                                     <p>Est. 2018</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '33%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
                                     <p>$4.2M
@@ -317,6 +319,7 @@ function Ddetails() {
                             </div>
                            
                         </div>
+                        <br/>
 
 
                     </div>
@@ -343,7 +346,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <IoPeopleOutline />
@@ -352,7 +355,7 @@ function Ddetails() {
                                     <p>342 employees</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <CiLocationOn />
@@ -363,7 +366,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '24%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '19%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <SlCalender />
@@ -372,7 +375,7 @@ function Ddetails() {
                                     <p>Est. 2018</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '33%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
                                     <p>$4.2M
@@ -395,7 +398,7 @@ function Ddetails() {
                             </div>
                            
                         </div>
-
+                        <br/>
 
                     </div>
                     <br/>
@@ -422,7 +425,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <IoPeopleOutline />
@@ -431,7 +434,7 @@ function Ddetails() {
                                     <p>342 employees</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '35%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '26%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <CiLocationOn />
@@ -442,7 +445,7 @@ function Ddetails() {
                             </div>
                         </div>
                         <div className='three-four-two' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '24%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '19%', justifyContent: 'space-between', marginTop: '10px' }}>
                                 <div className='tft'>
 
                                     <SlCalender />
@@ -451,7 +454,7 @@ function Ddetails() {
                                     <p>Est. 2018</p>
                                 </div>
                             </div>
-                            <div className='threefourtwo' style={{ display: 'flex', width: '33%', justifyContent: 'space-between', marginTop: '10px' }}>
+                            <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
                                     <p>$4.2M
@@ -474,6 +477,7 @@ function Ddetails() {
                             </div>
                            
                         </div>
+                        <br/>
 
 
                     </div>

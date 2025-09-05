@@ -69,10 +69,13 @@ function Budgets() {
             <br />
 
           </div>
+          <br/>
 
         </div>
+        
 
       </div>
+      <br/>
 
     </div>
   )

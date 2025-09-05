@@ -1492,11 +1492,11 @@
 }
 .big_tcards {
   display: grid;
-  grid-auto-flow: column;       
-  grid-auto-columns: calc(50% - 10px); 
-   grid-template-rows: repeat(2, auto); 
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - 10px);
+  grid-template-rows: repeat(2, auto);
   gap: 20px;
-  overflow-x: auto;              
+  overflow-x: auto;
   padding-bottom: 10px;
   scroll-behavior: smooth;
 }
@@ -2213,8 +2213,13 @@
 }
 .dcs-flex {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - 10px);
+  grid-template-rows: repeat(4, auto);
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
 }
 .export {
   display: flex;
@@ -2789,7 +2794,7 @@
 .flex-number {
   margin-bottom: 5px;
 }
-.flex-number p{
+.flex-number p {
   font-size: 14px;
 }
 .can-bottom-icon {
@@ -4599,7 +4604,7 @@ text p {
   font-size: 15px;
 }
 .dcs-image {
-  width: 15%;
+  width: 8%;
 }
 .dcs-image img {
   width: 100%;
@@ -4636,7 +4641,7 @@ text p {
   cursor: pointer;
   width: 100%;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .dbutton {
   width: 50%;
@@ -5587,25 +5592,25 @@ text p {
   margin: auto;
   gap: 10px;
 }
-.equipment-task{
+.equipment-task {
   display: flex;
   width: 93%;
   margin: auto;
   gap: 10px;
 }
-.tsk-training{
+.tsk-training {
   display: flex;
   width: 95%;
   margin: auto;
   gap: 10px;
 }
-.tsk-meetings{
+.tsk-meetings {
   display: flex;
   width: 93%;
   margin: auto;
   gap: 10px;
 }
-.tsk-access{
+.tsk-access {
   display: flex;
   width: 93%;
   margin: auto;
@@ -5623,102 +5628,100 @@ text p {
   padding: 10px 10px;
   border-radius: 8px;
 }
-.training-border{
+.training-border {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
   width: 11%;
 }
-.meeting-border{
+.meeting-border {
   border: 1px solid #ccc;
   width: 12%;
   border-radius: 8px;
   padding: 10px 10px;
 }
-.access-border{
+.access-border {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
   width: 16%;
 }
-.tsk-categories{
+.tsk-categories {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
   width: 12%;
 }
-.tsk--categories{
+.tsk--categories {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
   width: 11%;
 }
-.tsk---categories{
+.tsk---categories {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
   width: 9%;
 }
-.tsk----categories{
+.tsk----categories {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
   width: 8%;
 }
-.sub-options{
+.sub-options {
   display: flex;
   gap: 20px;
   margin-bottom: 25px;
 }
-.tsk-form-one{
+.tsk-form-one {
   border: 1px solid #ccc;
   height: auto;
   border-radius: 8px;
   width: 100%;
   background-color: white;
 }
-.tsk-form{
+.tsk-form {
   display: grid;
-  grid-auto-flow: column;       
-  grid-auto-columns: calc(50% - 10px); 
-   grid-template-rows: repeat(4, auto); 
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - 10px);
+  grid-template-rows: repeat(4, auto);
   gap: 20px;
-  overflow-x: auto;              
+  overflow-x: auto;
   padding-bottom: 10px;
   scroll-behavior: smooth;
-
 }
-.template-form{
+.template-form {
   display: grid;
-  grid-auto-flow: column;       
-  grid-auto-columns: calc(50% - 10px); 
-   grid-template-rows: repeat(3, auto); 
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - 10px);
+  grid-template-rows: repeat(3, auto);
   gap: 20px;
-  overflow-x: auto;              
+  overflow-x: auto;
   padding-bottom: 10px;
   scroll-behavior: smooth;
-
 }
-.f-orm{
+.f-orm {
   width: 90%;
   margin: auto;
   margin-top: 20px;
 }
-.f-tsk h3{
+.f-tsk h3 {
   font-weight: 500;
 }
-.f-tsk p{
+.f-tsk p {
   font-size: 14px;
 }
-.ff-tsk{
+.ff-tsk {
   display: flex;
   justify-content: space-between;
 }
-.ff-tsk p{
+.ff-tsk p {
   font-size: 14px;
 }
 .access-border h4,
-.meeting-border h4, 
+.meeting-border h4,
 .training-border h4,
 .equipment-border h4,
 .documentation-border h4,
@@ -5727,64 +5730,63 @@ text p {
 .tsk----categories h4,
 .tsk--categories h4,
 .tsk--categories h4,
-.tsk----categories h4
-{
+.tsk----categories h4 {
   font-weight: 500;
   font-size: 14px;
 }
-.tsk-image{
+.tsk-image {
   width: 7%;
 }
-.tsk-image img{
+.tsk-image img {
   width: 100%;
   border-radius: 16px;
 }
-.tsk-tsk{
+.tsk-tsk {
   display: flex;
   gap: 10px;
 }
-.tsk-tsk p{
+.tsk-tsk p {
   font-size: 14px;
 }
-.tsk-tsk h4{
+.tsk-tsk h4 {
   font-weight: 500;
 }
-.date-tsk{
+.date-tsk {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
 }
-.date-tsk p{
+.date-tsk p {
   font-size: 15px;
 }
-.tsk_bg{
+.tsk_bg {
   background-color: #f9fafb;
   height: 55px;
   width: 100%;
   margin-bottom: 20px;
 }
-.tsk-date-time{
+.tsk-date-time {
   margin-bottom: 15px;
 }
-.verify p{
+.verify p {
   font-size: 14px;
 }
-.tsk-list-butons{
+.tsk-list-butons {
   display: flex;
   gap: 5px;
 }
-.tsk-complete{
+.tsk-complete {
   background: transparent;
   border: 1px solid #ccc;
   padding: 10px 30px;
   cursor: pointer;
   border-radius: 4px;
 }
-.templates-container{
+.templates-container {
   width: 95%;
   margin: auto;
 }
-.templates-input input{
+.templates-input input {
   width: 100%;
   padding: 15px 10px;
   border-radius: 8px;
@@ -5792,77 +5794,13 @@ text p {
   outline: none;
   font-size: 16px;
 }
-.all_depart-ment{
+.all_depart-ment {
   display: flex;
   justify-content: space-between;
 }
-.all_depart-ment h4{
+.all_depart-ment h4 {
   font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive Design */
 @media (max-width: 428px) {
