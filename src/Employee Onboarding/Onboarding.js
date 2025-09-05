@@ -9,6 +9,17 @@ import Onboardingdetails from './Onboardingdetails';
 import Taskdetails from './Taskdetails';
 import Templatesdetails from './Templatesdetails';
 import Analyticdetails from './Analyticdetails';
+import { BsCircle } from "react-icons/bs";
+import { HiArrowTrendingUp } from "react-icons/hi2";
+import { CgDanger } from "react-icons/cg";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
+import { SlCalender } from "react-icons/sl";
+import { GoPersonAdd } from "react-icons/go";
+import { IoMdTime } from "react-icons/io";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+// import { IoPeopleOutline } from "react-icons/io5";
+
+
 
 function Onboarding() {
 
@@ -20,6 +31,7 @@ function Onboarding() {
 
     return (
         <div>
+            
             <div className='onboarding--navigations'>
                 <div className='main1'>
                     <Dashboard />
@@ -67,9 +79,10 @@ function Onboarding() {
                                 </div>
                             </div>
                         </div><br />
+                        
                         <div className='sub-board'>
                             <div>
-                                <h4 onClick={() => handleTabClick('Onboarding')}
+                                <h3 onClick={() => handleTabClick('Onboarding')}
                                     style={{
                                         cursor: 'pointer', marginTop: '10px',
                                         backgroundColor: activeTab === 'Onboarding' ? '#f5f5faff' : 'transparent',
@@ -78,10 +91,10 @@ function Onboarding() {
                                         transition: 'background-color 0.3s ease',
                                         marginTop: '-6px'
                                     }}
-                                    className='onboard-text' >Onboarding Pipeline</h4>
+                                    className='onboard-text' >Onboarding Pipeline</h3>
                             </div>
                             <div>
-                                <h4 onClick={() => handleTabClick('Task')}
+                                <h3 onClick={() => handleTabClick('Task')}
                                     style={{
                                         cursor: 'pointer', marginTop: '10px',
                                         backgroundColor: activeTab === 'Task' ? '#f5f5faff' : 'transparent',
@@ -90,10 +103,10 @@ function Onboarding() {
                                         transition: 'background-color 0.3s ease',
                                         marginTop: '-6px'
                                     }}
-                                    className='onboard-text' >Task Management</h4>
+                                    className='onboard-text' >Task Management</h3>
                             </div>
                             <div>
-                                <h4 onClick={() => handleTabClick('Templates')}
+                                <h3 onClick={() => handleTabClick('Templates')}
                                     style={{
                                         cursor: 'pointer', marginTop: '10px',
                                         backgroundColor: activeTab === 'Templates' ? '#f5f5faff' : 'transparent',
@@ -102,10 +115,10 @@ function Onboarding() {
                                         transition: 'background-color 0.3s ease',
                                         marginTop: '-6px'
                                     }}
-                                    className='onboard-text'>Templates</h4>
+                                    className='onboard-text'>Templates</h3>
                             </div>
                             <div>
-                                <h4 onClick={() => handleTabClick('Analytics')}
+                                <h3 onClick={() => handleTabClick('Analytics')}
                                     style={{
                                         cursor: 'pointer', marginTop: '10px',
                                         backgroundColor: activeTab === 'Analytics' ? '#f5f5faff' : 'transparent',
@@ -114,7 +127,7 @@ function Onboarding() {
                                         transition: 'background-color 0.3s ease',
                                         marginTop: '-6px'
                                     }}
-                                    className='onboard-text'>Analytics</h4>
+                                    className='onboard-text'>Analytics</h3>
                             </div>
                         </div>
                     </div><br />
@@ -126,12 +139,14 @@ function Onboarding() {
                         {activeTab === 'Analytics' && <Analyticdetails />}
 
                     </div>
+                    
 
 
                 </div>
 
 
             </div>
+            
 
         </div>
     )

@@ -113,7 +113,7 @@ function Onboardingdetails() {
                                 <div className='flex-number'>
                                     <h2>87.5%</h2>
                                     <p>Task Completion Rate</p>
-                                    <span>Overall completion </span>
+                                    <span>Overall completion</span>
                                 </div>
 
                             </div>
@@ -132,7 +132,7 @@ function Onboardingdetails() {
                                 <div className='flex-number'>
                                     <h2>12.5%</h2>
                                     <p>Pending Tasks</p>
-                                    <span>Across all hires </span>
+                                    <span>Across all hires</span>
                                 </div>
 
                             </div>
