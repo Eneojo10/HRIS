@@ -44,7 +44,7 @@ function Settings() {
                                             <PiExportThin />
 
                                         </div>
-                                        <span>Export Config</span>
+                                        <span className='configexp'>Export Config</span>
 
                                     </div>
 
