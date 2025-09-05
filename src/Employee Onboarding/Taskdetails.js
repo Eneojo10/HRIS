@@ -2,6 +2,7 @@ import React from 'react'
 import { IoPeopleOutline } from "react-icons/io5";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import image from '../Images/user2.jpg'
 
 function Taskdetails() {
   const cards = [
@@ -194,7 +195,7 @@ function Taskdetails() {
                     <HiOutlineDotsHorizontal />
                   </div>
                 </div><br/>
-                <div className='ff-tsk'>
+                <div className='ff-tsk'style={{marginBottom:'25px'}}>
                   <div>
                     <p>Documentation</p>
                   </div>
@@ -203,6 +204,15 @@ function Taskdetails() {
                   </div>
                   <div>
                     <p>Pending</p>
+                  </div>
+                </div>
+                <div className='tsk-tsk'>
+                  <div className='tsk-image'>
+                    <img src={image} alt=''/>
+                  </div>
+                  <div>
+                    <h4>Alex Thompson</h4>
+                    <p>Engineering</p>
                   </div>
                 </div>
               </div>

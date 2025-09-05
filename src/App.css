@@ -5707,8 +5707,19 @@ text p {
 .tsk----categories h4
 {
   font-weight: 500;
+  font-size: 14px;
 }
-
+.tsk-image{
+  width: 11%;
+}
+.tsk-image img{
+  width: 100%;
+  border-radius: 16px;
+}
+.tsk-tsk{
+  display: flex;
+  gap: 10px;
+}
 
 
 
