@@ -1175,7 +1175,7 @@
 .flex___can11 {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 40%;
   margin-bottom: 7px;
 }
 .flex___can2 {
@@ -1187,7 +1187,7 @@
 .flex___can22 {
   display: flex;
   justify-content: space-between;
-  width: 48%;
+  width: 32%;
   margin-bottom: 7px;
 }
 .flex___can3 {
@@ -1205,7 +1205,7 @@
 .flex___can44 {
   display: flex;
   justify-content: space-between;
-  width: 58%;
+  width: 38%;
   margin-bottom: 7px;
 }
 .flex___can5 {
@@ -1216,7 +1216,7 @@
 .flex___can55 {
   display: flex;
   justify-content: space-between;
-  width: 39%;
+  width: 26%;
 }
 .priority {
   display: flex;
@@ -1237,7 +1237,16 @@
   color: red;
   background-color: rgb(248, 232, 232);
   font-size: 13px;
-  width: 50%;
+  width: 38%;
+  text-align: center;
+  padding-top: 2px;
+  border-radius: 4px;
+}
+.hpp {
+  color: red;
+  background-color: rgb(248, 232, 232);
+  font-size: 13px;
+  width: 31%;
   text-align: center;
   padding-top: 2px;
   border-radius: 4px;
@@ -1483,20 +1492,13 @@
 }
 .big_tcards {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(350px, 1fr);
-  gap: 10px;
-  overflow-x: auto;
+  grid-auto-flow: column;       
+  grid-auto-columns: calc(50% - 10px); 
+   grid-template-rows: repeat(2, auto); 
+  gap: 20px;
+  overflow-x: auto;              
   padding-bottom: 10px;
   scroll-behavior: smooth;
-
-  /* Hide scrollbar for Webkit (Chrome, Safari) */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-
-  /* Hide scrollbar for Webkit (Chrome, Safari) */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
 }
 .performance-container {
   display: flex;

@@ -388,7 +388,7 @@ function Onboardingdetails() {
                                     </div><br />
                                     <div className='can-width'>
                                         <div className='priority2'>
-                                            <div className='hp' style={{ backgroundColor: 'yellow', width: '50%', borderRadius: '4px' }}>
+                                            <div className='hp' style={{ backgroundColor: 'yellow', width: '38%', borderRadius: '4px' }}>
                                                 <p>Medium priority</p>
                                             </div>
                                             <div className='on-track'>
@@ -486,7 +486,7 @@ function Onboardingdetails() {
                                     </div><br />
                                     <div className='can-width'>
                                         <div className='priority3'>
-                                            <div className='hp' style={{ backgroundColor: '#ccc', color: 'black', borderRadius: '4px' }}>
+                                            <div className='hpp' style={{ backgroundColor: '#ccc', color: 'black', borderRadius: '4px' }}>
                                                 <p>Low priority</p>
                                             </div>
                                             <div className='on-track'>
