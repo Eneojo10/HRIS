@@ -5580,7 +5580,7 @@ text p {
 }
 .documentation {
   display: flex;
-  width: 93%;
+  width: 91%;
   margin: auto;
   gap: 10px;
 }
@@ -5642,19 +5642,19 @@ text p {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
-  width: 13%;
+  width: 12%;
 }
 .tsk--categories{
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
-  width: 9%;
+  width: 11%;
 }
 .tsk---categories{
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
-  width: 8%;
+  width: 10%;
 }
 .tsk----categories{
   border: 1px solid #ccc;
