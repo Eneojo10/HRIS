@@ -61,7 +61,7 @@ function Taskdetails() {
               <h2>Task Management</h2>
               <p>Track and manage onboarding tasks across all new hires</p>
             </div>
-            <div className='task_mgt-buttons' style={{ display: 'flex', width: '35%', justifyContent: 'space-between' }}>
+            <div className='task_mgt-buttons' style={{ display: 'flex', width: '40%', justifyContent: 'space-between' }}>
               <div><button className='bulk-btn'>Bulk Actions</button></div>
               <div> <button className='bulk-btnn'>Advanced Filters</button></div>
               <div><button className='bulk--btn'>Add Task</button></div>
