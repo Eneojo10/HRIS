@@ -5687,7 +5687,17 @@ text p {
   padding-bottom: 10px;
   scroll-behavior: smooth;
 
- 
+}
+.template-form{
+  display: grid;
+  grid-auto-flow: column;       
+  grid-auto-columns: calc(50% - 10px); 
+   grid-template-rows: repeat(3, auto); 
+  gap: 20px;
+  overflow-x: auto;              
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+
 }
 .f-orm{
   width: 90%;
@@ -5769,6 +5779,25 @@ text p {
   padding: 10px 30px;
   cursor: pointer;
   border-radius: 4px;
+}
+.templates-container{
+  width: 95%;
+  margin: auto;
+}
+.templates-input input{
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+.all_depart-ment{
+  display: flex;
+  justify-content: space-between;
+}
+.all_depart-ment h4{
+  font-weight: 500;
 }
 
 
