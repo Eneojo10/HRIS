@@ -61,10 +61,10 @@ function Umanagement() {
                                     </div>
                                 </div>
                                 <div className='right_side-mgt'style={{display:'flex',width:'95%',justifyContent:'space-between'}}>
-                                    <div>
+                                    <div className='u_ac-tive'>
                                         <p>Admin</p>
                                     </div>
-                                    <div>
+                                    <div className='u_active'>
                                         <p>Active</p>
                                     </div>
                                     <div>
@@ -93,10 +93,10 @@ function Umanagement() {
                                     </div>
                                 </div>
                                 <div className='right_side-mgt'style={{display:'flex',width:'95%',justifyContent:'space-between'}}>
-                                    <div>
+                                    <div className='u-manager'>
                                         <p>Manager</p>
                                     </div>
-                                    <div>
+                                   <div className='u_active'>
                                         <p>Active</p>
                                     </div>
                                     <div>
@@ -128,7 +128,7 @@ function Umanagement() {
                                     <div className='mgt_HR'>
                                         <p>HR Specialist</p>
                                     </div>
-                                    <div>
+                                    <div className='u_active'>
                                         <p>Active</p>
                                     </div>
                                     <div>
@@ -157,11 +157,11 @@ function Umanagement() {
                                     </div>
                                 </div>
                                 <div className='right_side-mgt'style={{display:'flex',width:'95%',justifyContent:'space-between'}}>
-                                    <div>
+                                    <div className='u_employee'>
                                         <p>Employee</p>
                                     </div>
-                                    <div>
-                                        <p>Active</p>
+                                    <div className='u_inactive'>
+                                        <p>Inactive</p>
                                     </div>
                                     <div>
                                         <p>Last login: 2 hours ago</p>

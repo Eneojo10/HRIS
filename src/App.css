@@ -4064,7 +4064,7 @@ text p {
 .p-resent {
   color: #166534;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
 }
 .p-resent-late {
   color: #854d0e;
@@ -4081,7 +4081,7 @@ text p {
 .p--resent {
   color: #991b1b;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
 }
 .bsperson {
   color: #991b1b;
@@ -5057,6 +5057,7 @@ text p {
   border-radius: 8px;
   outline: none;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 .secone-input h4{
   font-weight: 500;
@@ -5068,6 +5069,7 @@ text p {
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
+  font-size: 16px;
 }
 .max-login h4{
   font-weight: 500;
@@ -5450,6 +5452,49 @@ border: 1px solid #ccc;
 .low-error h4{
   margin-top: 3px;
   color: #3c6534;
+}
+.right_side-mgt p{
+  font-size: 14px;
+}
+.u_active{
+  background-color: #dcfce7;
+  width: 16%;
+  height: 20px;
+  color: #166534;
+  text-align: center;
+  border-radius: 16px;
+}
+.u-manager{
+  background-color: #dbeafe;
+  height: 21px;
+  width: 20%;
+  color: #1e40af;
+  border-radius: 16px;
+  text-align: center;
+}
+.u_ac-tive{
+  background-color: #fee2e2;
+  width: 16%;
+  height: 20px;
+  text-align: center;
+  border-radius: 16px;
+  color: #991b3b;
+}
+.u_inactive{
+  background-color: #f3f4f6;
+  width: 20%;
+  height: 20px;
+  border-radius: 16px;
+  text-align: center;
+  color: #1f2937;
+}
+.u_employee{
+  background-color: #f3f4f6;
+  width: 21%;
+  height: 20px;
+  border-radius: 16px;
+  text-align: center;
+  color: #1f2937;
 }
 
 
