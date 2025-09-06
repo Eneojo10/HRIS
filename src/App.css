@@ -6075,7 +6075,7 @@ text p {
     margin: auto;
   }
   .login-page {
-    /* padding-top: 50px; */
+    height: 100vh;
   }
   .input-flex {
     width: 67%;
@@ -6104,7 +6104,7 @@ text p {
 
   .login-footer--mobile {
     display: flex;
-    width: 49%;
+    width: 55%;
     margin: auto;
     justify-content: space-between;
     margin-top: 10px;
