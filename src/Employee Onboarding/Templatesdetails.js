@@ -106,7 +106,7 @@ function Templatesdetails() {
           </div>
           <br />
           <div className='template-form'>
-            <div className='tsk-form-one'>
+             <div className='tsk-form-one'>
               <div className='f-orm'>
                 <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <div>
@@ -117,69 +117,126 @@ function Templatesdetails() {
                     <HiOutlineDotsHorizontal />
                   </div>
                 </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
+                
                 <div className='tsk-tsk'>
-                  {/* <div className='tsk-image'>
-                    <img src={image} alt='' />
-                  </div> */}
-                  <div>
-                    <h4>Alex Thompson</h4>
+                  <div className='tsk-imag'>
                     <p>Engineering</p>
+                  </div>
+                  <div className='temp_exe'>
+                    <p>executive</p>
+
+                  </div>
+                  <div className='temp-lead'>
+                    <p>leadership</p>
+
+                  </div>
+                  <div className='temp-one'>
+                    <p>+1</p>
                   </div>
                 </div>
                 <br />
                 <div className='tsk-date-time'>
-                  <div className='date-tsk'>
-                    <div>
-                      <SlCalender />
+                  <div className='template-tsk-icon'>
+                    <div className='date-tsk'>
+                      <div>
+                        <SlCalender />
+                      </div>
+                      <div>
+                        <p>24 days</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Due: 1/30/2024</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <FaTasks />
+                      </div>
+                      <div>
+                        <p>14 tasks</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
+                  <div className='template-tsk-iconn'>
+                    <div className='date-tsk'>
+                      <div className='temp-user' style={{ marginTop: '2px' }}>
+                        < BsPeople />
+                      </div>
+                      <div>
+                        <p>18 uses</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Est: time: 15 min</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <LiaStarHalfAltSolid />
+                      </div>
+                      <div>
+                        <p>4.6/5</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
+                  <div className='temp-stages'>
+                    <h4>Stages</h4>
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
                     <div>
-                      <IoMdTime />
+                      <p>Pre-boarding</p>
                     </div>
                     <div>
-                      <p>Stage: pre boarding</p>
+                      <p>6 tasks
+                        •
+                        5 days</p>
                     </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Day</p>
+                    </div>
+                    <div>
+                      <p>9 tasks
+                        •
+                        1 day</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                    <div>
+                      <p>First Week</p>
+                    </div>
+                    <div>
+                      <p>8 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Month</p>
+                    </div>
+                    <div>
+                      <p>5 tasks
+                        •
+                        2 weeks</p>
+                    </div>
+
                   </div>
 
                 </div>
-                <div className='tsk_bg'>
-                  <div className='verify' style={{ padding: '15px' }}>
-                    <p>Requires valid ID and work authorization documents</p>
-                  </div>
-
+                <div className='d-line'></div>
+                <div className='ann'style={{fontSize:'13px'}}>
+                  <p>created by: Ann Thompson</p>
+                  <p>Last used: 1/26/2024</p>
                 </div>
+                <br/>
+
                 <div className='tsk-list-butons'>
-                  <div>
-                    <button className='tsk-complete'>Complete</button>
-                  </div>
                   <div>
                     <button className='tsk-complete'>Edit</button>
                   </div>
                   <div>
-                    <button className='tsk-complete'>Details</button>
+                    <button className='tsk-complete'>Use</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Preview</button>
                   </div>
                 </div>
                 <br />
@@ -187,7 +244,7 @@ function Templatesdetails() {
               <br /><br />
 
             </div>
-            <div className='tsk-form-one'>
+             <div className='tsk-form-one'>
               <div className='f-orm'>
                 <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <div>
@@ -198,69 +255,126 @@ function Templatesdetails() {
                     <HiOutlineDotsHorizontal />
                   </div>
                 </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
+                
                 <div className='tsk-tsk'>
-                  {/* <div className='tsk-image'>
-                    <img src={image} alt='' />
-                  </div> */}
-                  <div>
-                    <h4>Alex Thompson</h4>
-                    <p>Engineering</p>
+                  <div className='tsk-imag_one'>
+                    <p>Product</p>
+                  </div>
+                  <div className='temp_exe'>
+                    <p>product</p>
+
+                  </div>
+                  <div className='temp-lead'>
+                    <p>strategy</p>
+
+                  </div>
+                  <div className='temp-one'>
+                    <p>+1</p>
                   </div>
                 </div>
                 <br />
                 <div className='tsk-date-time'>
-                  <div className='date-tsk'>
-                    <div>
-                      <SlCalender />
+                  <div className='template-tsk-icon'>
+                    <div className='date-tsk'>
+                      <div>
+                        <SlCalender />
+                      </div>
+                      <div>
+                        <p>24 days</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Due: 1/30/2024</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <FaTasks />
+                      </div>
+                      <div>
+                        <p>14 tasks</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
+                  <div className='template-tsk-iconn'>
+                    <div className='date-tsk'>
+                      <div className='temp-user' style={{ marginTop: '2px' }}>
+                        < BsPeople />
+                      </div>
+                      <div>
+                        <p>18 uses</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Est: time: 15 min</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <LiaStarHalfAltSolid />
+                      </div>
+                      <div>
+                        <p>4.6/5</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
+                  <div className='temp-stages'>
+                    <h4>Stages</h4>
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
                     <div>
-                      <IoMdTime />
+                      <p>Pre-boarding</p>
                     </div>
                     <div>
-                      <p>Stage: pre boarding</p>
+                      <p>6 tasks
+                        •
+                        5 days</p>
                     </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Day</p>
+                    </div>
+                    <div>
+                      <p>9 tasks
+                        •
+                        1 day</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                    <div>
+                      <p>First Week</p>
+                    </div>
+                    <div>
+                      <p>8 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Month</p>
+                    </div>
+                    <div>
+                      <p>5 tasks
+                        •
+                        2 weeks</p>
+                    </div>
+
                   </div>
 
                 </div>
-                <div className='tsk_bg'>
-                  <div className='verify' style={{ padding: '15px' }}>
-                    <p>Requires valid ID and work authorization documents</p>
-                  </div>
-
+                <div className='d-line'></div>
+                <div className='ann'style={{fontSize:'13px'}}>
+                  <p>created by: Ann Thompson</p>
+                  <p>Last used: 1/26/2024</p>
                 </div>
+                <br/>
+
                 <div className='tsk-list-butons'>
-                  <div>
-                    <button className='tsk-complete'>Complete</button>
-                  </div>
                   <div>
                     <button className='tsk-complete'>Edit</button>
                   </div>
                   <div>
-                    <button className='tsk-complete'>Details</button>
+                    <button className='tsk-complete'>Use</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Preview</button>
                   </div>
                 </div>
                 <br />
@@ -268,83 +382,137 @@ function Templatesdetails() {
               <br /><br />
 
             </div>
-            <div className='tsk-form-one'>
+             <div className='tsk-form-one'>
               <div className='f-orm'>
                 <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <div>
                     <h3>Sales Representative Onboarding</h3>
-                    <p>Sales-focused template with CRM training, product knowledge, and territory assignment
-
-
-                    </p>
+                    <p>Sales-focused template with CRM training, product knowledge, and territory assignment</p>
                   </div>
                   <div>
                     <HiOutlineDotsHorizontal />
                   </div>
                 </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
+                
                 <div className='tsk-tsk'>
-                  {/* <div className='tsk-image'>
-                    <img src={image} alt='' />
-                  </div> */}
-                  <div>
-                    <h4>Alex Thompson</h4>
-                    <p>Engineering</p>
+                  <div className='tsk-imag-two'>
+                    <p>Sales</p>
+                  </div>
+                  <div className='temp_exe'>
+                    <p>sales</p>
+
+                  </div>
+                  <div className='temp-lead'>
+                    <p>crm</p>
+
+                  </div>
+                  <div className='temp-one'>
+                    <p>+1</p>
                   </div>
                 </div>
                 <br />
                 <div className='tsk-date-time'>
-                  <div className='date-tsk'>
-                    <div>
-                      <SlCalender />
+                  <div className='template-tsk-icon'>
+                    <div className='date-tsk'>
+                      <div>
+                        <SlCalender />
+                      </div>
+                      <div>
+                        <p>24 days</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Due: 1/30/2024</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <FaTasks />
+                      </div>
+                      <div>
+                        <p>14 tasks</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
+                  <div className='template-tsk-iconn'>
+                    <div className='date-tsk'>
+                      <div className='temp-user' style={{ marginTop: '2px' }}>
+                        < BsPeople />
+                      </div>
+                      <div>
+                        <p>18 uses</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Est: time: 15 min</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <LiaStarHalfAltSolid />
+                      </div>
+                      <div>
+                        <p>4.6/5</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
+                  <div className='temp-stages'>
+                    <h4>Stages</h4>
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
                     <div>
-                      <IoMdTime />
+                      <p>Pre-boarding</p>
                     </div>
                     <div>
-                      <p>Stage: pre boarding</p>
+                      <p>6 tasks
+                        •
+                        5 days</p>
                     </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Day</p>
+                    </div>
+                    <div>
+                      <p>9 tasks
+                        •
+                        1 day</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                    <div>
+                      <p>First Week</p>
+                    </div>
+                    <div>
+                      <p>8 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Month</p>
+                    </div>
+                    <div>
+                      <p>5 tasks
+                        •
+                        2 weeks</p>
+                    </div>
+
                   </div>
 
                 </div>
-                <div className='tsk_bg'>
-                  <div className='verify' style={{ padding: '15px' }}>
-                    <p>Requires valid ID and work authorization documents</p>
-                  </div>
-
+                <div className='d-line'></div>
+                <div className='ann'style={{fontSize:'13px'}}>
+                  <p>created by: Ann Thompson</p>
+                  <p>Last used: 1/26/2024</p>
                 </div>
+                <br/>
+
                 <div className='tsk-list-butons'>
-                  <div>
-                    <button className='tsk-complete'>Complete</button>
-                  </div>
                   <div>
                     <button className='tsk-complete'>Edit</button>
                   </div>
                   <div>
-                    <button className='tsk-complete'>Details</button>
+                    <button className='tsk-complete'>Use</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Preview</button>
                   </div>
                 </div>
                 <br />
@@ -352,7 +520,7 @@ function Templatesdetails() {
               <br /><br />
 
             </div>
-            <div className='tsk-form-one'>
+             <div className='tsk-form-one'>
               <div className='f-orm'>
                 <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <div>
@@ -363,69 +531,402 @@ function Templatesdetails() {
                     <HiOutlineDotsHorizontal />
                   </div>
                 </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
+                
                 <div className='tsk-tsk'>
-                  {/* <div className='tsk-image'>
-                    <img src={image} alt='' />
-                  </div> */}
-                  <div>
-                    <h4>Alex Thompson</h4>
-                    <p>Engineering</p>
+                  <div className='tsk-imag-four'>
+                    <p>Design</p>
+                  </div>
+                  <div className='temp_exe'>
+                    <p>design</p>
+
+                  </div>
+                  <div className='temp-lead'>
+                    <p>creative</p>
+
+                  </div>
+                  <div className='temp-one'>
+                    <p>+1</p>
                   </div>
                 </div>
                 <br />
                 <div className='tsk-date-time'>
-                  <div className='date-tsk'>
-                    <div>
-                      <SlCalender />
+                  <div className='template-tsk-icon'>
+                    <div className='date-tsk'>
+                      <div>
+                        <SlCalender />
+                      </div>
+                      <div>
+                        <p>24 days</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Due: 1/30/2024</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <FaTasks />
+                      </div>
+                      <div>
+                        <p>14 tasks</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
+                  <div className='template-tsk-iconn'>
+                    <div className='date-tsk'>
+                      <div className='temp-user' style={{ marginTop: '2px' }}>
+                        < BsPeople />
+                      </div>
+                      <div>
+                        <p>18 uses</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Est: time: 15 min</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <LiaStarHalfAltSolid />
+                      </div>
+                      <div>
+                        <p>4.6/5</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
+                  <div className='temp-stages'>
+                    <h4>Stages</h4>
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
                     <div>
-                      <IoMdTime />
+                      <p>Pre-boarding</p>
                     </div>
                     <div>
-                      <p>Stage: pre boarding</p>
+                      <p>6 tasks
+                        •
+                        5 days</p>
                     </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Day</p>
+                    </div>
+                    <div>
+                      <p>9 tasks
+                        •
+                        1 day</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                    <div>
+                      <p>First Week</p>
+                    </div>
+                    <div>
+                      <p>8 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Month</p>
+                    </div>
+                    <div>
+                      <p>5 tasks
+                        •
+                        2 weeks</p>
+                    </div>
+
                   </div>
 
                 </div>
-                <div className='tsk_bg'>
-                  <div className='verify' style={{ padding: '15px' }}>
-                    <p>Requires valid ID and work authorization documents</p>
-                  </div>
-
+                <div className='d-line'></div>
+                <div className='ann'style={{fontSize:'13px'}}>
+                  <p>created by: Ann Thompson</p>
+                  <p>Last used: 1/26/2024</p>
                 </div>
+                <br/>
+
                 <div className='tsk-list-butons'>
-                  <div>
-                    <button className='tsk-complete'>Complete</button>
-                  </div>
                   <div>
                     <button className='tsk-complete'>Edit</button>
                   </div>
                   <div>
-                    <button className='tsk-complete'>Details</button>
+                    <button className='tsk-complete'>Use</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Preview</button>
+                  </div>
+                </div>
+                <br />
+              </div>
+              <br /><br />
+
+            </div>
+             <div className='tsk-form-one'>
+              <div className='f-orm'>
+                <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div>
+                    <h3>Marketing Specialist Onboarding</h3>
+                    <p>Marketing-focused template with brand guidelines, campaign tools, and content strategy</p>
+                  </div>
+                  <div>
+                    <HiOutlineDotsHorizontal />
+                  </div>
+                </div><br />
+                
+                <div className='tsk-tsk'>
+                  <div className='tsk-imag-five'>
+                    <p>Marketing</p>
+                  </div>
+                  <div className='temp_exe'>
+                    <p>marketing</p>
+
+                  </div>
+                  <div className='temp-lead'>
+                    <p>brand</p>
+
+                  </div>
+                  <div className='temp-one'>
+                    <p>+1</p>
+                  </div>
+                </div>
+                <br />
+                <div className='tsk-date-time'>
+                  <div className='template-tsk-icon'>
+                    <div className='date-tsk'>
+                      <div>
+                        <SlCalender />
+                      </div>
+                      <div>
+                        <p>24 days</p>
+                      </div>
+                    </div>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <FaTasks />
+                      </div>
+                      <div>
+                        <p>14 tasks</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='template-tsk-iconn'>
+                    <div className='date-tsk'>
+                      <div className='temp-user' style={{ marginTop: '2px' }}>
+                        < BsPeople />
+                      </div>
+                      <div>
+                        <p>18 uses</p>
+                      </div>
+                    </div>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <LiaStarHalfAltSolid />
+                      </div>
+                      <div>
+                        <p>4.6/5</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='temp-stages'>
+                    <h4>Stages</h4>
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>Pre-boarding</p>
+                    </div>
+                    <div>
+                      <p>6 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Day</p>
+                    </div>
+                    <div>
+                      <p>9 tasks
+                        •
+                        1 day</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                    <div>
+                      <p>First Week</p>
+                    </div>
+                    <div>
+                      <p>8 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Month</p>
+                    </div>
+                    <div>
+                      <p>5 tasks
+                        •
+                        2 weeks</p>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className='d-line'></div>
+                <div className='ann'style={{fontSize:'13px'}}>
+                  <p>created by: Ann Thompson</p>
+                  <p>Last used: 1/26/2024</p>
+                </div>
+                <br/>
+
+                <div className='tsk-list-butons'>
+                  <div>
+                    <button className='tsk-complete'>Edit</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Use</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Preview</button>
+                  </div>
+                </div>
+                <br />
+              </div>
+              <br /><br />
+
+            </div>
+             <div className='tsk-form-one'>
+              <div className='f-orm'>
+                <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div>
+                    <h3>Executive Onboarding</h3>
+                    <p>Leadership-focused template with strategic briefings and stakeholder introductions</p>
+                  </div>
+                  <div>
+                    <HiOutlineDotsHorizontal />
+                  </div>
+                </div><br />
+                
+                <div className='tsk-tsk'>
+                  <div className='tsk-imag-six'>
+                    <p>Executive</p>
+                  </div>
+                  <div className='temp_exe'>
+                    <p>executive</p>
+
+                  </div>
+                  <div className='temp-lead'>
+                    <p>leadership</p>
+
+                  </div>
+                  <div className='temp-one'>
+                    <p>+1</p>
+                  </div>
+                </div>
+                <br />
+                <div className='tsk-date-time'>
+                  <div className='template-tsk-icon'>
+                    <div className='date-tsk'>
+                      <div>
+                        <SlCalender />
+                      </div>
+                      <div>
+                        <p>24 days</p>
+                      </div>
+                    </div>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <FaTasks />
+                      </div>
+                      <div>
+                        <p>14 tasks</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='template-tsk-iconn'>
+                    <div className='date-tsk'>
+                      <div className='temp-user' style={{ marginTop: '2px' }}>
+                        < BsPeople />
+                      </div>
+                      <div>
+                        <p>18 uses</p>
+                      </div>
+                    </div>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <LiaStarHalfAltSolid />
+                      </div>
+                      <div>
+                        <p>4.6/5</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='temp-stages'>
+                    <h4>Stages</h4>
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>Pre-boarding</p>
+                    </div>
+                    <div>
+                      <p>6 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Day</p>
+                    </div>
+                    <div>
+                      <p>9 tasks
+                        •
+                        1 day</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                    <div>
+                      <p>First Week</p>
+                    </div>
+                    <div>
+                      <p>8 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Month</p>
+                    </div>
+                    <div>
+                      <p>5 tasks
+                        •
+                        2 weeks</p>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className='d-line'></div>
+                <div className='ann'style={{fontSize:'13px'}}>
+                  <p>created by: Ann Thompson</p>
+                  <p>Last used: 1/26/2024</p>
+                </div>
+                <br/>
+
+                <div className='tsk-list-butons'>
+                  <div>
+                    <button className='tsk-complete'>Edit</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Use</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Preview</button>
                   </div>
                 </div>
                 <br />
@@ -437,76 +938,133 @@ function Templatesdetails() {
               <div className='f-orm'>
                 <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <div>
-                    <h3>Marketing Specialist Onboarding</h3>
-                    <p>Marketing-focused template with brand guidelines, campaign tools, and content strategy</p>
+                    <h3>Remote Employee Onboarding</h3>
+                    <p>Specialized template for remote workers with virtual setup and communication protocols</p>
                   </div>
                   <div>
                     <HiOutlineDotsHorizontal />
                   </div>
                 </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
+                
                 <div className='tsk-tsk'>
-                  {/* <div className='tsk-image'>
-                    <img src={image} alt='' />
-                  </div> */}
-                  <div>
-                    <h4>Alex Thompson</h4>
-                    <p>Engineering</p>
+                  <div className='tsk-imag-sv'>
+                    <p>Executive</p>
+                  </div>
+                  <div className='temp_exe'>
+                    <p>executive</p>
+
+                  </div>
+                  <div className='temp-lead'>
+                    <p>leadership</p>
+
+                  </div>
+                  <div className='temp-one'>
+                    <p>+1</p>
                   </div>
                 </div>
                 <br />
                 <div className='tsk-date-time'>
-                  <div className='date-tsk'>
-                    <div>
-                      <SlCalender />
+                  <div className='template-tsk-icon'>
+                    <div className='date-tsk'>
+                      <div>
+                        <SlCalender />
+                      </div>
+                      <div>
+                        <p>24 days</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Due: 1/30/2024</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <FaTasks />
+                      </div>
+                      <div>
+                        <p>14 tasks</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
+                  <div className='template-tsk-iconn'>
+                    <div className='date-tsk'>
+                      <div className='temp-user' style={{ marginTop: '2px' }}>
+                        < BsPeople />
+                      </div>
+                      <div>
+                        <p>18 uses</p>
+                      </div>
                     </div>
-                    <div>
-                      <p>Est: time: 15 min</p>
+                    <div className='date-tsk'>
+                      <div className='f-task' style={{ marginTop: '3px' }}>
+                        <LiaStarHalfAltSolid />
+                      </div>
+                      <div>
+                        <p>4.6/5</p>
+                      </div>
                     </div>
                   </div>
-                  <div className='date-tsk'>
+                  <div className='temp-stages'>
+                    <h4>Stages</h4>
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
                     <div>
-                      <IoMdTime />
+                      <p>Pre-boarding</p>
                     </div>
                     <div>
-                      <p>Stage: pre boarding</p>
+                      <p>6 tasks
+                        •
+                        5 days</p>
                     </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Day</p>
+                    </div>
+                    <div>
+                      <p>9 tasks
+                        •
+                        1 day</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                    <div>
+                      <p>First Week</p>
+                    </div>
+                    <div>
+                      <p>8 tasks
+                        •
+                        5 days</p>
+                    </div>
+
+                  </div>
+                  <div className='stage-boarding'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div>
+                      <p>First Month</p>
+                    </div>
+                    <div>
+                      <p>5 tasks
+                        •
+                        2 weeks</p>
+                    </div>
+
                   </div>
 
                 </div>
-                <div className='tsk_bg'>
-                  <div className='verify' style={{ padding: '15px' }}>
-                    <p>Requires valid ID and work authorization documents</p>
-                  </div>
-
+                <div className='d-line'></div>
+                <div className='ann'style={{fontSize:'13px'}}>
+                  <p>created by: Ann Thompson</p>
+                  <p>Last used: 1/26/2024</p>
                 </div>
+                <br/>
+
                 <div className='tsk-list-butons'>
-                  <div>
-                    <button className='tsk-complete'>Complete</button>
-                  </div>
                   <div>
                     <button className='tsk-complete'>Edit</button>
                   </div>
                   <div>
-                    <button className='tsk-complete'>Details</button>
+                    <button className='tsk-complete'>Use</button>
+                  </div>
+                  <div>
+                    <button className='tsk-complete'>Preview</button>
                   </div>
                 </div>
                 <br />
@@ -525,192 +1083,17 @@ function Templatesdetails() {
                     <HiOutlineDotsHorizontal />
                   </div>
                 </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
-                <div className='tsk-tsk'>
-                  {/* <div className='tsk-image'>
-                    <img src={image} alt='' />
-                  </div> */}
-                  <div>
-                    <h4>Alex Thompson</h4>
-                    <p>Engineering</p>
-                  </div>
-                </div>
-                <br />
-                <div className='tsk-date-time'>
-                  <div className='date-tsk'>
-                    <div>
-                      <SlCalender />
-                    </div>
-                    <div>
-                      <p>Due: 1/30/2024</p>
-                    </div>
-                  </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
-                    </div>
-                    <div>
-                      <p>Est: time: 15 min</p>
-                    </div>
-                  </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
-                    </div>
-                    <div>
-                      <p>Stage: pre boarding</p>
-                    </div>
-                  </div>
-
-                </div>
-                <div className='tsk_bg'>
-                  <div className='verify' style={{ padding: '15px' }}>
-                    <p>Requires valid ID and work authorization documents</p>
-                  </div>
-
-                </div>
-                <div className='tsk-list-butons'>
-                  <div>
-                    <button className='tsk-complete'>Complete</button>
-                  </div>
-                  <div>
-                    <button className='tsk-complete'>Edit</button>
-                  </div>
-                  <div>
-                    <button className='tsk-complete'>Details</button>
-                  </div>
-                </div>
-                <br />
-              </div>
-              <br /><br />
-
-            </div>
-            <div className='tsk-form-one'>
-              <div className='f-orm'>
-                <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <div>
-                    <h3>Remote Employee Onboarding</h3>
-                    <p>Specialized template for remote workers with virtual setup and communication protocols
-
-
-                    </p>
-                  </div>
-                  <div>
-                    <HiOutlineDotsHorizontal />
-                  </div>
-                </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
-                <div className='tsk-tsk'>
-                  {/* <div className='tsk-image'>
-                    <img src={image} alt='' />
-                  </div> */}
-                  <div>
-                    <h4>Alex Thompson</h4>
-                    <p>Engineering</p>
-                  </div>
-                </div>
-                <br />
-                <div className='tsk-date-time'>
-                  <div className='date-tsk'>
-                    <div>
-                      <SlCalender />
-                    </div>
-                    <div>
-                      <p>Due: 1/30/2024</p>
-                    </div>
-                  </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
-                    </div>
-                    <div>
-                      <p>Est: time: 15 min</p>
-                    </div>
-                  </div>
-                  <div className='date-tsk'>
-                    <div>
-                      <IoMdTime />
-                    </div>
-                    <div>
-                      <p>Stage: pre boarding</p>
-                    </div>
-                  </div>
-
-                </div>
-                <div className='tsk_bg'>
-                  <div className='verify' style={{ padding: '15px' }}>
-                    <p>Requires valid ID and work authorization documents</p>
-                  </div>
-
-                </div>
-                <div className='tsk-list-butons'>
-                  <div>
-                    <button className='tsk-complete'>Complete</button>
-                  </div>
-                  <div>
-                    <button className='tsk-complete'>Edit</button>
-                  </div>
-                  <div>
-                    <button className='tsk-complete'>Details</button>
-                  </div>
-                </div>
-                <br />
-              </div>
-              <br /><br />
-
-            </div>
-            <div className='tsk-form-one'>
-              <div className='f-orm'>
-                <div className='f-tsk' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <div>
-                    <h3>Executive Onboarding</h3>
-                    <p>Leadership-focused template with strategic briefings and stakeholder introductions</p>
-                  </div>
-                  <div>
-                    <HiOutlineDotsHorizontal />
-                  </div>
-                </div><br />
-                <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
-                    <p>Documentation</p>
-                  </div>
-                  <div>
-                    <p>high priority</p>
-                  </div>
-                  <div>
-                    <p>Pending</p>
-                  </div>
-                </div>
+               
                 <div className='tsk-tsk'>
                   <div className='tsk-imag'>
-                    <p>Executive</p>
+                    <p>Analytics</p>
                   </div>
                   <div className='temp_exe'>
-                    <p>executive</p>
+                    <p>data</p>
 
                   </div>
                   <div className='temp-lead'>
-                    <p>leadership</p>
+                    <p>analytics</p>
 
                   </div>
                   <div className='temp-one'>

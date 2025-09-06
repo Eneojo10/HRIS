@@ -5847,16 +5847,69 @@ text p {
   margin-bottom: 20px;
 }
 .tsk-imag{
+  background-color: #dbeafe;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+  color: #1e40af;
+}
+.tsk-imag_one{
+  background-color: #f3e8ff;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+  color: #6b21a8;
+}
+.tsk-imag-two{
+  background-color: #dcfce7;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+  color: #166534;
+}
+.tsk-imag-four{
+  background-color: #fce7f3;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+  color: #9d174d;
+}
+.tsk-imag-five{
+  background-color: #ffedd5;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+  color: #9a3412;
+}
+.tsk-imag-six{
   background-color: #fee2e2;
   height: 30px;
   width: 20%;
   text-align: center;
   border-radius: 16px;
-  color: #9c312e;
+  color: #991b1b;
 }
-.tsk-imag p{
+.tsk-imag-sv{
+  background-color: #f3f4f6;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+  color: #1f2937;
+}
+.tsk-imag p, .tsk-imag-two p,
+.tsk-imag_one p, .tsk-imag-four p,
+.tsk-imag-five p, .tsk-imag-six p,
+.tsk-imag-sv p
+{
   padding-top: 5px;
 }
+
 .tsk-date-time {
   margin-bottom: 15px;
 }
