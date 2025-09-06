@@ -5,6 +5,7 @@ import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import image from '../Images/user2.jpg'
 import { SlCalender } from "react-icons/sl";
 import { IoMdTime } from "react-icons/io";
+import { LuBuilding2 } from "react-icons/lu";
 
 function Taskdetails() {
   const cards = [
@@ -237,7 +238,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>
@@ -318,7 +319,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>
@@ -399,7 +400,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>
@@ -480,7 +481,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>
@@ -561,7 +562,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>
@@ -642,7 +643,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>
@@ -726,7 +727,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>
@@ -807,7 +808,7 @@ function Taskdetails() {
                   </div>
                   <div className='date-tsk'>
                     <div>
-                      <IoMdTime />
+                      <LuBuilding2 />
                     </div>
                     <div>
                       <p>Stage: pre boarding</p>

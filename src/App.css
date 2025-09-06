@@ -5774,7 +5774,7 @@ text p {
 }
 .tsk-list-butons {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 .tsk-complete {
   background: transparent;
