@@ -5744,7 +5744,22 @@ text p {
 }
 .tsk-tsk {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+}
+.temp_exe{
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 16px;
+}
+.temp-lead{
+  border: 1px solid #ccc;
+  padding: 5px 11px;
+  border-radius: 16px;
+}
+.temp-one{
+  border: 1px solid #ccc;
+  padding: 3px 10px;
+  border-radius: 16px;
 }
 .tsk-tsk p {
   font-size: 14px;
@@ -5765,6 +5780,17 @@ text p {
   height: 55px;
   width: 100%;
   margin-bottom: 20px;
+}
+.tsk-imag{
+  background-color: #fee2e2;
+  height: 30px;
+  width: 20%;
+  text-align: center;
+  border-radius: 16px;
+  color: #9c312e;
+}
+.tsk-imag p{
+  padding-top: 5px;
 }
 .tsk-date-time {
   margin-bottom: 15px;
@@ -5801,6 +5827,23 @@ text p {
 }
 .all_depart-ment h4 {
   font-weight: 500;
+}
+.template-tsk-icon{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.template-tsk-iconn{
+  display: flex;
+  justify-content: space-between;
+  width: 56%;
+}
+.temp-stages h4{
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.stage-boarding p{
+  color: #6b7280;
 }
 
 /* Responsive Design */

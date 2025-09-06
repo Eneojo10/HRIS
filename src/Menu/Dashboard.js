@@ -8,7 +8,7 @@ import { LiaClipboardListSolid } from "react-icons/lia";
 import { GoPeople } from "react-icons/go";
 import { BsPersonPlus } from "react-icons/bs";
 import { VscSettingsGear } from "react-icons/vsc";
-import { FiDollarSign } from "react-icons/fi";
+import { BsPersonCheckFill } from "react-icons/bs";
 import { SiSimpleanalytics } from "react-icons/si";
 import { PiMedalLight } from "react-icons/pi";
 import { SiClickhouse } from "react-icons/si";
@@ -76,7 +76,7 @@ function Dashboard() {
                         <a href='/onboarding' className='a-line'>
                             <div className='list-item4'>
                                 <div className='icons'>
-                                    <LiaClipboardListSolid />
+                                    <BsPersonCheckFill />
                                 </div>
                                 <div className='icons_'>
                                     <span>Onboarding</span>
