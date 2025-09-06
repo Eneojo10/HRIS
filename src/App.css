@@ -5769,12 +5769,48 @@ text p {
   scroll-behavior: smooth;
 
 
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
   -ms-overflow-style: none;
 }
 
 .template-form::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+  display: none; 
+}
+
+.dee-one{
+  background-color: #dbeafe;
+  width: 32%;
+  height: 30px;
+  text-align: center;
+  border-radius: 16px;
+}
+.dee-one p{
+  margin-top: 6px;
+  color: #1e4db9;
+  font-weight: 600;
+}
+.dee-two{
+  background-color: #fee2e2;
+  height: 30px;
+  width: 29%;
+  text-align: center;
+  border-radius: 16px;
+}
+.dee-two p{
+  margin-top: 5px;
+  color: #a61b1b;
+  font-weight: 600;
+}
+.dee-three{
+  background-color: #f3f4f6;
+  width: 23%;
+  height: 30px;
+  text-align: center;
+  border-radius: 16px;
+}
+.dee-three p{
+  margin-top: 4px;
+  font-weight: 600;
 }
 .f-orm {
   width: 90%;
@@ -5790,6 +5826,7 @@ text p {
 .ff-tsk {
   display: flex;
   justify-content: space-between;
+  width: 85%;
 }
 .ff-tsk p {
   font-size: 14px;
@@ -5934,6 +5971,7 @@ text p {
   padding: 10px 30px;
   cursor: pointer;
   border-radius: 4px;
+  font-size: 16px;
 }
 .templates-container {
   width: 95%;
@@ -5991,6 +6029,7 @@ text p {
     width: 67%;
     margin: auto;
     margin-top: 10px;
+   
   }
   .domain-text {
     width: 65%;
@@ -6031,4 +6070,50 @@ text p {
   .login-footer {
     width: 40%;
   }
+  .login-container {
+    width: 100%;
+    margin: auto;
+  }
+  .login-page {
+    /* padding-top: 50px; */
+  }
+  .input-flex {
+    width: 67%;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .domain-text {
+    width: 65%;
+  }
+  .login-footer-box {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .login-footer-logo {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .iput-flex-1 {
+    width: 100%;
+  }
+  .iput-flex-1 input {
+    width: 100%;
+  }
+
+  .login-footer--mobile {
+    display: flex;
+    width: 49%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .login-input {
+    font-size: 18px;
+  }
+  .back-txt {
+    font-size: 16px;
+  }
+  
 }

@@ -199,13 +199,13 @@ function Taskdetails() {
                   </div>
                 </div><br />
                 <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                  <div>
+                  <div className='dee-one'>
                     <p>Documentation</p>
                   </div>
-                  <div>
+                  <div className='dee-two'>
                     <p>high priority</p>
                   </div>
-                  <div>
+                  <div className='dee-three'>
                     <p>Pending</p>
                   </div>
                 </div>
