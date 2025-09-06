@@ -76,31 +76,31 @@ function Templatesdetails() {
             <input type="text" placeholder='Search templates by name or description...'></input>
           </div><br />
           <div className='all_depart-ment'>
-            <div>
+            <div className='line-one'>
               <h4>All Departments</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>Engineering</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>Product</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>Sales</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>Design</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>Marketing</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>Analytics</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>All Departments</h4>
             </div>
-            <div>
+            <div className='line-two'>
               <h4>Executive</h4>
             </div>
           </div>

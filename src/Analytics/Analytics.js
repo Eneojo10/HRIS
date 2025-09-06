@@ -53,12 +53,12 @@ function Analytics() {
 
                 <div className='analytics-bg'>
                     <div className='sub-analytics'>
-                        <div>
+                        <div className='font-hfour'>
                             <h4
                                 onClick={() => handleTabClick('Executive Overview')}
                                 style={{
                                     cursor: 'pointer',
-                                    color: activeTab === 'Executive Overview' ? '#58595aff' : '#58595aff',
+                                    color: activeTab === 'Executive Overview' ? '#58595aff' : '#58595aff', 
                                 }}
                             >
                                 Executive Overview
