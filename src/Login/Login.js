@@ -54,6 +54,7 @@ function Login() {
                                     </div>
                                 </div>
                             </div>
+                            <br/>
 
                             {/* FOOTER for front side */}
                             <div className='login-footer-box'>
