@@ -5657,19 +5657,19 @@ text p {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
-  width: 11%;
+  /* width: 11%; */
 }
 .tsk---categories {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
-  width: 9%;
+  /* width: 9%; */
 }
 .tsk----categories {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
-  width: 8%;
+  /* width: 8%; */
 }
 .sub-options {
   display: flex;
