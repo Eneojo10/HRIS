@@ -854,6 +854,7 @@
 }
 .rem-icon {
   font-size: 20px;
+  color: black;
 }
 .reminder-bg {
   border: 1px solid #ccc;
@@ -869,10 +870,16 @@
   margin: auto;
   margin-top: 6px;
 }
+.boarding-flex_ h3,
+.reminder-flex h3,
+.bg_scheduleflex h3{
+  font-weight: 600;
+  color: black;
+}
 .nav-boarding-border {
   border: 1px solid #ccc;
   height: 38px;
-  width: 15%;
+  width: 12%;
   border-radius: 8px;
 }
 .bg_schedule {
@@ -5651,7 +5658,7 @@ text p {
   border: 1px solid #ccc;
   padding: 10px 10px;
   border-radius: 8px;
-  width: 12%;
+  /* width: 12%; */
 }
 .tsk--categories {
   border: 1px solid #ccc;
