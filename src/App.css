@@ -5889,7 +5889,7 @@ text p {
 .all_depart-ment {
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 97%;
 }
 .all_depart-ment h4 {
   font-weight: 500;
@@ -5913,7 +5913,7 @@ text p {
 }
 .line-one, .line-two{
   border: 1px solid #ccc;
-  padding: 10px 10px;
+  padding: 8px 10px;
   border-radius: 16px;
 }
 
