@@ -5967,7 +5967,7 @@ text p {
 .line-one, .line-two{
   border: 1px solid #ccc;
   padding: 8px 10px;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 /* Responsive Design */
