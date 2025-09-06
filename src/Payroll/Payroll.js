@@ -11,6 +11,7 @@ import { IoPeopleOutline } from "react-icons/io5";
 import { IoCalendarClear } from 'react-icons/io5';
 import { IoTriangleOutline } from 'react-icons/io5';
 import { CiSettings } from "react-icons/ci";
+import { BiError } from "react-icons/bi";
 
 function Payroll() {
 
@@ -71,7 +72,7 @@ function Payroll() {
                                     <div className='pay_rollcards' style={{ width: '90%', margin: 'auto', marginTop: '10px' }}>
                                         <div className='payrollcards' style={{ display: 'flex', justifyContent: 'space-between' }}>
                                             <div className='prollcards' style={{ display: 'flex', width: '65%', gap: '10px' }}>
-                                                <div className='payroll-naira'>
+                                                <div className='payroll-naira'style={{color:'green'}}>
                                                     <TbCurrencyNaira />
                                                 </div>
                                                 <div className='payroll-total' style={{ marginTop: '3px' }}>
@@ -94,7 +95,7 @@ function Payroll() {
                                     <div className='pay_rollcards' style={{ width: '90%', margin: 'auto', marginTop: '10px' }}>
                                         <div className='payrollcards' style={{ display: 'flex', justifyContent: 'space-between' }}>
                                             <div className='prollcards' style={{ display: 'flex', width: '65%', gap: '10px' }}>
-                                                <div className='payroll-naira'>
+                                                <div className='payroll-naira'style={{color:'blue'}}>
                                                     <IoPeopleOutline />
                                                 </div>
                                                 <div className='payroll-total' style={{ marginTop: '3px' }}>
@@ -117,7 +118,7 @@ function Payroll() {
                                     <div className='pay_rollcards' style={{ width: '90%', margin: 'auto', marginTop: '10px' }}>
                                         <div className='payrollcards' style={{ display: 'flex', justifyContent: 'space-between' }}>
                                             <div className='prollcards' style={{ display: 'flex', width: '65%', gap: '10px' }}>
-                                                <div className='payroll-naira'>
+                                                <div className='payroll-naira'style={{color:'purple'}}>
                                                     <IoCalendarClear />
                                                 </div>
                                                 <div className='payroll-total' style={{ marginTop: '3px' }}>
@@ -140,8 +141,8 @@ function Payroll() {
                                     <div className='pay_rollcards' style={{ width: '90%', margin: 'auto', marginTop: '10px' }}>
                                         <div className='payrollcards' style={{ display: 'flex', justifyContent: 'space-between' }}>
                                             <div className='prollcards' style={{ display: 'flex', width: '65%', gap: '10px' }}>
-                                                <div className='payroll-naira'>
-                                                    <IoTriangleOutline />
+                                                <div className='payroll-naira' style={{color:'red'}}>
+                                                    <BiError />
                                                 </div>
                                                 <div className='payroll-total' style={{ marginTop: '3px' }}>
                                                     <h3>Pending Reviews</h3>
