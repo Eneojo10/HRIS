@@ -5,9 +5,10 @@ import Feedback from './Feedback';
 import Performanceanalytics from './Performanceanalytics';
 import Goals from './Goals';
 import { BsPlus } from "react-icons/bs";
+import { PiExport } from "react-icons/pi";
 
 function Performance() {
-    const [activeTab, setActiveTab] = useState('Performance'); // Default tab
+    const [activeTab, setActiveTab] = useState('Performance'); 
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
@@ -28,13 +29,20 @@ function Performance() {
                             </span>
                         </div>
                         <div className='performance-right'>
-                            <div className='er-export'><h4>Export Report</h4></div>
+                            <div className='exp-bg-bg'>
+                                <div className='exp-exp'>
+                                    <div className='exp-exp-icon'>
+                                        <PiExport />
+                                    </div>
+                                    <div className='er-export'><h4>Export Report</h4></div>
+                                </div>
+                            </div>
                             <div className='cycle--flex'>
                                 <div className='cycle-flex' style={{ display: 'flex', gap: '10px' }}>
                                     <div className='cycle-plus'>
                                         <BsPlus />
                                     </div>
-                                    <div><h4>New Review Cycle</h4></div>
+                                    <div className='chfour'><h4>New Review Cycle</h4></div>
                                 </div>
 
                             </div>

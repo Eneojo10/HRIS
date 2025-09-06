@@ -44,7 +44,7 @@ function Leave() {
                                         <div className='leave--nav-icon'>
                                             <GoPlus />
                                         </div>
-                                        <h4>New Request</h4>
+                                        <span>New Request</span>
                                     </div>
 
                                 </div>
@@ -52,7 +52,7 @@ function Leave() {
 
                         </div>
 
-                    </div><br /><br />
+                    </div><br />
                     <div className='d-line_'></div>
                     <div className='leave_background-color'>
                         <div className='leave_cards'>

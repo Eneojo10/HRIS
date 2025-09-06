@@ -36,7 +36,7 @@ function Settings() {
                             </div>
                             <div className='settings__nav'>
                                 <div className='set-tings-input'>
-                                    <input type='text' placeholder='Search settings'></input>
+                                    <input type='text' placeholder='Search settings...'></input>
                                 </div>
                                 <div className='set1'>
                                     <div className='set1-nav'>
@@ -62,7 +62,7 @@ function Settings() {
                                         <div className='set3-icon'>
                                             <GoPlus />
                                         </div>
-                                        <h4>Add User</h4>
+                                        <span>Add User</span>
                                     </div>
                                 </div>
                             </div>

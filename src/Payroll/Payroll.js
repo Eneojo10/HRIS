@@ -5,11 +5,12 @@ import Paydetails from './Paydetails';
 import Employeedetails from './Employeedetails';
 import Ticsdetails from './Ticsdetails';
 import Reportdetails from './Reportdetails';
-import PayrollDetails from './PayrollDetails';
+import { PiExport } from "react-icons/pi";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { IoPeopleOutline } from "react-icons/io5";
 import { IoCalendarClear } from 'react-icons/io5';
 import { IoTriangleOutline } from 'react-icons/io5';
+import { CiSettings } from "react-icons/ci";
 
 function Payroll() {
 
@@ -34,18 +35,28 @@ function Payroll() {
                                 <span>Manage employee compensation and payroll processing</span>
                             </div>
                             <div className='pay_navlist'>
-                                <div>
-                                    <span className='np1'>Export</span>
+                                <div className='np1'>
+                                    <div className='np__flex'>
+                                        <div className='npi-con'>
+                                            <PiExport />
+                                        </div>
+                                        <h4>Export</h4>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span className='np1'>Settings</span>
+                                 <div className='np1'>
+                                    <div className='np__flex'>
+                                        <div className='npi-con'>
+                                            <CiSettings />
+                                        </div>
+                                        <h4>Settings</h4>
+                                    </div>
                                 </div>
                                 <div className='np'>
                                     <div className='np-flex'>
                                         <div className='np_icon'>
                                             <GoPlus />
                                         </div>
-                                        <span>New Payroll</span>
+                                        <h4>New Payroll</h4>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +82,7 @@ function Payroll() {
                                                 <p>+12.5%</p>
                                             </div>
 
-                                        </div><br/>
+                                        </div><br />
                                         <div>
                                             <h2>$2,847,500</h2>
                                         </div>
@@ -148,7 +159,7 @@ function Payroll() {
                                     </div>
 
                                 </div>
-                                
+
                             </div><br />
                             <div className='pay_bg'>
                                 <div className='pay_list'>

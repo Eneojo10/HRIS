@@ -5,6 +5,8 @@ import Benefitsdetails from './Benefitsdetails';
 import Plans from './Plans';
 import Reports from './Reports';
 import Benanalytics from './Benanalytics';
+import { CiSettings } from "react-icons/ci";
+import { PiExport } from "react-icons/pi";
 
 function Benefits() {
 
@@ -28,18 +30,28 @@ function Benefits() {
                             <span>Manage employee benefits, enrollment, and plans</span>
                         </div>
                         <div className='benefits_navlist-'>
-                            <div>
-                                <h4>Export</h4>
+                            <div className='dvr2'>
+                                <div className='dvr2-flex'>
+                                    <div className='impo-rt-icon'>
+                                        <PiExport />
+                                    </div>
+                                    <span>Export</span>
+                                </div>
                             </div>
-                            <div>
-                                <h4>Settings</h4>
+                            <div className='flex-setting-holder'>
+                                <div className='sett-ings-flex'>
+                                    <div className='impo-rt-icon'>
+                                        <CiSettings />
+                                    </div>
+                                    <span>Settings</span>
+                                </div>
                             </div>
                             <div className='new-enroll'>
                                 <div className='ne1'>
                                     <div className='benplus'>
                                         <GoPlus />
                                     </div>
-                                    <h4>New Enrollment</h4>
+                                    <span>New Enrollment</span>
                                 </div>
                             </div>
                         </div>

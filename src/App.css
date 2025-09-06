@@ -154,7 +154,7 @@
 }
 .plus {
   display: flex;
-  width: 95%;
+  /* width: 95%; */
   justify-content: space-between;
 }
 .entry-btn {
@@ -164,7 +164,7 @@
   padding: 10px;
   border-radius: 8px;
   font-weight: 600;
-  width: 14%;
+  width: 50%;
   height: 40px;
 }
 .goplus {
@@ -558,6 +558,7 @@
   margin-top: 25px;
   padding-top: 10px;
 }
+
 .analytics-bg {
   background-color: #f4f4f5;
   height: 40px;
@@ -623,6 +624,13 @@
   width: 10%;
   padding: 10px;
   border-radius: 16px;
+  text-align: center;
+}
+.live-data h4, 
+.critical_alert h4,
+.cal-ender-flex h4, 
+.analytic-alert_ h4{
+  font-weight: 500;
 }
 .critical_alert {
   background-color: #fedfdf;
@@ -630,6 +638,7 @@
   width: 15%;
   padding: 9px;
   border-radius: 16px;
+  text-align: center;
 }
 .ab-display {
   display: flex;
@@ -812,6 +821,9 @@
   justify-content: space-between;
   padding: 7px;
 }
+.add-people h4{
+  font-weight: 600;
+}
 .add-people-bg {
   background-color: black;
   color: white;
@@ -985,7 +997,7 @@
 }
 .l-export {
   border: 1px solid #ccc;
-  width: 60%;
+  width: 55%;
   height: 38px;
   border-radius: 8px;
 }
@@ -998,11 +1010,13 @@
 }
 .l-mgt {
   width: 55%;
+  margin-top: 15px;
 }
 .ll--flex {
   display: flex;
   width: 32%;
   gap: 15px;
+  margin-top: 20px;
 }
 .employee-card1 {
   min-width: 200px;
@@ -1047,12 +1061,12 @@
   margin: auto;
 }
 .directory-table tbody tr {
-  border-bottom: 1px solid #ccc; /* Light gray bottom border */
+  border-bottom: 1px solid #ccc; 
 }
 
 .directory-table tbody td {
-  border: none; /* Remove other borders */
-  padding: 8px; /* Optional: for spacing */
+  border: none; 
+  padding: 8px; 
 }
 .image1 {
   width: 100%;
@@ -1117,7 +1131,6 @@
 }
 .d-line_ {
   border-bottom: 1px solid #ccc;
-  /* margin-bottom: 15px; */
 }
 .d-likne {
   border-bottom: 1px solid #ccc;
@@ -1530,7 +1543,7 @@
 .performance-right {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 35%;
   margin-top: 15px;
 }
 .cycle-plus {
@@ -1539,15 +1552,37 @@
 .cycle-flex {
   margin-top: 7px;
 }
+.chfour h4{
+  font-weight: 600;
+}
 .cycle--flex {
   background-color: black;
   height: 38px;
-  width: 55%;
+  width: 45%;
   color: white;
   border-radius: 8px;
 }
 .er-export {
   margin-top: 7px;
+}
+.er-export h4{
+  font-weight: 600;
+}
+.exp-exp-icon{
+  font-size: 20px;
+  margin-top: 5px;
+}
+.exp-exp{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  gap: 10px;
+}
+.exp-bg-bg{
+  border: 1px solid #ccc;
+  height: 38px;
+  width: 45%;
+  border-radius: 8px;
 }
 .goal {
   display: flex;
@@ -1564,7 +1599,7 @@
   transition: box-shadow 0.3s ease;
 }
 .g-cards1:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 .employee-card1:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -1842,7 +1877,7 @@
 }
 .ec-bg {
   background-color: black;
-  height: 35px;
+  height: 37px;
   color: white;
   width: 55%;
   border-radius: 8px;
@@ -1933,9 +1968,9 @@
 }
 .pay_navlist {
   display: flex;
-  width: 30%;
-  justify-content: space-between;
-  margin-top: 25px;
+  width: 40%;
+  gap: 15px;
+  margin-top: 20px;
 }
 .payroll-background {
   background-color: #f9fafb;
@@ -2000,7 +2035,11 @@
   margin: auto;
   margin-bottom: 15px;
   border-radius: 6px;
-  /* background-color: white; */
+}
+.new-flex{
+  display: flex;
+  gap: 25px;
+  width: 30%;
 }
 .pay__box {
   padding-top: 20px;
@@ -2018,17 +2057,30 @@
 }
 .np1 {
   border: 1px solid #ccc;
-  padding: 8px;
   border-radius: 8px;
+  width: 28%;
+  height: 40px;
+}
+.np__flex{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+.np__flex h4{
+  font-weight: 500;
+}
+.npi-con{
+  margin-top: 1px;
+  font-size: 19px;
 }
 .np {
   background-color: black;
-  /* padding: 8px; */
   color: white;
   border-radius: 8px;
   width: 45%;
   height: 40px;
-  margin-top: -10px;
 }
 .np-flex {
   display: flex;
@@ -2058,7 +2110,7 @@
   display: flex;
   width: 45%;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .bm_ {
   width: 30%;
@@ -2142,7 +2194,7 @@
 }
 .dvr2 {
   border: 1px solid #ccc;
-  height: 35px;
+  height: 38px;
   border-radius: 8px;
   width: 25%;
 }
@@ -2185,7 +2237,7 @@
 .flex-setting-holder {
   width: 27%;
   border: 1px solid #ccc;
-  height: 35px;
+  height: 38px;
   border-radius: 8px;
 }
 .sett-ings-flex {
@@ -2255,6 +2307,9 @@
   justify-content: space-between;
   padding-top: 8px;
 }
+.new-job h4{
+  font-weight: 600;
+}
 .new-job-bg {
   background-color: black;
   height: 40px;
@@ -2281,6 +2336,10 @@
   width: 95%;
   margin: auto;
 }
+.dipslay_export h4,
+.re-bell h4{
+  font-weight: 500;
+}
 .leave--nav-icon {
   font-size: 23px;
 }
@@ -2288,6 +2347,7 @@
   display: flex;
   width: 55%;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .add_people_icon {
   font-size: 20px;
@@ -2343,8 +2403,6 @@
 .candidates {
   display: flex;
   justify-content: space-between;
-  /* padding: 8px; */
-  /* color: white; */
   width: 27%;
 }
 .candidate_color {
@@ -2391,6 +2449,7 @@
 }
 .onboard-text {
   font-size: 15px;
+  color: black;
 }
 .new-enroll {
   background-color: black;
@@ -2458,6 +2517,7 @@
   outline: none;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 .set3 {
   background-color: black;
@@ -2772,7 +2832,6 @@
 .decline-flex {
   display: flex;
   justify-content: space-between;
-  /* width: 90%; */
   margin: auto;
 }
 .da {
@@ -3071,7 +3130,6 @@
 }
 .approve h4 {
   font-weight: 400;
-  /* text-align: center; */
   margin-top: 7px;
 }
 .reject {
@@ -3132,7 +3190,7 @@
 }
 
 .weekdays-table {
-  border-collapse: collapse; /* Clean border edges */
+  border-collapse: collapse; 
 }
 
 .todays-leave {

@@ -5,6 +5,7 @@ import { GoPlus } from "react-icons/go";
 import Sheetdetails from './Sheetdetails';
 import Attendancedetails from './Attendancedetails';
 import Anadetails from './Anadetails';
+import { PiExport } from "react-icons/pi";
 
 function Tracking() {
 
@@ -27,12 +28,24 @@ function Tracking() {
                             <h2>Time Tracking</h2>
                             <span className='time-trcke-tex'>Manage employee time, attendance, and schedules</span>
                         </div>
-                        <div className='entry-btn'>
-                            <div className='plus'>
-                                <div className='goplus'><GoPlus /></div>
-                                <span className='new_entry'>New Entry</span>
+                        <div className='new-flex'>
+                            <div className='schedule_export'style={{marginTop:'11px'}}>
+                                <div className='schedule_exp-flex'>
+                                    <div className='ec--icon'>
+                                        <PiExport />
+                                    </div>
+                                    <h4>Export</h4>
+                                </div>
+                            </div>
+                            <div className='entry-btn'>
+
+                                <div className='plus'>
+                                    <div className='goplus'><GoPlus /></div>
+                                    <span className='new_entry'>New Entry</span>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                     <div className='d-line_'></div>
                     <div className='tracing_bg__color'>
@@ -87,20 +100,20 @@ function Tracking() {
                                         style={{
                                             cursor: 'pointer',
                                             backgroundColor: activeTab === 'Timing' ? 'white' : 'transparent',
-                                            padding: '7px 35px',           
-                                            borderRadius: '6px',  
+                                            padding: '7px 35px',
+                                            borderRadius: '6px',
                                             transition: 'background-color 0.3s ease',
-                                            marginTop:'-6px'
+                                            marginTop: '-6px'
                                         }}
                                     >Time Entry</h4></div>
                                     <div className='tracking-sheets'><h4 onClick={() => handleTabClick('Sheet')}
                                         style={{
                                             cursor: 'pointer',
                                             backgroundColor: activeTab === 'Sheet' ? 'white' : 'transparent',
-                                            padding: '7px 35px',           
-                                            borderRadius: '6px',       
+                                            padding: '7px 35px',
+                                            borderRadius: '6px',
                                             transition: 'background-color 0.3s ease',
-                                            marginTop:'-6px'
+                                            marginTop: '-6px'
 
                                         }}
                                     >Timesheets</h4></div>
@@ -108,20 +121,20 @@ function Tracking() {
                                         style={{
                                             cursor: 'pointer',
                                             backgroundColor: activeTab === 'Attendance' ? 'white' : 'transparent',
-                                            padding: '7px 35px',           
-                                            borderRadius: '6px',       
+                                            padding: '7px 35px',
+                                            borderRadius: '6px',
                                             transition: 'background-color 0.3s ease',
-                                            marginTop:'-6px'
+                                            marginTop: '-6px'
                                         }}
                                     >Attendance</h4></div>
                                     <div className='tracking-sheets'><h4 onClick={() => handleTabClick('Analytics')}
                                         style={{
                                             cursor: 'pointer',
-                                             backgroundColor: activeTab === 'Analytics' ? 'white' : 'transparent',
-                                            padding: '7px 35px',           
-                                            borderRadius: '6px',       
+                                            backgroundColor: activeTab === 'Analytics' ? 'white' : 'transparent',
+                                            padding: '7px 35px',
+                                            borderRadius: '6px',
                                             transition: 'background-color 0.3s ease',
-                                            marginTop:'-6px'
+                                            marginTop: '-6px'
                                         }}
                                     >Analytics</h4></div>
                                 </div>

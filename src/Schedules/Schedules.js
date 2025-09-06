@@ -28,7 +28,7 @@ function Schedules() {
                                 <h2>Management</h2>
                                 <span>Manage employee schedules, shifts, and workforce planning</span>
                             </div>
-                            <div className='ec'>
+                            <div className='ec'style={{marginTop:'20px'}}>
                                 <div className='schedule_export'>
                                     <div className='schedule_exp-flex'>
                                         <div className='ec--icon'>
@@ -42,7 +42,7 @@ function Schedules() {
                                         <div className='ec--icon'>
                                             <GoPlus />
                                         </div>
-                                        <h4>Create</h4>
+                                        <span>Create</span>
                                     </div>
                                 </div>
                             </div>
