@@ -22,13 +22,13 @@ function SystemAccess() {
                         </div><br />
                         <div className='ff-tsk' style={{ marginBottom: '25px' }}>
                             <div className='dee-one'>
-                                <p>Documentation</p>
+                                <p>System Access</p>
                             </div>
                             <div className='dee-two'>
                                 <p>high priority</p>
                             </div>
                             <div className='dee-three'>
-                                <p>Pending</p>
+                                <p>Overdue</p>
                             </div>
                         </div>
                         <div className='tsk-tsk'>

@@ -23,13 +23,13 @@ function Training() {
                         </div><br />
                         <div className='ff-tsk' style={{ marginBottom: '25px' }}>
                             <div className='dee-one'>
-                                <p>Documentation</p>
+                                <p>Training</p>
                             </div>
                             <div className='dee-two'>
-                                <p>high priority</p>
+                                <p>medium priority</p>
                             </div>
                             <div className='dee-three'>
-                                <p>Pending</p>
+                                <p>Completed</p>
                             </div>
                         </div>
                         <div className='tsk-tsk'>

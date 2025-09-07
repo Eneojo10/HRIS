@@ -23,7 +23,7 @@ function Meetings() {
                         </div><br />
                         <div className='ff-tsk' style={{ marginBottom: '25px' }}>
                             <div className='dee-one'>
-                                <p>Documentation</p>
+                                <p>Meetings</p>
                             </div>
                             <div className='dee-two'>
                                 <p>high priority</p>

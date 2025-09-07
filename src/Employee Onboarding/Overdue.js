@@ -29,7 +29,7 @@ function Overdue() {
                                 <p>high priority</p>
                             </div>
                             <div className='dee-three'>
-                                <p>Pending</p>
+                                <p>Overdue</p>
                             </div>
                         </div>
                         <div className='tsk-tsk'>
@@ -110,7 +110,7 @@ function Overdue() {
                                 <p>high priority</p>
                             </div>
                             <div className='dee-three'>
-                                <p>Pending</p>
+                                <p>Overdue</p>
                             </div>
                         </div>
                         <div className='tsk-tsk'>

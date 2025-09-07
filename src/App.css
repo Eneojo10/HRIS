@@ -6015,6 +6015,13 @@ text p {
   padding: 8px 10px;
   border-radius: 8px;
 }
+.pending-task{
+  text-align: center;
+  margin-top: 55px;
+}
+.pending-task h2{
+  font-weight: 500;
+}
 
 /* Responsive Design */
 @media (max-width: 428px) {
@@ -6101,6 +6108,8 @@ text p {
   .iput-flex-1 input {
     width: 100%;
   }
+
+  
 
   .login-footer--mobile {
     display: flex;
