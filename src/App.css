@@ -5748,6 +5748,9 @@ text p {
   width: 100%;
   background-color: white;
 }
+.tsk-form-one:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 .tsk-form {
   display: grid;
   grid-auto-flow: column;
