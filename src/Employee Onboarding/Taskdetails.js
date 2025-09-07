@@ -7,7 +7,11 @@ import Equipment from './Equipment';
 import Training from './Training';
 import Meetings from './Meetings';
 import SystemAccess from './SystemAccess';
-
+import Status from './Status';
+import Pending from './Pending';
+import Progress from './Progress';
+import Complete from './Complete';
+import Overdue from './Overdue';
 
 function Taskdetails() {
   const [activeTab, setActiveTab] = useState('Categories')
@@ -218,19 +222,44 @@ function Taskdetails() {
           </div>
           <br />
           <div className='sub-options'>
-            <div className='tsk---categories'>
+            <div onClick={() => handleTabClick('Status')}
+            style={{
+              cursor:'pointer',
+              backgroundColor: activeTab === 'Status' ? '#e9e9f7ff' : 'transparent',
+            }}
+             className='tsk---categories'>
               <h4>All Status</h4>
             </div>
-            <div className='tsk----categories'>
+            <div onClick={() => handleTabClick('Pending')}
+            style={{
+              cursor:'pointer',
+              backgroundColor: activeTab === 'Pending' ?  '#e9e9f7ff' : 'transparent',
+            }}
+             className='tsk----categories'>
               <h4>Pending</h4>
             </div>
-            <div className='tsk--categories'>
+            <div onClick={() => handleTabClick('Progress')}
+            style={{
+              cursor:'pointer',
+              backgroundColor: activeTab === 'Progress' ? '#e9e9f7ff' : 'transparent',
+            }}
+             className='tsk--categories'>
               <h4>In Progress</h4>
             </div>
-            <div className='tsk--categories'>
+            <div onClick={() => handleTabClick('Complete')}
+            style={{
+              cursor:'pointer',
+              backgroundColor: activeTab === 'Complete' ? '#e9e9f7ff' : 'transparent',
+            }}
+             className='tsk--categories'>
               <h4>Completed</h4>
             </div>
-            <div className='tsk----categories'>
+            <div onClick={() => handleTabClick('Overdue')}
+            style={{
+              cursor:'pointer',
+              backgroundColor: activeTab === 'Overdue' ? '#e9e9f7ff' : 'transparent',
+            }}
+             className='tsk----categories'>
               <h4>Overdue</h4>
             </div>
 
@@ -242,6 +271,11 @@ function Taskdetails() {
             {activeTab === 'Training' && <Training />}
             {activeTab === 'Meetings' && <Meetings />}
             {activeTab === 'System' && <SystemAccess />}
+            {activeTab === 'Status' && <Status />}
+            {activeTab === 'Pending' && <Pending />}
+            {activeTab === 'Progress' && <Progress />}
+            {activeTab === 'Complete' && <Complete />}
+            {activeTab === 'Overdue' && <Overdue />}
 
           </div>
 

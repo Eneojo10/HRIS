@@ -66,6 +66,10 @@ import Training from './Employee Onboarding/Training';
 import Meetings from './Employee Onboarding/Meetings'
 import SystemAccess from './Employee Onboarding/SystemAccess';
 import Status from './Employee Onboarding/Status';
+import Pending from './Employee Onboarding/Pending';
+import Progress from './Employee Onboarding/Progress';
+import Complete from './Employee Onboarding/Complete';
+import Overdue from './Employee Onboarding/Overdue';
 
 function App() {
   return (
@@ -141,6 +145,10 @@ function App() {
           <Route path="meetings" element={<Meetings />} />
           <Route path="access" element={<SystemAccess />} />
           <Route path="status" element={<Status />} />
+          <Route path="pending" element={<Pending />} />
+          <Route path="progress" element={<Progress />} />
+          <Route path="complete" element={<Complete />} />
+          <Route path="overdue" element={<Overdue />} />
         </Routes>
       </Router>
     </div>
