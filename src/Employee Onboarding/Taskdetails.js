@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import { IoPeopleOutline } from "react-icons/io5";
 import { IoDocumentTextOutline } from "react-icons/io5";
-import Categories from './Categories';
-import Documentation from './Documentation';
-import Equipment from './Equipment';
-import Training from './Training';
-import Meetings from './Meetings';
-import SystemAccess from './SystemAccess';
-import Status from './Status';
-import Pending from './Pending';
-import Progress from './Progress';
-import Complete from './Complete';
-import Overdue from './Overdue';
+import Categories from '../Others/Categories';
+import Documentation from '../Others/Documentation';
+import Equipment from '../Others/Equipment';
+import Training from '../Others/Training';
+import Meetings from '../Others/Meetings';
+import SystemAccess from '../Others/SystemAccess';
+import Status from '../Others/Status';
+import Pending from '../Others/Pending';
+import Progress from '../Others/Progress';
+import Complete from '../Others/Complete';
+import Overdue from '../Menu/Overdue';
 import { MdOutlineMeetingRoom } from "react-icons/md";
 import { IoIosDesktop } from "react-icons/io";
 import { MdOutlineModelTraining } from "react-icons/md";

@@ -59,17 +59,17 @@ import System from './Settings/System';
 import Umanagement from './Settings/Umanagement';
 import Security from './Settings/Security';
 import Integration from './Settings/Integration';
-import Categories from './Employee Onboarding/Categories';
-import Documentation from './Employee Onboarding/Documentation';
-import Equipment from './Employee Onboarding/Equipment';
-import Training from './Employee Onboarding/Training';
-import Meetings from './Employee Onboarding/Meetings'
-import SystemAccess from './Employee Onboarding/SystemAccess';
-import Status from './Employee Onboarding/Status';
-import Pending from './Employee Onboarding/Pending';
-import Progress from './Employee Onboarding/Progress';
-import Complete from './Employee Onboarding/Complete';
-import Overdue from './Employee Onboarding/Overdue';
+import Categories from './Others/Categories';
+import Documentation from './Others/Documentation';
+import Equipment from './Others/Equipment';
+import Training from './Others/Training';
+import Meetings from './Others/Meetings'
+import SystemAccess from './Others/SystemAccess';
+import Status from './Others/Status';
+import Pending from './Others/Pending';
+import Progress from './Others/Progress';
+import Complete from './Others/Complete';
+import Overdue from './Menu/Overdue';
 
 function App() {
   return (
