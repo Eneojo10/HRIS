@@ -12,6 +12,10 @@ import Pending from './Pending';
 import Progress from './Progress';
 import Complete from './Complete';
 import Overdue from './Overdue';
+import { MdOutlineMeetingRoom } from "react-icons/md";
+import { IoIosDesktop } from "react-icons/io";
+import { MdOutlineModelTraining } from "react-icons/md";
+import { MdPhonelinkSetup } from "react-icons/md";
 
 function Taskdetails() {
   const [activeTab, setActiveTab] = useState('Categories')
@@ -163,7 +167,7 @@ function Taskdetails() {
               className='equipment-border'>
               <div className='equipment-task'>
                 <div>
-                  <IoDocumentTextOutline />
+                  <MdPhonelinkSetup />
                 </div>
                 <div>
                   <h4
@@ -181,7 +185,7 @@ function Taskdetails() {
               className='training-border'>
               <div className='tsk-training'>
                 <div>
-                  <IoDocumentTextOutline />
+                  <MdOutlineModelTraining />
                 </div>
                 <div>
                   <h4
@@ -200,7 +204,7 @@ function Taskdetails() {
               className='meeting-border'>
               <div className='tsk-meetings'>
                 <div>
-                  <IoDocumentTextOutline />
+                  <MdOutlineMeetingRoom />
                 </div>
                 <div>
                   <h4
@@ -218,7 +222,7 @@ function Taskdetails() {
               className='access-border'>
               <div className='tsk-access'>
                 <div>
-                  <IoDocumentTextOutline />
+                  <IoIosDesktop />
                 </div>
                 <div>
                   <h4>System Access</h4>
