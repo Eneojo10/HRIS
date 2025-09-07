@@ -22,7 +22,7 @@ function Equipment() {
                             </div>
                         </div><br />
                         <div className='ff-tsk' style={{ marginBottom: '25px' }}>
-                            <div className='dee-one'>
+                            <div className='dee-one-one'>
                                 <p>Equipment setup</p>
                             </div>
                             <div className='dee-two'>

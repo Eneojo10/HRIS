@@ -5784,6 +5784,18 @@ text p {
   text-align: center;
   border-radius: 16px;
 }
+.dee-one-one{
+  background-color: #dbeafe;
+  width: 35%;
+  height: 30px;
+  text-align: center;
+  border-radius: 16px;
+}
+.dee-one-one p{
+  margin-top: 6px;
+  color: #1e4db9;
+  font-weight: 600;
+}
 .dee-one p{
   margin-top: 6px;
   color: #1e4db9;
