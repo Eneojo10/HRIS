@@ -128,7 +128,8 @@ function Taskdetails() {
             <div onClick={() => handleTabClick('Categories')}
               style={{
                 cursor: 'pointer',
-                backgroundColor: activeTab === 'Categories' ? '#e9e9f7ff' : 'transparent',
+                backgroundColor: activeTab === 'Categories' ? 'black' : 'transparent',
+                color: activeTab === 'Categories' ? 'white' : 'black',
               }}
               className='tsk-categories'>
               <h4
@@ -138,7 +139,8 @@ function Taskdetails() {
             <div onClick={() => handleTabClick('Documentation')}
               style={{
                 cursor: 'pointer',
-                backgroundColor: activeTab === 'Documentation' ? '#e9e9f7ff' : 'transparent',
+                backgroundColor: activeTab === 'Documentation' ? 'black' : 'transparent',
+                color: activeTab === 'Documentation' ? 'white' : 'black',
               }}
               className='documentation-border'>
               <div className='documentation'>
@@ -155,7 +157,8 @@ function Taskdetails() {
             <div onClick={() => handleTabClick('Equipment')}
               style={{
                 cursor: 'pointer',
-                backgroundColor: activeTab === 'Equipment' ? '#e9e9f7ff' : 'transparent',
+                backgroundColor: activeTab === 'Equipment' ? 'black' : 'transparent',
+                color: activeTab === 'Equipment' ? 'white' : 'black',
               }}
               className='equipment-border'>
               <div className='equipment-task'>
@@ -172,7 +175,8 @@ function Taskdetails() {
             <div onClick={() => handleTabClick('Training')}
               style={{
                 cursor: 'pointer',
-                backgroundColor: activeTab === 'Training' ? '#e9e9f7ff' : 'transparent',
+                backgroundColor: activeTab === 'Training' ? 'black' : 'transparent',
+                color: activeTab === 'Training' ? 'white' : 'black',
               }}
               className='training-border'>
               <div className='tsk-training'>
@@ -189,8 +193,9 @@ function Taskdetails() {
             <div onClick={() => handleTabClick('Meetings')}
               style={{
                 cursor: 'pointer',
-                backgroundColor: activeTab === 'Meetings' ? '#e9e9f7ff' : 'transparent',
-                padding: '10px 10px'
+                backgroundColor: activeTab === 'Meetings' ? 'black' : 'transparent',
+                color: activeTab === 'Meetings' ? 'white' : 'black',
+
               }}
               className='meeting-border'>
               <div className='tsk-meetings'>
@@ -205,11 +210,12 @@ function Taskdetails() {
               </div>
             </div>
             <div onClick={() => handleTabClick('System')}
-            style={{
-              cursor:'pointer',
-              backgroundColor: activeTab === 'System' ? '#e9e9f7ff' : 'transparent',
-            }}
-             className='access-border'>
+              style={{
+                cursor: 'pointer',
+                backgroundColor: activeTab === 'System' ? 'black' : 'transparent',
+                color: activeTab === 'System' ? 'white' : 'black',
+              }}
+              className='access-border'>
               <div className='tsk-access'>
                 <div>
                   <IoDocumentTextOutline />
@@ -223,43 +229,48 @@ function Taskdetails() {
           <br />
           <div className='sub-options'>
             <div onClick={() => handleTabClick('Status')}
-            style={{
-              cursor:'pointer',
-              backgroundColor: activeTab === 'Status' ? '#e9e9f7ff' : 'transparent',
-            }}
-             className='tsk---categories'>
+              style={{
+                cursor: 'pointer',
+                backgroundColor: activeTab === 'Status' ? 'black' : 'transparent',
+                color: activeTab === 'Status' ? 'white' : 'black',
+              }}
+              className='tsk---categories'>
               <h4>All Status</h4>
             </div>
             <div onClick={() => handleTabClick('Pending')}
-            style={{
-              cursor:'pointer',
-              backgroundColor: activeTab === 'Pending' ?  '#e9e9f7ff' : 'transparent',
-            }}
-             className='tsk----categories'>
+              style={{
+                cursor: 'pointer',
+                backgroundColor: activeTab === 'Pending' ? 'black' : 'transparent',
+                color: activeTab === 'Pending' ? 'white' : 'black',
+              }}
+              className='tsk----categories'>
               <h4>Pending</h4>
             </div>
             <div onClick={() => handleTabClick('Progress')}
-            style={{
-              cursor:'pointer',
-              backgroundColor: activeTab === 'Progress' ? '#e9e9f7ff' : 'transparent',
-            }}
-             className='tsk--categories'>
+              style={{
+                cursor: 'pointer',
+                backgroundColor: activeTab === 'Progress' ? 'black' : 'transparent',
+                color: activeTab === 'Progress' ? 'white' : 'black',
+              }}
+              className='tsk--categories'>
               <h4>In Progress</h4>
             </div>
             <div onClick={() => handleTabClick('Complete')}
-            style={{
-              cursor:'pointer',
-              backgroundColor: activeTab === 'Complete' ? '#e9e9f7ff' : 'transparent',
-            }}
-             className='tsk--categories'>
+              style={{
+                cursor: 'pointer',
+                backgroundColor: activeTab === 'Complete' ? 'black' : 'transparent',
+                color: activeTab === 'Complete' ? 'white' : 'black',
+              }}
+              className='tsk--categories'>
               <h4>Completed</h4>
             </div>
             <div onClick={() => handleTabClick('Overdue')}
-            style={{
-              cursor:'pointer',
-              backgroundColor: activeTab === 'Overdue' ? '#e9e9f7ff' : 'transparent',
-            }}
-             className='tsk----categories'>
+              style={{
+                cursor: 'pointer',
+                backgroundColor: activeTab === 'Overdue' ? 'black' : 'transparent',
+                color: activeTab === 'Overdue' ? 'white' : 'black',
+              }}
+              className='tsk----categories'>
               <h4>Overdue</h4>
             </div>
 
