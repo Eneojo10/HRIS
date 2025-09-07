@@ -5791,9 +5791,21 @@ text p {
   text-align: center;
   border-radius: 16px;
 }
+.dee-three-three{
+  background-color: #dcfce7;
+  width: 28%;
+  height: 30px;
+  text-align: center;
+  border-radius: 16px;
+}
 .dee-one-one p{
   margin-top: 6px;
   color: #1e4db9;
+  font-weight: 600;
+}
+.dee-three-three p{
+  margin-top: 6px;
+  color: #166534;
   font-weight: 600;
 }
 .dee-one p{

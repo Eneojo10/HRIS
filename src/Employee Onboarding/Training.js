@@ -25,10 +25,10 @@ function Training() {
                             <div className='dee-one'>
                                 <p>Training</p>
                             </div>
-                            <div className='dee-two'>
+                            <div className='dee-one-one'>
                                 <p>medium priority</p>
                             </div>
-                            <div className='dee-three'>
+                            <div className='dee-three-three'>
                                 <p>Completed</p>
                             </div>
                         </div>
