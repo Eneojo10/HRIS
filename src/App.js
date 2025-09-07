@@ -59,7 +59,13 @@ import System from './Settings/System';
 import Umanagement from './Settings/Umanagement';
 import Security from './Settings/Security';
 import Integration from './Settings/Integration';
-
+import Categories from './Employee Onboarding/Categories';
+import Documentation from './Employee Onboarding/Documentation';
+import Equipment from './Employee Onboarding/Equipment';
+import Training from './Employee Onboarding/Training';
+import Meetings from './Employee Onboarding/Meetings'
+import SystemAccess from './Employee Onboarding/SystemAccess';
+import Status from './Employee Onboarding/Status';
 
 function App() {
   return (
@@ -127,8 +133,14 @@ function App() {
           <Route path="management" element={<Umanagement />} />
           <Route path="security" element={<Security />} />
           <Route path="integration" element={<Integration />} />
-          
+          <Route path="categories" element={<Categories />} />
 
+          <Route path="docs" element={<Documentation />} />
+          <Route path="equip" element={<Equipment />} />
+          <Route path="training" element={<Training />} />
+          <Route path="meetings" element={<Meetings />} />
+          <Route path="access" element={<SystemAccess />} />
+          <Route path="status" element={<Status />} />
         </Routes>
       </Router>
     </div>
