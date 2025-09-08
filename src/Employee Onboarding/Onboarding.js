@@ -9,15 +9,7 @@ import Onboardingdetails from './Onboardingdetails';
 import Taskdetails from './Taskdetails';
 import Templatesdetails from './Templatesdetails';
 import Analyticdetails from './Analyticdetails';
-import { BsCircle } from "react-icons/bs";
-import { HiArrowTrendingUp } from "react-icons/hi2";
-import { CgDanger } from "react-icons/cg";
-import { FaRegStarHalfStroke } from "react-icons/fa6";
-import { SlCalender } from "react-icons/sl";
-import { GoPersonAdd } from "react-icons/go";
-import { IoMdTime } from "react-icons/io";
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-// import { IoPeopleOutline } from "react-icons/io5";
+
 
 
 
