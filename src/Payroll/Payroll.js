@@ -9,7 +9,7 @@ import { PiExport } from "react-icons/pi";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { IoPeopleOutline } from "react-icons/io5";
 import { IoCalendarClear } from 'react-icons/io5';
-import { IoTriangleOutline } from 'react-icons/io5';
+// import { IoTriangleOutline } from 'react-icons/io5';
 import { CiSettings } from "react-icons/ci";
 import { BiError } from "react-icons/bi";
 

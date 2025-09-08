@@ -70,6 +70,13 @@ import Pending from './Others/Pending';
 import Progress from './Others/Progress';
 import Complete from './Others/Complete';
 import Overdue from './Menu/Overdue';
+import AllDepartment from './Others/AllDepartment';
+import Engineering from './Others/Engineering';
+import Product from './Others/Product';
+import Sales from './Others/Sales';
+import Design from './Others/Design';
+import Marketing from './Others/Marketing';
+import Executive from './Others/Executive';
 
 function App() {
   return (
@@ -149,6 +156,13 @@ function App() {
           <Route path="progress" element={<Progress />} />
           <Route path="complete" element={<Complete />} />
           <Route path="overdue" element={<Overdue />} />
+          <Route path="alldept" element={<AllDepartment />} />
+          <Route path="engineering" element={<Engineering />} />
+          <Route path="products" element={<Product />} />
+          <Route path="sales" element={<Sales />} />
+          <Route path="design" element={<Design />} />
+          <Route path="marketing" element={<Marketing />} />
+          <Route path="executive" element={<Executive />} />
         </Routes>
       </Router>
     </div>

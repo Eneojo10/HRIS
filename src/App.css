@@ -4715,7 +4715,7 @@ text p {
 .org-structure {
   border: 1px solid #ccc;
   width: 100%;
-  height: 200px;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 25px;
 }
@@ -6042,6 +6042,9 @@ text p {
   padding: 8px 10px;
   border-radius: 8px;
 }
+/* .line-two:hover{
+  background-color: red;
+} */
 .pending-task{
   text-align: center;
   margin-top: 55px;
@@ -6049,6 +6052,63 @@ text p {
 .pending-task h2{
   font-weight: 500;
 }
+.template-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.ie-flex{
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+.structure_listing{
+  display: flex;
+  justify-content: space-between;
+}
+
+.onboard-import{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 25%;
+  height: 38px;
+}
+.import-onboard{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.onboard-export{
+  border: 1px solid #ccc;
+  height: 38px;
+  width: 28%;
+  border-radius: 8px;
+}
+.export-onboard{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.import-onboard h4, 
+.export-onboard h4{
+  font-weight: 500;
+}
+.ctbtn{
+  background: transparent;
+  border: none;
+  background-color: black;
+  color: white;
+  height: 42px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 30%;
+  font-size: 16px;
+
+}
+
 
 /* Responsive Design */
 @media (max-width: 428px) {

@@ -1,9 +1,9 @@
 import React from 'react'
-import { HiOutlineDotsHorizontal } from "react-icons/hi";
-import image from '../Images/user2.jpg'
-import { SlCalender } from "react-icons/sl";
-import { IoMdTime } from "react-icons/io";
-import { LuBuilding2 } from "react-icons/lu";
+// import { HiOutlineDotsHorizontal } from "react-icons/hi";
+// import image from '../Images/user2.jpg'
+// import { SlCalender } from "react-icons/sl";
+// import { IoMdTime } from "react-icons/io";
+// import { LuBuilding2 } from "react-icons/lu";
 
 
 function Progress() {
