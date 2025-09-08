@@ -4136,13 +4136,13 @@ text p {
 }
 .pss {
   background-color: #dcfce7;
-  width: 93%;
+  /* width: 93%; */
   height: 30px;
   border-radius: 16px;
 }
 .pss_ {
   background-color: #fee2e2;
-  width: 88%;
+  /* width: 88%; */
   height: 30px;
   border-radius: 16px;
 }
@@ -4192,6 +4192,7 @@ text p {
   text-align: center;
   border-radius: 16px;
   margin-top: 15px;
+  background-color: #ffffff;
 }
 .monthly_ p {
   font-weight: 500;
@@ -4216,12 +4217,14 @@ text p {
   height: 35px;
   width: 35%;
   text-align: center;
+  background-color: #ffffff;
 }
 .pay-download {
   border: 1px solid #ccc;
   height: 35px;
   width: 56%;
   text-align: center;
+  background-color: #ffffff;
 }
 .pay-download p {
   margin-top: 4px;
@@ -6117,6 +6120,106 @@ text p {
   font-size: 14px;
 
 }
+
+.shift-one{
+  border: 1px solid #ccc;
+  height: 120px;
+  width: 100%;
+   border-radius: 8px;
+}
+.shifts{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 20px;
+  gap: 20px;
+}
+.shift-templates{
+  border: 1px solid #ccc;
+  height: auto;
+  border-radius: 8px;
+}
+.tsf{
+  width: 93%;
+  margin: auto;
+}
+.temp-shift-flex{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+.te-em-bg{
+  background-color: black;
+  height: 38px;
+  width: 15%;
+  color: white;
+  border-radius: 8px;
+}
+.teem{
+  display: flex;
+  gap: 10px;
+}
+.teem-icon{
+  font-size: 22px;
+  margin-top: 1px;
+}
+.te-em{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 6px;
+}
+.teem--icon{
+  font-size: 20px;
+}
+.te-em h4{
+  font-weight: 500;
+}
+.shift {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.shift th,
+.shift td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* only bottom border */
+}
+
+.shift th {
+  font-weight: 600;
+  color: #8e8e95;
+}
+
+.select-tem select{
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  border-radius: 8px;
+}
+
+.tems{
+  display: flex;
+  width: 50%;
+  gap: 15px;
+}
+
+.tem-input{
+  width: 95%;
+}
+
+.tem-input input{
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
 
 
 /* Responsive Design */
