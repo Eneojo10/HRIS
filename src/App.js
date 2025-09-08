@@ -77,6 +77,7 @@ import Sales from './Others/Sales';
 import Design from './Others/Design';
 import Marketing from './Others/Marketing';
 import Executive from './Others/Executive';
+import Metrics from './Analytics/Metrics';
 
 function App() {
   return (
@@ -163,6 +164,7 @@ function App() {
           <Route path="design" element={<Design />} />
           <Route path="marketing" element={<Marketing />} />
           <Route path="executive" element={<Executive />} />
+          <Route path="metrics" element={<Metrics />} />
         </Routes>
       </Router>
     </div>

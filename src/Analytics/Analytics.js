@@ -4,6 +4,8 @@ import Analyticsdetails from '../Analytics/Analyticsdetails';
 import { PiExportLight } from "react-icons/pi";
 import { SlCalender } from "react-icons/sl";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import Workforce from './Workforce';
+import Metrics from './Metrics';
 
 function Analytics() {
     const [activeTab, setActiveTab] = useState('Executive Overview');
@@ -115,11 +117,8 @@ function Analytics() {
                 </div>
                 <div className='analytics-tab-content'>
                     {activeTab === 'Executive Overview' && <Analyticsdetails />}
-                    {activeTab !== 'Executive Overview' && (
-                        <div style={{ padding: '20px' }}>
-                            <h3>{activeTab} content coming soon...</h3>
-                        </div>
-                    )}
+                    {activeTab === 'Workforce Analysis' && <Workforce />}
+                    {activeTab === 'Performance & Retention' && <Metrics />}
                 </div>
             </div>
 
