@@ -81,6 +81,7 @@ import Metrics from './Analytics/Metrics';
 import Equity from './Analytics/Equity';
 import PayrollTrends from './Analytics/PayrollTrends';
 import Distribution from './Analytics/Distribution';
+import Talent from './Analytics/Talent';
 
 function App() {
   return (
@@ -171,6 +172,7 @@ function App() {
           <Route path="equity" element={<Equity />} />
           <Route path="trends" element={<PayrollTrends />} />
           <Route path="distribution" element={<Distribution />} />
+          <Route path="talent" element={<Talent />} />
         </Routes>
       </Router>
     </div>

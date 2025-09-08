@@ -6470,6 +6470,12 @@ text p {
   padding-top: 18px;
   
 }
+.time-att-border{
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 74vh;
+  border-radius: 8px;
+}
 
 
 
