@@ -6,6 +6,7 @@ import { SlCalender } from "react-icons/sl";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import Workforce from './Workforce';
 import Metrics from './Metrics';
+import Equity from './Equity';
 
 function Analytics() {
     const [activeTab, setActiveTab] = useState('Executive Overview');
@@ -119,6 +120,7 @@ function Analytics() {
                     {activeTab === 'Executive Overview' && <Analyticsdetails />}
                     {activeTab === 'Workforce Analysis' && <Workforce />}
                     {activeTab === 'Performance & Retention' && <Metrics />}
+                    {activeTab === 'Compensation & Equity' && <Equity />}
                 </div>
             </div>
 

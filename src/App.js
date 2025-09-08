@@ -78,6 +78,9 @@ import Design from './Others/Design';
 import Marketing from './Others/Marketing';
 import Executive from './Others/Executive';
 import Metrics from './Analytics/Metrics';
+import Equity from './Analytics/Equity';
+import PayrollTrends from './Analytics/PayrollTrends';
+import Distribution from './Analytics/Distribution';
 
 function App() {
   return (
@@ -165,6 +168,9 @@ function App() {
           <Route path="marketing" element={<Marketing />} />
           <Route path="executive" element={<Executive />} />
           <Route path="metrics" element={<Metrics />} />
+          <Route path="equity" element={<Equity />} />
+          <Route path="trends" element={<PayrollTrends />} />
+          <Route path="distribution" element={<Distribution />} />
         </Routes>
       </Router>
     </div>

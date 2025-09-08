@@ -6348,12 +6348,159 @@ text p {
   font-weight: 500;
 }
 
-.over-all{
+.over-all {
   text-align: center;
 }
-.over-all h2{
+.over-all h2 {
   color: #16a34a;
 }
+
+.compensation-holder {
+  width: 95%;
+  margin: auto;
+}
+
+.compensation--holder {
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.compenflex {
+  display: flex;
+  gap: 5px;
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.com-naira {
+  font-size: 22px;
+  color: #16a34a;
+  margin-top: 4px;
+}
+
+.eq-holder {
+  width: 95%;
+  margin: auto;
+}
+
+.equity-bg {
+  background-color: #f4f4f5;
+  margin-bottom: 15px;
+  height: 45px;
+}
+
+.e__flex {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 9px;
+}
+.e__flex h4 {
+  font-weight: 500;
+  color: #71717a;
+}
+
+.sal-ary{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.sal-ary h4{
+  font-weight: 500;
+}
+
+.pay_trends{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tr-one{
+  /* border: 1px solid #ccc; */
+  height: 110px;
+  border-radius: 8px;
+  background-color: #f0fdf4;
+}
+.tr-two{
+  /* border: 1px solid #ccc; */
+  height: 110px;
+  border-radius: 8px;
+  background-color: #eff6ff;
+}
+.tr-three{
+  /* border: 1px solid #ccc; */
+  height: 110px;
+  border-radius: 8px;
+  background-color: #fff7ed;
+}
+.tr-four{
+  /* border: 1px solid #ccc; */
+  height: 110px;
+  border-radius: 8px;
+  background-color: #faf5ff;
+}
+
+.nine-icon{
+  margin-top: 4px;
+  font-size: 22px;
+}
+
+.band{
+  width: 50%;
+}
+
+.band-bg{
+  background-color: #f9fafb;
+  height: 100px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+.band-naira {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 428px) {
