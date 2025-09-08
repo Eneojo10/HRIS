@@ -1546,14 +1546,18 @@
 .performance-right {
   display: flex;
   justify-content: space-between;
-  width: 35%;
+  width: 40%;
   margin-top: 15px;
 }
 .cycle-plus {
   font-size: 21px;
 }
 .cycle-flex {
-  margin-top: 7px;
+  padding-top: 6px;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
 }
 .chfour h4{
   font-weight: 600;
@@ -1577,9 +1581,9 @@
 }
 .exp-exp{
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  gap: 10px;
+  justify-content: space-between;
 }
 .exp-bg-bg{
   border: 1px solid #ccc;

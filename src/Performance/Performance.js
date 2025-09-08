@@ -38,7 +38,7 @@ function Performance() {
                                 </div>
                             </div>
                             <div className='cycle--flex'>
-                                <div className='cycle-flex' style={{ display: 'flex', gap: '10px' }}>
+                                <div className='cycle-flex'>
                                     <div className='cycle-plus'>
                                         <BsPlus />
                                     </div>
