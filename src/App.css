@@ -6557,6 +6557,7 @@ text p {
 }
 .pee-icon{
   font-size: 20px;
+  margin-top: 5px;
 }
 .upload-img{
   width: 6%;
@@ -6618,6 +6619,9 @@ text p {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+.per-input label{
+  margin-bottom: 5px;
+}
 .city-one input, 
 .city-one select{
   width: 100%;
@@ -6633,9 +6637,9 @@ text p {
   margin-bottom: 25px;
 }
 .scrollable {
-  max-height: 400px;  /* adjust as needed */
+  max-height: 400px;  
   overflow-y: auto;
-  padding-right: 10px; /* space for scrollbar */
+  padding-right: 8px;
 }
 
 /* Optional: Hide scrollbar for cleaner UI */
@@ -6676,6 +6680,7 @@ text p {
   /* width: 100%; */
   font-size: 15px;
 }
+
 
 
 

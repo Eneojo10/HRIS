@@ -7,7 +7,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { PiExport } from "react-icons/pi";
 import { CiImport } from "react-icons/ci";
 import Personal from './Register/Personal';
-
+import Employment from './Register/Employment';
+import Contact from './Register/Contact';
 
 function Employees() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -82,10 +83,20 @@ function Employees() {
                                             className='person-one'>
                                             <h4>Personal</h4>
                                         </div>
-                                        <div className='person-one'>
+                                        <div onClick={() => handleTabClick('Employment')}
+                                        style={{
+                                            cursor:'pointer',
+                                            backgroundColor: activeTab === 'Employment' ? 'white' : 'transparent',
+                                        }}
+                                         className='person-one'>
                                             <h4>Employment</h4>
                                         </div>
-                                        <div className='person-one'>
+                                        <div onClick={() => handleTabClick('Contact')}
+                                        style={{
+                                            cursor:'pointer',
+                                            backgroundColor: activeTab === 'Contact' ? 'white' : 'transparent',
+                                        }}
+                                         className='person-one'>
                                             <h4>Contact</h4>
                                         </div>
                                         <div className='person-one'>
@@ -102,6 +113,8 @@ function Employees() {
                                 <form>
                                     <div className='performance-content'>
                                         {activeTab === 'Personal' && <Personal />}
+                                        {activeTab === 'Employment' && <Employment />}
+                                        {activeTab === 'Contact' && <Contact />}
 
                                     </div>
 
