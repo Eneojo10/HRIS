@@ -81,7 +81,7 @@ function Onboarding() {
                             <div className="modal-overlay">
                                 <div className="modal">
                                     <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                        <div className='modal-icon' style={{ fontSize: '21px' }}>
+                                        <div className='modal-icon' style={{ fontSize: '21px',marginTop:'1px' }}>
                                             <GoPersonAdd />
                                         </div>
                                         <div
