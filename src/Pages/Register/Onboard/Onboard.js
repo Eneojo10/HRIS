@@ -45,7 +45,7 @@ function Onboard() {
                 <div className='perosnal'>
                     <div className='personal-details'>
                         <div className="per-sonal-flex">
-                            <div className="pee-icon-gift" style={{ fontSize: '21px' }}>
+                            <div className="pee-icon-gift" style={{ fontSize: '21px',marginTop:'3px' }}>
                                 <LuBriefcase />
                             </div>
                             <div>
@@ -122,7 +122,7 @@ function Onboard() {
                 <div className='perosnal'>
                     <div className='personal-details'>
                         <div className="per-sonal-flex">
-                            <div className="pee-icon-gift" style={{ fontSize: '21px' }}>
+                            <div className="pee-icon-gift" style={{ fontSize: '21px',marginTop:'2px' }}>
                                 <MdOutlineAppSettingsAlt />
                             </div>
                             <div>
