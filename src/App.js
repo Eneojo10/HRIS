@@ -91,6 +91,9 @@ import Basic from './Pages/Postjob/Basic';
 import Details from './Pages/Postjob/Details';
 import Jobsettings from './Pages/Postjob/Jobsettings';
 import Onboard from './Pages/Register/Onboard/Onboard';
+import PerformOne from './Pages/Perform/PerformOne';
+import GoalsKPIs from './Pages/Perform/GoalsKPIs';
+import Core from './Pages/Perform/Core';
 
 function App() {
   return (
@@ -175,6 +178,7 @@ function App() {
           <Route path="products" element={<Product />} />
           <Route path="sales" element={<Sales />} />
           <Route path="design" element={<Design />} />
+
           <Route path="marketing" element={<Marketing />} />
           <Route path="executive" element={<Executive />} />
           <Route path="metrics" element={<Metrics />} />
@@ -191,6 +195,9 @@ function App() {
           <Route path="details" element={<Details />} />
           <Route path="jobsettings" element={<Jobsettings />} />
           <Route path="onboard" element={<Onboard />} />
+          <Route path="perform" element={<PerformOne />} />
+          <Route path="goalkpi" element={<GoalsKPIs />} />
+          <Route path="core" element={<Core />} />
           {/* <Route path="onboard" element={<Onboard />} /> */}
         </Routes>
       </Router>

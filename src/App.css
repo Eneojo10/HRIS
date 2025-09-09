@@ -565,7 +565,6 @@
   padding-top: 10px;
 }
 
-
 .analytics-bg {
   background-color: #f4f4f5;
   height: 40px;
@@ -2322,6 +2321,7 @@
   color: white;
   justify-content: space-between;
   padding-top: 8px;
+  cursor: pointer;
 }
 .new-job h4 {
   font-weight: 600;
@@ -6415,57 +6415,57 @@ text p {
   color: #71717a;
 }
 
-.sal-ary{
+.sal-ary {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.sal-ary h4{
+.sal-ary h4 {
   font-weight: 500;
 }
 
-.pay_trends{
+.pay_trends {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   margin-top: 20px;
 }
 
-.tr-one{
+.tr-one {
   /* border: 1px solid #ccc; */
   height: 110px;
   border-radius: 8px;
   background-color: #f0fdf4;
 }
-.tr-two{
+.tr-two {
   /* border: 1px solid #ccc; */
   height: 110px;
   border-radius: 8px;
   background-color: #eff6ff;
 }
-.tr-three{
+.tr-three {
   /* border: 1px solid #ccc; */
   height: 110px;
   border-radius: 8px;
   background-color: #fff7ed;
 }
-.tr-four{
+.tr-four {
   /* border: 1px solid #ccc; */
   height: 110px;
   border-radius: 8px;
   background-color: #faf5ff;
 }
 
-.nine-icon{
+.nine-icon {
   margin-top: 4px;
   font-size: 22px;
 }
 
-.band{
+.band {
   width: 50%;
 }
 
-.band-bg{
+.band-bg {
   background-color: #f9fafb;
   height: 100px;
   border-radius: 8px;
@@ -6478,9 +6478,8 @@ text p {
   display: flex;
   justify-content: space-between;
   padding-top: 18px;
-  
 }
-.time-att-border{
+.time-att-border {
   border: 1px solid #ccc;
   width: 100%;
   height: 74vh;
@@ -6492,7 +6491,7 @@ text p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6525,142 +6524,142 @@ text p {
   justify-content: flex-end;
   gap: 10px;
 }
-.addebtn{
+.addebtn {
   background: transparent;
   border: none;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
-.modal-bg{
+.modal-bg {
   background-color: #f4f4f5;
   height: 40px;
   width: 100%;
 }
-.p-flex{
+.p-flex {
   width: 85%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   padding-top: 9px;
 }
-.person-one h4{
+.person-one h4 {
   font-weight: 500;
   color: #71717a;
 }
-.perosnal{
+.perosnal {
   border: 1px solid #ccc;
   height: auto;
   width: 100%;
   border-radius: 8px;
   margin-top: 20px;
 }
-.personal-details{
+.personal-details {
   width: 95%;
   margin: auto;
 }
-.per-sonal-flex{
+.per-sonal-flex {
   display: flex;
   margin-top: 20px;
   gap: 5px;
 }
-.per-sonal-flex h3{
+.per-sonal-flex h3 {
   margin-top: 4px;
 }
-.pee-icon{
+.pee-icon {
   font-size: 20px;
   margin-top: 5px;
 }
-.upload-img{
+.upload-img {
   width: 6%;
 }
-.upload-img img{
+.upload-img img {
   width: 100%;
   border-radius: 28px;
 }
-.personimage-holder{
+.personimage-holder {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
 }
-.imgae-holder{
+.imgae-holder {
   display: flex;
   width: 90%;
   margin: auto;
   justify-content: space-between;
   margin-top: 4px;
 }
-.imgae-holder h4{
+.imgae-holder h4 {
   font-weight: 500;
 }
-.image-border{
+.image-border {
   border: 1px solid #ccc;
   width: 18%;
   height: 38px;
   border-radius: 4px;
   margin-top: 15px;
 }
-.person-input-fields{
+.person-input-fields {
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
 }
-.per-input{
+.per-input {
   width: 50%;
 }
-.per--input{
+.per--input {
   width: 100%;
 }
-.per-input input{
-  width: 100%;
-  padding: 11px 10px;
-  border: 1px solid #ccc;
-  outline: none;
-  border-radius: 4px;
-}
-.per--input input{
+.per-input input {
   width: 100%;
   padding: 11px 10px;
   border: 1px solid #ccc;
   outline: none;
   border-radius: 4px;
 }
-.per-input select{
+.per--input input {
+  width: 100%;
+  padding: 11px 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 4px;
+}
+.per-input select {
   width: 100%;
   padding: 11px 10px;
   outline: none;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.per-in-put{
+.per-in-put {
   width: 100%;
 }
-.per-in-put select{
+.per-in-put select {
   width: 100%;
   padding: 11px 10px;
   outline: none;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.per-input label{
+.per-input label {
   margin-bottom: 5px;
 }
-.city-one input, 
-.city-one select{
+.city-one input,
+.city-one select {
   width: 100%;
   padding: 11px 10px;
   border: 1px solid #ccc;
   outline: none;
   border-radius: 4px;
 }
-.postal-code{
+.postal-code {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-bottom: 25px;
 }
 .scrollable {
-  max-height: 400px;  
+  max-height: 400px;
   overflow-y: auto;
   padding-right: 8px;
 }
@@ -6678,12 +6677,12 @@ text p {
 .scrollable::-webkit-scrollbar-track {
   background: transparent;
 }
-.employee-option-btn{
+.employee-option-btn {
   display: flex;
   justify-content: flex-end;
   gap: 15px;
 }
-.cancel-btn{
+.cancel-btn {
   background: transparent;
   border: 1px solid #ccc;
   padding: 11px 25px;
@@ -6692,7 +6691,7 @@ text p {
   /* width: 100%; */
   font-size: 14px;
 }
-.cancel-btnn{
+.cancel-btnn {
   background: transparent;
   background-color: #2563eb;
   color: white;
@@ -6703,18 +6702,17 @@ text p {
   /* width: 100%; */
   font-size: 15px;
 }
-.skill-button{
+.skill-button {
   background: transparent;
   border: none;
   background-color: black;
   color: white;
   padding: 6px 12px;
   cursor: pointer;
-  margin-top: 22px;
   font-size: 20px;
   border-radius: 4px;
 }
-.s-textarea textarea{
+.s-textarea textarea {
   width: 100%;
   height: 100px;
   border: 1px solid #ccc;
@@ -6722,31 +6720,31 @@ text p {
   border-radius: 4px;
   padding: 10px;
 }
-.pjobflex{
+.pjobflex {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-bottom: 20px;
 }
-.checked_ h4{
+.checked_ h4 {
   font-weight: 500;
   font-size: 14px;
 }
-.job-cancel{
+.job-cancel {
   border: 1px solid #ccc;
   background: transparent;
   border-radius: 6px;
   padding: 10px 15px;
   cursor: pointer;
 }
-.job-previous{
+.job-previous {
   border: 1px solid #ccc;
   background: transparent;
   border-radius: 6px;
   padding: 10px 15px;
   cursor: pointer;
 }
-.job-next{
+.job-next {
   border: none;
   background: transparent;
   color: white;
@@ -6755,41 +6753,49 @@ text p {
   padding: 10px 20px;
   cursor: pointer;
 }
+.rating-scale {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
 
+.pp-mance {
+  width: 55%;
+}
 
+.comm-plus {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 8px;
+}
 
+.performance-option {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.comm-bord {
+  border: 1px solid #ccc;
+  width: 50%;
+  height: 38px;
+  border-radius: 6px;
+}
+.comm--bord {
+  border: 1px solid #ccc;
+  width: 35%;
+  height: 38px;
+  border-radius: 6px;
+}
+.comm--bord:hover, 
+.comm-bord:hover{
+background-color: #f4f4f5;
+}
+.plus-comm-icon {
+  font-size: 21px;
+}
 
 /* Responsive Design */
 @media (max-width: 428px) {

@@ -6,13 +6,15 @@ import Performanceanalytics from './Performanceanalytics';
 import Goals from './Goals';
 import { BsPlus } from "react-icons/bs";
 import { PiExport } from "react-icons/pi";
+import PerformOne from '../Pages/Perform/PerformOne';
+import GoalsKPIs from '../Pages/Perform/GoalsKPIs';
+import Core from '../Pages/Perform/Core';
+// import Settings from '../Pages/Perform/Settings';
 
 function Performance() {
-    const [activeTab, setActiveTab] = useState('Performance'); 
-
-    const handleTabClick = (tabName) => {
-        setActiveTab(tabName);
-    };
+    const [activeTab, setActiveTab] = useState('Performance');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalTab, setModalTab] = useState('PerformOne');
 
     return (
         <div className='performance-container'>
@@ -38,24 +40,99 @@ function Performance() {
                                 </div>
                             </div>
                             <div className='cycle--flex'>
-                                <div className='cycle-flex'>
+                                <div className='cycle-flex' onClick={() => setIsModalOpen(true)}>
                                     <div className='cycle-plus'>
                                         <BsPlus />
                                     </div>
-                                    <div className='chfour'><h4>New Review Cycle</h4></div>
+                                    <div className='chfour'>
+                                        <button className='addebtn'>New Review Cycle</button>
+                                    </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
 
                     <br />
 
-                    {/* Tabs */}
+                    {/* Modal */}
+                    {isModalOpen && (
+                        <div className="modal-overlay">
+                            <div className="modal">
+                                <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <h3>Create Performance Review</h3>
+                                    <button onClick={() => setIsModalOpen(false)}>✖</button>
+                                </div>
+                                <br />
+
+                                {/* Modal Tabs */}
+                                <div className='modal-bg'>
+                                    <div className='p-flex'>
+                                        <div
+                                            onClick={() => setModalTab('PerformOne')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: modalTab === 'PerformOne' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'
+                                        >
+                                            <h4>Basic Info</h4>
+                                        </div>
+                                        <div
+                                            onClick={() => setModalTab('GoalsKPIs')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: modalTab === 'GoalsKPIs' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'
+                                        >
+                                            <h4>Goals & KPIs</h4>
+                                        </div>
+                                        <div
+                                            onClick={() => setModalTab('Core')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: modalTab === 'Core' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'
+                                        >
+                                            <h4>Competencies</h4>
+                                        </div>
+                                        <div
+                                            onClick={() => setModalTab('Settings')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: modalTab === 'Settings' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'
+                                        >
+                                            <h4>Settings</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Modal Content */}
+                                <form>
+                                    <div className='performance-content'>
+                                        {modalTab === 'PerformOne' && <PerformOne />}
+                                        {modalTab === 'GoalsKPIs' && <GoalsKPIs /> }
+                                        {modalTab === 'Core' && <Core /> }
+                                        {/* {modalTab === 'Core' && <div>Competencies content</div>} */}
+                                        {modalTab === 'Settings' && <div>Settings content</div>}
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Main Page Tabs */}
                     <div className='goal'>
                         <div>
                             <h4
-                                onClick={() => handleTabClick('Performance')}
+                                onClick={() => setActiveTab('Performance')}
                                 style={{
                                     cursor: 'pointer',
                                     backgroundColor: activeTab === 'Performance' ? '#f5f5faff' : 'transparent',
@@ -70,7 +147,7 @@ function Performance() {
                         </div>
                         <div>
                             <h4
-                                onClick={() => handleTabClick('Goals')}
+                                onClick={() => setActiveTab('Goals')}
                                 style={{
                                     cursor: 'pointer',
                                     backgroundColor: activeTab === 'Goals' ? '#f5f5faff' : 'transparent',
@@ -84,7 +161,8 @@ function Performance() {
                             </h4>
                         </div>
                         <div>
-                            <h4 onClick={() => handleTabClick('Feedback')}
+                            <h4
+                                onClick={() => setActiveTab('Feedback')}
                                 style={{
                                     cursor: 'pointer',
                                     backgroundColor: activeTab === 'Feedback' ? '#f5f5faff' : 'transparent',
@@ -93,10 +171,13 @@ function Performance() {
                                     transition: 'background-color 0.3s ease',
                                     marginTop: '-6px'
                                 }}
-                            >Feedback Center</h4>
+                            >
+                                Feedback Center
+                            </h4>
                         </div>
                         <div>
-                            <h4 onClick={() => handleTabClick('Analytics')}
+                            <h4
+                                onClick={() => setActiveTab('Analytics')}
                                 style={{
                                     cursor: 'pointer',
                                     backgroundColor: activeTab === 'Analytics' ? '#f5f5faff' : 'transparent',
@@ -105,14 +186,16 @@ function Performance() {
                                     transition: 'background-color 0.3s ease',
                                     marginTop: '-6px'
                                 }}
-                            >Analytics</h4>
+                            >
+                                Analytics
+                            </h4>
                         </div>
                     </div>
 
                     <div className='d-line_'></div>
                 </div>
 
-                {/* Content Switch */}
+                {/* Main Content Switch */}
                 <div className='performance-content'>
                     {activeTab === 'Performance' && <Performancedetails />}
                     {activeTab === 'Feedback' && <Feedback />}

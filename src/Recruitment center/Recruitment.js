@@ -65,8 +65,7 @@ function Recruitment() {
                                 <div className='new-job-bg'>
                                     <div className='new-job' onClick={() => {
                                         setIsModalOpen(true);
-                                        setModalTab('Basic'); // 👈 always start modal at Basic
-                                    }}>
+                                        setModalTab('Basic');                                     }}>
                                         <div className='newjob_plus'><GoPlus /></div>
                                         <button className='addebtn'>Post New Job</button>
                                     </div>
