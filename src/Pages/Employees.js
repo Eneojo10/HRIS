@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Dashboard from '../Menu/Dashboard'
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import img1 from '../Images/user2.jpg'
@@ -6,9 +6,18 @@ import { GoPersonAdd } from "react-icons/go";
 import { AiOutlineMail } from "react-icons/ai";
 import { PiExport } from "react-icons/pi";
 import { CiImport } from "react-icons/ci";
+import Personal from './Register/Personal';
 
 
 function Employees() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [activeTab, setActiveTab] = useState('Personal');
+
+
+    const handleTabClick = (tabName) => {
+        setActiveTab(tabName)
+    };
+
     return (
         <div>
             <div className='employees-container'>
@@ -41,16 +50,66 @@ function Employees() {
                                         <span> Import</span>
                                     </div>
                                 </div>
-                                
-                                <div className='add-people-bg'>
-                                    <div className='add-people'>
+
+                                <div className='add-people-bg' >
+                                    <div className='add-people' onClick={() => setIsModalOpen(true)}>
                                         <div className='add_people_icon'><GoPersonAdd /></div>
-                                        <h4>Add Employee</h4>
+                                        <button className='addebtn'>Add Employee</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div><br />
+                    {isModalOpen && (
+                        <div className="modal-overlay">
+                            <div className="modal">
+                                <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
+                                    <div className='modal-icon' style={{ fontSize: '21px' }}>
+                                        <GoPersonAdd />
+                                    </div>
+                                    <div
+                                    ><h2>Add New Employee</h2></div>
+                                </div>
+                                <br />
+                                <div className='modal-bg'>
+                                    <div className='p-flex'>
+                                        <div onClick={() => handleTabClick('Personal')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: activeTab === 'Personal' ? 'white' : 'transparent',
+                                                // padding: '5px 35px',
+                                            }}
+                                            className='person-one'>
+                                            <h4>Personal</h4>
+                                        </div>
+                                        <div className='person-one'>
+                                            <h4>Employment</h4>
+                                        </div>
+                                        <div className='person-one'>
+                                            <h4>Contact</h4>
+                                        </div>
+                                        <div className='person-one'>
+                                            <h4>Compensation</h4>
+                                        </div>
+                                        <div className='person-one'>
+                                            <h4>Additional</h4>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <form>
+                                    <div className='performance-content'>
+                                        {activeTab === 'Personal' && <Personal />}
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    )}
+
                     <div className='d-line_'></div>
                     <div className='emp-bg'>
                         <div className='employee-cards'>
@@ -65,7 +124,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>1,240</h2>
                                             <p>Total Employees</p>
@@ -84,7 +143,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>1,240</h2>
                                             <p>Present Today</p>
@@ -103,7 +162,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>43</h2>
                                             <p>On Leave</p>
@@ -122,7 +181,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>387</h2>
                                             <p>Remote Workers</p>
@@ -141,7 +200,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>12</h2>
                                             <p>Department</p>
@@ -160,7 +219,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>8</h2>
                                             <p>Locations</p>
@@ -179,7 +238,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>28</h2>
                                             <p>New Hires (30d)</p>
@@ -198,7 +257,7 @@ function Employees() {
                                                 <div></div>
                                                 <p>+12</p>
                                             </div>
-                                        </div><br/>
+                                        </div><br />
                                         <div className='flex-number'>
                                             <h2>156</h2>
                                             <p>Top Performers</p>
@@ -207,7 +266,7 @@ function Employees() {
 
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div className='empolyee-directory'>
                                 <div className='directory-header'>

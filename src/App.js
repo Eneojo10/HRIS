@@ -82,6 +82,7 @@ import Equity from './Analytics/Equity';
 import PayrollTrends from './Analytics/PayrollTrends';
 import Distribution from './Analytics/Distribution';
 import Talent from './Analytics/Talent';
+import Personal from './Pages/Register/Personal';
 
 function App() {
   return (
@@ -173,6 +174,7 @@ function App() {
           <Route path="trends" element={<PayrollTrends />} />
           <Route path="distribution" element={<Distribution />} />
           <Route path="talent" element={<Talent />} />
+          <Route path="personal" element={<Personal />} />
         </Routes>
       </Router>
     </div>
