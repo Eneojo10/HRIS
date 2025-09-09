@@ -860,6 +860,7 @@
   width: 85%;
   margin: auto;
   padding-top: 10px;
+  cursor: pointer;
 }
 .reminder-flex {
   display: flex;
@@ -6623,6 +6624,16 @@ text p {
   border-radius: 4px;
 }
 .per-input select{
+  width: 100%;
+  padding: 11px 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.per-in-put{
+  width: 100%;
+}
+.per-in-put select{
   width: 100%;
   padding: 11px 10px;
   outline: none;

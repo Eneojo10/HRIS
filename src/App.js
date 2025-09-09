@@ -90,6 +90,7 @@ import Additional from './Pages/Register/Additional';
 import Basic from './Pages/Postjob/Basic';
 import Details from './Pages/Postjob/Details';
 import Jobsettings from './Pages/Postjob/Jobsettings';
+import Onboard from './Pages/Register/Onboard/Onboard';
 
 function App() {
   return (
@@ -189,6 +190,8 @@ function App() {
           <Route path="basic" element={<Basic />} />
           <Route path="details" element={<Details />} />
           <Route path="jobsettings" element={<Jobsettings />} />
+          <Route path="onboard" element={<Onboard />} />
+          {/* <Route path="onboard" element={<Onboard />} /> */}
         </Routes>
       </Router>
     </div>

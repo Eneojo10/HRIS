@@ -9,13 +9,15 @@ import Onboardingdetails from './Onboardingdetails';
 import Taskdetails from './Taskdetails';
 import Templatesdetails from './Templatesdetails';
 import Analyticdetails from './Analyticdetails';
-
+import Onboard from '../Pages/Register/Onboard/Onboard';
+import { GoPersonAdd } from "react-icons/go";
 
 
 
 function Onboarding() {
 
     const [activeTab, setActiveTab] = useState('Onboarding')
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
@@ -23,7 +25,7 @@ function Onboarding() {
 
     return (
         <div>
-            
+
             <div className='onboarding--navigations'>
                 <div className='main1'>
                     <Dashboard />
@@ -60,18 +62,46 @@ function Onboarding() {
                                 </div>
                             </div>
                             <div className='hire'>
-                                <div className='hire-flex'>
+                                <div className='hire-flex' onClick={() => {
+                                    setIsModalOpen(true);
+                                    setActiveTab('Onboard'); 
+                                }}>
                                     <div className='hire-icon'>
                                         <GoPlus />
                                     </div>
-                                    <div>
-                                        <h4>Add New Hire</h4>
+                                    <div className=''>
+                                        <button className='addebtn'>Add New Hire</button>
                                     </div>
 
                                 </div>
                             </div>
                         </div><br />
-                        
+
+                        {isModalOpen && (
+                            <div className="modal-overlay">
+                                <div className="modal">
+                                    <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
+                                        <div className='modal-icon' style={{ fontSize: '21px' }}>
+                                            <GoPersonAdd />
+                                        </div>
+                                        <div
+                                        ><h2>Add New Hire</h2></div>
+                                        
+                                    </div>
+                                    <br />
+
+                                    <form>
+                                        <div className='performance-content'>
+                                            {activeTab === 'Onboard' && <Onboard />}
+
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        )}
+
                         <div className='sub-board'>
                             <div>
                                 <h3 onClick={() => handleTabClick('Onboarding')}
@@ -131,14 +161,14 @@ function Onboarding() {
                         {activeTab === 'Analytics' && <Analyticdetails />}
 
                     </div>
-                    
+
 
 
                 </div>
 
 
             </div>
-            
+
 
         </div>
     )
