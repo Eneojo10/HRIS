@@ -10,9 +10,12 @@ import Postingdetails from './Postingdetails';
 import Interviewdetails from './Interviewdetails';
 import Analyticdetails from './Analyticdetails';
 import { LuBriefcase } from "react-icons/lu";
+import Basic from '../Pages/Postjob/Basic';
 
 function Recruitment() {
     const [activeTab, setActiveTab] = useState('Candidate Pipeline');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalTab, setModalTab] = useState('Basic')
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
@@ -58,15 +61,67 @@ function Recruitment() {
                                 </div>
 
                                 <div className='new-job-bg'>
-                                    <div className='new-job'>
+                                    <div className='new-job' onClick={() => {
+                                            setIsModalOpen(true);
+                                            setModalTab('Basic'); // 👈 always start modal at Basic
+                                        }}>
                                         <div className='newjob_plus'><GoPlus /></div>
-                                        <h4>Post New Job</h4>
+                                        <button className='addebtn'>Post New Job</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <br /><br />
+                        {isModalOpen && (
+                            <div className="modal-overlay">
+                                <div className="modal">
+                                    <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
+                                        <div className='modal-icon' style={{ fontSize: '21px',marginTop:'5px' }}>
+                                            <LuBriefcase />
+                                        </div>
+                                        <div
+                                        ><h2>Post New Job</h2></div>
+                                    </div>
+                                    <br />
+                                    <div className='modal-bg'>
+                                        <div className='p-flex'>
+                                            <div onClick={() => setModalTab('Basic')}
+                                                style={{
+                                                    backgroundColor: modalTab === 'Basic' ? 'white' : 'transparent',
+                                                    cursor: 'pointer',
+                                                    padding: '3px 20px'
+                                                }}
+                                                className='person-one'>
+                                                <h4>Basic Info</h4>
+                                            </div>
+                                            <div
+                                                className='person-one'>
+                                                <h4>Job Details</h4>
+                                            </div>
+                                            <div
+                                                className='person-one'>
+                                                <h4>Settings</h4>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <form>
+                                        <div className='performance-content'>
+                                            {modalTab === 'Basic' && <Basic />}
+                                            {/* {activeTab === 'Employment' && <Employment />}
+                                            {activeTab === 'Contact' && <Contact />} */}
+
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        )}
 
                         <div className='recruitment-sub-list'>
                             <div onClick={() => handleTabClick('Candidate Pipeline')} style={tabStyle('Candidate Pipeline')} className='candidates'>
@@ -114,6 +169,7 @@ function Recruitment() {
                         {activeTab === 'Job Postings' && <Postingdetails />}
                         {activeTab === 'Interview' && <Interviewdetails />}
                         {activeTab === 'Analytics' && <Analyticdetails />}
+                        {/* {activeTab === 'Basic' && <Basic />} */}
                     </div>
                 </div>
             </div>

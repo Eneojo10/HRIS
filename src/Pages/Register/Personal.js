@@ -19,8 +19,9 @@ function Personal() {
                         </div>
                         <br />
                         <div className='personimage-holder'>
-                            <div className='upload-img'>
-                                <img src={image} alt='' />
+                            <div className='personal-bg-1'>
+                                {/* <img src={image} alt='' /> */}
+                                
 
                             </div>
                             <div className='image-border'>
