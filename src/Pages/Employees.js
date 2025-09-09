@@ -9,6 +9,8 @@ import { CiImport } from "react-icons/ci";
 import Personal from './Register/Personal';
 import Employment from './Register/Employment';
 import Contact from './Register/Contact';
+import Compensation from './Register/Compensation';
+import Additional from './Register/Additional';
 
 function Employees() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -78,7 +80,7 @@ function Employees() {
                                             style={{
                                                 cursor: 'pointer',
                                                 backgroundColor: activeTab === 'Personal' ? 'white' : 'transparent',
-                                                // padding: '5px 35px',
+                                                padding:'3px 20px'
                                             }}
                                             className='person-one'>
                                             <h4>Personal</h4>
@@ -87,6 +89,7 @@ function Employees() {
                                         style={{
                                             cursor:'pointer',
                                             backgroundColor: activeTab === 'Employment' ? 'white' : 'transparent',
+                                            padding:'3px 20px'
                                         }}
                                          className='person-one'>
                                             <h4>Employment</h4>
@@ -95,14 +98,27 @@ function Employees() {
                                         style={{
                                             cursor:'pointer',
                                             backgroundColor: activeTab === 'Contact' ? 'white' : 'transparent',
+                                            padding:'2px 25px'
                                         }}
                                          className='person-one'>
                                             <h4>Contact</h4>
                                         </div>
-                                        <div className='person-one'>
+                                        <div onClick={() => handleTabClick('Compensation')}
+                                        style={{
+                                            cursor:'pointer',
+                                            backgroundColor: activeTab === 'Compensation' ? 'white' : 'transparent',
+                                            padding:'2px 20px'
+                                        }}
+                                         className='person-one'>
                                             <h4>Compensation</h4>
                                         </div>
-                                        <div className='person-one'>
+                                        <div onClick={() => handleTabClick('Additional')}
+                                        style={{
+                                            cursor:'pointer',
+                                            backgroundColor: activeTab === 'Additional' ? 'white' : 'transparent',
+                                            padding:'3px 20px'
+                                        }}
+                                         className='person-one'>
                                             <h4>Additional</h4>
                                         </div>
 
@@ -115,6 +131,8 @@ function Employees() {
                                         {activeTab === 'Personal' && <Personal />}
                                         {activeTab === 'Employment' && <Employment />}
                                         {activeTab === 'Contact' && <Contact />}
+                                        {activeTab === 'Compensation' && <Compensation />}
+                                        {activeTab === 'Additional' && <Additional />}
 
                                     </div>
 

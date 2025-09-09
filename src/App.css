@@ -6555,6 +6555,9 @@ text p {
   margin-top: 20px;
   gap: 5px;
 }
+.per-sonal-flex h3{
+  margin-top: 4px;
+}
 .pee-icon{
   font-size: 20px;
   margin-top: 5px;
@@ -6679,6 +6682,24 @@ text p {
   cursor: pointer;
   /* width: 100%; */
   font-size: 15px;
+}
+.skill-button{
+  background: transparent;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-top: 22px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+.s-textarea textarea{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 4px;
 }
 
 
