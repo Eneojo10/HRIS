@@ -12,49 +12,30 @@ function PerformOne() {
 
                     <div className='person-input-fields'>
                         <div className='per-input'>
-                            <label>Reviewer *</label>
+                            <label>Employee *</label>
                             <select>
-                                <option>Select department</option>
-                                <option>Engineering</option>
-                                <option>Human Resources </option>
-                                <option>Sales </option>
-                                <option>Marketing</option>
+                                <option>Select reviewer</option>
+                                <option>John Doe- Software</option>
 
                             </select>
                         </div>
                         <div className='per-input'>
                             <label>Review Date *</label>
-                            <input placeholder='e.g. FCT Abuja, Nigeria'></input>
+                            <input placeholder=''></input>
                         </div>
-                        {/* <div className='per-input'>
-                                <label>Employment Type</label>
-                                <select>
-                                    <option>Select Type</option>
-                                    <option>Full-time</option>
-                                    <option>Part-time </option>
-                                    <option>Contract </option>
-                                    <option>Internship </option>
-
-                                </select>
-                            </div> */}
-
+                        
                     </div>
                     <div className='person-input-fields'>
                         <div className='per-input'>
-                            <label>Employee *</label>
+                            <label>Reviewer *</label>
                             <select>
-                                <option>Select Level</option>
-                                <option>Entry Level</option>
-                                <option>Mid-Level </option>
-                                <option>Senior-Level </option>
-                                <option>Lead/Principal </option>
-                                <option>Executive </option>
-
+                                <option>Select employee</option>
+                                <option>John Doe- Software</option>
                             </select>
                         </div>
                         <div className='per-input'>
                             <label>Due Date</label>
-                            <input placeholder='e.g. FCT Abuja, Nigeria'></input>
+                            <input placeholder=''></input>
                         </div>
 
 
@@ -63,24 +44,53 @@ function PerformOne() {
                         <div className='per-input'>
                             <label>Review Type *</label>
                             <select>
-                                <option>Select Level</option>
-                                <option>Entry Level</option>
-                                <option>Mid-Level </option>
-                                <option>Senior-Level </option>
-                                <option>Lead/Principal </option>
-                                <option>Executive </option>
+                                <option>Select review type</option>
+                                <option>Annual Review</option>
+                                <option>Quarterly Review</option>
+                                <option>Probabtion Review </option>
+                                <option>Promotion Review</option>
+                                <option>360-degree Review</option>
+                                
 
                             </select>
                         </div>
                         <div className='per-input'>
                             <label>Review Template</label>
                             <select>
-                                <option>Select Level</option>
-                                <option>Entry Level</option>
-                                <option>Mid-Level </option>
-                                <option>Senior-Level </option>
-                                <option>Lead/Principal </option>
-                                <option>Executive </option>
+                                <option>Select Level (Optional)</option>
+                                <option>Standard Performance Review</option>
+                                <option>Technical Role Review </option>
+                                <option>Leadership Review</option>
+                                <option>Sales Performance Review </option>
+                                
+
+                            </select>
+                        </div>
+
+
+
+                    </div>
+                    <div className='person-input-fields'>
+                        <div className='per-input'>
+                            <label>Review Period *</label>
+                            <select>
+                                <option>Select period</option>
+                                <option>Q1 2024</option>
+                                <option>Q2 2024</option>
+                                <option>Q3 2024</option>
+                                <option>Q4 2024</option>
+                                <option>Annual 2024</option>
+
+                            </select>
+                        </div>
+                        <div className='per-input'>
+                            <label>Priority</label>
+                            <select>
+                                <option>Select priority</option>
+                                <option>High</option>
+                                <option>Medium</option>
+                                <option>Low</option>
+                                
 
                             </select>
                         </div>
