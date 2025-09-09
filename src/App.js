@@ -88,6 +88,8 @@ import Contact from './Pages/Register/Contact';
 import Compensation from './Pages/Register/Compensation';
 import Additional from './Pages/Register/Additional';
 import Basic from './Pages/Postjob/Basic';
+import Details from './Pages/Postjob/Details';
+import Jobsettings from './Pages/Postjob/Jobsettings';
 
 function App() {
   return (
@@ -185,6 +187,8 @@ function App() {
           <Route path="compensation" element={<Compensation />} />
           <Route path="addition" element={<Additional />} />
           <Route path="basic" element={<Basic />} />
+          <Route path="details" element={<Details />} />
+          <Route path="jobsettings" element={<Jobsettings />} />
         </Routes>
       </Router>
     </div>
