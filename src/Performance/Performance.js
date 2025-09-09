@@ -9,7 +9,7 @@ import { PiExport } from "react-icons/pi";
 import PerformOne from '../Pages/Perform/PerformOne';
 import GoalsKPIs from '../Pages/Perform/GoalsKPIs';
 import Core from '../Pages/Perform/Core';
-// import Settings from '../Pages/Perform/Settings';
+import Performsettings from '../Pages/Perform/Performsettings';
 
 function Performance() {
     const [activeTab, setActiveTab] = useState('Performance');
@@ -101,10 +101,10 @@ function Performance() {
                                             <h4>Competencies</h4>
                                         </div>
                                         <div
-                                            onClick={() => setModalTab('Settings')}
+                                            onClick={() => setModalTab('Performsettings')}
                                             style={{
                                                 cursor: 'pointer',
-                                                backgroundColor: modalTab === 'Settings' ? 'white' : 'transparent',
+                                                backgroundColor: modalTab === 'Performsettings' ? 'white' : 'transparent',
                                                 padding: '3px 20px'
                                             }}
                                             className='person-one'
@@ -120,8 +120,8 @@ function Performance() {
                                         {modalTab === 'PerformOne' && <PerformOne />}
                                         {modalTab === 'GoalsKPIs' && <GoalsKPIs /> }
                                         {modalTab === 'Core' && <Core /> }
-                                        {/* {modalTab === 'Core' && <div>Competencies content</div>} */}
-                                        {modalTab === 'Settings' && <div>Settings content</div>}
+                                        {modalTab === 'Performsettings' && <Performsettings /> }
+                                        
                                     </div>
                                 </form>
                             </div>

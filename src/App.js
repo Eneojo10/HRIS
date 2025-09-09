@@ -94,6 +94,7 @@ import Onboard from './Pages/Register/Onboard/Onboard';
 import PerformOne from './Pages/Perform/PerformOne';
 import GoalsKPIs from './Pages/Perform/GoalsKPIs';
 import Core from './Pages/Perform/Core';
+import Performsettings from './Pages/Perform/Performsettings';
 
 function App() {
   return (
@@ -198,6 +199,7 @@ function App() {
           <Route path="perform" element={<PerformOne />} />
           <Route path="goalkpi" element={<GoalsKPIs />} />
           <Route path="core" element={<Core />} />
+          <Route path="perfohmance" element={<Performsettings />} />
           {/* <Route path="onboard" element={<Onboard />} /> */}
         </Routes>
       </Router>

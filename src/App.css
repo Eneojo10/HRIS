@@ -6795,6 +6795,44 @@ background-color: #f4f4f5;
 }
 .plus-comm-icon {
   font-size: 21px;
+} 
+.perfom-s{
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 7px;
+}
+.Performsettings{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.r-settings{
+  padding: 25px;
+}
+
+.r-setting-flex{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.remember{
+  width: 100%;
+}
+
+.remember input{
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+}
+.pero-snal textarea{
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 150px;
+  border-radius: 7px;
 }
 
 /* Responsive Design */
