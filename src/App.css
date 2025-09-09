@@ -3928,7 +3928,7 @@
 .gt-text-2 {
   background-color: #fee2e2;
   color: #c91515;
-  height: 30px;
+  height: 22px;
   width: 10%;
   text-align: center;
   border-radius: 16px;
@@ -3936,18 +3936,20 @@
 .gt-text-3 {
   background-color: #dbeafe;
   color: #2050d9;
-  height: 30px;
-  width: 20%;
+  height: 22px;
+  width: 15%;
   text-align: center;
   border-radius: 16px;
 }
 .gt-text-3 p {
-  margin-top: 4px;
+  margin-top: 2px;
   font-weight: 600;
+  font-size: 12px;
 }
 .gt-text-2 p {
-  margin-top: 4px;
+  margin-top: 3px;
   font-weight: 600;
+  font-size: 12px;
 }
 text p {
   font-size: 15px;
