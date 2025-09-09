@@ -71,7 +71,7 @@ function Feedback() {
                     </div>
 
                     <div className='pend---time'>
-                      <div className='p-ending' style={{ display: 'flex', gap: '5px' }}>
+                      <div className='p-ending' style={{ display: 'flex',width:'80%',margin:'auto',justifyContent:'space-between',marginTop:'3px' }}>
                         <div>
                           <IoMdTime />
                         </div>
@@ -126,7 +126,7 @@ function Feedback() {
                     </div>
 
                     <div className='pend---times'>
-                      <div className='p-ending' style={{ display: 'flex', gap: '5px' }}>
+                      <div className='p-ending' style={{ display: 'flex',width:'80%',margin:'auto',justifyContent:'space-between',marginTop:'2px' }}>
                         <div>
                           <IoMdCheckmarkCircleOutline />
                         </div>

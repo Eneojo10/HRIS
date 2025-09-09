@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineGift } from "react-icons/ai";
+import { LuBriefcase } from "react-icons/lu";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -13,7 +13,7 @@ function Employment() {
                     <div className="personal-details ">
                         <div className="per-sonal-flex">
                             <div className="pee-icon-gift" style={{ fontSize: '21px', marginTop: '4px' }}>
-                                <AiOutlineGift />
+                                <LuBriefcase />
                             </div>
                             <div>
                                 <h3>Employment Details</h3>
