@@ -1567,8 +1567,9 @@
   justify-content: space-between;
   display: flex;
 }
-.chfour h4 {
-  font-weight: 600;
+.chfour{
+  /* font-weight: 600; */
+  padding-top: -30px;
 }
 .cycle--flex {
   background-color: black;

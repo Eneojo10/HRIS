@@ -9,18 +9,25 @@ function Request() {
                         <div className='per-inputt' style={{ marginBottom: '15px' }}>
                             <label>Employee *</label>
                             <select>
-                                <option>Select gender</option>
-                                <option>Male</option>
-                                <option>Female </option>
+                                <option>Select employee</option>
+                                <option>David Tunji</option>
+                                <option>David Tunji</option>
+                                <option>David Tunji</option>
+                                
 
                             </select>
                         </div>
                         <div className='per-inputt' style={{ marginBottom: '15px' }}>
                             <label>Leave Type *</label><br />
                             <select>
-                                <option>Select gender</option>
-                                <option>Male</option>
-                                <option>Female </option>
+                                <option>Select leave type</option>
+                                <option>Vacation Leave</option>
+                                <option>Sick Leave </option>
+                                <option>Personal Leave </option>
+                                <option>Maternity Leave </option>
+                                <option>Parternity Leave </option>
+                                <option>Bereavement Leave </option>
+                                <option>Emergency Leave </option>
 
                             </select>
                         </div>
