@@ -46,7 +46,7 @@ function Leave() {
                                         <div className='leave--nav-icon'>
                                             <GoPlus />
                                         </div>
-                                        <button className='addebtn'>Request Leave</button>
+                                        <button className='added-btn'>Request Leave</button>
                                     </div>
 
                                 </div>

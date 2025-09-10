@@ -4,7 +4,7 @@ function Request() {
     return (
         <div>
             <div className='scrollable'>
-                <div className='d-right' style={{ display: 'flex',gap:'10px' }}>
+                <div className='d-right' style={{ display: 'flex', gap: '10px' }}>
                     <div className='person-input-fieldss'>
                         <div className='per-inputt' style={{ marginBottom: '15px' }}>
                             <label>Employee *</label>
@@ -13,7 +13,7 @@ function Request() {
                                 <option>David Tunji</option>
                                 <option>David Tunji</option>
                                 <option>David Tunji</option>
-                                
+
 
                             </select>
                         </div>
@@ -119,7 +119,7 @@ function Request() {
                 </div>
 
                 <div className='person-input-fie-lds'>
-                    <div className='three-flex' style={{ width: '85%', gap: '10px', display: 'flex' }}>
+                    <div className='three-flex' style={{ width: '100%', gap: '10px', display: 'flex' }}>
                         <div className='per-inputt'>
                             <label>Duration</label>
                             <input type='text' placeholder='5'></input>
@@ -143,7 +143,7 @@ function Request() {
                         </select>
                     </div>
                 </div>
-                <div className='per-inputt' style={{ marginBottom: '15px' }}>
+                <div className='per-inputt' style={{ marginBottom: '15px', width: '50%' }}>
                     <label>Priority</label><br />
                     <select>
                         <option>Select priority</option>
@@ -157,6 +157,56 @@ function Request() {
                 <div className='leave-reason'>
                     <label>Reason for Leave *</label>
                     <textarea></textarea>
+                </div>
+                <div className='perosnal'>
+                    <div className='support-doc' style={{ padding: '25px' }}>
+                        <h3>Supporting Documents</h3><br />
+                        <div class="with-dash-border">
+                            <div className='med' style={{ textAlign: 'center' }}>
+                                <h4>Upload supporting documents (medical certificates, etc.)</h4><br />
+                                <input type='file'></input><br />
+                                <p>Supported formats: PDF, JPG, PNG (Max 5MB each)</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div className='perosnal' style={{ padding: '25px' }}>
+                    <div className='handover'>
+                        <h4>Work Handover</h4><br />
+
+                        <div className='s-textarea' style={{ marginBottom: '10px' }}>
+                            <label>Handover Notes</label><br />
+                            <textarea placeholder='Describe work that need to be handed over, important deadlines, contacts etc.'></textarea>
+
+                            <div className='checked_' style={{ display: 'flex', gap: '5px' }}>
+                                <div>
+                                    <input type='checkbox'></input>
+                                </div>
+                                <div>
+                                    <h4>I confirm that all necessary work handover has been completed</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><br />
+                <div className='leave-request-bg'>
+
+                </div>
+                <br />
+                <div className='modal-job-btn' style={{ display: 'flex', justifyContent: 'flex-end' }}>
+
+                    <div className='jay-jay' style={{ gap: '10px', display: 'flex' }}>
+                        <div>
+                            <button className='job-previous'>Cancel</button>
+                        </div>
+                        <div>
+                            <button className='job-next'>Submit Leave Request</button>
+                        </div>
+                    </div>
                 </div>
 
 
