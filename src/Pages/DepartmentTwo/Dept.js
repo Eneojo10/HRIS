@@ -139,51 +139,53 @@ function Dept() {
                             </div>
 
                         </div>
-                        <div className='perosnal'>
-                            <div className='personal-details' style={{ marginTop: '20px' }}>
+
+
+                    </div>
+                    <br/>
+
+                </div>
+                <div className='perosnal'>
+                    <div className='personal-details' style={{ marginTop: '20px' }}>
+                        <div>
+                            <h3>Summary</h3>
+                            <p>Review department configuration</p><br />
+
+                            <div className='depman' style={{ width: '75%', justifyContent: 'space-between', display: 'flex' }}>
                                 <div>
-                                    <h3>Summary</h3>
-                                    <p>Review department configuration</p><br />
-
-                                    <div className='depman' style={{ width: '75%', justifyContent: 'space-between', display: 'flex' }}>
-                                        <div>
-                                            <h4>Department</h4>
-                                            <p>Not specified (No code)</p>
-                                            <h4>Location</h4>
-                                            <p>Not specified</p>
-                                        </div>
-                                        <div>
-                                            <h4>Manager</h4>
-                                            <p>Mike Davis</p>
-                                            <h4>Objectives</h4>
-                                            <p>
-
-                                                0 defined</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <br />
-                        <div className='modal-job-btn' style={{ display: 'flex', justifyContent: 'flex-end' }}>
-
-                            <div className='jay-jay' style={{ gap: '10px', display: 'flex' }}>
-                                <div>
-                                    <button className='job-previous'>Cancel</button>
+                                    <h4>Department</h4>
+                                    <p>Not specified (No code)</p>
+                                    <h4>Location</h4>
+                                    <p>Not specified</p>
                                 </div>
                                 <div>
-                                    <button className='job-next'>Create Department 
-                                        
-                                    </button>
+                                    <h4>Manager</h4>
+                                    <p>Mike Davis</p>
+                                    <h4>Objectives</h4>
+                                    <p>
+
+                                        0 defined</p>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
 
+                </div>
+                <br />
+                <div className='modal-job-btn' style={{ display: 'flex', justifyContent: 'flex-end' }}>
+
+                    <div className='jay-jay' style={{ gap: '10px', display: 'flex' }}>
+                        <div>
+                            <button className='job-previous'>Cancel</button>
+                        </div>
+                        <div>
+                            <button className='job-next'>Create Department
+
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
             </div>

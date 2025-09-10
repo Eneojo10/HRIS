@@ -70,7 +70,7 @@ function Departments() {
                         <div className="modal-overlay">
                             <div className="modal">
                                 <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                    <div className='modal-icon' style={{ fontSize: '21px', marginTop: '1px' }}>
+                                    <div className='modal-icon' style={{ fontSize: '21px', marginTop: '1px',color:'#5b8af0' }}>
                                         <BiBuildingHouse />
                                     </div>
                                     <div
