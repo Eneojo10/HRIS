@@ -134,8 +134,9 @@ function Request() {
                         </div>
                     </div>
                     <div className='per-inputt' style={{ marginBottom: '15px' }}>
-                        <label>Backup Person (optional)</label><br />
+                        <label>Backup Person</label><br />
                         <select>
+                            <option>Select backup (optional)</option>
                             <option>Alice Johnson</option>
                             <option>Olawale Adesoji</option>
 
