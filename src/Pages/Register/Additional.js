@@ -22,7 +22,7 @@ function Additional() {
                                 <label>Skill</label>
                                 <input type='text' placeholder='Add a skill'></input>
                             </div>
-                            <div>
+                            <div className='button-job'style={{marginTop:'22px'}}>
                                 <button className='skill-button'><HiMiniPlusSmall /></button>
                             </div>
                         </div>

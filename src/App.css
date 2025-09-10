@@ -2094,6 +2094,7 @@
   border-radius: 8px;
   width: 45%;
   height: 40px;
+  cursor: pointer;
 }
 .np-flex {
   display: flex;
@@ -6948,6 +6949,23 @@ background-color: #f4f4f5;
 }
 .depman p{
   margin-bottom: 5px;
+}
+.no1 h4{
+  font-weight: 500;
+  font-size: 16px;
+}
+.no1 p{
+  font-size: 14px;
+}
+.pay-select select{
+  width: 100%;
+  padding: 11px 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+
+}
+.pay-select{
+  margin-bottom: 20px;
 }
 
 
