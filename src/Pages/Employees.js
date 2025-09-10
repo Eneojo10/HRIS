@@ -72,7 +72,7 @@ function Employees() {
                                     </div>
                                     <div
                                     ><h2>Add New Employee</h2></div>
-                                    <button onClick={() => setIsModalOpen(false)}>✖</button>
+                                    {/* <button onClick={() => setIsModalOpen(false)}>✖</button> */}
                                 </div>
                                 <br />
                                 <div className='modal-bg'>

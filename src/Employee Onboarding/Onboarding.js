@@ -9,7 +9,7 @@ import Onboardingdetails from './Onboardingdetails';
 import Taskdetails from './Taskdetails';
 import Templatesdetails from './Templatesdetails';
 import Analyticdetails from './Analyticdetails';
-import Onboard from '../Pages/Register/Onboard/Onboard';
+import Onboard from '../Pages/Onboard/Onboard';
 import { GoPersonAdd } from "react-icons/go";
 
 

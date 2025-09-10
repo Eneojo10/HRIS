@@ -90,11 +90,12 @@ import Additional from './Pages/Register/Additional';
 import Basic from './Pages/Postjob/Basic';
 import Details from './Pages/Postjob/Details';
 import Jobsettings from './Pages/Postjob/Jobsettings';
-import Onboard from './Pages/Register/Onboard/Onboard';
+import Onboard from './Pages/Onboard/Onboard';
 import PerformOne from './Pages/Perform/PerformOne';
 import GoalsKPIs from './Pages/Perform/GoalsKPIs';
 import Core from './Pages/Perform/Core';
 import Performsettings from './Pages/Perform/Performsettings';
+import Request from './Pages/Request/Request';
 
 function App() {
   return (
@@ -200,6 +201,7 @@ function App() {
           <Route path="goalkpi" element={<GoalsKPIs />} />
           <Route path="core" element={<Core />} />
           <Route path="perfohmance" element={<Performsettings />} />
+          <Route path="request" element={<Request />} />
           {/* <Route path="onboard" element={<Onboard />} /> */}
         </Routes>
       </Router>
