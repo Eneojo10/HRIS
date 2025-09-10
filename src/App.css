@@ -6839,7 +6839,7 @@ background-color: #f4f4f5;
   width: 50%;
 }
 .person-input-fie-lds{
-  /* width: 60%; */
+  /* width: 100%; */
   display: flex;
   gap: 15px;
 }
@@ -6853,14 +6853,14 @@ background-color: #f4f4f5;
   width: 100%;
 }
 .per-inputt select{
-  width: 98%;
+  width: 100%;
   padding: 11px 10px;
   border: 1px solid #ccc;
   outline: none;
   border-radius: 4px;
 }
 .per-inputt input{
-  width: 98%;
+  width: 100%;
   padding: 11px 10px;
   border: 1px solid #ccc;
   outline: none;

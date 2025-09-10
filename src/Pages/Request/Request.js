@@ -4,7 +4,7 @@ function Request() {
     return (
         <div>
             <div className='scrollable'>
-                <div className='d-right' style={{ display: 'flex' }}>
+                <div className='d-right' style={{ display: 'flex',gap:'10px' }}>
                     <div className='person-input-fieldss'>
                         <div className='per-inputt' style={{ marginBottom: '15px' }}>
                             <label>Employee *</label>
