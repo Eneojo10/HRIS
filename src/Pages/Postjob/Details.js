@@ -36,7 +36,7 @@ function Details() {
                                 <label>Required Skill</label>
                                 <input type='text' placeholder='Add a required skill...'></input>
                             </div>
-                            <div>
+                            <div className='button-job'style={{marginTop:'22px'}}>
                                 <button className='skill-button'><HiMiniPlusSmall /></button>
                             </div>
                         </div>

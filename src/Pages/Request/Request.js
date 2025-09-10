@@ -73,7 +73,7 @@ function Request() {
                                     <div>
                                         <p>Maternity</p>
                                     </div>
-                                    <div>
+                                    <div className='tweleve-weeks'>
                                         <p>12 weeks</p>
                                     </div>
                                 </div>
