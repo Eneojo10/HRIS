@@ -96,6 +96,7 @@ import GoalsKPIs from './Pages/Perform/GoalsKPIs';
 import Core from './Pages/Perform/Core';
 import Performsettings from './Pages/Perform/Performsettings';
 import Request from './Pages/Request/Request';
+import Dept from './Pages/DepartmentTwo/Dept';
 
 function App() {
   return (
@@ -202,6 +203,7 @@ function App() {
           <Route path="core" element={<Core />} />
           <Route path="perfohmance" element={<Performsettings />} />
           <Route path="request" element={<Request />} />
+          <Route path="dept" element={<Dept />} />
           {/* <Route path="onboard" element={<Onboard />} /> */}
         </Routes>
       </Router>

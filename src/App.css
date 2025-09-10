@@ -6927,6 +6927,28 @@ background-color: #f4f4f5;
   height: 100px;
   border-radius: 6px;
 }
+.dept_input-field{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.inputfield-dept-one{
+  width: 50%;
+}
+.inputfield-dept-one input{
+  padding: 11px 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+.depman h4{
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.depman p{
+  margin-bottom: 5px;
+}
 
 
 /* Responsive Design */
