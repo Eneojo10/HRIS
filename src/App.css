@@ -6978,6 +6978,33 @@ background-color: #f4f4f5;
   font-size: 13px;
 }
 
+.grid-days{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid_one{
+  display: flex;
+  gap: 6px;
+  margin-bottom: 7px;
+}
+.days-of-week h4{
+  margin-bottom: 7px;
+}
+
+.grid_one p{
+  font-size: 14px;
+}
+.shi-ft-btn{
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  cursor:pointer;
+  font-size: 15px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 428px) {
