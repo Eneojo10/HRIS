@@ -6755,7 +6755,7 @@ text p {
   border: none;
   background: transparent;
   color: white;
-  background-color: black;
+  background-color: #2563eb;
   border-radius: 6px;
   padding: 10px 20px;
   cursor: pointer;
@@ -7003,6 +7003,33 @@ background-color: #f4f4f5;
   border-radius: 6px;
   cursor:pointer;
   font-size: 15px;
+}
+.bulk-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+.bulk-input select{
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+}
+.bulk-input input{
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.bulk-input{
+  width: 100%;
+}
+.bulkone-icon{
+  border: 1px solid #ccc;
+  padding: 9px 11px;
+  border-radius: 7px;
 }
 
 
