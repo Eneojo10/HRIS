@@ -1839,7 +1839,7 @@
 }
 .ec {
   display: flex;
-  width: 25%;
+  width: 33%;
   gap: 10px;
 }
 .schedule-cards {
@@ -1898,7 +1898,7 @@
 .ec_flex {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 85%;
   margin: auto;
   padding-top: 5px;
 }
@@ -2488,7 +2488,7 @@
 }
 .schedule_export {
   border: 1px solid #ccc;
-  width: 55%;
+  width: 45%;
   height: 38px;
   border-radius: 8px;
 }
@@ -6966,6 +6966,16 @@ background-color: #f4f4f5;
 }
 .pay-select{
   margin-bottom: 20px;
+}
+
+.x-btn{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.tweleve-weeks p{
+  font-size: 13px;
 }
 
 

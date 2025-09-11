@@ -60,7 +60,7 @@ function Performance() {
                             <div className="modal">
                                 <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <h3>Create Performance Review</h3>
-                                    <button onClick={() => setIsModalOpen(false)}>✖</button>
+                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
                                 </div>
                                 <br />
 

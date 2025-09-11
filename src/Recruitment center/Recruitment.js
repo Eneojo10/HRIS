@@ -65,7 +65,8 @@ function Recruitment() {
                                 <div className='new-job-bg'>
                                     <div className='new-job' onClick={() => {
                                         setIsModalOpen(true);
-                                        setModalTab('Basic');                                     }}>
+                                        setModalTab('Basic');
+                                    }}>
                                         <div className='newjob_plus'><GoPlus /></div>
                                         <button className='addebtn'>Post New Job</button>
                                     </div>
@@ -77,13 +78,18 @@ function Recruitment() {
                         {isModalOpen && (
                             <div className="modal-overlay">
                                 <div className="modal">
-                                    <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                        <div className='modal-icon' style={{ fontSize: '21px', marginTop: '5px' }}>
-                                            <LuBriefcase />
+                                    <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <div className='modal-modal-add' style={{ display: 'flex', gap: '5px' }}>
+                                            <div className='modal-icon' style={{ fontSize: '21px' }}>
+                                                <LuBriefcase />
+                                            </div>
+                                            <div
+                                            ><h3>Post New Job</h3></div>
                                         </div>
-                                        <div
-                                        ><h2>Post New Job</h2></div>
+                                        <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+
                                     </div>
+                                    
                                     <br />
                                     <div className='modal-bg'>
                                         <div className='p-flex'>
@@ -92,8 +98,8 @@ function Recruitment() {
                                                     backgroundColor: modalTab === 'Basic' ? 'white' : 'transparent',
                                                     cursor: 'pointer',
                                                     padding: '3px 20px',
-                                                    width:'30%',
-                                                    textAlign:'center',
+                                                    width: '30%',
+                                                    textAlign: 'center',
                                                 }}
                                                 className='person-one'>
                                                 <h4>Basic Info</h4>
@@ -104,8 +110,8 @@ function Recruitment() {
                                                     backgroundColor: modalTab === 'Details' ? 'white' : 'transparent',
                                                     cursor: 'pointer',
                                                     padding: '3px 20px',
-                                                    width:'30%',
-                                                    textAlign:'center',
+                                                    width: '30%',
+                                                    textAlign: 'center',
                                                 }}
                                                 className='person-one'>
                                                 <h4>Job Details</h4>
@@ -116,8 +122,8 @@ function Recruitment() {
                                                     backgroundColor: modalTab === 'Job' ? 'white' : 'transparent',
                                                     cursor: 'pointer',
                                                     padding: '3px 20px',
-                                                    width:'30%',
-                                                    textAlign:'center',
+                                                    width: '30%',
+                                                    textAlign: 'center',
                                                 }}
                                                 className='person-one'>
                                                 <h4>Settings</h4>

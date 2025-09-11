@@ -72,12 +72,15 @@ function Payroll() {
                     {isModalOpen && (
                         <div className="modal-overlay">
                             <div className="modal">
-                                <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                    <div className='modal-icon' style={{ fontSize: '21px', marginTop: '1px', color: '#5b8af0' }}>
-                                        <TbCurrencyNaira />
+                                <div className='modal-add' style={{ display: 'flex',justifyContent:'space-between' }}>
+                                    <div className='modal-modal-add'style={{display:'flex',gap:'5px'}}>
+                                        <div className='modal-icon' style={{ fontSize: '21px', marginTop: '1px', color: '#5b8af0' }}>
+                                            <TbCurrencyNaira />
+                                        </div>
+                                        <div
+                                        ><h3>Process Payroll</h3></div>
                                     </div>
-                                    <div
-                                    ><h3>Process Payroll</h3></div>
+                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
 
                                 </div>
                                 <br />

@@ -98,6 +98,9 @@ import Performsettings from './Pages/Perform/Performsettings';
 import Request from './Pages/Request/Request';
 import Dept from './Pages/DepartmentTwo/Dept';
 import Pay from './Pages/Pay/Pay';
+import Shift from './Pages/Schedules/Shift';
+import Recurring from './Pages/Schedules/Recurring';
+import Bulk from './Pages/Schedules/Bulk';
 
 function App() {
   return (
@@ -206,7 +209,10 @@ function App() {
           <Route path="request" element={<Request />} />
           <Route path="dept" element={<Dept />} />
           <Route path="pay" element={<Pay />} />
-          {/* <Route path="onboard" element={<Onboard />} /> */}
+          <Route path="shift" element={<Shift />} />
+          <Route path="recur" element={<Recurring />} />
+          <Route path="bulk" element={<Bulk />} />
+        
         </Routes>
       </Router>
     </div>

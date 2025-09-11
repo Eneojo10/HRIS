@@ -49,7 +49,7 @@ function Request() {
                                     <div>
                                         <p>Vacation</p>
                                     </div>
-                                    <div>
+                                    <div className='tweleve-weeks'>
                                         <p>15 days</p>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@ function Request() {
                                     <div>
                                         <p>Sick Leave</p>
                                     </div>
-                                    <div>
+                                    <div className='tweleve-weeks'>
                                         <p>10 days</p>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@ function Request() {
                                     <div>
                                         <p>Personal</p>
                                     </div>
-                                    <div>
+                                    <div className='tweleve-weeks'>
                                         <p>5 days</p>
                                     </div>
                                 </div>

@@ -59,21 +59,20 @@ function Leave() {
                     {isModalOpen && (
                         <div className="modal-overlay">
                             <div className="modal">
-                                <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                    {/* <div className='modal-icon' style={{ fontSize: '21px' }}>
-                                        <GoPersonAdd />
-                                    </div> */}
+                                <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between' }}>
                                     <div
                                     ><h3>Request Leave</h3></div>
-                                    {/* <button onClick={() => setIsModalOpen(false)}>✖</button> */}
+                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+
                                 </div>
-                                <br />
                                 
+                                <br />
+
 
                                 <form>
                                     <div className='performance-content'>
                                         {activeTab === 'Request' && <Request />}
-                                        
+
 
                                     </div>
 

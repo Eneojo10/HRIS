@@ -66,14 +66,18 @@ function Employees() {
                     {isModalOpen && (
                         <div className="modal-overlay">
                             <div className="modal">
-                                <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                    <div className='modal-icon' style={{ fontSize: '21px' }}>
-                                        <GoPersonAdd />
+                                <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className='modal-modal-add' style={{ display: 'flex', gap: '5px' }}>
+                                        <div className='modal-icon' style={{ fontSize: '21px', marginTop: '1px' }}>
+                                            <GoPersonAdd />
+                                        </div>
+                                        <div
+                                        ><h3>Add New Employee</h3></div>
                                     </div>
-                                    <div
-                                    ><h2>Add New Employee</h2></div>
-                                    {/* <button onClick={() => setIsModalOpen(false)}>✖</button> */}
+                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+
                                 </div>
+                                
                                 <br />
                                 <div className='modal-bg'>
                                     <div className='p-flex'>
@@ -81,45 +85,45 @@ function Employees() {
                                             style={{
                                                 cursor: 'pointer',
                                                 backgroundColor: activeTab === 'Personal' ? 'white' : 'transparent',
-                                                padding:'3px 20px'
+                                                padding: '3px 20px'
                                             }}
                                             className='person-one'>
                                             <h4>Personal</h4>
                                         </div>
                                         <div onClick={() => handleTabClick('Employment')}
-                                        style={{
-                                            cursor:'pointer',
-                                            backgroundColor: activeTab === 'Employment' ? 'white' : 'transparent',
-                                            padding:'3px 20px'
-                                        }}
-                                         className='person-one'>
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: activeTab === 'Employment' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'>
                                             <h4>Employment</h4>
                                         </div>
                                         <div onClick={() => handleTabClick('Contact')}
-                                        style={{
-                                            cursor:'pointer',
-                                            backgroundColor: activeTab === 'Contact' ? 'white' : 'transparent',
-                                            padding:'2px 25px'
-                                        }}
-                                         className='person-one'>
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: activeTab === 'Contact' ? 'white' : 'transparent',
+                                                padding: '2px 25px'
+                                            }}
+                                            className='person-one'>
                                             <h4>Contact</h4>
                                         </div>
                                         <div onClick={() => handleTabClick('Compensation')}
-                                        style={{
-                                            cursor:'pointer',
-                                            backgroundColor: activeTab === 'Compensation' ? 'white' : 'transparent',
-                                            padding:'2px 20px'
-                                        }}
-                                         className='person-one'>
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: activeTab === 'Compensation' ? 'white' : 'transparent',
+                                                padding: '2px 20px'
+                                            }}
+                                            className='person-one'>
                                             <h4>Compensation</h4>
                                         </div>
                                         <div onClick={() => handleTabClick('Additional')}
-                                        style={{
-                                            cursor:'pointer',
-                                            backgroundColor: activeTab === 'Additional' ? 'white' : 'transparent',
-                                            padding:'3px 20px'
-                                        }}
-                                         className='person-one'>
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: activeTab === 'Additional' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'>
                                             <h4>Additional</h4>
                                         </div>
 

@@ -64,7 +64,7 @@ function Onboarding() {
                             <div className='hire'>
                                 <div className='hire-flex' onClick={() => {
                                     setIsModalOpen(true);
-                                    setActiveTab('Onboard'); 
+                                    setActiveTab('Onboard');
                                 }}>
                                     <div className='hire-icon'>
                                         <GoPlus />
@@ -80,14 +80,18 @@ function Onboarding() {
                         {isModalOpen && (
                             <div className="modal-overlay">
                                 <div className="modal">
-                                    <div className='modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                        <div className='modal-icon' style={{ fontSize: '21px',marginTop:'1px' }}>
-                                            <GoPersonAdd />
+                                    <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <div className='modal-modal-add' style={{ display: 'flex', gap: '5px' }}>
+                                            <div className='modal-icon' style={{ fontSize: '21px',  color: '#5b8af0' }}>
+                                                <GoPersonAdd />
+                                            </div>
+                                            <div
+                                            ><h3>Add New Hire</h3></div>
                                         </div>
-                                        <div
-                                        ><h2>Add New Hire</h2></div>
-                                        
+                                        <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+
                                     </div>
+                                   
                                     <br />
 
                                     <form>
