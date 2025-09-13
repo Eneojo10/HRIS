@@ -13,6 +13,7 @@ import { SiSimpleanalytics } from "react-icons/si";
 import { PiMedalLight } from "react-icons/pi";
 import { SiClickhouse } from "react-icons/si";
 import { TbCurrencyNaira } from "react-icons/tb";
+import { AiTwotoneSchedule } from "react-icons/ai";
 
 function Dashboard() {
     return (
@@ -117,7 +118,7 @@ function Dashboard() {
                         <a href='/schedules' className='a-line'>
                             <div className='list-item8'>
                                 <div className='icons'>
-                                    <GrSchedules />
+                                    <AiTwotoneSchedule />
                                 </div>
                                 <div className='icons_'>
                                     <span>Schedules</span>
