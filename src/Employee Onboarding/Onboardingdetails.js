@@ -388,7 +388,7 @@ function Onboardingdetails() {
                                     </div><br />
                                     <div className='can-width'>
                                         <div className='priority2'>
-                                            <div className='hp' style={{ backgroundColor: 'yellow', width: '38%', borderRadius: '4px' }}>
+                                            <div className='hpee'>
                                                 <p>Medium priority</p>
                                             </div>
                                             <div className='on-track'>
@@ -396,7 +396,7 @@ function Onboardingdetails() {
                                                     <IoMdTime />
                                                 </div>
                                                 <div>
-                                                    <span>In progress</span>
+                                                    <p>In progress</p>
                                                 </div>
                                             </div>
                                         </div><br />
@@ -486,7 +486,7 @@ function Onboardingdetails() {
                                     </div><br />
                                     <div className='can-width'>
                                         <div className='priority3'>
-                                            <div className='hpp' style={{ backgroundColor: '#ccc', color: 'black', borderRadius: '4px' }}>
+                                            <div className='hpp' style={{ backgroundColor: '#ccc', color: 'black', borderRadius: '4px',width:'35%' }}>
                                                 <p>Low priority</p>
                                             </div>
                                             <div className='on-track'>
@@ -571,6 +571,7 @@ function Onboardingdetails() {
                             </div>
                         </div>
                     </div>
+                    <br/>
                 </div>
 
             </div>

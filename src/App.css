@@ -1206,7 +1206,7 @@
 .flex___can11 {
   display: flex;
   justify-content: space-between;
-  width: 44%;
+  width: 55%;
   margin-bottom: 7px;
 }
 .flex___can2 {
@@ -1218,7 +1218,7 @@
 .flex___can22 {
   display: flex;
   justify-content: space-between;
-  width: 36%;
+  width: 45%;
   margin-bottom: 7px;
 }
 .flex___can3 {
@@ -1236,7 +1236,7 @@
 .flex___can44 {
   display: flex;
   justify-content: space-between;
-  width: 43%;
+  width: 54%;
   margin-bottom: 7px;
 }
 .flex___can5 {
@@ -1247,28 +1247,28 @@
 .flex___can55 {
   display: flex;
   justify-content: space-between;
-  width: 29%;
+  width: 37%;
 }
 .priority {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  /* width: 100%; */
 }
 .priority2 {
   display: flex;
   justify-content: space-between;
-  width: 98%;
+  /* width: 98%; */
 }
 .priority3 {
   display: flex;
   justify-content: space-between;
-  width: 98%;
+  /* width: 98%; */
 }
 .hp {
   color: red;
   background-color: rgb(248, 232, 232);
   font-size: 13px;
-  width: 38%;
+  width: 40%;
   text-align: center;
   padding-top: 2px;
   border-radius: 4px;
@@ -1285,10 +1285,26 @@
 .on-track {
   display: flex;
   gap: 5px;
+  /* width: 41%; */
+}
+
+.hpee {
+ /* color: def; */
+  background-color: yellow;
+  font-size: 13px;
+  width: 45%;
+  text-align: center;
+  /* padding-top: 2px; */
+  border-radius: 4px;
+}
+.hpee p{
+  font-size: 13px;
+  text-align: center;
+  padding-top: 3px;
 }
 .flex___can {
   display: flex;
-  justify-content: space-between;
+  gap: 15px;
 }
 .can_line {
   width: 90%;
@@ -1316,7 +1332,7 @@
   border-radius: 8px;
 }
 .can-width {
-  width: 75%;
+  width: 95%;
 }
 .can-image {
   width: 15%;
@@ -1523,13 +1539,15 @@
 }
 .big_tcards {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  /* grid-auto-flow: column;
   grid-auto-columns: calc(50% - 10px);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   overflow-x: auto;
   padding-bottom: 10px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; */
 }
 .performance-container {
   display: flex;
@@ -2101,7 +2119,7 @@
   justify-content: space-between;
   width: 90%;
   margin: auto;
-  padding-top: 8px;
+  padding-top: 5px;
 }
 .np_icon {
   font-size: 21px;
@@ -2953,14 +2971,16 @@
 }
 .f-1 {
   display: flex;
-  width: 90%;
+  width: 85%;
   margin: auto;
+  margin-top: 4px;
   justify-content: space-between;
 }
 .f-box {
   border: 1px solid #ccc;
-  width: 30%;
-  padding: 5px 10px;
+  width: 35%;
+  height: 35px;
+  /* padding: 5px 10px; */
   border-radius: 4px;
 }
 .f-icon {
