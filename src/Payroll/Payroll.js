@@ -15,6 +15,7 @@ import { BiError } from "react-icons/bi";
 import Pay from '../Pages/Pay/Pay';
 import Review from '../Pages/Pay/Review';
 import Process from '../Pages/Pay/Process';
+import Final from '../Pages/Pay/Final';
 import { TfiLayoutLineSolid } from "react-icons/tfi";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
@@ -154,7 +155,12 @@ function Payroll() {
                                     {/* Step 4 */}
                                     <div className='no1' style={{ display: 'flex', gap: '5px' }}>
                                         <div>
-                                            <h2>4</h2>
+                                            {activeTab === 'Final' ? (
+                                                <IoMdCheckmarkCircleOutline size={24} color="green" />
+                                            ) : (
+                                                <h2>4</h2>
+                                            )}
+
                                         </div>
                                         <div>
                                             <h4>Complete</h4>
@@ -186,8 +192,16 @@ function Payroll() {
 
                                         {activeTab === 'Complete' && (
                                             <div>
+                                                {/* <h2>Step 4: Complete</h2> */}
+                                                <button type="button" onClick={() => setActiveTab('Process')}>Back</button>
+                                                <button type="button" onClick={() => setActiveTab('Final')}>Next</button>
+                                            </div>
+                                        )}
+
+                                        {activeTab === 'Final' && (
+                                            <div>
                                                 <h2>✅ Payroll Completed!</h2>
-                                                <button onClick={() => setActiveTab('Payroll')}>Start Again</button>
+                                                <button type="button" onClick={() => setActiveTab('Payroll')}>Start Again</button>
                                             </div>
                                         )}
                                     </div>

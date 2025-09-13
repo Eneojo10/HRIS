@@ -106,6 +106,7 @@ import Review from './Pages/Pay/Review';
 import PayrollNext from './Pages/Pay/PayrollNext';
 import Process from './Pages/Pay/Process';
 import Progrezz from './Pages/Pay/Progrezz'
+import Final from './Pages/Pay/Final';
 
 function App() {
   return (
@@ -223,8 +224,7 @@ function App() {
           <Route path="next" element={<PayrollNext />} />
           <Route path="process" element={<Process />} />
           <Route path="progrezz" element={<Progrezz />} />
-          
-        
+          <Route path="final" element={<Final />} />
         </Routes>
       </Router>
     </div>
