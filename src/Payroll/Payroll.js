@@ -186,28 +186,25 @@ function Payroll() {
                                         {activeTab === 'Process' && (
                                             <Process
                                                 onBack={() => setActiveTab('Review')}
-                                                onNext={() => setActiveTab('Complete')}
+                                                // ⬇️ Directly go to Final when clicking "Process Payroll"
+                                                onNext={() => setActiveTab('Final')}
                                             />
-                                        )}
-
-                                        {activeTab === 'Complete' && (
-                                            <div>
-                                                {/* <h2>Step 4: Complete</h2> */}
-                                                <button type="button" onClick={() => setActiveTab('Process')}>Back</button>
-                                                <button type="button" onClick={() => setActiveTab('Final')}>Next</button>
-                                            </div>
                                         )}
 
                                         {activeTab === 'Final' && (
                                             <div>
                                                 <h2>✅ Payroll Completed!</h2>
-                                                <button type="button" onClick={() => setActiveTab('Payroll')}>Start Again</button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setActiveTab('Payroll')}
+                                                >
+                                                    Start Again
+                                                </button>
                                             </div>
                                         )}
                                     </div>
-
-
                                 </form>
+
                             </div>
                         </div>
                     )}

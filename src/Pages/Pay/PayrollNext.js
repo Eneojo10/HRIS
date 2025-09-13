@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Pay from "./Pay";
 import Review from "./Review";
-import Progrezz from "./Progrezz" // ✅ progress bar
+import Process from "./Process";   // ✅ add this
+import Final from "./Final";
+import Progrezz from "./Progrezz"; // ✅ progress bar
 
 function PayrollNext() {
   const [step, setStep] = useState(1);
@@ -11,12 +13,14 @@ function PayrollNext() {
 
   return (
     <div>
-      {/* Step indicator */}
+      {/* Progress bar: step is zero-based */}
       <Progrezz step={step - 1} />
 
-      {/* Render the correct step */}
+      {/* Render steps */}
       {step === 1 && <Pay onNext={nextStep} />}
-      {step === 2 && <Review onBack={prevStep} />}
+      {step === 2 && <Review onNext={nextStep} onBack={prevStep} />}
+      {step === 3 && <Process onNext={nextStep} onBack={prevStep} step={2} />}
+      {step === 4 && <Final />}
     </div>
   );
 }
