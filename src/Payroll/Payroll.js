@@ -16,6 +16,7 @@ import Pay from '../Pages/Pay/Pay';
 import Review from '../Pages/Pay/Review';
 import Process from '../Pages/Pay/Process';
 import { TfiLayoutLineSolid } from "react-icons/tfi";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 
 function Payroll() {
@@ -93,42 +94,64 @@ function Payroll() {
                                 <br />
 
                                 <div className='proc-ess-payroll' style={{ display: 'flex', justifyContent: 'space-between', width: '95%', margin: 'auto' }}>
+                                    {/* Step 1 */}
                                     <div className='no1' style={{ display: 'flex', gap: '5px' }}>
                                         <div>
-                                            <h2>1</h2>
+                                            {activeTab !== 'Payroll' ? (
+                                                <IoMdCheckmarkCircleOutline size={24} color="green" />
+                                            ) : (
+                                                <h2>1</h2>
+                                            )}
                                         </div>
                                         <div>
                                             <h4>Setup</h4>
                                             <p>Configure payroll<br /> parameters</p>
                                         </div>
                                     </div>
+
                                     <div className='line-line' style={{ marginTop: '15px', color: '#717379ff' }}>
                                         <TfiLayoutLineSolid />
                                     </div>
+
+                                    {/* Step 2 */}
                                     <div className='no1' style={{ display: 'flex', gap: '5px' }}>
                                         <div>
-                                            <h2>2</h2>
+                                            {['Process', 'Complete'].includes(activeTab) ? (
+                                                <IoMdCheckmarkCircleOutline size={24} color="green" />
+                                            ) : (
+                                                <h2>2</h2>
+                                            )}
                                         </div>
                                         <div>
                                             <h4>Review</h4>
                                             <p>Review employee data and<br /> calculations</p>
                                         </div>
                                     </div>
+
                                     <div className='line-line' style={{ marginTop: '15px', color: '#717379ff' }}>
                                         <TfiLayoutLineSolid />
                                     </div>
+
+                                    {/* Step 3 */}
                                     <div className='no1' style={{ display: 'flex', gap: '5px' }}>
                                         <div>
-                                            <h2>3</h2>
+                                            {activeTab === 'Complete' ? (
+                                                <IoMdCheckmarkCircleOutline size={24} color="green" />
+                                            ) : (
+                                                <h2>3</h2>
+                                            )}
                                         </div>
                                         <div>
                                             <h4>Process</h4>
                                             <p>Execute payroll <br />processing</p>
                                         </div>
                                     </div>
+
                                     <div className='line-line' style={{ marginTop: '15px', color: '#717379ff' }}>
                                         <TfiLayoutLineSolid />
                                     </div>
+
+                                    {/* Step 4 */}
                                     <div className='no1' style={{ display: 'flex', gap: '5px' }}>
                                         <div>
                                             <h2>4</h2>
@@ -139,6 +162,7 @@ function Payroll() {
                                         </div>
                                     </div>
                                 </div>
+
 
                                 <form>
                                     <div className='performance-content'>
