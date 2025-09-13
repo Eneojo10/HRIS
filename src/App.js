@@ -101,6 +101,11 @@ import Pay from './Pages/Pay/Pay';
 import Shift from './Pages/Schedules/Shift';
 import Recurring from './Pages/Schedules/Recurring';
 import Bulk from './Pages/Schedules/Bulk';
+import Time from './Pages/Time/Time';
+import Review from './Pages/Pay/Review';
+import PayrollNext from './Pages/Pay/PayrollNext';
+import Process from './Pages/Pay/Process';
+import Progrezz from './Pages/Pay/Progrezz'
 
 function App() {
   return (
@@ -205,6 +210,7 @@ function App() {
           <Route path="perform" element={<PerformOne />} />
           <Route path="goalkpi" element={<GoalsKPIs />} />
           <Route path="core" element={<Core />} />
+
           <Route path="perfohmance" element={<Performsettings />} />
           <Route path="request" element={<Request />} />
           <Route path="dept" element={<Dept />} />
@@ -212,6 +218,12 @@ function App() {
           <Route path="shift" element={<Shift />} />
           <Route path="recur" element={<Recurring />} />
           <Route path="bulk" element={<Bulk />} />
+          <Route path="times" element={<Time />} />
+          <Route path="review" element={<Review />} />
+          <Route path="next" element={<PayrollNext />} />
+          <Route path="process" element={<Process />} />
+          <Route path="progrezz" element={<Progrezz />} />
+          
         
         </Routes>
       </Router>

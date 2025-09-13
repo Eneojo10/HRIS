@@ -6,10 +6,17 @@ import Sheetdetails from './Sheetdetails';
 import Attendancedetails from './Attendancedetails';
 import Anadetails from './Anadetails';
 import { PiExport } from "react-icons/pi";
+import Time from '../Pages/Time/Time';
+import { IoTime } from 'react-icons/io5';
 
 function Tracking() {
 
     const [activeTab, setActiveTab] = useState('Timing')
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [modalTab, setModalTab] = useState('Time')
+
+
+
 
 
     const handleTabClick = (tabName) => {
@@ -29,7 +36,7 @@ function Tracking() {
                             <span className='time-trcke-tex'>Manage employee time, attendance, and schedules</span>
                         </div>
                         <div className='new-flex'>
-                            <div className='schedule_export'style={{marginTop:'11px'}}>
+                            <div className='schedule_export' style={{ marginTop: '11px' }}>
                                 <div className='schedule_exp-flex'>
                                     <div className='ec--icon'>
                                         <PiExport />
@@ -39,14 +46,85 @@ function Tracking() {
                             </div>
                             <div className='entry-btn'>
 
-                                <div className='plus'>
+                                <div className='plus' onClick={() => {
+                                    setIsModalOpen(true);
+                                    setModalTab('Time')
+                                }}>
                                     <div className='goplus'><GoPlus /></div>
-                                    <span className='new_entry'>New Entry</span>
+                                    <button className='addebtn'>New Entry</button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
+                    {isModalOpen && (
+                        <div className="modal-overlay">
+                            <div className="modal">
+                                <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className='modal-modal-add' style={{ display: 'flex', gap: '5px' }}>
+                                        <div className='modal-icon' style={{ fontSize: '21px', color: '#5b8af0' }}>
+                                            <IoTime />
+                                        </div>
+                                        <div
+                                        ><h3>Time Entry</h3></div>
+                                    </div>
+                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+
+                                </div>
+
+                                <br />
+                                {/* Modal Tabs */}
+                                <div className='modal-bg'>
+                                    <div className='p-flex'>
+                                        <div
+                                            onClick={() => setModalTab('Time')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: modalTab === 'Time' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'
+                                        >
+                                            <h4>Manual Entry</h4>
+                                        </div>
+                                        <div
+                                            onClick={() => setModalTab('GoalsKPIs')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: modalTab === 'GoalsKPIs' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'
+                                        >
+                                            <h4>Live Timer</h4>
+                                        </div>
+                                        <div
+                                            onClick={() => setModalTab('Core')}
+                                            style={{
+                                                cursor: 'pointer',
+                                                backgroundColor: modalTab === 'Core' ? 'white' : 'transparent',
+                                                padding: '3px 20px'
+                                            }}
+                                            className='person-one'
+                                        >
+                                            <h4>Bulk Entry</h4>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+                                <form>
+                                    <div className='performance-content'>
+                                        {modalTab === 'Time' && <Time />}
+
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    )}
                     <div className='d-line_'></div>
                     <div className='tracing_bg__color'>
                         <div className='tracking-sub-list'><br /><br />

@@ -13,8 +13,14 @@ import { IoCalendarClear } from 'react-icons/io5';
 import { CiSettings } from "react-icons/ci";
 import { BiError } from "react-icons/bi";
 import Pay from '../Pages/Pay/Pay';
+import Review from '../Pages/Pay/Review';
+import Process from '../Pages/Pay/Process';
+import { TfiLayoutLineSolid } from "react-icons/tfi";
+
 
 function Payroll() {
+
+
 
     const [activeTab, setActiveTab] = useState('Payroll')
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,6 +28,7 @@ function Payroll() {
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
     }
+
 
 
     return (
@@ -72,8 +79,8 @@ function Payroll() {
                     {isModalOpen && (
                         <div className="modal-overlay">
                             <div className="modal">
-                                <div className='modal-add' style={{ display: 'flex',justifyContent:'space-between' }}>
-                                    <div className='modal-modal-add'style={{display:'flex',gap:'5px'}}>
+                                <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className='modal-modal-add' style={{ display: 'flex', gap: '5px' }}>
                                         <div className='modal-icon' style={{ fontSize: '21px', marginTop: '1px', color: '#5b8af0' }}>
                                             <TbCurrencyNaira />
                                         </div>
@@ -85,12 +92,82 @@ function Payroll() {
                                 </div>
                                 <br />
 
+                                <div className='proc-ess-payroll' style={{ display: 'flex', justifyContent: 'space-between', width: '95%', margin: 'auto' }}>
+                                    <div className='no1' style={{ display: 'flex', gap: '5px' }}>
+                                        <div>
+                                            <h2>1</h2>
+                                        </div>
+                                        <div>
+                                            <h4>Setup</h4>
+                                            <p>Configure payroll<br /> parameters</p>
+                                        </div>
+                                    </div>
+                                    <div className='line-line' style={{ marginTop: '15px', color: '#717379ff' }}>
+                                        <TfiLayoutLineSolid />
+                                    </div>
+                                    <div className='no1' style={{ display: 'flex', gap: '5px' }}>
+                                        <div>
+                                            <h2>2</h2>
+                                        </div>
+                                        <div>
+                                            <h4>Review</h4>
+                                            <p>Review employee data and<br /> calculations</p>
+                                        </div>
+                                    </div>
+                                    <div className='line-line' style={{ marginTop: '15px', color: '#717379ff' }}>
+                                        <TfiLayoutLineSolid />
+                                    </div>
+                                    <div className='no1' style={{ display: 'flex', gap: '5px' }}>
+                                        <div>
+                                            <h2>3</h2>
+                                        </div>
+                                        <div>
+                                            <h4>Process</h4>
+                                            <p>Execute payroll <br />processing</p>
+                                        </div>
+                                    </div>
+                                    <div className='line-line' style={{ marginTop: '15px', color: '#717379ff' }}>
+                                        <TfiLayoutLineSolid />
+                                    </div>
+                                    <div className='no1' style={{ display: 'flex', gap: '5px' }}>
+                                        <div>
+                                            <h2>4</h2>
+                                        </div>
+                                        <div>
+                                            <h4>Complete</h4>
+                                            <p>Finalize and<br /> distribute</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <form>
                                     <div className='performance-content'>
-                                        {activeTab === 'Payroll' && <Pay />}
+                                        {activeTab === 'Payroll' && (
+                                            <Pay onNext={() => setActiveTab('Review')} />
+                                        )}
 
+                                        {activeTab === 'Review' && (
+                                            <Review
+                                                onBack={() => setActiveTab('Payroll')}
+                                                onNext={() => setActiveTab('Process')}
+                                            />
+                                        )}
 
+                                        {activeTab === 'Process' && (
+                                            <Process
+                                                onBack={() => setActiveTab('Review')}
+                                                onNext={() => setActiveTab('Complete')}
+                                            />
+                                        )}
+
+                                        {activeTab === 'Complete' && (
+                                            <div>
+                                                <h2>✅ Payroll Completed!</h2>
+                                                <button onClick={() => setActiveTab('Payroll')}>Start Again</button>
+                                            </div>
+                                        )}
                                     </div>
+
 
                                 </form>
                             </div>
