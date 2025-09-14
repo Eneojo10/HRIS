@@ -107,6 +107,7 @@ import PayrollNext from './Pages/Pay/PayrollNext';
 import Process from './Pages/Pay/Process';
 import Progrezz from './Pages/Pay/Progrezz'
 import Final from './Pages/Pay/Final';
+import Timer from './Pages/Time/Timer';
 
 function App() {
   return (
@@ -225,6 +226,7 @@ function App() {
           <Route path="process" element={<Process />} />
           <Route path="progrezz" element={<Progrezz />} />
           <Route path="final" element={<Final />} />
+          <Route path="timer" element={<Timer />} />
         </Routes>
       </Router>
     </div>

@@ -8,6 +8,7 @@ import Anadetails from './Anadetails';
 import { PiExport } from "react-icons/pi";
 import Time from '../Pages/Time/Time';
 import { IoTime } from 'react-icons/io5';
+import Timer from '../Pages/Time/Timer';
 
 function Tracking() {
 
@@ -89,10 +90,10 @@ function Tracking() {
                                             <h4>Manual Entry</h4>
                                         </div>
                                         <div
-                                            onClick={() => setModalTab('GoalsKPIs')}
+                                            onClick={() => setModalTab('Timer')}
                                             style={{
                                                 cursor: 'pointer',
-                                                backgroundColor: modalTab === 'GoalsKPIs' ? 'white' : 'transparent',
+                                                backgroundColor: modalTab === 'Timer' ? 'white' : 'transparent',
                                                 padding: '3px 20px'
                                             }}
                                             className='person-one'
@@ -117,6 +118,7 @@ function Tracking() {
                                 <form>
                                     <div className='performance-content'>
                                         {modalTab === 'Time' && <Time />}
+                                        {modalTab === 'Timer' && <Timer />}
 
 
                                     </div>

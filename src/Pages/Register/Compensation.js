@@ -60,10 +60,10 @@ function Compensation() {
                                 </select>
                             </div>
                         </div>
-                        {/* <div className='employee-option-btn'>
+                        <div className='employee-option-btn'>
                             <button className='cancel-btn'>Cancel</button>
                             <button className='cancel-btnn'>Add Employee</button>
-                        </div> */}
+                        </div>
 
                     </div>
                     <br />

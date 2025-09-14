@@ -51,7 +51,7 @@ function Benefits() {
                                     <div className='benplus'>
                                         <GoPlus />
                                     </div>
-                                    <span>New Enrollment</span>
+                                    <span>Enroll Benefits</span>
                                 </div>
                             </div>
                         </div>

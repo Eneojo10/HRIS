@@ -161,10 +161,10 @@
   margin-top: 10px;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 7px;
   border-radius: 8px;
   font-weight: 600;
-  width: 50%;
+  width: 43%;
   height: 40px;
 }
 .goplus {
@@ -7092,35 +7092,7 @@ background-color: #f4f4f5;
   margin: 20px 0;
 }
 
-.progress-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.progress-label {
-  font-size: 14px;
-  color: #666;
-}
-
-.progress-label.active {
-  font-weight: bold;
-  color: #18181b; /* blue */
-}
-
-.progress-bar {
-  position: relative;
-  height: 8px;
-  background-color: #e5e7eb; /* light gray */
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background-color: #18181b; /* blue */
-  transition: width 0.3s ease-in-out;
-}
+/*  */
 
 .process-bg{
   background-color: #f0fdf4;
@@ -7135,6 +7107,53 @@ background-color: #f4f4f5;
 }
 .com-pletely p{
   color: #6aa484;
+}
+
+.time_inputs-one{
+  width: 100%;
+}
+
+.time_inputs-one input{
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.real-time h1{
+  color: #2563eb;
+  font-size: 55px;
+}
+
+.real-time{
+  text-align: center;
+}
+
+.real-btns{
+  border: none;
+  background: transparent;
+  padding: 15px 25px;
+  background-color: #8ad1a4;
+  color: white;
+  border-radius: 6px;
+}
+.real--btns{
+  border: none;
+  background: transparent;
+  padding: 15px 25px;
+  background-color: #f7a1a1;
+  color: white;
+  border-radius: 6px;
+  
+}
+
+.timer-inputfield input{
+  width: 100%;
+  padding: 11px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 7px;
 }
 
 
