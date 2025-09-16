@@ -3,11 +3,13 @@ import { IoMdTime } from "react-icons/io";
 import { IoPlayOutline } from "react-icons/io5";
 import { BsPerson } from "react-icons/bs";
 import { GoPlus } from "react-icons/go";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { PiNotePencil } from "react-icons/pi";
 
 
 function Timedetails() {
 
-    
+
 
     return (
         <div>
@@ -60,9 +62,7 @@ function Timedetails() {
                                 <span>Start Time</span>
                                 <select>
                                     <option value="">--:-- --</option>
-                                    <option value="john">John</option>
-                                    <option value="jane">Jane</option>
-                                    <option value="mike">Mike</option>
+
                                 </select>
                             </div>
 
@@ -70,9 +70,7 @@ function Timedetails() {
                                 <span>End Time</span>
                                 <select>
                                     <option value="">Select Project</option>
-                                    <option value="alpha">Alpha</option>
-                                    <option value="beta">Beta</option>
-                                    <option value="gamma">Gamma</option>
+
                                 </select>
                             </div>
 
@@ -115,14 +113,14 @@ function Timedetails() {
                                     <h2>Active Timers</h2>
                                 </div>
                             </div>
-                            <div className='ac-tive' style={{ marginTop: '15px',backgroundColor:'#f4f4f5',width:'15%',textAlign:'center',borderRadius:'16px',fontSize:'14px',height:'21px' }}>
+                            <div className='ac-tive' style={{ marginTop: '15px', backgroundColor: '#f4f4f5', width: '15%', textAlign: 'center', borderRadius: '16px', fontSize: '14px', height: '21px' }}>
                                 <p>3 active</p>
                             </div>
                         </div>
                         <div className='t-border' style={{ border: '1px solid #ccc', height: '120px', borderRadius: '8px', marginBottom: '15px' }}>
                             <div className='container-border'>
                                 <div className='t-border-flex'>
-                                    <div className='person'style={{fontSize:'18px'}}>
+                                    <div className='person' style={{ fontSize: '18px' }}>
                                         <BsPerson />
                                     </div>
                                     <div>
@@ -147,7 +145,7 @@ function Timedetails() {
                         <div className='t-border' style={{ border: '1px solid #ccc', height: '120px', borderRadius: '8px', marginBottom: '15px' }}>
                             <div className='container-border'>
                                 <div className='t-border-flex'>
-                                    <div className='person'style={{fontSize:'18px'}}>
+                                    <div className='person' style={{ fontSize: '18px' }}>
                                         <BsPerson />
                                     </div>
                                     <div>
@@ -172,7 +170,7 @@ function Timedetails() {
                         <div className='t-border' style={{ border: '1px solid #ccc', height: '120px', borderRadius: '8px', marginBottom: '15px' }}>
                             <div className='container-border'>
                                 <div className='t-border-flex'>
-                                    <div className='person'style={{fontSize:'18px'}}>
+                                    <div className='person' style={{ fontSize: '18px' }}>
                                         <BsPerson />
                                     </div>
                                     <div>
@@ -194,7 +192,7 @@ function Timedetails() {
 
                             </div>
                         </div>
-                        
+
                     </div>
 
                 </div>
@@ -231,7 +229,17 @@ function Timedetails() {
                                 <td>Backend API</td>
                                 <td>8.5h</td>
                                 <td>approved</td>
-                                <td>$5,000</td>
+                                <td><div className='int--icons' style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
+                                    <div className='int_icon-big' style={{ fontSize: '20px' }}>
+                                        <PiNotePencil />
+
+                                    </div>
+                                    
+                                    <div className='int_icon-big' style={{ fontSize: '20px' }}>
+                                        <RiDeleteBin6Line />
+
+                                    </div>
+                                </div></td>
 
                             </tr>
                             <tr>
@@ -243,9 +251,17 @@ function Timedetails() {
                                 <td>2023-01-15</td>
                                 <td>Active</td>
                                 <td>Excellent</td>
-                                <td>$5,000</td>
-                                {/* <td>2025-07-24</td> */}
-                                {/* <td><HiOutlineDotsHorizontal /></td> */}
+                                <td><div className='int--icons' style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
+                                    <div className='int_icon-big' style={{ fontSize: '20px' }}>
+                                        <PiNotePencil />
+
+                                    </div>
+                                    
+                                    <div className='int_icon-big' style={{ fontSize: '20px' }}>
+                                        <RiDeleteBin6Line />
+
+                                    </div>
+                                </div></td>
                             </tr>
 
 

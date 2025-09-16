@@ -3055,11 +3055,13 @@
   color: white;
   width: 68%;
   border-radius: 4px;
+  cursor: pointer;
 }
 .timer {
   border: 1px solid #ccc;
   padding: 7px 10px;
   border-radius: 4px;
+  cursor: pointer;
 }
 .sheet-cards {
   display: grid;
@@ -3531,6 +3533,14 @@
   width: 100%;
 }
 .int_iconbig {
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  padding-top: 7px;
+  border-radius: 4px;
+}
+.int_icon-big {
   border: 1px solid #ccc;
   height: 40px;
   width: 100%;
@@ -4131,7 +4141,7 @@ text p {
 .admin-img {
   background-color: #d1d5db;
   height: 38px;
-  width: 15%;
+  width: 16%;
   border-radius: 24px;
 }
 .ad-user h4 {
@@ -4344,7 +4354,8 @@ text p {
   border-radius: 4px;
   outline: none;
   border: 1px solid #ccc;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 5px;
 }
 .pay-image {
   width: 18%;
