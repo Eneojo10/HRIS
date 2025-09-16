@@ -3,7 +3,7 @@ import { IoMdTime } from "react-icons/io";
 import { IoPlayOutline } from "react-icons/io5";
 import { BsPerson } from "react-icons/bs";
 import { GoPlus } from "react-icons/go";
-import Time from '../Pages/Time/Time';
+
 
 function Timedetails() {
 
