@@ -226,11 +226,11 @@ function Timedetails() {
 
 
                                 <td>Engineering</td>
-                                <td>+1234567890</td>
-                                <td>New York</td>
-                                <td>2023-01-15</td>
-                                <td>Active</td>
-                                <td>Excellent</td>
+                                <td>2024-01-26</td>
+                                <td>Website Redesign</td>
+                                <td>Backend API</td>
+                                <td>8.5h</td>
+                                <td>approved</td>
                                 <td>$5,000</td>
 
                             </tr>

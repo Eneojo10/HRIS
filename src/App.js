@@ -108,6 +108,7 @@ import Process from './Pages/Pay/Process';
 import Progrezz from './Pages/Pay/Progrezz'
 import Final from './Pages/Pay/Final';
 import Timer from './Pages/Time/Timer';
+import Blk from './Pages/Time/Blk';
 
 function App() {
   return (
@@ -227,6 +228,7 @@ function App() {
           <Route path="progrezz" element={<Progrezz />} />
           <Route path="final" element={<Final />} />
           <Route path="timer" element={<Timer />} />
+          <Route path="blk" element={<Blk />} />
         </Routes>
       </Router>
     </div>

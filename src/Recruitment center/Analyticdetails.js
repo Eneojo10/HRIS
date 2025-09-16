@@ -6,7 +6,9 @@ import { MdAccessTime } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import HiringTrends from '../Pages/Hiringtrends';
 import { TbCurrencyNaira } from "react-icons/tb";
+import { CiCircleAlert } from "react-icons/ci";
 import { SiConvertio } from "react-icons/si";
+import { FaArrowTrendUp } from "react-icons/fa6";
 
 function Analyticdetails() {
   const [activeTab, setActiveTab] = useState('Today');
@@ -111,8 +113,8 @@ function Analyticdetails() {
           <div className='j-job-one'>
             <div className='job-posting-container'>
               <div>
-                <div className='outline'>
-                  <IoPeopleOutline />
+                <div className='outline'style={{color:'#4f46e2'}}>
+                  <SiConvertio />
                 </div>
                 <h4>156</h4>
                 <p className='a--c' style={{ fontSize: '14px', fontWeight: '500' }}>Pipeline Conversion</p>
@@ -127,8 +129,8 @@ function Analyticdetails() {
           <div className='j-job-one'>
             <div className='job-posting-container'>
               <div>
-                <div className='outline'>
-                  <IoPeopleOutline />
+                <div className='outline'style={{color:'maroon'}}>
+                  <FaArrowTrendUp />
                 </div>
                 <h4>156</h4>
                 <p className='a--c' style={{ fontSize: '14px', fontWeight: '500' }}>Quality Score</p>
@@ -143,8 +145,8 @@ function Analyticdetails() {
           <div className='j-job-one'>
             <div className='job-posting-container'>
               <div>
-                <div className='outline'>
-                  <IoPeopleOutline />
+                <div className='outline'style={{color:'red'}}>
+                  <CiCircleAlert />
                 </div>
                 <h4>156</h4>
                 <p className='a--c' style={{ fontSize: '14px', fontWeight: '500' }}>Urgent Positions</p>

@@ -9,6 +9,14 @@ import { PiExport } from "react-icons/pi";
 import Time from '../Pages/Time/Time';
 import { IoTime } from 'react-icons/io5';
 import Timer from '../Pages/Time/Timer';
+import Blk from '../Pages/Time/Blk';
+import { CiStopwatch } from "react-icons/ci";
+import { TbCurrencyNaira } from "react-icons/tb";
+import { SlCalender } from "react-icons/sl";
+import { BiError } from "react-icons/bi";
+import { BsPersonCheckFill } from "react-icons/bs";
+import { WiTime3 } from "react-icons/wi";
+import { FaArrowTrendUp } from "react-icons/fa6";
 
 function Tracking() {
 
@@ -101,10 +109,10 @@ function Tracking() {
                                             <h4>Live Timer</h4>
                                         </div>
                                         <div
-                                            onClick={() => setModalTab('Core')}
+                                            onClick={() => setModalTab('Blk')}
                                             style={{
                                                 cursor: 'pointer',
-                                                backgroundColor: modalTab === 'Core' ? 'white' : 'transparent',
+                                                backgroundColor: modalTab === 'Blk' ? 'white' : 'transparent',
                                                 padding: '3px 20px'
                                             }}
                                             className='person-one'
@@ -119,6 +127,7 @@ function Tracking() {
                                     <div className='performance-content'>
                                         {modalTab === 'Time' && <Time />}
                                         {modalTab === 'Timer' && <Timer />}
+                                        {modalTab === 'Blk' && <Blk />}
 
 
                                     </div>
@@ -132,12 +141,99 @@ function Tracking() {
                         <div className='tracking-sub-list'><br /><br />
                             {activeTab === 'Timing' && (
                                 <div className='sheet-cards'>
-                                    <div className='t1'></div>
-                                    <div className='t1'></div>
-                                    <div className='t1'></div>
-                                    <div className='t1'></div>
-                                    <div className='t1'></div>
-                                    <div className='t1'></div>
+                                    <div className='t1'>
+                                        <div className='stop-watch'style={{padding:'20px',display:'flex',justifyContent:'space-between'}}>
+                                            <div>
+                                                <p>Active Timers</p>
+                                            
+                                                <h2>24</h2>
+                                                <span className='yes'style={{fontSize:'12px'}}>+12.3 from<br/> yesterday</span>
+                                            </div>
+                                            <div className='stp-watch'style={{fontSize:'21px',color:'#16a34a'}}>
+                                                <CiStopwatch/>
+                                            </div>
+                                        </div>
+                                        <div className='arr-ow'style={{display:'flex',justifyContent:'flex-end',width:'80%',margin:'auto',marginTop:'-20px'}}>
+                                           <div className='arrtwo'>
+                                             <FaArrowTrendUp/>
+                                           </div>
+                                        </div>
+                                    </div>
+                                    <div className='t1'>
+                                        <div className='stop-watch'style={{padding:'20px',display:'flex',justifyContent:'space-between'}}>
+                                            <div>
+                                                <p>Total Hours Today</p>
+                                            
+                                                <h2>186.5</h2>
+                                                <span className='yes'style={{fontSize:'12px'}}>+12.3 from<br/> yesterday</span>
+                                            </div>
+                                            <div className='stp-watch'style={{fontSize:'21px',color:'#2563eb'}}>
+                                                <WiTime3/>
+                                            </div>
+                                        </div>
+                                        <div className='arr-ow'style={{display:'flex',justifyContent:'flex-end',width:'80%',margin:'auto',marginTop:'-20px'}}>
+                                           <div className='arrtwo'>
+                                             <FaArrowTrendUp/>
+                                           </div>
+                                        </div>
+                                    </div>
+                                    <div className='t1'>
+                                        <div className='stop-watch'style={{padding:'20px',display:'flex',justifyContent:'space-between'}}>
+                                            <div>
+                                                <p>Present Today</p>
+                                            
+                                                <h2>142/156</h2>
+                                                <span className='yes'style={{fontSize:'12px'}}>91% attendance rate</span>
+                                            </div>
+                                            <div className='stp-watch'style={{fontSize:'21px',color:'#16a34a'}}>
+                                                <BsPersonCheckFill/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='t1'>
+                                        <div className='stop-watch'style={{padding:'20px',display:'flex',justifyContent:'space-between'}}>
+                                            <div>
+                                                <p>Overtime Hours</p>
+                                            
+                                                <h2>23.2</h2>
+                                                <span className='yes'style={{fontSize:'12px'}}>-5.1 from last week</span>
+                                            </div>
+                                            <div className='stp-watch'style={{fontSize:'21px',color:'red'}}>
+                                                <BiError/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='t1'>
+                                        <div className='stop-watch'style={{padding:'20px',display:'flex',justifyContent:'space-between'}}>
+                                            <div>
+                                                <p>Pending Approvals</p>
+                                            
+                                                <h2>18</h2>
+                                                <span className='yes'style={{fontSize:'12px'}}>7 time-off requests</span>
+                                            </div>
+                                            <div className='stp-watch'style={{fontSize:'21px',color:'purple'}}>
+                                                <SlCalender/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='t1'>
+                                        <div className='stop-watch'style={{padding:'20px',display:'flex',justifyContent:'space-between'}}>
+                                            <div>
+                                                <p>Payroll Ready</p>
+                                            
+                                                <h2> &#8358;24,850</h2>
+                                                <span className='yes'style={{fontSize:'12px'}}>This pay period</span>
+                                            </div>
+                                            <div className='stp-watch'style={{fontSize:'21px',color:'#16a34a'}}>
+                                                <TbCurrencyNaira/>
+                                            </div>
+                                        </div>
+                                        <div className='arr-ow'style={{display:'flex',justifyContent:'flex-end',width:'80%',margin:'auto',marginTop:'-20px'}}>
+                                           <div className='arrtwo'>
+                                             <FaArrowTrendUp/>
+                                           </div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             )}

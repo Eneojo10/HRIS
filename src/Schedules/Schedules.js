@@ -9,6 +9,12 @@ import Sanalytics from './Sanalytics';
 import Shift from '../Pages/Schedules/Shift';
 import Recurring from '../Pages/Schedules/Recurring';
 import Bulk from '../Pages/Schedules/Bulk';
+import { BsPeople } from "react-icons/bs";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { BiError } from "react-icons/bi";
+import { BsPersonCheckFill } from "react-icons/bs";
+import { WiTime3 } from "react-icons/wi";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 function Schedules() {
 
@@ -104,10 +110,10 @@ function Schedules() {
                                         >
                                             <h4>Bulk Scheduling</h4>
                                         </div>
-                                        
+
                                     </div>
-                                    
-                                   
+
+
                                 </div>
 
                                 {/* Modal Content */}
@@ -116,7 +122,7 @@ function Schedules() {
                                         {modalTab === 'Shift' && <Shift />}
                                         {modalTab === 'Recurring' && <Recurring />}
                                         {modalTab === 'Bulk' && <Bulk />}
-                                        
+
 
                                     </div>
                                 </form>
@@ -126,25 +132,122 @@ function Schedules() {
                     <div className='d-line_'></div>
                     <div className='sch-du-le'>
                         <div className='leave_cards_'>
-                            <div className='schedule-cards'>
+                            <div className='sheet-cards'>
                                 <div className='schdule-card1'>
+                                    <div className='stop-watch' style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+                                        <div>
+                                            <p>Total Employees</p>
+
+                                            <h2>24</h2>
+                                            <span className='yes' style={{ fontSize: '12px' }}>All scheduled this week</span>
+                                        </div>
+                                        <div className='stp-watch' style={{ fontSize: '21px', color: 'blue' }}>
+                                            <BsPeople />
+                                        </div>
+                                    </div>
+                                    {/* <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginTop: '-20px' }}>
+                                        <div className='arrtwo'>
+                                            <FaArrowTrendUp />
+                                        </div>
+                                    </div> */}
 
                                 </div>
                                 <div className='schdule-card1'>
+                                    <div className='stop-watch' style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+                                        <div>
+                                            <p>Active Shifts</p>
+
+                                            <h2>24</h2>
+                                            <span className='yes' style={{ fontSize: '12px' }}>Currently running</span>
+                                        </div>
+                                        <div className='stp-watch' style={{ fontSize: '21px', color: '#16a34a' }}>
+                                            <WiTime3 />
+                                        </div>
+                                    </div>
+                                    <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginBottom: '6px' }}>
+                                        <div className='arrtwo'>
+                                            <FaArrowTrendUp />
+                                        </div>
+                                    </div>
 
                                 </div>
                                 <div className='schdule-card1'>
+                                    <div className='stop-watch' style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+                                        <div>
+                                            <p>Coverage Rate</p>
+
+                                            <h2>92.8%</h2>
+                                            <span className='yes' style={{ fontSize: '12px' }}>+2.1% from last<br/> week</span>
+                                        </div>
+                                        <div className='stp-watch' style={{ fontSize: '21px', color: '#16a34a' }}>
+                                            <IoMdCheckmarkCircleOutline />
+                                        </div>
+                                    </div>
+                                    <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginBottom: '-6px' }}>
+                                        <div className='arrtwo'>
+                                            <FaArrowTrendUp />
+                                        </div>
+                                    </div>
 
                                 </div>
                                 <div className='schdule-card1'>
+                                    <div className='stop-watch' style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+                                        <div>
+                                            <p>Open Shifts</p>
+
+                                            <h2>9</h2>
+                                            <span className='yes' style={{ fontSize: '12px' }}>Need coverage</span>
+                                        </div>
+                                        <div className='stp-watch' style={{ fontSize: '21px', color: 'red' }}>
+                                            <BiError />
+                                        </div>
+                                    </div>
+                                    {/* <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginTop: '-20px' }}>
+                                        <div className='arrtwo'>
+                                            <FaArrowTrendUp />
+                                        </div>
+                                    </div> */}
 
                                 </div>
                                 <div className='schdule-card1'>
+                                    <div className='stop-watch' style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+                                        <div>
+                                            <p>Overtime Hours</p>
+
+                                            <h2>9</h2>
+                                            <span className='yes' style={{ fontSize: '12px' }}>This week</span>
+                                        </div>
+                                        <div className='stp-watch' style={{ fontSize: '21px', color: 'purple' }}>
+                                            <FaArrowTrendUp />
+                                        </div>
+                                    </div>
+                                    {/* <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginTop: '-20px' }}>
+                                        <div className='arrtwo'>
+                                            <FaArrowTrendUp />
+                                        </div>
+                                    </div> */}
 
                                 </div>
                                 <div className='schdule-card1'>
+                                    <div className='stop-watch' style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+                                        <div>
+                                            <p>On Schedule</p>
+
+                                            <h2>148/156</h2>
+                                            <span className='yes' style={{ fontSize: '12px' }}>94.9%<br/> attendance</span>
+                                        </div>
+                                        <div className='stp-watch' style={{ fontSize: '21px', color: '#16a34a' }}>
+                                            <BsPersonCheckFill />
+                                        </div>
+                                    </div>
+                                    <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginBottom: '6px' }}>
+                                        <div className='arrtwo'>
+                                            <FaArrowTrendUp />
+                                        </div>
+                                    </div>
 
                                 </div>
+                                
                             </div>
 
                         </div><br />
