@@ -20,6 +20,7 @@ import { TfiLayoutLineSolid } from "react-icons/tfi";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 
+
 function Payroll() {
 
 
@@ -229,7 +230,7 @@ function Payroll() {
 
                                         </div><br />
                                         <div>
-                                            <h2>$2,847,500</h2>
+                                            <h2>&#8358;2,847,500</h2>
                                         </div>
                                         <span>This month</span>
                                     </div>

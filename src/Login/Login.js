@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Users } from "lucide-react";
 import { Link } from 'react-router-dom';
 
+import logo from '../Images/logo-removebg-preview.png'
+
 
 function Login() {
     const [flipped, setFlipped] = useState(false);
@@ -17,10 +19,13 @@ function Login() {
                         <div className="flip-card-front">
                             <div className="login-box">
                                 <div className="login-details">
-                                    <div className="flex items-center space-x-4">
-                                        <Users className="w-8 h-8 text-blue-600 login-users" />
-                                        <span className="text-3xl font-bold text-blue-800 enes">enes</span>
-                                        <span className="text-3xl font-bold text-gray-700 hr">HR</span>
+                                    <div className='nav-leaf'>
+                                        <div className='le-af'>
+                                            <img src={logo} alt='' />
+                                        </div>
+                                        <div className='dropdown'>
+                                            <h2>enesHR</h2>
+                                        </div>
                                     </div>
                                     <br /><br />
                                     <div className='login----text'>
@@ -55,7 +60,7 @@ function Login() {
                                     </div>
                                 </div>
                             </div>
-                            <br/>
+                            <br />
 
                             {/* FOOTER for front side */}
                             <div className='login-footer-box'>
@@ -105,16 +110,19 @@ function Login() {
                         <div className="flip-card-back">
                             <div className="domain-info">
                                 <div className="login_details">
-                                    <div className="flex items-center space-x-2">
-                                        <Users className="w-8 h-8 text-blue-600 login-users" />
-                                        <span className="text-3xl font-bold text-blue-800 enes">enes</span>
-                                        <span className="text-3xl font-bold text-gray-700 hr">HR</span>
+                                    <div className='nav-leaf'>
+                                        <div className='le-af'>
+                                            <img src={logo} alt='' />
+                                        </div>
+                                        <div className='dropdown'>
+                                            <h2>enesHR</h2>
+                                        </div>
                                     </div>
                                     <br /><br />
                                     <div className='login----text-'>
                                         <h4>What's my EnesHR domain?</h4>
                                         <div className='flip-input'>
-                                            <input type='text' placeholder='https://companyeneshr.com'className='back-txt' disabled></input>
+                                            <input type='text' placeholder='https://companyeneshr.com' className='back-txt' disabled></input>
                                         </div><br />
                                         <p>Take a look at the address bar when you are logged in to EnesHR (or ask a colleague, since you are not logged in). The text just before .eneshr.com is your domain.</p>
                                     </div>

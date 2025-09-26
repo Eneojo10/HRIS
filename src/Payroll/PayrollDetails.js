@@ -20,7 +20,7 @@ function PayrollDetails() {
                         <p>Base Salary</p>
                     </div>
                     <div>
-                        <p>$95,000</p>
+                        <p>&#8358;95,000</p>
                     </div>
                 </div>
                 <div className='bs'style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
@@ -28,7 +28,7 @@ function PayrollDetails() {
                         <p>Gross Pay</p>
                     </div>
                     <div>
-                        <p>$7,916.67</p>
+                        <p>&#8358;7,916.67</p>
                     </div>
                 </div>
                 <div className='bs'style={{display:'flex',justifyContent:'space-between',marginBottom:'7px'}}>
@@ -36,7 +36,7 @@ function PayrollDetails() {
                         <p >Total Deductions</p>
                     </div>
                     <div>
-                        <p className='td'style={{color:'#dc2626'}}>-$1,583.33</p>
+                        <p className='td'style={{color:'#dc2626'}}>-&#8358;1,583.33</p>
                     </div>
                 </div><br/><br/>
                 <div className='d-line'></div>
@@ -45,7 +45,7 @@ function PayrollDetails() {
                         <p>Net Pay</p>
                     </div>
                     <div className='netpay'>
-                        <p>$6,333.34</p>
+                        <p>&#8358;6,333.34</p>
                     </div>
                 </div>
                 <button className='edit-pay'>Edit Payroll</button>

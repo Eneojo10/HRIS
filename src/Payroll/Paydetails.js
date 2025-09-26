@@ -41,7 +41,7 @@ function Paydetails() {
                                 </div>
                                 <div className='etd-1'>
                                     <h4>Total Amount</h4>
-                                    <p>$2,847,500</p>
+                                    <p>&#8358;2,847,500</p>
                                 </div>
                                 <div className='etd-1'>
                                     <h4>Due Date</h4>
@@ -88,7 +88,7 @@ function Paydetails() {
                                 </div>
                                 <div className='etd-1'>
                                     <h4>Total Amount</h4>
-                                    <p>$2,847,500</p>
+                                    <p>&#8358;2,847,500</p>
                                 </div>
                                 <div className='etd-1'>
                                     <h4>Due Date</h4>
@@ -135,7 +135,7 @@ function Paydetails() {
                                 </div>
                                 <div className='etd-1'>
                                     <h4>Total Amount</h4>
-                                    <p>$2,847,500</p>
+                                    <p>&#8358;2,847,500</p>
                                 </div>
                                 <div className='etd-1'>
                                     <h4>Due Date</h4>

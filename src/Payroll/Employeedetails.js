@@ -55,15 +55,15 @@ function Employeedetails() {
                 <div className='etd' style={{ display: 'flex', width: '85%', justifyContent: 'space-between' }}>
                   <div className='etd-1'>
                     <h4>Gross Pay</h4>
-                    <p>$7,916.67</p>
+                    <p>&#8358;7,916.67</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Deductions</h4>
-                    <p className='deductions' style={{ color: '#e14444' }}>-$1,583.33</p>
+                    <p className='deductions' style={{ color: '#e14444' }}>-&#8358;1,583.33</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Net Pay</h4>
-                    <p className='net-pay' style={{ color: '#29ab59' }}>$2,847,500</p>
+                    <p className='net-pay' style={{ color: '#29ab59' }}>&#8358;2,847,500</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Pay Date</h4>
@@ -107,15 +107,15 @@ function Employeedetails() {
                 <div className='etd' style={{ display: 'flex', width: '85%', justifyContent: 'space-between' }}>
                   <div className='etd-1'>
                     <h4>Gross Pay</h4>
-                    <p>$7,916.67</p>
+                    <p>&#8358;7,916.67</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Deductions</h4>
-                    <p className='deductions' style={{ color: '#e14444' }}>-$1,583.33</p>
+                    <p className='deductions' style={{ color: '#e14444' }}>-&#8358;1,583.33</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Net Pay</h4>
-                    <p className='net-pay' style={{ color: '#29ab59' }}>$2,847,500</p>
+                    <p className='net-pay' style={{ color: '#29ab59' }}>&#8358;2,847,500</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Pay Date</h4>
@@ -159,15 +159,15 @@ function Employeedetails() {
                 <div className='etd' style={{ display: 'flex', width: '85%', justifyContent: 'space-between' }}>
                   <div className='etd-1'>
                     <h4>Gross Pay</h4>
-                    <p>$7,916.67</p>
+                    <p>&#8358;7,916.67</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Deductions</h4>
-                    <p className='deductions' style={{ color: '#e14444' }}>-$1,583.33</p>
+                    <p className='deductions' style={{ color: '#e14444' }}>-&#8358;1,583.33</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Net Pay</h4>
-                    <p className='net-pay' style={{ color: '#29ab59' }}>$2,847,500</p>
+                    <p className='net-pay' style={{ color: '#29ab59' }}>&#8358;2,847,500</p>
                   </div>
                   <div className='etd-1'>
                     <h4>Pay Date</h4>

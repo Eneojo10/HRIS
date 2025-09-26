@@ -7200,6 +7200,23 @@ background-color: #f4f4f5;
   color: #186636;
 }
 
+.nav-leaf{
+  display: flex;
+  width: 20%;
+  margin: auto;
+}
+.le-af{
+  width: 10%;
+}
+.le-af img{
+  width: 20px;
+}
+.dropdown{
+  color: #599d15;
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 428px) {
   .login-container {
