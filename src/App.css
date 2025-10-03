@@ -2277,6 +2277,7 @@
   display: flex;
   justify-content: space-between;
   padding: 4px;
+  margin-top: 3px;
 }
 .dept-card010 {
   border: 1px solid #ccc;
@@ -2491,6 +2492,7 @@
   color: white;
   width: 37%;
   border-radius: 8px;
+  cursor: pointer;
 }
 .ne1 {
   padding: 7px;
@@ -7206,7 +7208,8 @@ background-color: #f4f4f5;
   margin: auto;
 }
 .le-af{
-  width: 10%;
+  width: 8%;
+  margin-top: 3px;
 }
 .le-af img{
   width: 20px;
@@ -7214,11 +7217,70 @@ background-color: #f4f4f5;
 .dropdown{
   color: #599d15;
 }
-
+.health-one{
+  border: 1px solid #ccc;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+.health-border{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  gap: 20px;
+}
+.hlth p{
+  font-size: 13px;
+}
+.hlth-price p{
+  font-size: 12px;
+  font-weight: 600;
+}
+.bb-buttons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 99%;
+}
+.benefit-cancel{
+  background: transparent;
+  padding: 10px 15px;
+  cursor: pointer;
+  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.benefits-sub{
+  background: transparent;
+  border: none;
+  padding: 11px 15px;
+  cursor: pointer;
+  color: white;
+  background-color: #2563eb;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.ben-add{
+  background: transparent;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.depend-icons h4{
+  font-weight: 500;
+  color: #4b5563;
+}
+.pre-month{
+  display: flex;
+  justify-content: space-between;
+}
 
 
 /* Responsive Design */
-@media (max-width: 428px) {
+@media (max-width: 500px) {
   .login-container {
     width: 100%;
     margin: auto;

@@ -145,11 +145,7 @@ function Schedules() {
                                             <BsPeople />
                                         </div>
                                     </div>
-                                    {/* <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginTop: '-20px' }}>
-                                        <div className='arrtwo'>
-                                            <FaArrowTrendUp />
-                                        </div>
-                                    </div> */}
+                                    
 
                                 </div>
                                 <div className='schdule-card1'>
@@ -183,7 +179,7 @@ function Schedules() {
                                             <IoMdCheckmarkCircleOutline />
                                         </div>
                                     </div>
-                                    <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginBottom: '-6px' }}>
+                                    <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginBottom: '6px' }}>
                                         <div className='arrtwo'>
                                             <FaArrowTrendUp />
                                         </div>
@@ -202,11 +198,7 @@ function Schedules() {
                                             <BiError />
                                         </div>
                                     </div>
-                                    {/* <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginTop: '-20px' }}>
-                                        <div className='arrtwo'>
-                                            <FaArrowTrendUp />
-                                        </div>
-                                    </div> */}
+                                    
 
                                 </div>
                                 <div className='schdule-card1'>
@@ -221,12 +213,7 @@ function Schedules() {
                                             <FaArrowTrendUp />
                                         </div>
                                     </div>
-                                    {/* <div className='arr-ow' style={{ display: 'flex', justifyContent: 'flex-end', width: '80%', margin: 'auto', marginTop: '-20px' }}>
-                                        <div className='arrtwo'>
-                                            <FaArrowTrendUp />
-                                        </div>
-                                    </div> */}
-
+                                    
                                 </div>
                                 <div className='schdule-card1'>
                                     <div className='stop-watch' style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>

@@ -110,6 +110,9 @@ import Progrezz from './Pages/Pay/Progrezz'
 import Final from './Pages/Pay/Final';
 import Timer from './Pages/Time/Timer';
 import Blk from './Pages/Time/Blk';
+import Bplans from './Pages/Benefitsplans/Bplans';
+import Dependent from './Pages/Benefitsplans/Dependent';
+import Summ from './Pages/Benefitsplans/Summ';
 
 function App() {
   return (
@@ -230,6 +233,9 @@ function App() {
           <Route path="final" element={<Final />} />
           <Route path="timer" element={<Timer />} />
           <Route path="blk" element={<Blk />} />
+          <Route path="bplans" element={<Bplans />} />
+          <Route path="dependent" element={<Dependent />} />
+          <Route path="summ" element={<Summ />} />
         </Routes>
       </Router>
     </div>

@@ -18,7 +18,7 @@ import { RxEnvelopeClosed } from "react-icons/rx";
 import { BsTelephone } from "react-icons/bs";
 import { BsThreeDots } from "react-icons/bs";
 import { TbCurrencyNaira } from "react-icons/tb";
-import image from '../Images/user2.jpg'
+
 
 function MainDashBoard() {
     return (
@@ -416,7 +416,7 @@ function MainDashBoard() {
                                 </div><br />
                                 <div className='activities-icons'>
                                     <div className='add-10'>
-                                        <FiDollarSign />
+                                        <TbCurrencyNaira />
                                     </div>
                                     <div>
                                         <h4>Payroll processed</h4>
