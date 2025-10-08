@@ -11,6 +11,10 @@ import { CiHeart } from "react-icons/ci";
 import Bplans from '../Pages/Benefitsplans/Bplans';
 import Dependent from "../Pages/Benefitsplans/Dependent"
 import Summ from '../Pages/Benefitsplans/Summ'
+import { SiClickhouse } from "react-icons/si";
+import { BiHeart } from 'react-icons/bi';
+import { TbCurrencyNaira } from "react-icons/tb";
+import { IoPeopleOutline } from "react-icons/io5";
 
 function Benefits() {
 
@@ -62,12 +66,13 @@ function Benefits() {
                                     <div className='benplus'>
                                         <GoPlus />
                                     </div>
-                                    <button className='addebtn'style={{marginTop:'-4px'}}>Enroll Benefits</button>
+                                    <button className='addebtn' style={{ marginTop: '-4px' }}>Enroll Benefits</button>
                                 </div>
 
                             </div>
                         </div>
                     </div>
+                    {/* <br/> */}
 
                     {isModalOpen && (
                         <div className="modal-overlay">
@@ -152,10 +157,58 @@ function Benefits() {
                     <div className='benefit-background'>
                         <div className='b-holder'>
                             <div className='b-flex'>
-                                <div className='benefits_cards'></div>
-                                <div className='benefits_cards'></div>
-                                <div className='benefits_cards'></div>
-                                <div className='benefits_cards'></div>
+                                <div className='benefits_cards'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex' style={{ display: 'flex', justifyContent: 'space-between', marginTop: '15px' }}>
+                                            <div>
+                                                <h4>Total Enrolled</h4>
+                                                <p>1,247</p>
+                                            </div>
+                                            <div className='icon-dept' style={{ marginTop: '20px', color: '#2563eb', backgroundColor: '#eff6ff', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
+                                                <IoPeopleOutline />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='benefits_cards'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex' style={{ display: 'flex', justifyContent: 'space-between', marginTop: '15px' }}>
+                                            <div>
+                                                <h4>Benefits Cost</h4>
+                                                <p>₦405M</p>
+                                            </div>
+                                            <div className='icon-dept' style={{ marginTop: '20px', color: '#16a34a', backgroundColor: '#eff6ff', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
+                                                <TbCurrencyNaira />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='benefits_cards'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex' style={{ display: 'flex', justifyContent: 'space-between', marginTop: '15px' }}>
+                                            <div>
+                                                <h4>Health Plans</h4>
+                                                <p>94.2%</p>
+                                            </div>
+                                            <div className='icon-dept' style={{ marginTop: '20px', color: 'red', backgroundColor: '#eff6ff', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
+                                                <BiHeart />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='benefits_cards'>
+                                    <div className='total-department'>
+                                        <div className='total_department-flex' style={{ display: 'flex', justifyContent: 'space-between', marginTop: '15px' }}>
+                                            <div>
+                                                <h4>Coverage Rate</h4>
+                                                <p>89.7%</p>
+                                            </div>
+                                            <div className='icon-dept' style={{ marginTop: '20px', color: '#9333ea', backgroundColor: '#eff6ff', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
+                                                <SiClickhouse />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div><br />
 
                             <div className='benefits-bg'>

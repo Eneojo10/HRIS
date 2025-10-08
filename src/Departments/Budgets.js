@@ -7,7 +7,7 @@ function Budgets() {
         <div className='budget-cost'>
           <div className='b-c'>
             <h4>Total Budget</h4>
-            <p>$12,590,000</p>
+            <p>₦12,590,000</p>
           </div>
         </div>
         <div className='budget-cost'></div>
@@ -37,15 +37,15 @@ function Budgets() {
               <div className='brkdown-list'style={{display:'flex',justifyContent:'space-between',marginBottom:'27px'}}>
                 <div>
                   <h4>Budget</h4>
-                  <p>$4,200,000</p>
+                  <p>₦4,200,000</p>
                 </div>
                 <div>
                   <h4>Spent</h4>
-                  <p>$3,150,000</p>
+                  <p>₦3,150,000</p>
                 </div>
                 <div>
                   <h4>Remaining</h4>
-                  <p>$1,050,000</p>
+                  <p>₦1,050,000</p>
                 </div>
                 <div>
                   <h4>Employees</h4>
@@ -53,7 +53,7 @@ function Budgets() {
                 </div>
                 <div>
                   <h4>Cost/Employee</h4>
-                  <p>$9,211</p>
+                  <p>₦9,211</p>
                 </div>
               </div>
               <div className='bu'style={{display:'flex',justifyContent:'space-between'}}>

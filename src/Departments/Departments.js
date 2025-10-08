@@ -12,6 +12,7 @@ import { SiClickhouse } from "react-icons/si";
 import { IoPeopleOutline } from "react-icons/io5";
 import Dept from '../Pages/DepartmentTwo/Dept';
 import { BiBuildingHouse } from "react-icons/bi";
+import { FcSalesPerformance } from "react-icons/fc";
 
 function Departments() {
 
@@ -129,7 +130,7 @@ function Departments() {
                                         <div className='total_department-flex' style={{ display: 'flex', justifyContent: 'space-between', marginTop: '15px' }}>
                                             <div>
                                                 <h4>Total Budget</h4>
-                                                <p>$12.4M</p>
+                                                <p>₦550M</p>
                                             </div>
                                             <div className='icon-dept' style={{ marginTop: '20px', color: 'purple', backgroundColor: '#eee7f4', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
                                                 <TbCurrencyNaira />
@@ -145,7 +146,7 @@ function Departments() {
                                                 <p>87.3%</p>
                                             </div>
                                             <div className='icon-dept' style={{ marginTop: '20px', color: '#ea580c', backgroundColor: '#fff7ed', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
-                                                <TbCurrencyNaira />
+                                                <FcSalesPerformance />
                                             </div>
                                         </div>
                                     </div>

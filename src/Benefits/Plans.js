@@ -81,7 +81,7 @@ function Plans() {
                       <p>Deductible:</p>
                     </div>
                     <div>
-                      <h4>$1,000</h4>
+                      <h4>₦1,000</h4>
                     </div>
 
                   </div>
@@ -94,7 +94,7 @@ function Plans() {
                         <p>Employee:</p>
                       </div>
                       <div>
-                        <h4>$185/month</h4>
+                        <h4>₦185/month</h4>
                       </div>
 
                     </div>
@@ -103,7 +103,7 @@ function Plans() {
                         <p>Employer:</p>
                       </div>
                       <div>
-                        <h4>$420/month</h4>
+                        <h4>₦420/month</h4>
                       </div>
 
                     </div>
@@ -114,7 +114,7 @@ function Plans() {
                       <h3>Total:</h3>
                     </div>
                     <div>
-                      <h3>$605/month</h3>
+                      <h3>₦605/month</h3>
                     </div>
                   </div>
                 </div>
@@ -186,7 +186,7 @@ function Plans() {
                       <p>Deductible:</p>
                     </div>
                     <div>
-                      <h4>$1,000</h4>
+                      <h4>₦1,000</h4>
                     </div>
 
                   </div>
@@ -199,7 +199,7 @@ function Plans() {
                         <p>Employee:</p>
                       </div>
                       <div>
-                        <h4>$185/month</h4>
+                        <h4>₦185/month</h4>
                       </div>
 
                     </div>
@@ -208,7 +208,7 @@ function Plans() {
                         <p>Employer:</p>
                       </div>
                       <div>
-                        <h4>$420/month</h4>
+                        <h4>₦420/month</h4>
                       </div>
 
                     </div>
@@ -219,7 +219,7 @@ function Plans() {
                       <h3>Total:</h3>
                     </div>
                     <div>
-                      <h3>$605/month</h3>
+                      <h3>₦605/month</h3>
                     </div>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ function Plans() {
                       <p>Deductible:</p>
                     </div>
                     <div>
-                      <h4>$1,000</h4>
+                      <h4>₦1,000</h4>
                     </div>
 
                   </div>
@@ -304,7 +304,7 @@ function Plans() {
                         <p>Employee:</p>
                       </div>
                       <div>
-                        <h4>$185/month</h4>
+                        <h4>₦185/month</h4>
                       </div>
 
                     </div>
@@ -313,7 +313,7 @@ function Plans() {
                         <p>Employer:</p>
                       </div>
                       <div>
-                        <h4>$420/month</h4>
+                        <h4>₦420/month</h4>
                       </div>
 
                     </div>
@@ -324,7 +324,7 @@ function Plans() {
                       <h3>Total:</h3>
                     </div>
                     <div>
-                      <h3>$605/month</h3>
+                      <h3>₦605/month</h3>
                     </div>
                   </div>
                 </div>
@@ -396,7 +396,7 @@ function Plans() {
                       <p>Deductible:</p>
                     </div>
                     <div>
-                      <h4>$1,000</h4>
+                      <h4>₦1,000</h4>
                     </div>
 
                   </div>
@@ -409,7 +409,7 @@ function Plans() {
                         <p>Employee:</p>
                       </div>
                       <div>
-                        <h4>$185/month</h4>
+                        <h4>₦185/month</h4>
                       </div>
 
                     </div>
@@ -418,7 +418,7 @@ function Plans() {
                         <p>Employer:</p>
                       </div>
                       <div>
-                        <h4>$420/month</h4>
+                        <h4>₦420/month</h4>
                       </div>
 
                     </div>
@@ -429,7 +429,7 @@ function Plans() {
                       <h3>Total:</h3>
                     </div>
                     <div>
-                      <h3>$605/month</h3>
+                      <h3>₦605/month</h3>
                     </div>
                   </div>
                 </div>
@@ -501,7 +501,7 @@ function Plans() {
                       <p>Deductible:</p>
                     </div>
                     <div>
-                      <h4>$1,000</h4>
+                      <h4>₦1,000</h4>
                     </div>
 
                   </div>
@@ -523,7 +523,7 @@ function Plans() {
                         <p>Employer:</p>
                       </div>
                       <div>
-                        <h4>$420/month</h4>
+                        <h4>₦420/month</h4>
                       </div>
 
                     </div>
@@ -534,7 +534,7 @@ function Plans() {
                       <h3>Total:</h3>
                     </div>
                     <div>
-                      <h3>$605/month</h3>
+                      <h3>₦605/month</h3>
                     </div>
                   </div>
                 </div>
@@ -606,7 +606,7 @@ function Plans() {
                       <p>Deductible:</p>
                     </div>
                     <div>
-                      <h4>$1,000</h4>
+                      <h4>₦1,000</h4>
                     </div>
 
                   </div>
@@ -619,7 +619,7 @@ function Plans() {
                         <p>Employee:</p>
                       </div>
                       <div>
-                        <h4>$185/month</h4>
+                        <h4>₦185/month</h4>
                       </div>
 
                     </div>
@@ -628,7 +628,7 @@ function Plans() {
                         <p>Employer:</p>
                       </div>
                       <div>
-                        <h4>$420/month</h4>
+                        <h4>₦420/month</h4>
                       </div>
 
                     </div>
@@ -639,7 +639,7 @@ function Plans() {
                       <h3>Total:</h3>
                     </div>
                     <div>
-                      <h3>$605/month</h3>
+                      <h3>₦605/month</h3>
                     </div>
                   </div>
                 </div>
