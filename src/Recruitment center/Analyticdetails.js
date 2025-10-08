@@ -9,6 +9,7 @@ import { TbCurrencyNaira } from "react-icons/tb";
 import { CiCircleAlert } from "react-icons/ci";
 import { SiConvertio } from "react-icons/si";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { SiJfrogpipelines } from "react-icons/si";
 
 function Analyticdetails() {
   const [activeTab, setActiveTab] = useState('Today');
@@ -114,7 +115,7 @@ function Analyticdetails() {
             <div className='job-posting-container'>
               <div>
                 <div className='outline'style={{color:'#4f46e2'}}>
-                  <SiConvertio />
+                  <SiJfrogpipelines />
                 </div>
                 <h4>156</h4>
                 <p className='a--c' style={{ fontSize: '14px', fontWeight: '500' }}>Pipeline Conversion</p>
@@ -129,7 +130,7 @@ function Analyticdetails() {
           <div className='j-job-one'>
             <div className='job-posting-container'>
               <div>
-                <div className='outline'style={{color:'maroon'}}>
+                <div className='outline'style={{color:'orange'}}>
                   <FaArrowTrendUp />
                 </div>
                 <h4>156</h4>
@@ -209,7 +210,7 @@ function Analyticdetails() {
                         <h2>1,240</h2>
                       </div>
                       <div className='oo' style={{ fontSize: '25px', color: '#9333ea', backgroundColor: '#faf5ff', width: '13%', height: '50px', textAlign: 'center', paddingTop: '10px', borderRadius: '8px' }}>
-                        <SiConvertio />
+                        <SiJfrogpipelines />
                       </div>
                     </div>
                   </div>
