@@ -2057,6 +2057,12 @@
   color: black;
   cursor: pointer;
 }
+.ts--flex h4{
+  margin-top: 10px;
+}
+.ts--flex p{
+  font-weight: 600;
+}
 .payroll-details {
   width: 95%;
   margin: auto;
