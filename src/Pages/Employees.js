@@ -11,6 +11,13 @@ import Employment from './Register/Employment';
 import Contact from './Register/Contact';
 import Compensation from './Register/Compensation';
 import Additional from './Register/Additional';
+import { BsFillPersonCheckFill } from "react-icons/bs";
+import { BsFillPersonXFill } from "react-icons/bs";
+import { IoMdTime } from "react-icons/io";
+import { HiOutlineBuildingOffice } from "react-icons/hi2";
+import { IoLocationOutline } from "react-icons/io5";
+import { LiaGiftSolid } from "react-icons/lia";
+import { LuAward } from "react-icons/lu";
 
 function Employees() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -173,7 +180,7 @@ function Employees() {
                                     <div className='flex-one'>
                                         <div className='flex1'>
                                             <div>
-                                                <GoPersonAdd />
+                                                <BsFillPersonCheckFill />
                                             </div>
                                             <div>
                                                 <div></div>
@@ -192,7 +199,7 @@ function Employees() {
                                     <div className='flex-one'>
                                         <div className='flex1'>
                                             <div>
-                                                <GoPersonAdd />
+                                                <BsFillPersonXFill />
                                             </div>
                                             <div>
                                                 <div></div>
@@ -211,7 +218,7 @@ function Employees() {
                                     <div className='flex-one'>
                                         <div className='flex1'>
                                             <div>
-                                                <GoPersonAdd />
+                                                <IoMdTime />
                                             </div>
                                             <div>
                                                 <div></div>
@@ -230,7 +237,7 @@ function Employees() {
                                     <div className='flex-one'>
                                         <div className='flex1'>
                                             <div>
-                                                <GoPersonAdd />
+                                                <HiOutlineBuildingOffice />
                                             </div>
                                             <div>
                                                 <div></div>
@@ -249,7 +256,7 @@ function Employees() {
                                     <div className='flex-one'>
                                         <div className='flex1'>
                                             <div>
-                                                <GoPersonAdd />
+                                                <IoLocationOutline />
                                             </div>
                                             <div>
                                                 <div></div>
@@ -268,7 +275,7 @@ function Employees() {
                                     <div className='flex-one'>
                                         <div className='flex1'>
                                             <div>
-                                                <GoPersonAdd />
+                                                <LiaGiftSolid />
                                             </div>
                                             <div>
                                                 <div></div>
@@ -287,7 +294,7 @@ function Employees() {
                                     <div className='flex-one'>
                                         <div className='flex1'>
                                             <div>
-                                                <GoPersonAdd />
+                                                <LuAward />
                                             </div>
                                             <div>
                                                 <div></div>
