@@ -5,16 +5,75 @@ import { SlLocationPin } from "react-icons/sl";
 import { LuRectangleVertical } from "react-icons/lu";
 import { BsPersonXFill } from "react-icons/bs";
 import { IoMdTime } from "react-icons/io";
+import { BsFillPersonXFill } from "react-icons/bs";
+import { LuSmartphone } from "react-icons/lu";
+
 
 function Attendancedetails() {
   return (
     <div>
       <div className='ts-main'>
         <div className='ts-flex'>
-          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}></div>
-          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}></div>
-          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}></div>
-          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}></div>
+          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet' style={{ padding: '10px' }}>
+              <div className='ts--flex' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Present Today</p>
+                  <h2>142</h2>
+                  <span className='payperiod'>91% attendance rate</span>
+                </div>
+                <div className='bluetime' style={{ color: 'green' }}>
+                  <BsFillPersonCheckFill />
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet' style={{ padding: '10px' }}>
+              <div className='ts--flex' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Late Arrivals</p>
+                  <h2>8</h2>
+                  <span className='payperiod'>5% of present employees</span>
+                </div>
+                <div className='bluetime' style={{ color: '#ca8a04' }}>
+                  <IoMdTime />
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet' style={{ padding: '10px' }}>
+              <div className='ts--flex' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Absent Today</p>
+                  <h2>14</h2>
+                  <span className='payperiod'>9% absent rate</span>
+                </div>
+                <div className='bluetime' style={{ color: '#dc2626' }}>
+                  <BsFillPersonXFill />
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet' style={{ padding: '10px' }}>
+              <div className='ts--flex' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Remote Workers</p>
+                  <h2>28</h2>
+                  <span className='payperiod'>18% working remotely</span>
+                </div>
+                <div className='bluetime' style={{ color: '#2563eb' }}>
+                  <LuSmartphone />
+                </div>
+              </div>
+
+            </div>
+          </div>
 
         </div>
         <div className='ts-big'>
@@ -52,7 +111,7 @@ function Attendancedetails() {
                   <td>05:30 PM</td>
                   <td>
                     <div className='pss'>
-                      <div className='pre-sent-status' style={{ display: 'flex', justifyContent: 'space-between',width:'78%',margin:'auto',paddingTop:'4px' }}>
+                      <div className='pre-sent-status' style={{ display: 'flex', justifyContent: 'space-between', width: '78%', margin: 'auto', paddingTop: '4px' }}>
                         <div className='bsfill'>
                           <BsFillPersonCheckFill />
                         </div>
@@ -64,8 +123,8 @@ function Attendancedetails() {
                   </td>
                   <td>
                     <div className='pss-office'>
-                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px',margin:'auto',paddingTop:'4px' }}>
-                        <div className='bsfill-off'style={{fontSize:'13px',marginTop:'3px'}}>
+                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px', margin: 'auto', paddingTop: '4px' }}>
+                        <div className='bsfill-off' style={{ fontSize: '13px', marginTop: '3px' }}>
                           <SlLocationPin />
                         </div>
                         <div className='p-resent-off'>
@@ -74,7 +133,7 @@ function Attendancedetails() {
                       </div>
                     </div>
                   </td>
-                  
+
                   <td>Card Swipe</td>
                   <td><button className='btn_btn'>
                     View Details
@@ -85,9 +144,9 @@ function Attendancedetails() {
                   <td>Engineering</td>
                   <td>-</td>
                   <td>-</td>
-                   <td>
+                  <td>
                     <div className='pss_'>
-                      <div className='pre-sent-status' style={{ display: 'flex',justifyContent:'space-between',width:'78%',margin:'auto',paddingTop:'4px' }}>
+                      <div className='pre-sent-status' style={{ display: 'flex', justifyContent: 'space-between', width: '78%', margin: 'auto', paddingTop: '4px' }}>
                         <div className='bsperson'>
                           <BsPersonXFill />
                         </div>
@@ -99,8 +158,8 @@ function Attendancedetails() {
                   </td>
                   <td>
                     <div className='pss-office'>
-                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px',margin:'auto',paddingTop:'4px' }}>
-                        <div className='bsfill-off'style={{fontSize:'13px',marginTop:'3px'}}>
+                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px', margin: 'auto', paddingTop: '4px' }}>
+                        <div className='bsfill-off' style={{ fontSize: '13px', marginTop: '3px' }}>
                           <LuRectangleVertical />
                         </div>
                         <div className='p-resent-off'>
@@ -121,7 +180,7 @@ function Attendancedetails() {
                   <td>-</td>
                   <td>
                     <div className='pss-late'>
-                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px',width:'78%',margin:'auto',paddingTop:'4px' }}>
+                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px', width: '78%', margin: 'auto', paddingTop: '4px' }}>
                         <div className='iomdtime'>
                           <IoMdTime />
                         </div>
@@ -133,12 +192,12 @@ function Attendancedetails() {
                   </td>
                   <td>
                     <div className='pss-office'>
-                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px',margin:'auto',paddingTop:'4px' }}>
-                        <div className='bsfill-off'style={{fontSize:'13px',marginTop:'3px'}}>
+                      <div className='pre-sent-status' style={{ display: 'flex', gap: '5px', margin: 'auto', paddingTop: '4px' }}>
+                        <div className='bsfill-off' style={{ fontSize: '13px', marginTop: '3px' }}>
                           <SlLocationPin />
                         </div>
                         <div className='p-resent-off'>
-                          <p>Office</p>
+                          <p>-</p>
                         </div>
                       </div>
                     </div>

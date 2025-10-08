@@ -17,7 +17,7 @@ function Sheetdetails() {
               <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
                 <div>
                   <p>Total Timesheets</p>
-                  <h4>156</h4>
+                  <h2>156</h2>
                   <span className='payperiod'>This pay period</span>
                 </div>
                 <div>
@@ -33,7 +33,7 @@ function Sheetdetails() {
               <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
                 <div>
                   <p>Pending Approval</p>
-                  <h4>23</h4>
+                  <h2>23</h2>
                   <span className='payperiod'>Awaiting review</span>
                 </div>
                 <div className='bluetime'style={{color:'#2563eb'}}>
@@ -48,7 +48,7 @@ function Sheetdetails() {
               <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
                 <div>
                   <p>Approved</p>
-                  <h4>128</h4>
+                  <h2>128</h2>
                   <span className='payperiod'>Ready for payroll</span>
                 </div>
                 <div className='greencheck'>
@@ -63,7 +63,7 @@ function Sheetdetails() {
               <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
                 <div>
                   <p>Total Hours</p>
-                  <h4>6,240</h4>
+                  <h2>6,240</h2>
                   <span className='payperiod'>This pay period</span>
                 </div>
                 <div className='purpletime'style={{color:'#9333ea'}}>
