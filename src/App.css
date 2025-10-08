@@ -1940,7 +1940,7 @@
 .schedule_months_ {
   display: flex;
   margin-bottom: 10px;
-  gap: 15px;
+  gap: 5px;
 }
 .m1 {
   background-color: #f4f4f5;
@@ -1949,14 +1949,24 @@
 }
 .m1-border {
   border: 1px solid #ccc;
-  height: 50px;
-  /* width: 15%; */
+  height: 45px;
+  width: 105px;
+}
+.m1--border{
+  border: 1px solid #ccc;
+  height: 45px;
+  width: 104px;
+}
+.m1---border{
+  border: 1px solid #ccc;
+  height: 45px;
+  width: 100%;
 }
 .week-days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   width: 100%;
-  gap: 20px;
+  gap: 5px;
   margin-bottom: 10px;
 }
 .schedule-list-tag {
@@ -1970,14 +1980,76 @@
 .today_cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 .today-cards {
   border: 1px solid #ccc;
-  height: 200px;
+  height: auto;
   width: 100%;
   border-radius: 4px;
   background-color: white;
+}
+.ms p{
+  font-size: 15px;
+}
+.morn p{
+  font-weight: 600;
+}
+.morn-btn{
+  background: transparent;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+.ten-staff p{
+  font-size: 13px;
+  color: #1f41b0;
+  margin-top: 2px;
+}
+.ten--staff p{
+  font-size: 13px;
+  color: #226e3f;
+  margin-top: 2px;
+}
+.ten---staff p{
+  font-size: 13px;
+  color: #7e3cb4;
+  margin-top: 2px;
+}
+.ten----staff p{
+  font-size: 13px;
+  color: #b36242;
+  margin-top: 2px;
+}
+.ten-staff{
+  background-color: #dbeafe;
+  width: 33%;
+  text-align: center;
+  border-radius: 16px;
+}
+.ten--staff{
+  background-color: #dcfce7;
+  width: 33%;
+  text-align: center;
+  border-radius: 16px;
+}
+.ten---staff{
+  background-color: #f3e8ff;
+  width: 33%;
+  text-align: center;
+  border-radius: 16px;
+}
+.ten----staff{
+  background-color: #ffedd5;
+  width: 33%;
+  text-align: center;
+  border-radius: 16px;
+}
+.morn-btn:hover{
+  background-color: #e9eaea;
+  color: black;
+  cursor: pointer;
 }
 .payroll-details {
   width: 95%;
