@@ -3,6 +3,9 @@ import { LuFileSpreadsheet } from "react-icons/lu";
 import { TiEyeOutline } from "react-icons/ti";
 import { FcCancel } from "react-icons/fc";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { BsFileEarmarkSpreadsheet } from "react-icons/bs";
+import { IoMdTime } from "react-icons/io";
+
 
 function Sheetdetails() {
   return (
@@ -10,11 +13,66 @@ function Sheetdetails() {
       <div className='ts-main'>
         <div className='ts-flex'>
           <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet'style={{padding:'10px'}}>
+              <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
+                <div>
+                  <p>Total Timesheets</p>
+                  <h4>156</h4>
+                  <span className='payperiod'>This pay period</span>
+                </div>
+                <div>
+                  <BsFileEarmarkSpreadsheet/>
+                </div>
+              </div>
+
+            </div>
 
           </div>
-          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}></div>
-          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}></div>
-          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}></div>
+          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet'style={{padding:'10px'}}>
+              <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
+                <div>
+                  <p>Pending Approval</p>
+                  <h4>23</h4>
+                  <span className='payperiod'>Awaiting review</span>
+                </div>
+                <div className='bluetime'style={{color:'#2563eb'}}>
+                  <IoMdTime/>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet'style={{padding:'10px'}}>
+              <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
+                <div>
+                  <p>Approved</p>
+                  <h4>128</h4>
+                  <span className='payperiod'>Ready for payroll</span>
+                </div>
+                <div className='greencheck'>
+                  <IoMdCheckmarkCircleOutline/>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div className='ts-card' style={{ border: '1px solid #ccc', height: '120px', width: '100%', borderRadius: '4px' }}>
+            <div className='tee-sheet'style={{padding:'10px'}}>
+              <div className='ts--flex'style={{display:'flex',justifyContent:'space-between'}}>
+                <div>
+                  <p>Total Hours</p>
+                  <h4>6,240</h4>
+                  <span className='payperiod'>This pay period</span>
+                </div>
+                <div className='purpletime'style={{color:'#9333ea'}}>
+                  <IoMdTime/>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
         </div><br />
         <div className='ts-big'>
