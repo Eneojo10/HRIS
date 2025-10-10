@@ -111,7 +111,7 @@ function Attendancedetails() {
                   <td>05:30 PM</td>
                   <td>
                     <div className='pss'>
-                      <div className='pre-sent-status' style={{ display: 'flex', justifyContent: 'space-between', width: '78%', margin: 'auto', paddingTop: '4px' }}>
+                      <div className='pre-sent-status' style={{ display: 'flex', justifyContent: 'space-between', width: '82%', margin: 'auto', paddingTop: '4px' }}>
                         <div className='bsfill'>
                           <BsFillPersonCheckFill />
                         </div>
