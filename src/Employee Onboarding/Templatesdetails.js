@@ -9,6 +9,14 @@ import Marketing from '../Others/Marketing';
 import Executive from '../Others/Executive';
 import { BiImport } from "react-icons/bi";
 import { PiExport } from "react-icons/pi";
+import { BsFillPersonCheckFill } from "react-icons/bs";
+import { SlCalender } from "react-icons/sl";
+import { IoMdTime } from "react-icons/io";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { BsCircle } from "react-icons/bs";
+import { FiAward } from "react-icons/fi";
+import { CgDanger } from "react-icons/cg";
+
 
 
 function Templatesdetails() {
@@ -20,37 +28,30 @@ function Templatesdetails() {
   };
 
   const cards = [
-    { title: "Active Onboarding", subtitle: "New hires in process" },
-    { title: "Completed This Month", subtitle: "Successfully onboarded" },
-    { title: "Starting This week", subtitle: "New arrivals" },
-    { title: "Avg. Completion Time", subtitle: "Time to complete" },
-    { title: "Task Completion Rate", subtitle: "Overall completion" },
-    { title: "Pending Tasks", subtitle: "Across all hires" },
-    { title: "Satisfaction Score", subtitle: "New hire feedback" },
-    { title: "Overdue Items", subtitle: "Need attention" }
+    { title: "Active Onboarding", subtitle: "New hires in process", icon: <IoPeopleOutline />, color: 'blue' },
+    { title: "Completed This Month", subtitle: "Successfully onboarded", icon: <BsFillPersonCheckFill />, color: 'green' },
+    { title: "Starting This week", subtitle: "New arrivals", icon: <SlCalender />, color: 'purple' },
+    { title: "Avg. Completion Time", subtitle: "Time to complete", icon: <IoMdTime />, color: 'orange' },
+    { title: "Task Completion Rate", subtitle: "Overall completion", icon: <IoMdCheckmarkCircleOutline />, color: 'green' },
+    { title: "Pending Tasks", subtitle: "Across all hires", icon: <BsCircle />, color: 'blue' },
+    { title: "Satisfaction Score", subtitle: "New hire feedback", icon: <FiAward />, color: 'red' },
+    { title: "Overdue Items", subtitle: "Need attention", icon: <CgDanger />, color: 'red' },
   ];
+
   return (
     <div>
       <div className='performance-background'>
         <div className='employee-cards'>
           <div className='employee-cards--flex'>
 
-            {[
-              { title: "Active Onboarding", subtitle: "New hires in process" },
-              { title: "Completed This Month", subtitle: "Successfully onboarded" },
-              { title: "Starting This week", subtitle: "New arrivals" },
-              { title: "Avg. Completion Time", subtitle: "Time to complete" },
-              { title: "Task Completion Rate", subtitle: "Overall completion" },
-              { title: "Pending Tasks", subtitle: "Across all hires" },
-              { title: "Satisfaction Score", subtitle: "New hire feedback" },
-              { title: "Overdue Items", subtitle: "Need attention" },
-            ].map((card, i) => (
+            {cards.map((card, i) => (
               <div className='employee-card1' key={i}>
                 <div className='flex-one'>
                   <div className='flex1'>
-                    <div className='i-c-o-n' style={{ color: 'blue' }}>
-                      <IoPeopleOutline />
+                    <div className='i-c-o-n' style={{ color: card.color, fontSize: '25px' }}>
+                      {card.icon}
                     </div>
+
                     <div className='twelve'>
                       <p>+12%</p>
                     </div>
@@ -78,7 +79,7 @@ function Templatesdetails() {
               <div className='onboard-import'>
                 <div className='import-onboard'>
                   <div>
-                    <BiImport/>
+                    <BiImport />
                   </div>
                   <div>
                     <h4>Import</h4>
@@ -88,7 +89,7 @@ function Templatesdetails() {
               <div className='onboard-export'>
                 <div className='export-onboard'>
                   <div>
-                    <PiExport/>
+                    <PiExport />
                   </div>
                   <div>
                     <h4>Export All</h4>

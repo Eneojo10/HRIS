@@ -4,7 +4,6 @@ import { GoPersonAdd } from "react-icons/go";
 import image from '../Images/user2.jpg'
 import { BsThreeDots } from "react-icons/bs";
 import { IoMdTime } from "react-icons/io";
-import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { BsCircle } from "react-icons/bs";
 import { HiArrowTrendingUp } from "react-icons/hi2";
@@ -16,6 +15,8 @@ import { RxEnvelopeClosed } from "react-icons/rx";
 import { BsTelephone } from "react-icons/bs";
 import { BsListTask } from 'react-icons/bs';
 import { IoPeopleOutline } from "react-icons/io5";
+import { BsFillPersonCheckFill } from "react-icons/bs";
+import { FiAward } from "react-icons/fi";
 
 function Onboardingdetails() {
     return (
@@ -46,7 +47,7 @@ function Onboardingdetails() {
                             <div className='flex-one'>
                                 <div className='flex1'>
                                     <div className='i-c-o-n' style={{ color: 'green' }}>
-                                        <GoPersonAdd />
+                                        < BsFillPersonCheckFill/>
                                     </div>
                                     <div className='twelve'>
 
@@ -141,7 +142,7 @@ function Onboardingdetails() {
                             <div className='flex-one'>
                                 <div className='flex1'>
                                     <div className='i-c-o-n' style={{ color: 'red' }}>
-                                        <HiArrowTrendingUp />
+                                        <FiAward />
                                     </div>
                                     <div className='twelve'>
 
