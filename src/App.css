@@ -2995,11 +2995,28 @@
   margin-bottom: 5px;
 }
 .flex-number p {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 .can-bottom-icon {
   display: flex;
   justify-content: space-between;
+}
+.performance-analytics-grid{
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.pagrid{
+  border: 1px solid #ccc;
+  height: 400px;
+  border-radius: 8px;
+  background-color: white;
+}
+.pagrid-one{
+  padding: 20px;
 }
 .envelope-tel {
   display: flex;

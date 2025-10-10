@@ -3,40 +3,116 @@ import { IoPeopleOutline } from "react-icons/io5";
 import image from '../Images/user2.jpg'
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { GoCircle } from "react-icons/go";
+import { IoPeople } from "react-icons/io5";
+import { IoMdTime } from "react-icons/io";
+import { MdOutlineTrackChanges } from "react-icons/md";
+import { FiAward } from "react-icons/fi";
 
 function Goals() {
   return (
     <div>
       <div className='performance-background'>
         <div className='goals-cards'>
-          {/* --- Repeated stat cards --- */}
-          {[
-            { title: "Active Reviews", subtitle: "In progress this cycle" },
-            { title: "Goals Completed", subtitle: "This quarter" },
-            { title: "Avg Performance Score", subtitle: "Out of 5.0" },
-            { title: "Overdue Reviews", subtitle: "Need attention" },
-            { title: "Feedback Requests", subtitle: "Pending responses" },
-            { title: "Review Completion", subtitle: "This cycle" },
-          ].map((card, i) => (
-            <div className='g-cards1' key={i}>
-              <div className='flex-one'>
-                <div className='flex1'>
-                  <div className='i-c-o-n' style={{ color: 'blue' }}>
-                    <IoPeopleOutline />
-                  </div>
-                  <div className='twelve'>
-                    <p>+12%</p>
-                  </div>
-                </div><br />
-                <div className='flex-number'>
-                  <h2>156</h2>
-                  <p>{card.title}</p>
-                  <span>{card.subtitle}</span>
-                </div>
+          <div className='g-cards1'>
+            <div className='flex-one' style={{ marginTop: '20px' }}>
+
+              <div className='flex-number'>
+                <p>Average <br />Performance</p>
+
+
               </div>
+
+              <div className='flex1x'>
+                <div className='ue'>
+
+                  <h2>4.2</h2>
+                </div>
+                <div className='i-c-o-n' style={{ color: 'purple' }}>
+                  <FiAward />
+                </div>
+
+              </div>
+              <span className='from'>+0.3 from last month</span>
+
             </div>
-          ))}
-        </div>
+            <br />
+
+          </div>
+          <div className='g-cards1'>
+            <div className='flex-one' style={{ marginTop: '20px' }}>
+
+              <div className='flex-number'>
+                <p>Reviews Completed</p>
+
+
+              </div>
+
+              <div className='flex1x'>
+                <div className='ue'>
+
+                  <h2>89%</h2>
+                </div>
+                <div className='i-c-o-n' style={{ color: 'blue' }}>
+                  <IoPeople />
+                </div>
+
+              </div>
+              <span className='from'>+12% from last month</span>
+
+            </div>
+
+          </div>
+          <div className='g-cards1'>
+            <div className='flex-one' style={{ marginTop: '20px' }}>
+
+              <div className='flex-number'>
+                <p>Goals on Track</p>
+
+
+              </div>
+
+              <div className='flex1x'>
+                <div className='ue'>
+
+                  <h2>156</h2>
+                </div>
+                <div className='i-c-o-n' style={{ color: '#1c8443' }}>
+                  <MdOutlineTrackChanges />
+                </div>
+
+              </div>
+              <span className='fr-om'>-8 from last month</span>
+
+            </div>
+
+          </div>
+          <div className='g-cards1'>
+            <div className='flex-one' style={{ marginTop: '20px' }}>
+
+              <div className='flex-number'>
+                <p>Average Review Time</p>
+
+
+              </div>
+
+              <div className='flex1x'>
+                <div className='ue'>
+
+                  <h2>12 days</h2>
+                </div>
+                <div className='i-c-o-n' style={{ color: '#ea580c' }}>
+                  <IoMdTime />
+                </div>
+
+              </div>
+              <span className='from'>-2 days from last<br /> month</span>
+
+            </div>
+
+          </div>
+
+
+        </div><br />
 
         <br />
         <div className='per-for-mance'>
@@ -148,7 +224,7 @@ function Goals() {
                 <div className='goals-table1-header' style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <div className='gt-text-1'>
                     <h3>Launch new product feature
-</h3>
+                    </h3>
                   </div>
                   <div className='gt-text-3'>
                     <p>On Track</p>
