@@ -45,7 +45,7 @@ function Anadetails() {
               <div className='ts--flex' style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <div>
                   <p>Overtime Cost</p>
-                  <h2>N50,000M</h2>
+                  <h2>&#8358;50M</h2>
                   <span className='payperiod'>270 overtime hours</span>
                 </div>
                 <div className='bluetime' style={{ color: '#ea580c' }}>
