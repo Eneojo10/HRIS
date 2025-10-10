@@ -1,6 +1,10 @@
 import React from 'react'
 import { IoPeopleOutline } from "react-icons/io5";
+import { FiAward } from "react-icons/fi";
 import image from '../Images/user2.jpg'
+import { IoPeople } from "react-icons/io5";
+import { IoMdTime } from "react-icons/io";
+import { MdOutlineTrackChanges } from "react-icons/md";
 
 function Performancedetails() {
     return (
@@ -8,125 +12,104 @@ function Performancedetails() {
             <div className='performance-background'>
                 <div className='goals-cards'>
                     <div className='g-cards1'>
-                        <div className='flex-one'>
-                            <div className='flex1'>
-                                <div className='i-c-o-n' style={{ color: 'blue' }}>
-                                    <IoPeopleOutline />
-                                </div>
-                                <div className='twelve'>
+                        <div className='flex-one' style={{ marginTop: '20px' }}>
 
-                                    <p>+12%</p>
-                                </div>
-                            </div><br />
                             <div className='flex-number'>
-                                <h2>156</h2>
-                                <p>Active Reviews</p>
-                                <span>In progress this cycle</span>
+                                <p>Average <br />Performance</p>
+
+
                             </div>
+
+                            <div className='flex1x'>
+                                <div className='ue'>
+
+                                    <h2>4.2</h2>
+                                </div>
+                                <div className='i-c-o-n' style={{ color: 'purple' }}>
+                                    <FiAward />
+                                </div>
+
+                            </div>
+                            <span className='from'>+0.3 from last month</span>
+
+                        </div>
+                        <br/>
+
+                    </div>
+                    <div className='g-cards1'>
+                        <div className='flex-one' style={{ marginTop: '20px' }}>
+
+                            <div className='flex-number'>
+                                <p>Reviews Completed</p>
+
+
+                            </div>
+
+                            <div className='flex1x'>
+                                <div className='ue'>
+
+                                    <h2>89%</h2>
+                                </div>
+                                <div className='i-c-o-n' style={{ color: 'blue' }}>
+                                    <IoPeople />
+                                </div>
+
+                            </div>
+                            <span className='from'>+12% from last month</span>
 
                         </div>
 
                     </div>
                     <div className='g-cards1'>
-                        <div className='flex-one'>
-                            <div className='flex1'>
-                                <div className='i-c-o-n' style={{ color: 'blue' }}>
-                                    <IoPeopleOutline />
-                                </div>
-                                <div className='twelve'>
+                        <div className='flex-one' style={{ marginTop: '20px' }}>
 
-                                    <p>+12%</p>
-                                </div>
-                            </div><br />
                             <div className='flex-number'>
-                                <h2>156</h2>
-                                <p>Goals Completed</p>
-                                <span>This quarter</span>
+                                <p>Goals on Track</p>
+
+
                             </div>
+
+                            <div className='flex1x'>
+                                <div className='ue'>
+
+                                    <h2>156</h2>
+                                </div>
+                                <div className='i-c-o-n' style={{ color: '#1c8443' }}>
+                                    <MdOutlineTrackChanges />
+                                </div>
+
+                            </div>
+                            <span className='fr-om'>-8 from last month</span>
 
                         </div>
 
                     </div>
                     <div className='g-cards1'>
-                        <div className='flex-one'>
-                            <div className='flex1'>
-                                <div className='i-c-o-n' style={{ color: 'blue' }}>
-                                    <IoPeopleOutline />
-                                </div>
-                                <div className='twelve'>
+                        <div className='flex-one' style={{ marginTop: '20px' }}>
 
-                                    <p>+12%</p>
-                                </div>
-                            </div><br />
                             <div className='flex-number'>
-                                <h2>156</h2>
-                                <p>Avg Performance Score</p>
-                                <span>Out of 5.0</span>
+                                <p>Average Review Time</p>
+
+
                             </div>
+
+                            <div className='flex1x'>
+                                <div className='ue'>
+
+                                    <h2>12 days</h2>
+                                </div>
+                                <div className='i-c-o-n' style={{ color: '#ea580c' }}>
+                                    <IoMdTime />
+                                </div>
+
+                            </div>
+                            <span className='from'>-2 days from last<br/> month</span>
 
                         </div>
 
                     </div>
-                    <div className='g-cards1'>
-                        <div className='flex-one'>
-                            <div className='flex1'>
-                                <div className='i-c-o-n' style={{ color: 'blue' }}>
-                                    <IoPeopleOutline />
-                                </div>
-                                <div className='twelve'>
+                    
 
-                                    <p>+12%</p>
-                                </div>
-                            </div><br />
-                            <div className='flex-number'>
-                                <h2>156</h2>
-                                <p>Overdue Reviews</p>
-                                <span>Need attention</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div className='g-cards1'>
-                        <div className='flex-one'>
-                            <div className='flex1'>
-                                <div className='i-c-o-n' style={{ color: 'blue' }}>
-                                    <IoPeopleOutline />
-                                </div>
-                                <div className='twelve'>
-
-                                    <p>+12%</p>
-                                </div>
-                            </div><br />
-                            <div className='flex-number'>
-                                <h2>156</h2>
-                                <p>Feedback Requests</p>
-                                <span>Pending responses</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div className='g-cards1'>
-                        <div className='flex-one'>
-                            <div className='flex1'>
-                                <div className='i-c-o-n' style={{ color: 'blue' }}>
-                                    <IoPeopleOutline />
-                                </div>
-                                <div className='twelve'>
-
-                                    <p>+12%</p>
-                                </div>
-                            </div><br />
-                            <div className='flex-number'>
-                                <h2>156</h2>
-                                <p>Review Completion</p>
-                                <span>This cycle</span>
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div><br />
                 <div className='per-for-mance'>
                     <div>

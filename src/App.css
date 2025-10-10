@@ -1625,7 +1625,7 @@
   background-color: white;
   border: 1px solid #ccc;
   width: 100%;
-  height: 160px;
+  height: auto;
   transition: box-shadow 0.3s ease;
 }
 .g-cards1:hover {
@@ -2976,6 +2976,20 @@
 
   justify-content: space-between;
   margin-top: 10px;
+}
+.flex1x{
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.from{
+  font-size: 13px;
+  color: green;
+}
+.fr-om{
+  font-size: 13px;
+  color: red;
 }
 .flex-number {
   margin-bottom: 5px;
