@@ -21,6 +21,7 @@ function Analyticdetails() {
   return (
     <div>
       <div className='onboard-background'>
+
         <div className='employee-cards'>
           <div className='employee-cards--flex'>
             <div className='employee-card1'>
@@ -177,116 +178,163 @@ function Analyticdetails() {
             </div>
           </div>
         </div>
-      </div>
-      <div className='d-line_'></div>
-      <div className='board-on_'>
-        <div>
-          <h3>Onboarding Analytics</h3>
-          <span className='track'>Track new hire progress through onboarding stages</span>
+        <div className='d-line_'></div>
+        <div className='board-on_'>
+          <div>
+            <h3>Onboarding Analytics</h3>
+            <span className='track'>Track new hire progress through onboarding stages</span>
+          </div>
+          <div className='goals--cards'>
+            <div className='g-cards1'>
+              <div className='flex-one' style={{ marginTop: '20px' }}>
+
+                <div className='flex-number'>
+                  <p>Completion Rate</p>
+
+
+                </div>
+
+                <div className='flex1x'>
+                  <div className='ue'>
+
+                    <h2>85.7%</h2>
+                  </div>
+                  <div className='i-c-o-n' style={{ color: 'green' }}>
+                    <IoMdCheckmarkCircleOutline />
+                  </div>
+
+                </div>
+                {/* <span className='from'>+0.3 from last month</span> */}
+
+              </div>
+              <br />
+
+            </div>
+            <div className='g-cards1'>
+              <div className='flex-one' style={{ marginTop: '20px' }}>
+
+                <div className='flex-number'>
+                  <p>Avg. Time to Complete</p>
+
+
+                </div>
+
+                <div className='flex1x'>
+                  <div className='ue'>
+
+                    <h2>12 days</h2>
+                  </div>
+                  <div className='i-c-o-n' style={{ color: 'blue' }}>
+                    <IoMdTime />
+                  </div>
+
+                </div>
+                {/* <span className='from'>+12% from last month</span> */}
+
+              </div>
+
+            </div>
+            <div className='g-cards1'>
+              <div className='flex-one' style={{ marginTop: '20px' }}>
+
+                <div className='flex-number'>
+                  <p>Satisfaction Score</p>
+
+
+                </div>
+
+                <div className='flex1x'>
+                  <div className='ue'>
+
+                    <h2>4.6/5</h2>
+                  </div>
+                  <div className='i-c-o-n' style={{ color: '#ca8a04' }}>
+                    <FaRegStar />
+                  </div>
+
+                </div>
+                {/* <span className='fr-om'>-8 from last month</span> */}
+
+              </div>
+
+            </div>
+            <div className='g-cards1'>
+              <div className='flex-one' style={{ marginTop: '20px' }}>
+
+                <div className='flex-number'>
+                  <p>At-Risk Hires</p>
+
+
+                </div>
+
+                <div className='flex1x'>
+                  <div className='ue'>
+
+                    <h2>12 </h2>
+                  </div>
+                  <div className='i-c-o-n' style={{ color: '#ea580c' }}>
+                    <BiError />
+                  </div>
+
+                </div>
+                {/* <span className='from'>-2 days from last<br /> month</span> */}
+
+              </div>
+
+            </div>
+
+
+          </div><br />
+          <div className='aOne-holder'>
+            <div className='aone'>
+              <div className='aone--head' style={{ padding: '20px' }}>
+                <h3>Onboarding Completion Trends</h3>
+              </div>
+            </div>
+            <div className='aone'>
+              <div className='aone--head' style={{ padding: '20px' }}>
+                <h3>Department Performance</h3>
+              </div>
+            </div>
+
+          </div><br />
+          <div className='bOne-holder'>
+            <div className='aone--head' style={{ padding: '20px' }}>
+              <h3>Weekly Progress Review</h3>
+            </div>
+
+          </div>
+          <br />
+          <div className='bOne-holder'>
+            <div className='aone--head' style={{ padding: '20px' }}>
+              <h3>Task Completion by Category</h3>
+            </div>
+
+          </div>
+          <br/>
+          <div className='aOne-holder'>
+            <div className='aone'>
+              <div className='aone--head' style={{ padding: '20px' }}>
+                <h3>Satisfaction Distribution</h3>
+              </div>
+            </div>
+            <div className='aone'>
+              <div className='aone--head' style={{ padding: '20px' }}>
+                <h3>Time to Productivity by Role</h3>
+              </div>
+            </div>
+
+          </div><br />
+          <div className='task-completions-holder'>
+            <div className='aone--head' style={{ padding: '20px' }}>
+              <h3>Department Retention Rates</h3>
+            </div>
+
+          </div><br />
+
         </div>
-        <div className='goals--cards'>
-          <div className='g-cards1'>
-            <div className='flex-one' style={{ marginTop: '20px' }}>
-
-              <div className='flex-number'>
-                <p>Completion Rate</p>
-
-
-              </div>
-
-              <div className='flex1x'>
-                <div className='ue'>
-
-                  <h2>85.7%</h2>
-                </div>
-                <div className='i-c-o-n' style={{ color: 'green' }}>
-                  <IoMdCheckmarkCircleOutline />
-                </div>
-
-              </div>
-              {/* <span className='from'>+0.3 from last month</span> */}
-
-            </div>
-            <br />
-
-          </div>
-          <div className='g-cards1'>
-            <div className='flex-one' style={{ marginTop: '20px' }}>
-
-              <div className='flex-number'>
-                <p>Avg. Time to Complete</p>
-
-
-              </div>
-
-              <div className='flex1x'>
-                <div className='ue'>
-
-                  <h2>12 days</h2>
-                </div>
-                <div className='i-c-o-n' style={{ color: 'blue' }}>
-                  <IoMdTime />
-                </div>
-
-              </div>
-              {/* <span className='from'>+12% from last month</span> */}
-
-            </div>
-
-          </div>
-          <div className='g-cards1'>
-            <div className='flex-one' style={{ marginTop: '20px' }}>
-
-              <div className='flex-number'>
-                <p>Satisfaction Score</p>
-
-
-              </div>
-
-              <div className='flex1x'>
-                <div className='ue'>
-
-                  <h2>4.6/5</h2>
-                </div>
-                <div className='i-c-o-n' style={{ color: '#ca8a04' }}>
-                  <FaRegStar />
-                </div>
-
-              </div>
-              {/* <span className='fr-om'>-8 from last month</span> */}
-
-            </div>
-
-          </div>
-          <div className='g-cards1'>
-            <div className='flex-one' style={{ marginTop: '20px' }}>
-
-              <div className='flex-number'>
-                <p>At-Risk Hires</p>
-
-
-              </div>
-
-              <div className='flex1x'>
-                <div className='ue'>
-
-                  <h2>12 </h2>
-                </div>
-                <div className='i-c-o-n' style={{ color: '#ea580c' }}>
-                  <BiError />
-                </div>
-
-              </div>
-              {/* <span className='from'>-2 days from last<br /> month</span> */}
-
-            </div>
-
-          </div>
-
-
-        </div><br />
-
       </div>
+
 
     </div>
   )

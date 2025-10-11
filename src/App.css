@@ -1707,6 +1707,31 @@
   width: 95%;
   margin: auto;
 }
+.aOne-holder{
+  display: flex;
+  gap: 20px;
+}
+.bOne-holder{
+  border: 1px solid #ccc;
+  height: 350px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: white;
+}
+.task-completions-holder{
+  border: 1px solid #ccc;
+  height: 150px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: white;
+}
+.aone{
+  border: 1px solid #ccc;
+  height: 350px;
+  width: 50%;
+  border-radius: 4px;
+  background-color: white;
+}
 .pr1-card {
   background-color: white;
   border: 1px solid #ccc;
