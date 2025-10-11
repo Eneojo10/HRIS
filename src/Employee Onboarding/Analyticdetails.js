@@ -1,8 +1,5 @@
 import React from 'react'
-import { IoPersonOutline } from "react-icons/io5";
-import { RxEnvelopeClosed } from "react-icons/rx";
-import { BsTelephone } from "react-icons/bs";
-import { BsListTask } from 'react-icons/bs';
+
 import { IoPeopleOutline } from "react-icons/io5";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import { FiAward } from "react-icons/fi";
@@ -12,10 +9,8 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { BsCircle } from "react-icons/bs";
 import { CgDanger } from "react-icons/cg";
 import { BiError } from "react-icons/bi";
-import { MdOutlineTrackChanges } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa6";
-import { IoPeople } from "react-icons/io5";
-
+import HiringTrends from '../Pages/Hiringtrends';
 
 function Analyticdetails() {
   return (
@@ -288,26 +283,27 @@ function Analyticdetails() {
           <div className='aOne-holder'>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h3>Onboarding Completion Trends</h3>
+                <h2>Onboarding Completion Trends</h2>
               </div>
             </div>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h3>Department Performance</h3>
+                <h2>Department Performance</h2>
+               
               </div>
             </div>
 
           </div><br />
           <div className='bOne-holder'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h3>Weekly Progress Review</h3>
+              <h2>Weekly Progress Review</h2>
             </div>
 
           </div>
           <br />
           <div className='bOne-holder'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h3>Task Completion by Category</h3>
+              <h2>Task Completion by Category</h2>
             </div>
 
           </div>
@@ -315,19 +311,19 @@ function Analyticdetails() {
           <div className='aOne-holder'>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h3>Satisfaction Distribution</h3>
+                <h2>Satisfaction Distribution</h2>
               </div>
             </div>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h3>Time to Productivity by Role</h3>
+                <h2>Time to Productivity by Role</h2>
               </div>
             </div>
 
           </div><br />
           <div className='task-completions-holder'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h3>Department Retention Rates</h3>
+              <h2>Department Retention Rates</h2>
             </div>
 
           </div><br />

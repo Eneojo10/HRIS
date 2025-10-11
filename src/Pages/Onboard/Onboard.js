@@ -56,7 +56,7 @@ function Onboard() {
                         <div className='person-input-fields'>
                             <div className='per-input'>
                                 <label>Job Title *</label>
-                                <input type='text' placeholder='DD/MM/YYYY'></input>
+                                <input type='text' placeholder='Job title...'></input>
                             </div>
                             <div className='per-input'>
                                 <label>Department *</label>
