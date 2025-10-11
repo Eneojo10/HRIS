@@ -6,7 +6,6 @@ import { BsThreeDots } from "react-icons/bs";
 import { IoMdTime } from "react-icons/io";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { BsCircle } from "react-icons/bs";
-import { HiArrowTrendingUp } from "react-icons/hi2";
 import { CgDanger } from "react-icons/cg";
 import { IoLocation } from 'react-icons/io5';
 import { LuBriefcase } from "react-icons/lu";
