@@ -70,9 +70,28 @@ function Anadetails() {
 
             </div>
           </div>
-          
+
+        </div><br />
+        <div className='aOne-holder'>
+          <div className='aone'>
+            <div className='aone--head' style={{ padding: '20px' }}>
+              <h2>Productivity & Hours Trends</h2>
+            </div>
+          </div>
+          <div className='aone'>
+            <div className='aone--head' style={{ padding: '20px' }}>
+              <h2>Hours by Department</h2>
+
+            </div>
+          </div>
+
         </div><br />
         <div className='ts-big'>
+          <div className='aone--head' style={{ padding: '20px' }}>
+            <h2>Project Time Analysis</h2>
+
+          </div>
+
 
         </div>
       </div>

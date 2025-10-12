@@ -12,6 +12,9 @@
   display: flex;
   width: 100%;
 }
+.farrow p{
+  font-size: 13px;
+}
 .hr-logo img {
   width: 35%;
 }
@@ -1720,18 +1723,37 @@
 }
 .task-completions-holder{
   border: 1px solid #ccc;
-  height: 150px;
+  height: auto;
   width: 100%;
   border-radius: 4px;
   background-color: white;
 }
 .aone{
   border: 1px solid #ccc;
-  height: 350px;
+  height: auto;
   width: 50%;
   border-radius: 4px;
   background-color: white;
 }
+.aone--head h2{
+  font-weight: 500;
+}
+.metrics-cards{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.metrics_card{
+  text-align: center;
+}
+.vs{
+  font-size: 13px;
+}
+.benarrow{
+  /* font-size: 12px; */
+}
+
 .pr1-card {
   background-color: white;
   border: 1px solid #ccc;

@@ -13,6 +13,9 @@ import { IoPeopleOutline } from "react-icons/io5";
 import Dept from '../Pages/DepartmentTwo/Dept';
 import { BiBuildingHouse } from "react-icons/bi";
 import { FcSalesPerformance } from "react-icons/fc";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { FaArrowTrendDown } from "react-icons/fa6";
+
 
 function Departments() {
 
@@ -81,7 +84,7 @@ function Departments() {
                                     <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
 
                                 </div>
-                                
+
                                 <br />
 
                                 <form>
@@ -110,6 +113,14 @@ function Departments() {
                                                 <SiClickhouse />
                                             </div>
                                         </div>
+                                        <div className='farrow' style={{ display: 'flex',gap:'4px',color:'green' }}>
+                                            <div>
+                                                <FaArrowTrendUp />
+                                            </div>
+                                            <div>
+                                                <p>+2</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='dept-card010'>
@@ -121,6 +132,14 @@ function Departments() {
                                             </div>
                                             <div className='icon-dept' style={{ marginTop: '20px', color: '#23a854', backgroundColor: '#f0fdf4', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
                                                 <IoPeopleOutline />
+                                            </div>
+                                        </div>
+                                        <div className='farrow' style={{ display: 'flex',gap:'4px',color:'green' }}>
+                                            <div>
+                                                <FaArrowTrendUp />
+                                            </div>
+                                            <div>
+                                                <p>+8.2%</p>
                                             </div>
                                         </div>
                                     </div>
@@ -136,6 +155,14 @@ function Departments() {
                                                 <TbCurrencyNaira />
                                             </div>
                                         </div>
+                                        <div className='farrow' style={{ display: 'flex',gap:'4px',color:'green' }}>
+                                            <div>
+                                                <FaArrowTrendUp />
+                                            </div>
+                                            <div>
+                                                <p>+5.1%</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='dept-card010'>
@@ -147,6 +174,14 @@ function Departments() {
                                             </div>
                                             <div className='icon-dept' style={{ marginTop: '20px', color: '#ea580c', backgroundColor: '#fff7ed', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
                                                 <FcSalesPerformance />
+                                            </div>
+                                        </div>
+                                        <div className='farrow' style={{ display: 'flex',gap:'4px',color:'red' }}>
+                                            <div>
+                                                <FaArrowTrendDown />
+                                            </div>
+                                            <div>
+                                                <p>-2.1%</p>
                                             </div>
                                         </div>
                                     </div>
