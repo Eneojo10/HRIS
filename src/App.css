@@ -1750,10 +1750,21 @@
 .vs{
   font-size: 13px;
 }
-.benarrow{
-  /* font-size: 12px; */
+.debt-analysis{
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 4px;
+  background-color: white;
+  height: auto;
 }
-
+.depsub-one{
+  border: 1px solid #ccc;
+  height: 100px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: white;
+  margin-top: 15px;
+}
 .pr1-card {
   background-color: white;
   border: 1px solid #ccc;
