@@ -574,34 +574,70 @@ function Banalytics() {
           <div className='dis-one' style={{ padding: '20px' }}>
             <h3>Performance Distribution</h3>
             <br />
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Engineering</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Sales</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Marketing</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>HR</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Finance</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div>
+            <div className='esmhfo' style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Operations</p>
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
               </div>
             </div>
           </div>
@@ -611,34 +647,70 @@ function Banalytics() {
           <div className='dis-one' style={{ padding: '20px' }}>
             <h3>Employee Satisfaction</h3>
             <br />
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Engineering</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Sales</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Marketing</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>HR</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div className='esmhfo'>
+            <div className='esmhfo'style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Finance</p>
               </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
             </div>
-            <div>
+            <div className='esmhfo' style={{display:'flex',justifyContent:'space-between'}}>
               <div>
                 <p>Operations</p>
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
               </div>
             </div>
           </div>
