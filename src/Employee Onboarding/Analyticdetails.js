@@ -283,12 +283,12 @@ function Analyticdetails() {
           <div className='aOne-holder'>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h2>Onboarding Completion Trends</h2>
+                <h3>Onboarding Completion Trends</h3>
               </div>
             </div>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h2>Department Performance</h2>
+                <h3>Department Performance</h3>
                
               </div>
             </div>
@@ -296,14 +296,14 @@ function Analyticdetails() {
           </div><br />
           <div className='bOne-holder'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h2>Weekly Progress Review</h2>
+              <h3>Weekly Progress Review</h3>
             </div>
 
           </div>
           <br />
           <div className='bOne-holder'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h2>Task Completion by Category</h2>
+              <h3>Task Completion by Category</h3>
             </div>
 
           </div>
@@ -311,19 +311,19 @@ function Analyticdetails() {
           <div className='aOne-holder'>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h2>Satisfaction Distribution</h2>
+                <h3>Satisfaction Distribution</h3>
               </div>
             </div>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
-                <h2>Time to Productivity by Role</h2>
+                <h3>Time to Productivity by Role</h3>
               </div>
             </div>
 
           </div><br />
           <div className='task-completions-holder'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h2>Department Retention Rates</h2>
+              <h3>Department Retention Rates</h3>
             </div>
 
           </div><br />

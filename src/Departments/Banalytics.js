@@ -99,15 +99,554 @@ function Banalytics() {
       </div>
       <br />
       <div className='debt-analysis'>
-        <div className='deptone'style={{padding:'20px'}}>
+        <div className='deptone' style={{ padding: '20px' }}>
           <h2>Department Performance Analysis</h2>
           <p>Comprehensive performance metrics across all departments</p>
           <div className='depsub-one'>
+            <div className='dept-flex' style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+              <div className='threefourtu' style={{ display: 'flex', gap: '5px' }}>
+                <div>
+                  <h3>Engineering</h3>
+                </div>
+                <div className='the-employee' style={{ fontSize: '13px', marginTop: '3px' }}>
+                  <p>342 employees</p>
+                </div>
+              </div>
+              <div className='farrow' style={{ display: 'flex', gap: '4px', color: 'green' }}>
+                <div>
+                  <FaArrowTrendDown />
+                </div>
+                <div>
+                  <p>-2.1%</p>
+                </div>
+              </div>
+
+            </div>
+            <div className='pspt' style={{ display: 'flex', gap: '20px', width: '96%', margin: 'auto' }}>
+              <div className='perf' style={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Performance</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Satisfaction</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Productivity</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Turnover</p>
+                </div>
+                <span>94%</span>
+              </div>
+
+            </div>
+            <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+
+            </div>
+            <br />
+
+          </div>
+          <div className='depsub-one'>
+            <div className='dept-flex' style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+              <div className='threefourtu' style={{ display: 'flex', gap: '5px' }}>
+                <div>
+                  <h3>Sales</h3>
+                </div>
+                <div className='the-employee' style={{ fontSize: '13px', marginTop: '3px' }}>
+                  <p>342 employees</p>
+                </div>
+              </div>
+              <div className='farrow' style={{ display: 'flex', gap: '4px', color: 'green' }}>
+                <div>
+                  <FaArrowTrendDown />
+                </div>
+                <div>
+                  <p>-2.1%</p>
+                </div>
+              </div>
+
+            </div>
+            <div className='pspt' style={{ display: 'flex', gap: '20px', width: '96%', margin: 'auto' }}>
+              <div className='perf' style={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Performance</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Satisfaction</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Productivity</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Turnover</p>
+                </div>
+                <span>94%</span>
+              </div>
+
+            </div>
+            <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+
+            </div>
+            <br />
+
+          </div>
+
+          <div className='depsub-one'>
+            <div className='dept-flex' style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+              <div className='threefourtu' style={{ display: 'flex', gap: '5px' }}>
+                <div>
+                  <h3>Marketing</h3>
+                </div>
+                <div className='the-employee' style={{ fontSize: '13px', marginTop: '3px' }}>
+                  <p>342 employees</p>
+                </div>
+              </div>
+              <div className='farrow' style={{ display: 'flex', gap: '4px', color: 'green' }}>
+                <div>
+                  <FaArrowTrendDown />
+                </div>
+                <div>
+                  <p>-2.1%</p>
+                </div>
+              </div>
+
+            </div>
+            <div className='pspt' style={{ display: 'flex', gap: '20px', width: '96%', margin: 'auto' }}>
+              <div className='perf' style={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Performance</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Satisfaction</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Productivity</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Turnover</p>
+                </div>
+                <span>94%</span>
+              </div>
+
+            </div>
+            <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+
+            </div>
+            <br />
+
+          </div>
+          <div className='depsub-one'>
+            <div className='dept-flex' style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+              <div className='threefourtu' style={{ display: 'flex', gap: '5px' }}>
+                <div>
+                  <h3>HR</h3>
+                </div>
+                <div className='the-employee' style={{ fontSize: '13px', marginTop: '3px' }}>
+                  <p>342 employees</p>
+                </div>
+              </div>
+              <div className='farrow' style={{ display: 'flex', gap: '4px', color: 'green' }}>
+                <div>
+                  <FaArrowTrendDown />
+                </div>
+                <div>
+                  <p>-2.1%</p>
+                </div>
+              </div>
+
+            </div>
+            <div className='pspt' style={{ display: 'flex', gap: '20px', width: '96%', margin: 'auto' }}>
+              <div className='perf' style={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Performance</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Satisfaction</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Productivity</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Turnover</p>
+                </div>
+                <span>94%</span>
+              </div>
+
+            </div>
+            <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+
+            </div>
+            <br />
+
+          </div>
+          <div className='depsub-one'>
+            <div className='dept-flex' style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+              <div className='threefourtu' style={{ display: 'flex', gap: '5px' }}>
+                <div>
+                  <h3>Finance</h3>
+                </div>
+                <div className='the-employee' style={{ fontSize: '13px', marginTop: '3px' }}>
+                  <p>342 employees</p>
+                </div>
+              </div>
+              <div className='farrow' style={{ display: 'flex', gap: '4px', color: 'green' }}>
+                <div>
+                  <FaArrowTrendDown />
+                </div>
+                <div>
+                  <p>-2.1%</p>
+                </div>
+              </div>
+
+            </div>
+            <div className='pspt' style={{ display: 'flex', gap: '20px', width: '96%', margin: 'auto' }}>
+              <div className='perf' style={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Performance</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Satisfaction</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Productivity</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Turnover</p>
+                </div>
+                <span>94%</span>
+              </div>
+
+            </div>
+            <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+
+            </div>
+            <br />
+
+          </div>
+          <div className='depsub-one'>
+            <div className='dept-flex' style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+              <div className='threefourtu' style={{ display: 'flex', gap: '5px' }}>
+                <div>
+                  <h3>Operations</h3>
+                </div>
+                <div className='the-employee' style={{ fontSize: '13px', marginTop: '3px' }}>
+                  <p>342 employees</p>
+                </div>
+              </div>
+              <div className='farrow' style={{ display: 'flex', gap: '4px', color: 'green' }}>
+                <div>
+                  <FaArrowTrendDown />
+                </div>
+                <div>
+                  <p>-2.1%</p>
+                </div>
+              </div>
+
+            </div>
+            <div className='pspt' style={{ display: 'flex', gap: '20px', width: '96%', margin: 'auto' }}>
+              <div className='perf' style={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Performance</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Satisfaction</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Productivity</p>
+                </div>
+                <span>94%</span>
+              </div>
+              <div className='perf' style={{ width: '25%', display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Turnover</p>
+                </div>
+                <span>94%</span>
+              </div>
+
+            </div>
+            <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+              <div className="dept-progress-container">
+                <div className="dept-progress-bar">
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                </div>
+
+              </div>
+
+            </div>
+            <br />
 
           </div>
         </div>
 
       </div>
+      <br />
+      <div className='performance-distro'>
+        <div className='distro-one'>
+          <div className='dis-one' style={{ padding: '20px' }}>
+            <h3>Performance Distribution</h3>
+            <br />
+            <div className='esmhfo'>
+              <div>
+                <p>Engineering</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>Sales</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>Marketing</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>HR</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>Finance</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>Operations</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div className='distro-one'>
+          <div className='dis-one' style={{ padding: '20px' }}>
+            <h3>Employee Satisfaction</h3>
+            <br />
+            <div className='esmhfo'>
+              <div>
+                <p>Engineering</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>Sales</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>Marketing</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>HR</p>
+              </div>
+            </div>
+            <div className='esmhfo'>
+              <div>
+                <p>Finance</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>Operations</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <br />
 
     </div>
   )

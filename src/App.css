@@ -8,6 +8,31 @@
   border-right: 1px solid #ccc;
   height: auto;
 }
+.dept-progress-container {
+  width: 25%;
+}
+
+.dept-progress-bar {
+  width: 90%;
+  height: 7px;
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 11px;
+}
+
+.dept-progress-fill {
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+  transition: width 0.4s ease-in-out;
+}
+
+.dept-progress-label {
+  text-align: right;
+}
+
 .hr-logo {
   display: flex;
   width: 100%;
@@ -1759,11 +1784,33 @@
 }
 .depsub-one{
   border: 1px solid #ccc;
-  height: 100px;
+  height: auto;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: white;
   margin-top: 15px;
+}
+.performance-distro{
+  display: flex;
+  gap: 20px;
+}
+.distro-one{
+  border: 1px solid #ccc;
+  background-color: white;
+  height: auto;
+  border-radius: 8px;
+  width: 50%;
+}
+.esmhfo{
+  margin-bottom: 10px;
+}
+.esmhfo p{
+  font-size: 16px;
+}
+.the-employee{
+  background-color: #f4f4f5;
+  padding: 3px 10px;
+  border-radius: 16px;
 }
 .pr1-card {
   background-color: white;

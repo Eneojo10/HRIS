@@ -75,12 +75,12 @@ function Anadetails() {
         <div className='aOne-holder'>
           <div className='aone'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h2>Productivity & Hours Trends</h2>
+              <h3>Productivity & Hours Trends</h3>
             </div>
           </div>
           <div className='aone'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h2>Hours by Department</h2>
+              <h3>Hours by Department</h3>
 
             </div>
           </div>
@@ -88,7 +88,7 @@ function Anadetails() {
         </div><br />
         <div className='ts-big'>
           <div className='aone--head' style={{ padding: '20px' }}>
-            <h2>Project Time Analysis</h2>
+            <h3>Project Time Analysis</h3>
 
           </div>
 
