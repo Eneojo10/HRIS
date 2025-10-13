@@ -3,6 +3,7 @@ import React from 'react'
 import { IoPeople } from "react-icons/io5";
 import { IoMdTime } from "react-icons/io";
 import { MdOutlineTrackChanges } from "react-icons/md";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FiAward } from "react-icons/fi";
 import { BiError } from "react-icons/bi";
 
@@ -157,8 +158,8 @@ function Analytics() {
 
                     <h2>89%</h2>
                   </div>
-                  <div className='i-c-o-n' style={{ color: 'blue' }}>
-                    <IoPeople />
+                  <div className='i-c-o-n' style={{ color: 'green' }}>
+                    <MdOutlineTrackChanges />
                   </div>
 
                 </div>
@@ -181,8 +182,8 @@ function Analytics() {
 
                     <h2>94%</h2>
                   </div>
-                  <div className='i-c-o-n' style={{ color: '#1c8443' }}>
-                    <MdOutlineTrackChanges />
+                  <div className='i-c-o-n' style={{ color: '#2563eb' }}>
+                    <IoMdCheckmarkCircleOutline />
                   </div>
 
                 </div>
