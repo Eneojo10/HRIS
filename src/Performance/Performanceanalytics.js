@@ -222,28 +222,28 @@ function Analytics() {
           <div className='performance-analytics-grid'>
             <div className='pagrid'>
               <div className='pagrid-one'>
-                <h2>Performance Trends</h2>
+                <h3>Performance Trends</h3>
 
               </div>
 
             </div>
             <div className='pagrid'>
               <div className='pagrid-one'>
-                <h2>Goal Completion Status</h2>
+                <h3>Goal Completion Status</h3>
 
               </div>
 
             </div>
             <div className='pagrid'>
               <div className='pagrid-one'>
-                <h2>Department Performance</h2>
+                <h3>Department Performance</h3>
 
               </div>
 
             </div>
             <div className='pagrid'>
               <div className='pagrid-one'>
-                <h2>Review Status Overview</h2>
+                <h3>Review Status Overview</h3>
 
               </div>
 
