@@ -45,6 +45,21 @@
   text-align: right;
 }
 
+.dept-warning {
+  color: #864f10;
+  background-color: #fef9c3;
+  border-radius: 16px;
+  padding: 2px 10px;
+  font-size: 14px;
+}
+.dept--warning {
+  color: #166534;
+  background-color: #dcfce7;
+  border-radius: 16px;
+  padding: 2px 10px;
+  font-size: 14px;
+}
+
 .hr-logo {
   display: flex;
   width: 100%;

@@ -83,7 +83,109 @@ function Budgets() {
                   <div>
                     <h3>Engineering</h3>
                   </div>
+                  <div className='dept--warning'>
+                    <p>on track</p>
+                  </div>
+                </div>
+                <div>
+                  <p>+12%</p>
+                </div>
+              </div>
+              <div className='brkdown-list' style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '27px' }}>
+                <div>
+                  <h4>Budget</h4>
+                  <p>₦4,200,000</p>
+                </div>
+                <div>
+                  <h4>Spent</h4>
+                  <p>₦3,150,000</p>
+                </div>
+                <div>
+                  <h4>Remaining</h4>
+                  <p>₦1,050,000</p>
+                </div>
+                <div>
+                  <h4>Employees</h4>
+                  <p>342</p>
+                </div>
+                <div>
+                  <h4>Cost/Employee</h4>
+                  <p>₦9,211</p>
+                </div>
+              </div>
+              <div className='bu' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Budget Utilization</p>
+                </div>
+                <div>
+                  <p>75%</p>
+                </div>
+              </div>
+
+            </div>
+            <br />
+
+          </div>
+          <br />
+          <div className='breakdown-one'>
+            <div className='breakdown_one'>
+              <div className='brk' style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '25px' }}>
+                <div className='on_track' style={{ display: 'flex', gap: '10px' }}>
                   <div>
+                    <h3>Sales</h3>
+                  </div>
+                  <div className='dept-warning'>
+                    <p>warning</p>
+                  </div>
+                </div>
+                <div>
+                  <p>+12%</p>
+                </div>
+              </div>
+              <div className='brkdown-list' style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '27px' }}>
+                <div>
+                  <h4>Budget</h4>
+                  <p>₦4,200,000</p>
+                </div>
+                <div>
+                  <h4>Spent</h4>
+                  <p>₦3,150,000</p>
+                </div>
+                <div>
+                  <h4>Remaining</h4>
+                  <p>₦1,050,000</p>
+                </div>
+                <div>
+                  <h4>Employees</h4>
+                  <p>342</p>
+                </div>
+                <div>
+                  <h4>Cost/Employee</h4>
+                  <p>₦9,211</p>
+                </div>
+              </div>
+              <div className='bu' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>
+                  <p>Budget Utilization</p>
+                </div>
+                <div>
+                  <p>75%</p>
+                </div>
+              </div>
+
+            </div>
+            <br />
+
+          </div>
+          <br />
+          <div className='breakdown-one'>
+            <div className='breakdown_one'>
+              <div className='brk' style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '25px' }}>
+                <div className='on_track' style={{ display: 'flex', gap: '10px' }}>
+                  <div>
+                    <h3>Marketing</h3>
+                  </div>
+                  <div className='dept--warning'>
                     <p>on track</p>
                   </div>
                 </div>
