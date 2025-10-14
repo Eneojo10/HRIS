@@ -14,7 +14,7 @@ function PerformOne() {
                         <div className='per-input'>
                             <label>Employee *</label>
                             <select>
-                                <option>Select reviewer</option>
+                                <option>Select employee...</option>
                                 <option>John Doe- Software</option>
 
                             </select>
@@ -29,7 +29,7 @@ function PerformOne() {
                         <div className='per-input'>
                             <label>Reviewer *</label>
                             <select>
-                                <option>Select employee</option>
+                                <option>Select reviewer...</option>
                                 <option>John Doe- Software</option>
                             </select>
                         </div>

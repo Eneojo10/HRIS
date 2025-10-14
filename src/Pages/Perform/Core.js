@@ -1,5 +1,7 @@
 import React from 'react'
 import { HiMiniPlusSmall } from "react-icons/hi2";
+import { CiStar } from "react-icons/ci";
+import { IoMdStar } from "react-icons/io";
 
 function Core() {
     return (
@@ -90,6 +92,46 @@ function Core() {
                             </div>
                             <div>
                                 <p>Rating Scale</p>
+                                <div className='stah'style={{display:'flex',gap:'3px',marginTop:'5px'}}>
+                                    <div className='cstar'style={{marginTop:'1px',color:'#facc15'}}>
+                                        <IoMdStar/>
+                                    </div>
+                                    <div>
+                                        <p>5 - Exceptional</p>
+                                    </div>
+                                </div>
+                                <div className='stah'style={{display:'flex',gap:'3px',marginTop:'5px'}}>
+                                    <div className='cstar'style={{marginTop:'1px',color:'#facc15'}}>
+                                        <IoMdStar/>
+                                    </div>
+                                    <div>
+                                        <p>4 - Exceeds Expectations</p>
+                                    </div>
+                                </div>
+                                <div className='stah'style={{display:'flex',gap:'3px',marginTop:'5px'}}>
+                                    <div className='cstar'style={{marginTop:'1px',color:'#facc15'}}>
+                                        <IoMdStar/>
+                                    </div>
+                                    <div>
+                                        <p>3 - Meet Expectations</p>
+                                    </div>
+                                </div>
+                                <div className='stah'style={{display:'flex',gap:'3px',marginTop:'5px'}}>
+                                    <div className='cstar'style={{marginTop:'1px'}}>
+                                        <CiStar/>
+                                    </div>
+                                    <div>
+                                        <p>2 - Below Expectations</p>
+                                    </div>
+                                </div>
+                                <div className='stah'style={{display:'flex',gap:'3px',marginTop:'5px'}}>
+                                    <div className='cstar'style={{marginTop:'1px'}}>
+                                        <CiStar/>
+                                    </div>
+                                    <div>
+                                        <p>1 - Needs Improvement</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
