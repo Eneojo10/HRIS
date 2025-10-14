@@ -74,17 +74,46 @@ function Settings() {
                     <div className='setting-cards'>
                         <div className='settings-cards-flex'>
                             <div className='set-card1'>
+                                <div className='set0ne'>
+                                    <h3>Active Users</h3>
+                                    <h2>247</h2>
+                                    <br/>
+                                    <p>Total system users</p>
+
+                                </div>
 
                             </div>
                             <div className='set-card1'>
+                                <div className='set0ne'>
+                                    <h3>System Uptime</h3>
+                                    <h2>99.9%</h2>
+                                    <br/>
+                                    <p>Last 30 days</p>
+
+                                </div>
 
                             </div>
                             <div className='set-card1'>
+                                <div className='set0ne'>
+                                    <h3>Storage Used</h3>
+                                    <h2>2.4 TB</h2>
+                                    <br/>
+                                    <p>Of 5 TB available</p>
+
+                                </div>
 
                             </div>
                             <div className='set-card1'>
+                                <div className='set0ne'>
+                                    <h3>API Calls</h3>
+                                    <h2>1.2M</h2>
+                                    <br/>
+                                    <p>This month</p>
+
+                                </div>
 
                             </div>
+                            
 
                         </div><br /><br /><br />
                         <div className='settings-big-border'>
