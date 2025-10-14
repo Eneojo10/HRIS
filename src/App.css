@@ -59,6 +59,13 @@
   padding: 2px 10px;
   font-size: 14px;
 }
+.dept---warning {
+  color: #991b1b;
+  background-color: #fee2e2;
+  border-radius: 16px;
+  padding: 2px 10px;
+  font-size: 14px;
+}
 
 .hr-logo {
   display: flex;
