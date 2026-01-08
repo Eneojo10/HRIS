@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Dashboard from '../Menu/Dashboard'
 import { BsPeople } from "react-icons/bs";
 import { BsFillPersonXFill } from "react-icons/bs";
@@ -18,9 +18,36 @@ import { RxEnvelopeClosed } from "react-icons/rx";
 import { BsTelephone } from "react-icons/bs";
 import { BsThreeDots } from "react-icons/bs";
 import { TbCurrencyNaira } from "react-icons/tb";
+import axios from 'axios';
+import { BASE_URL } from './Utils/globals'
 
 
 function MainDashBoard() {
+    const [total, setTotal] = useState(0);
+    const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+
+
+    useEffect(() => {
+        const fetchTotalEmployees = async () => {
+            try {
+                const response = await axios.get(`${BASE_URL}/employees/total`);
+                setTotal(response.data.totalEmployees);
+            } catch (err) {
+                console.error("Error fetching total employees:", err);
+                setError("Failed to load total employees");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchTotalEmployees();
+    }, []);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>{error}</p>;
+
     return (
         <div>
             <div className='main-board'>
@@ -44,7 +71,7 @@ function MainDashBoard() {
                             <div className='total-employees'>
                                 <div>
                                     <span>Total Employees</span>
-                                    <h2>1,247</h2>
+                                    <h2>{total}</h2>
                                     <span className='span-text'>+12% from last month</span>
                                 </div>
                                 <div>
@@ -259,7 +286,7 @@ function MainDashBoard() {
                                     <div className='recent_1'>
                                         <div className='r1'>
                                             <div className='recent-bg-1'>
-                                            
+
                                             </div>
                                             <div>
                                                 <h4>Sarah Johnson</h4>
@@ -375,10 +402,10 @@ function MainDashBoard() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div><br/>
+                                    </div><br />
                                 </div>
                             </div>
-                            
+
 
                             <div className='big-borders03'>
                                 <div className='quick-actions'>

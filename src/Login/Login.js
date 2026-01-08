@@ -60,7 +60,7 @@ function Login() {
                                     </div>
                                 </div>
                             </div>
-                            <br />
+                        
 
                             {/* FOOTER for front side */}
                             <div className='login-footer-box'>
@@ -75,13 +75,13 @@ function Login() {
                                         <p>Terms of Service</p>
                                     </div>
                                 </div>
-                                <div className='login-footer-logo'>
+                                {/* <div className='login-footer-logo'>
                                     <div className="flex items-center space-x-4">
                                         <Users className="w-4 h-6 text-blue-600 login-users u-font" />
                                         <span className="text-3xl font-bold text-blue-800 enes-logo">enes</span>
                                         <span className="text-3xl font-bold text-gray-700 hr-">HR</span>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='mobile-view'>
                                 <div className='login-footer-logo'>

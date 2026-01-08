@@ -3,15 +3,15 @@ import { BsPeople, BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 function Calender() {
   const today = new Date();
-  const [currentMonth, setCurrentMonth] = useState(today.getMonth()); // 0-11
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth()); 
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
-  // Get month name
+ 
   const monthName = new Date(currentYear, currentMonth).toLocaleString('default', { month: 'long' });
 
-  // Generate days for calendar
+ 
   const generateCalendar = () => {
-    const firstDay = new Date(currentYear, currentMonth, 1).getDay(); // 0 = Sun
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay(); 
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
     const calendar = [];
     let dayCounter = 1;

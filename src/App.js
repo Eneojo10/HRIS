@@ -113,6 +113,8 @@ import Blk from './Pages/Time/Blk';
 import Bplans from './Pages/Benefitsplans/Bplans';
 import Dependent from './Pages/Benefitsplans/Dependent';
 import Summ from './Pages/Benefitsplans/Summ';
+import Reusable from './Pages/Reusable';
+import EmployeeWizard from './Pages/EmployeeWizard';  
 
 function App() {
   return (
@@ -205,10 +207,10 @@ function App() {
           <Route path="trends" element={<PayrollTrends />} />
           <Route path="distribution" element={<Distribution />} />
           <Route path="talent" element={<Talent />} />
-          <Route path="personal" element={<Personal />} />
-          <Route path="employment" element={<Employment />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="compensation" element={<Compensation />} />
+          <Route path="personal" element={<Personal onNext={() => {}} onClose={() => {}} />} />
+          <Route path="employment" element={<Employment onNext={() => {}} onClose={() => {}} />} />
+          <Route path="contact" element={<Contact onNext={() => {}} onClose={() => {}} />} />
+          <Route path="compensation" element={<Compensation onNext={() => {}} onClose={() => {}} />} />
           <Route path="addition" element={<Additional />} />
           <Route path="basic" element={<Basic />} />
           <Route path="details" element={<Details />} />
@@ -236,6 +238,9 @@ function App() {
           <Route path="bplans" element={<Bplans />} />
           <Route path="dependent" element={<Dependent />} />
           <Route path="summ" element={<Summ />} />
+          <Route path='use' element={<Reusable />} />
+          <Route path="employee-wizard" element={<EmployeeWizard />} />
+
         </Routes>
       </Router>
     </div>

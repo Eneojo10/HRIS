@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Dashboard from '../Menu/Dashboard'
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import img1 from '../Images/user2.jpg'
@@ -18,15 +18,143 @@ import { HiOutlineBuildingOffice } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { LiaGiftSolid } from "react-icons/lia";
 import { LuAward } from "react-icons/lu";
+import axios from 'axios';
+import { BASE_URL } from './Utils/globals';
 
 function Employees() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('Personal');
+    const [firstBatch, setFirstBatch] = useState([]);
+    const [remainingBatch, setRemainingBatch] = useState([]);
+    const [total, setTotal] = useState(0);
+
+    const [formData, setFormData] = useState({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        gender_id: "",
+        city: "",
+        state: "",
+        zip_code: "",
+        dob: "",
+        job_title: "",
+        date: "",
+        contact_name: "",
+        phone_no: "",
+        annual_salary: "",
+        skill: "",
+        education: "",
+        certifications: "",
+        experience: "",
+        notes: "",
+        type_id: "",
+        location_id: "",
+        package_id: "",
+        dept_id: "",
+        reports_id: "",
+        work_id: "",
+        frequency_id: "",
+        currecny_id: "",
+        country_id: "",
+        relationship_id: "",
+    })
+
+    // const [message, setMessage] = useState("");
+
+    // const handleChange = (e) => {
+    //     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // };
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+
+    //     try {
+    //         const res = await axios.post(`${BASE_URL}/employee`, formData, {
+    //             headers: { "Content-Type": "application/json" },
+    //         });
+    //         setMessage("Employee created successfully!");
+    //         console.log(res.data);
+    //         // Reset form if needed
+    //         setFormData({
+    //             firstname: "",
+    //             lastname: "",
+    //             email: "",
+    //             phone: "",
+    //             gender_id: "",
+    //             city: "",
+    //             state: "",
+    //             zip_code: "",
+    //             dob: "",
+    //             job_title: "",
+    //             date: "",
+    //             contact_name: "",
+    //             phone_no: "",
+    //             annual_salary: "",
+    //             skill: "",
+    //             education: "",
+    //             certifications: "",
+    //             experience: "",
+    //             notes: "",
+    //             type_id: "",
+    //             location_id: "",
+    //             package_id: "",
+    //             dept_id: "",
+    //             reports_id: "",
+    //             work_id: "",
+    //             frequency_id: "",
+    //             currecny_id: "",
+    //             country_id: "",
+    //             relationship_id: "",
+    //         });
+    //     } catch (error) {
+    //         setMessage("Error creating employee. Please try again.");
+    //         console.error(error);
+    //     }
+    // };
 
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName)
     };
+
+    const handlePersonalNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setActiveTab('Employment');
+    };
+
+    const handleEmploymentNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setActiveTab('Contact');
+    };
+
+    const handleContactNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setActiveTab('Compensation');
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
+
+    useEffect(() => {
+        const fetchEmployees = async () => {
+            try {
+                const res = await axios.get(`${BASE_URL}/employee/split`);
+
+                setFirstBatch(res.data.firstBatch);
+                setRemainingBatch(res.data.remainingBatch);
+                setTotal(res.data.totalEmployees);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchEmployees();
+    }, []);
+
+
 
     return (
         <div>
@@ -84,7 +212,7 @@ function Employees() {
                                     <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
 
                                 </div>
-                                
+
                                 <br />
                                 <div className='modal-bg'>
                                     <div className='p-flex'>
@@ -140,11 +268,11 @@ function Employees() {
 
                                 <form>
                                     <div className='performance-content'>
-                                        {activeTab === 'Personal' && <Personal />}
-                                        {activeTab === 'Employment' && <Employment />}
-                                        {activeTab === 'Contact' && <Contact />}
-                                        {activeTab === 'Compensation' && <Compensation />}
-                                        {activeTab === 'Additional' && <Additional />}
+                                        {activeTab === 'Personal' && <Personal data={formData} onNext={handlePersonalNext} onClose={handleCloseModal} />}
+                                        {activeTab === 'Employment' && <Employment data={formData} onNext={handleEmploymentNext} onClose={handleCloseModal} />}
+                                        {activeTab === 'Contact' && <Contact data={formData} onNext={handleContactNext} onClose={handleCloseModal} />}
+                                        {activeTab === 'Compensation' && <Compensation data={formData} onClose={handleCloseModal} />}
+                                        {activeTab === 'Additional' && <Additional data={formData} onClose={handleCloseModal} />}
 
                                     </div>
 
@@ -165,11 +293,11 @@ function Employees() {
                                             </div>
                                             <div>
                                                 <div></div>
-                                                <p>+12</p>
+                                                <p>+{remainingBatch.length}</p>
                                             </div>
                                         </div><br />
                                         <div className='flex-number'>
-                                            <h2>1,240</h2>
+                                            <h2>{total}</h2>
                                             <p>Total Employees</p>
                                             <span>Active worforce</span>
                                         </div>

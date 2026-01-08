@@ -48,12 +48,12 @@ function Schedules() {
                                         <h4>Export</h4>
                                     </div>
                                 </div>
-                                <div className='ec-bg'>
+                                <div className='ec-bg'style={{height:'40px'}}>
                                     <div className='ec_flex' onClick={() => {
                                         setIsModalOpen(true);
                                         setActiveTab('Schedule')
                                     }}>
-                                        <div className='ec--icon'>
+                                        <div className='ec--icon'style={{marginTop:'3px'}}>
                                             <GoPlus />
                                         </div>
                                         <button className='addebtn'>Create Schedule</button>

@@ -5,8 +5,15 @@ import image from '../Images/user2.jpg'
 import { IoPeople } from "react-icons/io5";
 import { IoMdTime } from "react-icons/io";
 import { MdOutlineTrackChanges } from "react-icons/md";
+import { color } from 'chart.js/helpers';
 
 function Performancedetails() {
+
+    // const styles ={
+    //     cardf: {
+    //         color:'red'
+    //     }
+    // }
     return (
         <div>
             <div className='performance-background'>
@@ -114,6 +121,10 @@ function Performancedetails() {
                 <div className='per-for-mance'>
                     <div>
                         <h2>Performance Reviews</h2>
+                        {/* <div style={styles.cardf}>
+                            <h3>Hello there...</h3>
+
+                        </div> */}
                     </div><br /><br />
                     <div className='pr1-card'>
                         <div className='p_flex'>

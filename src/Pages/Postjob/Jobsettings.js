@@ -1,7 +1,20 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { IoMdTime } from "react-icons/io";
+import axios from 'axios';
+import { BASE_URL } from '../Utils/globals';
 
 function Jobsettings() {
+    const [hiringManager, setHiringManager] = useState([]);
+   
+
+    useEffect(() => {
+        axios.get(`${BASE_URL}/managers`)
+            .then(res => setHiringManager(res.data?.data || res.data || []))
+            .catch(() => setHiringManager([]));
+
+        
+    }, []);
+
     return (
         <div>
             <div className='scrollable'>
@@ -22,7 +35,9 @@ function Jobsettings() {
                                 <label>Hiring Manager</label>
                                 <select>
                                     <option>Select hiring manager</option>
-                                    <option>Jane Smith </option>
+                                    {hiringManager.map((manager) => (
+                                        <option key={manager._id} value={manager._id}>{manager.manager_name}</option>
+                                    ))}
 
                                 </select>
                             </div>

@@ -152,25 +152,25 @@ function Banalytics() {
             <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -229,25 +229,25 @@ function Banalytics() {
             <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -307,25 +307,25 @@ function Banalytics() {
             <div className='dept_progress' style={{ width: '96%', margin: 'auto', display: 'flex', gap: '26px' }}>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress-fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -602,7 +602,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -613,7 +613,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -624,7 +624,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div>
                 </div>
 
               </div>
@@ -635,7 +635,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress--fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -653,7 +653,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -664,7 +664,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -675,7 +675,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -686,7 +686,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -697,7 +697,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>
@@ -708,7 +708,7 @@ function Banalytics() {
               </div>
               <div className="dept-progress-container">
                 <div className="dept-progress-bar">
-                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> {/* adjust width dynamically */}
+                  <div className="dept-progress---fill" style={{ width: '78%' }}></div> 
                 </div>
 
               </div>

@@ -82,16 +82,25 @@ function Onboarding() {
                                 <div className="modal">
                                     <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <div className='modal-modal-add' style={{ display: 'flex', gap: '5px' }}>
-                                            <div className='modal-icon' style={{ fontSize: '21px',  color: '#5b8af0' }}>
+                                            <div className='modal-icon' style={{ fontSize: '21px', color: '#5b8af0' }}>
                                                 <GoPersonAdd />
                                             </div>
                                             <div
                                             ><h3>Add New Hire</h3></div>
                                         </div>
-                                        <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+                                        <button
+                                            className="x-btn"
+                                            onClick={() => {
+                                                setIsModalOpen(false);
+                                                setActiveTab('Onboarding'); 
+                                            }}
+                                        >
+                                            ✖
+                                        </button>
+
 
                                     </div>
-                                   
+
                                     <br />
 
                                     <form>

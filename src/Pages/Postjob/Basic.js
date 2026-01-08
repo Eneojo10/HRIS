@@ -1,7 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { LuBriefcase } from "react-icons/lu";
+import axios from 'axios';
+import { BASE_URL } from '../Utils/globals';
 
 function Basic() {
+    const [currency, setCurrency] = useState([]);
+    const [department, setDepartment] = useState([]);
+    const [employmentType, setEmploymentType] = useState([]);
+    const [experienceLevel, setExperienceLevel] = useState([]);
+
+
+
+    useEffect(() => {
+        axios.get(`${BASE_URL}/dept`)
+            .then(res => setDepartment(res.data?.data || res.data || []))
+            .catch(() => setDepartment([]));
+            
+        axios.get(`${BASE_URL}/type`)
+            .then(res => setEmploymentType(res.data?.data || res.data || []))
+            .catch(() => setEmploymentType([]));
+
+        
+        axios.get(`${BASE_URL}/currency`)
+            .then(res => setCurrency(res.data?.data || res.data || []))
+            .catch(() => setCurrency([]));
+
+        axios.get(`${BASE_URL}/experiences`)
+            .then(res => setExperienceLevel(res.data?.data || res.data || []))
+            .catch(() => setExperienceLevel([]));
+
+        
+
+    })
     return (
         <div>
             <div className='scrollable'>
@@ -29,21 +59,19 @@ function Basic() {
                                 <label>Department *</label>
                                 <select>
                                     <option>Select department</option>
-                                    <option>Engineering</option>
-                                    <option>Human Resources </option>
-                                    <option>Sales </option>
-                                    <option>Marketing</option>
+                                    {department.map((dept) => (
+                                        <option key={dept._id} value={dept._id}>{dept.dept}</option>
+                                    ))}
 
                                 </select>
                             </div>
                             <div className='per-input'>
                                 <label>Employment Type</label>
-                                <select>
+                                <select >
                                     <option>Select Type</option>
-                                    <option>Full-time</option>
-                                    <option>Part-time </option>
-                                    <option>Contract </option>
-                                    <option>Internship </option>
+                                    {employmentType.map((empType) => (
+                                        <option key={empType._id} value={empType._id}>{empType.type}</option>
+                                    ))}
 
                                 </select>
                             </div>
@@ -58,11 +86,9 @@ function Basic() {
                                 <label>Experience Level</label>
                                 <select>
                                     <option>Select Level</option>
-                                    <option>Entry Level</option>
-                                    <option>Mid-Level </option>
-                                    <option>Senior-Level </option>
-                                    <option>Lead/Principal </option>
-                                    <option>Executive </option>
+                                    {experienceLevel.map((expLevel) => (
+                                        <option key={expLevel._id} value={expLevel._id}>{expLevel.experience_level}</option>
+                                    ))}
 
                                 </select>
                             </div>
@@ -82,10 +108,10 @@ function Basic() {
                             <div className='city-one'>
                                 <label>Currency</label>
                                 <select>
-                                    <option>USD</option>
-                                    <option>EUR</option>
-                                    <option>CAd</option>
-                                    <option>NGN</option>
+                                    <option>Select Currency</option>
+                                    {currency.map((curr) => (
+                                        <option key={curr._id} value={curr._id}>{curr.currency}</option>
+                                    ))}
                                 </select>
                             </div>
 
@@ -115,10 +141,10 @@ function Basic() {
                             <div>
                                 <button className='job-cancel'>Cancel</button>
                             </div>
-                            <div className='jay-jay' style={{ gap: '10px', display:'flex'}}>
-                               <div>
-                                 <button className='job-previous'>Previous</button>
-                               </div>
+                            <div className='jay-jay' style={{ gap: '10px', display: 'flex' }}>
+                                <div>
+                                    <button className='job-previous'>Previous</button>
+                                </div>
                                 <div>
                                     <button className='job-next'>Next</button>
                                 </div>
@@ -127,7 +153,7 @@ function Basic() {
 
 
                     </div>
-                    <br/>
+                    <br />
 
 
                 </div>
