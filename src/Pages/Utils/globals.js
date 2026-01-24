@@ -1,6 +1,6 @@
-//https://garen-server.onrender.com
 //
+//http://localhost:5000
 
 module.exports = {
-  BASE_URL: 'http://localhost:5000',
+  BASE_URL: 'https://human-resource-backend-a3xn.onrender.com',
 };
