@@ -1,5 +1,4 @@
 import React from 'react'
-// import { ThumbsUp } from 'lucide-react';
 import { IoPeople } from "react-icons/io5";
 import { IoMdTime } from "react-icons/io";
 import { MdOutlineTrackChanges } from "react-icons/md";
