@@ -14,7 +14,7 @@ export default function MyComponent() {
     datasets: [
       {
         data: [30, 35 - 30], // target vs. extra
-        backgroundColor: ['#4caf50', '#f44336'], // green for target, red for overage
+        backgroundColor: ['#4caf50', '#f44336'], // g
         borderWidth: 0
       }
     ]

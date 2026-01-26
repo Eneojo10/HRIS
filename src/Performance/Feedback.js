@@ -2,7 +2,6 @@ import React from 'react'
 import image from '../Images/user2.jpg'
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { GoCircle } from "react-icons/go";
-// import { IoMdTime } from "react-icons/io";
 import { MdOutlineFeedback } from "react-icons/md";
 import { IoIosStarOutline } from "react-icons/io";
 import { ThumbsUp } from 'lucide-react';
