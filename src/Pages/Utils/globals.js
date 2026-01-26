@@ -1,3 +1,2 @@
 // src/Pages/Utils/globals.js
-
-export const BASE_URL = 'https://human-resource-backend-a3xn.onrender.com';
+export const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
