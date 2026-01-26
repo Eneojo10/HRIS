@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { AiOutlineSecurityScan } from "react-icons/ai";
 import { IoIosCheckmark } from "react-icons/io";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function Bplans() {
+function Bplans({ data = {}, onNext, onClose }) {
+    const [formData, setFormData] = useState({
+        selectedPlans: data.selectedPlans || []
+    });
+
+    const handlePlanSelect = (planId) => {
+        setFormData(prev => ({
+            ...prev,
+            selectedPlans: prev.selectedPlans.includes(planId)
+                ? prev.selectedPlans.filter(id => id !== planId)
+                : [...prev.selectedPlans, planId]
+        }));
+    };
+
+    const isPlanSelected = (planId) => {
+        return formData.selectedPlans.includes(planId);
+    };
+
+    const handleNext = (e) => {
+        e.preventDefault();
+        
+        // Validation
+        if (formData.selectedPlans.length === 0) {
+            toast.error("Please select at least one benefit plan");
+            return;
+        }
+        
+        if (typeof onNext === 'function') {
+            onNext(formData);
+        }
+    };
     const plans = [
         {
             title: "Health Insurance",
@@ -91,8 +123,20 @@ function Bplans() {
 
                             {/* Plan items */}
                             <div className="health-border">
-                                {plan.items.map((item, idx) => (
-                                    <div className="health-one" key={idx}>
+                                {plan.items.map((item, idx) => {
+                                    const planId = `${plan.title}-${item.name}`;
+                                    const isSelected = isPlanSelected(planId);
+                                    return (
+                                    <div 
+                                        className="health-one" 
+                                        key={idx}
+                                        onClick={() => handlePlanSelect(planId)}
+                                        style={{
+                                            cursor: 'pointer',
+                                            border: isSelected ? '2px solid #5b8af0' : '1px solid #e5e7eb',
+                                            backgroundColor: isSelected ? '#f0f9ff' : 'white'
+                                        }}
+                                    >
                                         <div className="personal-details">
                                             <div
                                                 className="health-plan"
@@ -108,6 +152,7 @@ function Bplans() {
                                                     </div>
                                                     <div className="hlth-price">
                                                         <p>{item.price}</p>
+                                                        {isSelected && <span style={{color: '#5b8af0', fontWeight: 'bold'}}>✓ Selected</span>}
                                                     </div>
                                                 </div>
 
@@ -132,7 +177,8 @@ function Bplans() {
                                             <br />
                                         </div>
                                     </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                             <br />
                         </div>
@@ -141,9 +187,10 @@ function Bplans() {
             </div>
             <br/>
             <div className="bb-buttons">
-                <button className="benefit-cancel">Cancel</button>
-                <button className="benefits-sub">Submit Enrollment</button>
+                <button type='button' className="benefit-cancel" onClick={onClose}>Cancel</button>
+                <button type='button' className="benefits-sub" onClick={handleNext}>Next</button>
             </div>
+            <ToastContainer position="top-right" autoClose={3000} />
         </div>
     );
 }

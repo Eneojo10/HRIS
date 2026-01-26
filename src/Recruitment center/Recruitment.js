@@ -12,12 +12,11 @@ import Analyticdetails from './Analyticdetails';
 import { LuBriefcase } from "react-icons/lu";
 import Basic from '../Pages/Postjob/Basic';
 import Details from '../Pages/Postjob/Details';
-import Jobsettings from '../Pages/Postjob/Jobsettings';
+import JobWizard from '../Pages/Postjob/JobWizard';
 
 function Recruitment() {
     const [activeTab, setActiveTab] = useState('Candidate Pipeline');
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalTab, setModalTab] = useState('Basic')
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
@@ -63,10 +62,7 @@ function Recruitment() {
                                 </div>
 
                                 <div className='new-job-bg'>
-                                    <div className='new-job' onClick={() => {
-                                        setIsModalOpen(true);
-                                        setModalTab('Basic');
-                                    }}>
+                                    <div className='new-job' onClick={() => setIsModalOpen(true)}>
                                         <div className='newjob_plus'><GoPlus /></div>
                                         <button className='addebtn'>Post New Job</button>
                                     </div>
@@ -83,68 +79,12 @@ function Recruitment() {
                                             <div className='modal-icon' style={{ fontSize: '21px' }}>
                                                 <LuBriefcase />
                                             </div>
-                                            <div
-                                            ><h3>Post New Job</h3></div>
+                                            <div><h3>Post New Job</h3></div>
                                         </div>
                                         <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
-
                                     </div>
                                     
-                                    <br />
-                                    <div className='modal-bg'>
-                                        <div className='p-flex'>
-                                            <div onClick={() => setModalTab('Basic')}
-                                                style={{
-                                                    backgroundColor: modalTab === 'Basic' ? 'white' : 'transparent',
-                                                    cursor: 'pointer',
-                                                    padding: '3px 20px',
-                                                    width: '30%',
-                                                    textAlign: 'center',
-                                                }}
-                                                className='person-one'>
-                                                <h4>Basic Info</h4>
-                                            </div>
-                                            <div onClick={() => setModalTab('Details')}
-                                                style={{
-                                                    cursor: 'pointer',
-                                                    backgroundColor: modalTab === 'Details' ? 'white' : 'transparent',
-                                                    cursor: 'pointer',
-                                                    padding: '3px 20px',
-                                                    width: '30%',
-                                                    textAlign: 'center',
-                                                }}
-                                                className='person-one'>
-                                                <h4>Job Details</h4>
-                                            </div>
-                                            <div onClick={() => setModalTab('Job')}
-                                                style={{
-                                                    cursor: 'pointer',
-                                                    backgroundColor: modalTab === 'Job' ? 'white' : 'transparent',
-                                                    cursor: 'pointer',
-                                                    padding: '3px 20px',
-                                                    width: '30%',
-                                                    textAlign: 'center',
-                                                }}
-                                                className='person-one'>
-                                                <h4>Settings</h4>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-
-                                    <form>
-                                        <div className='performance-content'>
-                                            {modalTab === 'Basic' && <Basic />}
-                                            {modalTab === 'Details' && <Details />}
-                                            {modalTab === 'Job' && <Jobsettings />}
-
-
-
-                                        </div>
-
-                                    </form>
+                                    <JobWizard onClose={() => setIsModalOpen(false)} />
                                 </div>
                             </div>
                         )}

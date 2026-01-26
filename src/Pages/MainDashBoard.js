@@ -25,7 +25,7 @@ import { BASE_URL } from './Utils/globals'
 function MainDashBoard() {
     const [total, setTotal] = useState(0);
     const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+    const [error, setError] = useState("");
 
 
 

@@ -27,6 +27,9 @@ function Employees() {
     const [firstBatch, setFirstBatch] = useState([]);
     const [remainingBatch, setRemainingBatch] = useState([]);
     const [total, setTotal] = useState(0);
+    const [allemployees, setAllEmployees] = useState([]);
+    const [department, setDepartment] = useState([])
+    const [totaldept, setTotaldept] = useState(0)
 
     const [formData, setFormData] = useState({
         firstname: "",
@@ -55,7 +58,7 @@ function Employees() {
         reports_id: "",
         work_id: "",
         frequency_id: "",
-        currecny_id: "",
+        currency_id: "",
         country_id: "",
         relationship_id: "",
     })
@@ -133,29 +136,42 @@ function Employees() {
         setActiveTab('Compensation');
     };
 
+    const handleCompensationNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setActiveTab('Additional');
+    };
+
     const handleCloseModal = () => {
         setIsModalOpen(false);
     };
 
 
     useEffect(() => {
-        const fetchEmployees = async () => {
+        const fetchAllEmployeeData = async () => {
             try {
-                const res = await axios.get(`${BASE_URL}/employee/split`);
+                const [splitRes, allRes, deptRes] = await Promise.all([
+                    axios.get(`${BASE_URL}/employee/split`),
+                    axios.get(`${BASE_URL}/employees`),
+                    axios.get(`${BASE_URL}/dept`)
+                ]);
 
-                setFirstBatch(res.data.firstBatch);
-                setRemainingBatch(res.data.remainingBatch);
-                setTotal(res.data.totalEmployees);
+                setFirstBatch(splitRes.data.firstBatch);
+                setRemainingBatch(splitRes.data.remainingBatch);
+                setTotal(splitRes.data.totalEmployees);
+                setAllEmployees(allRes.data);
+                setDepartment(deptRes.data);
+                setTotaldept(deptRes.data.length);
+                console.log('Department data:', deptRes.data);
+                console.log('Total departments:', deptRes.data.length);
             } catch (error) {
-                console.error(error);
+                console.error('Error fetching employee data:', error);
             }
         };
 
-        fetchEmployees();
+        fetchAllEmployeeData();
     }, []);
 
-
-
+   
     return (
         <div>
             <div className='employees-container'>
@@ -271,7 +287,7 @@ function Employees() {
                                         {activeTab === 'Personal' && <Personal data={formData} onNext={handlePersonalNext} onClose={handleCloseModal} />}
                                         {activeTab === 'Employment' && <Employment data={formData} onNext={handleEmploymentNext} onClose={handleCloseModal} />}
                                         {activeTab === 'Contact' && <Contact data={formData} onNext={handleContactNext} onClose={handleCloseModal} />}
-                                        {activeTab === 'Compensation' && <Compensation data={formData} onClose={handleCloseModal} />}
+                                        {activeTab === 'Compensation' && <Compensation data={formData} onNext={handleCompensationNext} onClose={handleCloseModal} />}
                                         {activeTab === 'Additional' && <Additional data={formData} onClose={handleCloseModal} />}
 
                                     </div>
@@ -373,7 +389,7 @@ function Employees() {
                                             </div>
                                         </div><br />
                                         <div className='flex-number'>
-                                            <h2>12</h2>
+                                            <h2>{totaldept || 0}</h2>
                                             <p>Department</p>
                                             <span>Active department</span>
                                         </div>
@@ -465,54 +481,30 @@ function Employees() {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <input type="checkbox" name="subscribe" value="yes" />
-                                                    </td>
-                                                    <td>
-                                                        <div className='image1'>
-                                                            <div className='employee-image01'>
-                                                                <img src={img1} alt="Sarah Johnson" />
+                                                {allemployees.map((employee, index) => (
+                                                    <tr key={employee.id || index}>
+                                                        <td>
+                                                            <input type="checkbox" name="subscribe" value="yes" />
+                                                        </td>
+                                                        <td>
+                                                            <div className='image1'>
+                                                                <div className='employee-image01'>
+                                                                    <img src={img1} alt={`${employee.firstname} ${employee.lastname}`} />
+                                                                </div>
+                                                                <span className='employee-name'>{employee.firstname} {employee.lastname}</span>
                                                             </div>
-                                                            <span className='employee-name'>Sarah Johnson</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>Engineering</td>
-                                                    <td>+1234567890</td>
-                                                    <td>New York</td>
-                                                    <td>2023-01-15</td>
-                                                    <td>Active</td>
-                                                    <td>Excellent</td>
-                                                    <td>$5,000</td>
-                                                    <td>2025-07-24</td>
-                                                    <td><HiOutlineDotsHorizontal /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <input type="checkbox" name="subscribe" value="yes" />
-                                                    </td>
-                                                    <td>
-                                                        <div className='image1'>
-                                                            <div className='employee-image01'>
-                                                                <img src={img1} alt="Sarah Johnson" />
-                                                            </div>
-                                                            <span className='employee-name'>Sarah Johnson</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>Engineering</td>
-                                                    <td>+1234567890</td>
-                                                    <td>New York</td>
-                                                    <td>2023-01-15</td>
-                                                    <td>Active</td>
-                                                    <td>Excellent</td>
-                                                    <td>$5,000</td>
-                                                    <td>2025-07-24</td>
-                                                    <td><HiOutlineDotsHorizontal /></td>
-                                                </tr>
-
-
-
-
+                                                        </td>
+                                                        <td>{employee.dept_id?.dept || 'N/A'}</td>
+                                                        <td>{employee.phone}</td>
+                                                        <td>{employee.city}</td>
+                                                        <td>{employee.date}</td>
+                                                        <td>Active</td>
+                                                        <td>Excellent</td>
+                                                        <td>${employee.annual_salary}</td>
+                                                        <td>2025-07-24</td>
+                                                        <td><HiOutlineDotsHorizontal /></td>
+                                                    </tr>
+                                                ))}
                                             </tbody>
                                         </table>
 

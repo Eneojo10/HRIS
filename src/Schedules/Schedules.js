@@ -21,6 +21,23 @@ function Schedules() {
     const [activeTab, setActiveTab] = useState('Calender')
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [modalTab, setModalTab] = useState('Shift')
+    const [formData, setFormData] = useState({})
+
+    const handleShiftNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Recurring');
+    };
+
+    const handleRecurringNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Bulk');
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setModalTab('Shift');
+        setFormData({});
+    };
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName)
@@ -70,7 +87,7 @@ function Schedules() {
                             <div className="modal">
                                 <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <h3>Create Performance Review</h3>
-                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+                                    <button className='x-btn' onClick={handleCloseModal}>✖</button>
                                 </div>
                                 <br />
 
@@ -119,9 +136,9 @@ function Schedules() {
                                 {/* Modal Content */}
                                 <form>
                                     <div className='performance-content'>
-                                        {modalTab === 'Shift' && <Shift />}
-                                        {modalTab === 'Recurring' && <Recurring />}
-                                        {modalTab === 'Bulk' && <Bulk />}
+                                        {modalTab === 'Shift' && <Shift data={formData} onNext={handleShiftNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Recurring' && <Recurring data={formData} onNext={handleRecurringNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Bulk' && <Bulk data={formData} onClose={handleCloseModal} />}
 
 
                                     </div>

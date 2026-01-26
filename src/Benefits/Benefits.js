@@ -21,6 +21,23 @@ function Benefits() {
     const [activeTab, setActiveTab] = useState('Benefits')
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalTab, setModalTab] = useState('select');
+    const [formData, setFormData] = useState({});
+
+    const handleBplansNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Dependents');
+    };
+
+    const handleDependentsNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Summ');
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setModalTab('Bplans');
+        setFormData({});
+    };
 
 
     const handleTabClick = (tabName) => {
@@ -88,7 +105,7 @@ function Benefits() {
                                         </div>
 
                                     </div>
-                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+                                    <button className='x-btn' onClick={handleCloseModal}>✖</button>
 
                                 </div>
 
@@ -139,9 +156,9 @@ function Benefits() {
 
                                 <form>
                                     <div className='performance-content'>
-                                        {modalTab === 'Bplans' && <Bplans />}
-                                        {modalTab === 'Dependents' && <Dependent />}
-                                        {modalTab === 'Summ' && <Summ />}
+                                        {modalTab === 'Bplans' && <Bplans data={formData} onNext={handleBplansNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Dependents' && <Dependent data={formData} onNext={handleDependentsNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Summ' && <Summ data={formData} onClose={handleCloseModal} />}
 
 
 

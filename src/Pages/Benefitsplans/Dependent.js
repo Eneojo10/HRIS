@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoPeopleOutline } from "react-icons/io5";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function Dependent() {
+function Dependent({ data = {}, onNext, onClose }) {
+    const [formData, setFormData] = useState({
+        dependents: data.dependents || []
+    });
+
+    const handleNext = (e) => {
+        e.preventDefault();
+        
+        if (typeof onNext === 'function') {
+            onNext(formData);
+        }
+    };
     return (
         <div>
             <div className='dependants' style={{ display: "flex", justifyContent: "space-between", marginTop: '20px' }}>
@@ -30,9 +43,10 @@ function Dependent() {
             </div>
             <br/>
             <div className="bb-buttons">
-                <button className="benefit-cancel">Cancel</button>
-                <button className="benefits-sub">Submit Enrollment</button>
+                <button type='button' className="benefit-cancel" onClick={onClose}>Cancel</button>
+                <button type='button' className="benefits-sub" onClick={handleNext}>Next</button>
             </div>
+            <ToastContainer position="top-right" autoClose={3000} />
 
         </div>
     )

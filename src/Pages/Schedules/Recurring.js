@@ -136,7 +136,7 @@ function Recurring() {
                         <button className='job-previous'>Cancel</button>
                     </div>
                     <div>
-                        <button className='job-next'>Create Schedule</button>
+                        <button className='job-next'>Next</button>
                     </div>
                 </div>
 

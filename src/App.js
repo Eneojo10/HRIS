@@ -91,6 +91,7 @@ import Additional from './Pages/Register/Additional';
 import Basic from './Pages/Postjob/Basic';
 import Details from './Pages/Postjob/Details';
 import Jobsettings from './Pages/Postjob/Jobsettings';
+import JobWizard from './Pages/Postjob/JobWizard';
 import Onboard from './Pages/Onboard/Onboard';
 import PerformOne from './Pages/Perform/PerformOne';
 import GoalsKPIs from './Pages/Perform/GoalsKPIs';
@@ -114,7 +115,8 @@ import Bplans from './Pages/Benefitsplans/Bplans';
 import Dependent from './Pages/Benefitsplans/Dependent';
 import Summ from './Pages/Benefitsplans/Summ';
 import Reusable from './Pages/Reusable';
-import EmployeeWizard from './Pages/EmployeeWizard';  
+import EmployeeWizard from './Pages/EmployeeWizard';
+import PerformanceWizard from './Pages/Perform/PerformanceWizard';  
 
 function App() {
   return (
@@ -212,8 +214,9 @@ function App() {
           <Route path="contact" element={<Contact onNext={() => {}} onClose={() => {}} />} />
           <Route path="compensation" element={<Compensation onNext={() => {}} onClose={() => {}} />} />
           <Route path="addition" element={<Additional />} />
-          <Route path="basic" element={<Basic />} />
-          <Route path="details" element={<Details />} />
+          <Route path="job-wizard" element={<JobWizard onClose={() => {}} />} />
+          <Route path="basic" element={<Basic onNext={() => {}} onClose={() => {}}/>} />
+          <Route path="details" element={<Details onNext={() => {}} onBack={() => {}} onClose={() => {}}/>} />
           <Route path="jobsettings" element={<Jobsettings />} />
           <Route path="onboard" element={<Onboard />} />
           <Route path="perform" element={<PerformOne />} />
@@ -240,6 +243,7 @@ function App() {
           <Route path="summ" element={<Summ />} />
           <Route path='use' element={<Reusable />} />
           <Route path="employee-wizard" element={<EmployeeWizard />} />
+          <Route path="performance-wizard" element={<PerformanceWizard onClose={() => {}} />} />
 
         </Routes>
       </Router>

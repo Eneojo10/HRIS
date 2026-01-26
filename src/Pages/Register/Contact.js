@@ -99,8 +99,8 @@ function Contact({ data = {}, onNext, onClose }) {
 
                         </div>
                         <div className='employee-option-btn'>
-                            <button className='cancel-btn'onClose={onClose}>Cancel</button>
-                            <button className='cancel-btnn'type='button'onClick={handleSubmit}>Next</button>
+                            <button className='cancel-btn' type='button' onClick={onClose}>Cancel</button>
+                            <button className='cancel-btnn' type='button' onClick={handleSubmit}>Next</button>
                         </div>
 
                     </div>

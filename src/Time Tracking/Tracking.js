@@ -23,6 +23,23 @@ function Tracking() {
     const [activeTab, setActiveTab] = useState('Timing')
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [modalTab, setModalTab] = useState('Time')
+    const [formData, setFormData] = useState({})
+
+    const handleTimeNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Timer');
+    };
+
+    const handleTimerNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Blk');
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setModalTab('Time');
+        setFormData({});
+    };
 
 
 
@@ -78,7 +95,7 @@ function Tracking() {
                                         <div
                                         ><h3>Time Entry</h3></div>
                                     </div>
-                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+                                    <button className='x-btn' onClick={handleCloseModal}>✖</button>
 
                                 </div>
 
@@ -125,9 +142,9 @@ function Tracking() {
 
                                 <form>
                                     <div className='performance-content'>
-                                        {modalTab === 'Time' && <Time />}
-                                        {modalTab === 'Timer' && <Timer />}
-                                        {modalTab === 'Blk' && <Blk />}
+                                        {modalTab === 'Time' && <Time data={formData} onNext={handleTimeNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Timer' && <Timer data={formData} onNext={handleTimerNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Blk' && <Blk data={formData} onClose={handleCloseModal} />}
 
 
                                     </div>

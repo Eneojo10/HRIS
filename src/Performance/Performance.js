@@ -15,6 +15,28 @@ function Performance() {
     const [activeTab, setActiveTab] = useState('Performance');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalTab, setModalTab] = useState('PerformOne');
+    const [formData, setFormData] = useState({});
+
+    const handlePerformOneNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('GoalsKPIs');
+    };
+
+    const handleGoalsNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Core');
+    };
+
+    const handleCoreNext = (data) => {
+        setFormData(prev => ({ ...prev, ...data }));
+        setModalTab('Performsettings');
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setModalTab('PerformOne');
+        setFormData({});
+    };
 
     return (
         <div className='performance-container'>
@@ -60,7 +82,7 @@ function Performance() {
                             <div className="modal">
                                 <div className='modal-add' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <h3>Create Performance Review</h3>
-                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
+                                    <button className='x-btn' onClick={handleCloseModal}>✖</button>
                                 </div>
                                 <br />
 
@@ -117,10 +139,10 @@ function Performance() {
                                 {/* Modal Content */}
                                 <form>
                                     <div className='performance-content'>
-                                        {modalTab === 'PerformOne' && <PerformOne />}
-                                        {modalTab === 'GoalsKPIs' && <GoalsKPIs /> }
-                                        {modalTab === 'Core' && <Core /> }
-                                        {modalTab === 'Performsettings' && <Performsettings /> }
+                                        {modalTab === 'PerformOne' && <PerformOne data={formData} onNext={handlePerformOneNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'GoalsKPIs' && <GoalsKPIs data={formData} onNext={handleGoalsNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Core' && <Core data={formData} onNext={handleCoreNext} onClose={handleCloseModal} />}
+                                        {modalTab === 'Performsettings' && <Performsettings data={formData} onClose={handleCloseModal} />}
                                         
                                     </div>
                                 </form>
