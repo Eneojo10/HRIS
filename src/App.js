@@ -8,17 +8,17 @@ import Employees from './Pages/Employees';
 import Recruitment from './Recruitment center/Recruitment';
 import Onboarding from './Employee Onboarding/Onboarding';
 import Performance from './Performance/Performance';
-import Tracking from './Time Tracking/Tracking'
+import Tracking from './Time Tracking/Tracking';
 import Leave from './Leave/Leave';
 import Schedules from './Schedules/Schedules';
-import Payroll from './Payroll/Payroll'
+import Payroll from './Payroll/Payroll';
 import Benefits from './Benefits/Benefits';
-import Departments from './Departments/Departments'
+import Departments from './Departments/Departments';
 import Settings from './Settings/Settings';
 import Performancedetails from './Performance/Performancedetails';
 import Analyticsdetails from './Analytics/Analyticsdetails';
 import Workforce from './Analytics/Workforce';
-import Postingdetails from './Recruitment center/Postingdetails'
+import Postingdetails from './Recruitment center/Postingdetails';
 import Interviewdetails from './Recruitment center/Interviewdetails';
 import Onboardingdetails from './Employee Onboarding/Onboardingdetails';
 import Templatesdetails from './Employee Onboarding/Templatesdetails';
@@ -52,7 +52,7 @@ import Today from './Recruitment center/Today';
 import Tomorrow from './Recruitment center/Tomorrow';
 import Week from './Recruitment center/Week';
 import All from './Recruitment center/All';
-import Chart from './Pages/Chart'
+import Chart from './Pages/Chart';
 import HiringTrends from './Pages/Hiringtrends';
 import Login from './Login/Login';
 import PayrollDetails from './Payroll/PayrollDetails';
@@ -64,7 +64,7 @@ import Categories from './Others/Categories';
 import Documentation from './Others/Documentation';
 import Equipment from './Others/Equipment';
 import Training from './Others/Training';
-import Meetings from './Others/Meetings'
+import Meetings from './Others/Meetings';
 import SystemAccess from './Others/SystemAccess';
 import Status from './Others/Status';
 import Pending from './Others/Pending';
@@ -107,7 +107,7 @@ import Time from './Pages/Time/Time';
 import Review from './Pages/Pay/Review';
 import PayrollNext from './Pages/Pay/PayrollNext';
 import Process from './Pages/Pay/Process';
-import Progrezz from './Pages/Pay/Progrezz'
+import Progrezz from './Pages/Pay/Progrezz';
 import Final from './Pages/Pay/Final';
 import Timer from './Pages/Time/Timer';
 import Blk from './Pages/Time/Blk';
@@ -115,8 +115,7 @@ import Bplans from './Pages/Benefitsplans/Bplans';
 import Dependent from './Pages/Benefitsplans/Dependent';
 import Summ from './Pages/Benefitsplans/Summ';
 import Reusable from './Pages/Reusable';
-import EmployeeWizard from './Pages/EmployeeWizard';
-import PerformanceWizard from './Pages/Perform/PerformanceWizard';  
+import EmployeeWizard from './Pages/EmployeeWizard';  
 
 function App() {
   return (
@@ -243,7 +242,6 @@ function App() {
           <Route path="summ" element={<Summ />} />
           <Route path='use' element={<Reusable />} />
           <Route path="employee-wizard" element={<EmployeeWizard />} />
-          <Route path="performance-wizard" element={<PerformanceWizard onClose={() => {}} />} />
 
         </Routes>
       </Router>

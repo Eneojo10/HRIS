@@ -26,6 +26,19 @@ function MainDashBoard() {
     const [total, setTotal] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const [currentDate, setCurrentDate] = useState("");
+
+    useEffect(() => {
+        // Set current date
+        const today = new Date();
+        const options = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        };
+        setCurrentDate(today.toLocaleDateString('en-US', options));
+    }, []);
 
 
 
@@ -61,7 +74,7 @@ function MainDashBoard() {
                             <p>Welcome back! Here's your HR overview</p>
                         </div>
                         <div>
-                            <p>Friday, July 25, 2025</p>
+                            <p>{currentDate}</p>
                         </div>
 
                     </div>

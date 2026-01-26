@@ -1,11 +1,12 @@
 import React from 'react'
 import image from '../Images/user2.jpg'
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { MdOutlineTrackChanges } from "react-icons/md";
+import { MdOutlineTrackChanges, MdOutlineFeedback } from "react-icons/md";
 import { IoIosStarOutline } from "react-icons/io";
 import { IoPeople } from "react-icons/io5";
 import { IoMdTime } from "react-icons/io";
 import { FiAward } from "react-icons/fi";
+import { ThumbsUp } from 'lucide-react';
 
 
 
