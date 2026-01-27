@@ -184,12 +184,12 @@ function Goals() {
                   }}></div>
                 </div>
 
-                {/* Label at the extreme end */}
+              
                 <span style={{
                   position: 'absolute',
-                  top: '-20px',       // places it above the bar
-                  left: '90%',        // aligns with the end of the fill
-                  transform: 'translateX(-50%)', // centers over the end
+                  top: '-20px',       
+                  left: '90%',        
+                  transform: 'translateX(-50%)',
                   fontWeight: 'bold'
                 }}>
                   90%
