@@ -122,6 +122,8 @@ function App() {
     <div className='App'>
       <Router>
         <Routes>
+          <Route index element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="mainboard" element={<MainDashBoard />} />
           <Route path="analytics" element={<Analytics />} />
@@ -177,7 +179,6 @@ function App() {
           <Route path="all" element={<All />} />
           <Route path="chart" element={<Chart />} />
           <Route path="pie" element={<HiringTrends />} />
-          <Route path="/" element={<Login />} />
           <Route path="payrolldetails" element={<PayrollDetails />} />
           <Route path="system" element={<System />} />
           <Route path="management" element={<Umanagement />} />
