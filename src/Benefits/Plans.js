@@ -18,7 +18,7 @@ function Plans() {
               </div>
               <div className='planselect'>
                 <div className="custom-select-wrapper">
-                  {/* <label for="status-select">Status:</label> */}
+                
                   <select id="status-select" class="custom-select">
                     <option value="">All Categories</option>
                     <option value="active">Health Insurance</option>
