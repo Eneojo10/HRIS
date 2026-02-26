@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import img1 from '../Images/hr-logo-removebg-preview.png'
+import img2 from '../Images/enes-flowerHR.png'
 import { RxDashboard } from "react-icons/rx";
 import { GrSchedules } from "react-icons/gr";
 import { CiTimer } from "react-icons/ci";
@@ -16,15 +17,26 @@ import { TbCurrencyNaira } from "react-icons/tb";
 import { AiTwotoneSchedule } from "react-icons/ai";
 
 function Dashboard() {
+    const [user, setUser] = useState({ name: 'Admin User', email: 'admin@company.com' });
+
+    useEffect(() => {
+        const userData = localStorage.getItem('user');
+        if (userData) {
+            const parsedUser = JSON.parse(userData);
+            setUser({
+                name: parsedUser.name || 'Admin User',
+                email: parsedUser.email || 'admin@company.com'
+            });
+        }
+    }, []);
     return (
         <div className=''>
             <div className='mm'>
-                <div className='hr-logo'>
-                    <img src={img1} alt="HRIS Logo" className='logo' />
-                    <div className='d1'>
-                        <h4>HRIS Dashboard</h4>
-                        <p>Human Resources</p>
-                    </div>
+                <div className='d-main-logo'>
+                    <img src={img2} alt='' />
+                </div>
+                <div className='precision'>
+                    <p>Reimagining Human Resources</p>
                 </div>
                 <div className='list-container'>
                     <div className='d-line'></div>
@@ -184,16 +196,16 @@ function Dashboard() {
                     <br />
                     <br />
                     <div className='d-line'>
-                        
+
                     </div>
-                    <div className='admn-container'style={{width:'93%',margin:'auto'}}>
-                        <div className='admin-flex'style={{display:'flex',gap:'10px'}}>
+                    <div className='admn-container' style={{ width: '93%', margin: 'auto' }}>
+                        <div className='admin-flex' style={{ display: 'flex', gap: '10px' }}>
                             <div className='admin-img'>
 
                             </div>
                             <div className='ad-user'>
-                                <h4>Admin User</h4>
-                                <p>admin@company.com</p>
+                                <h4>{user.name}</h4>
+                                <p>{user.email}</p>
                             </div>
                         </div>
                     </div>

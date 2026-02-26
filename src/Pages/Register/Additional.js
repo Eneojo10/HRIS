@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import { FcGraduationCap } from "react-icons/fc";
 import { HiMiniPlusSmall } from "react-icons/hi2";
-import axios from 'axios';
-import { BASE_URL } from '../Utils/globals';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function Additional({ data = {}, onClose }) {
+function Additional({ data = {}, onSubmit, onPrevious, onClose, loading = false }) {
     const [formData, setFormData] = useState({
         skill: data.skill || "",
         education: data.education || "",
@@ -14,34 +12,19 @@ function Additional({ data = {}, onClose }) {
         experience: data.experience || "",
         notes: data.notes || "",
     });
-    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        setLoading(true);
-
-        try {
-            // Get all accumulated data from parent component
-            const completeData = { ...data, ...formData };
-            const response = await axios.post(`${BASE_URL}/employee`, completeData, {
-                headers: { "Content-Type": "application/json" },
-            });
-            
-            toast.success("Employee created successfully!");
-            setTimeout(() => {
-                onClose();
-                window.location.reload();
-            }, 2000);
-        } catch (error) {
-            console.error(error);
-            toast.error("Error creating employee. Please try again.");
-        } finally {
-            setLoading(false);
+        
+        if (typeof onSubmit === 'function') {
+            onSubmit(formData);
+        } else {
+            console.warn("Additional: onSubmit prop is not provided or not a function", onSubmit);
         }
     };
 
@@ -116,6 +99,7 @@ function Additional({ data = {}, onClose }) {
                 <div className='d-line'></div><br />
                 <div className='employee-option-btn'>
                     <button className='cancel-btn' type='button' onClick={onClose}>Cancel</button>
+                    <button className='cancel-btn' type='button' onClick={onPrevious}>Previous</button>
                     <button 
                         className='cancel-btnn' 
                         type='button' 

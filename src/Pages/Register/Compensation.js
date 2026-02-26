@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { TbCurrencyNaira } from "react-icons/tb";
 import axios from 'axios';
-import { BASE_URL } from '../Utils/globals';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function Compensation({ data = {}, onNext, onClose }) {
+function Compensation({ data = {}, onNext, onPrevious, onClose }) {
     const [options, setOptions] = useState({
         currency: [],
         frequency: [],
@@ -14,19 +14,20 @@ function Compensation({ data = {}, onNext, onClose }) {
 
     const [formData, setFormData] = useState({
         annual_salary: data.annual_salary || "",
-        currency_id: data.currency_id || "",
+        currecny_id: data.currecny_id || "", // Note: backend has typo "currecny_id"
         frequency_id: data.frequency_id || "",
-        benefits_id: data.benefits_id || "",
+        package_id: data.package_id || "", // Changed from benefits_id to package_id
     });
 
     // Combined fetch for better performance and readability
     useEffect(() => {
         const fetchAllData = async () => {
             try {
+                const headers = getAuthHeaders();
                 const [currRes, freqRes, benRes] = await Promise.all([
-                    axios.get(`${BASE_URL}/currency`),
-                    axios.get(`${BASE_URL}/frequency`),
-                    axios.get(`${BASE_URL}/benefit`)
+                    axios.get(`${BASE_URL}/currency`, { headers }),
+                    axios.get(`${BASE_URL}/periods`, { headers }),
+                    axios.get(`${BASE_URL}/benefit`, { headers })
                 ]);
 
                 setOptions({
@@ -51,8 +52,8 @@ function Compensation({ data = {}, onNext, onClose }) {
         e.preventDefault();
 
         // Validation
-        const { annual_salary, currency_id, frequency_id, benefits_id } = formData;
-        if (!annual_salary || !currency_id || !frequency_id || !benefits_id) {
+        const { annual_salary, currecny_id, frequency_id, package_id } = formData;
+        if (!annual_salary || !currecny_id || !frequency_id || !package_id) {
             toast.error("Please fill in all required fields");
             return;
         }
@@ -92,7 +93,7 @@ function Compensation({ data = {}, onNext, onClose }) {
                             </div>
                             <div className='per-input' style={{ width: '35%' }}>
                                 <label>Currency</label>
-                                <select name='currency_id' value={formData.currency_id} onChange={handleChange}>
+                                <select name='currecny_id' value={formData.currecny_id} onChange={handleChange}>
                                     <option value="">Select currency</option>
                                     {options.currency.map((cur) => (
                                         <option key={cur.id} value={cur.id}>{cur.currency}</option>
@@ -107,13 +108,13 @@ function Compensation({ data = {}, onNext, onClose }) {
                                 <select name='frequency_id' value={formData.frequency_id} onChange={handleChange}>
                                     <option value="">Select frequency</option>
                                     {options.frequency.map((freq) => (
-                                        <option key={freq.id} value={freq.id}>{freq.frequency}</option>
+                                        <option key={freq._id} value={freq._id}>{freq.period_name}</option>
                                     ))}
                                 </select>
                             </div>
                             <div className="per-input">
                                 <label>Benefits Package</label>
-                                <select name='benefits_id' value={formData.benefits_id} onChange={handleChange}>
+                                <select name='package_id' value={formData.package_id} onChange={handleChange}>
                                     <option value="">Select package</option>
                                     {options.benefits.map((ben) => (
                                         <option key={ben.id} value={ben.id}>{ben.benefit}</option>
@@ -125,6 +126,7 @@ function Compensation({ data = {}, onNext, onClose }) {
                         <div className='employee-option-btn'>
                             {/* Fixed the onClick here */}
                             <button className='cancel-btn' type='button' onClick={onClose}>Cancel</button>
+                            <button className='cancel-btn' type='button' onClick={onPrevious}>Previous</button>
                             <button className='cancel-btnn' type='button' onClick={handleSubmit}>Next</button>
                         </div>
                     </div>

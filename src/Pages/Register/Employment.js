@@ -3,9 +3,9 @@ import { LuBriefcase } from "react-icons/lu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { BASE_URL } from "../Utils/globals";
+import { BASE_URL, getAuthHeaders } from "../Utils/globals";
 
-function Employment({ data = {}, onNext, onClose }) {
+function Employment({ data = {}, onNext, onPrevious, onClose }) {
     const [dept, setDept] = useState([]);
     const [types, setTypes] = useState([]);
     const [report, setReport] = useState([]);
@@ -13,12 +13,12 @@ function Employment({ data = {}, onNext, onClose }) {
     const [time, setTime] = useState([]);
 
     const [formData, setFormData] = useState({
-        report_id: data.report_id || "",
+        reports_id: data.reports_id || "",
         job_title: data.job_title || "",
         dept_id: data.dept_id || "",
         type_id: data.type_id || "",
         work_id: data.work_id || "",
-        schedules_id: data.schedules_id || "",
+        Schedules_id: data.Schedules_id || "",
         date: data.date || "",
     });
 
@@ -35,7 +35,7 @@ function Employment({ data = {}, onNext, onClose }) {
             "dept_id",
             "type_id",
             "work_id",
-            "schedules_id",
+            "Schedules_id",
             "date",
         ];
 
@@ -56,23 +56,25 @@ function Employment({ data = {}, onNext, onClose }) {
     };
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/dept`)
+        const headers = getAuthHeaders();
+        
+        axios.get(`${BASE_URL}/dept`, { headers })
             .then(res => setDept(res.data?.data || res.data || []))
             .catch(() => setDept([]));
 
-        axios.get(`${BASE_URL}/type`)
+        axios.get(`${BASE_URL}/type`, { headers })
             .then(res => setTypes(res.data?.data || res.data || []))
             .catch(() => setTypes([]));
 
-        axios.get(`${BASE_URL}/report`)
+        axios.get(`${BASE_URL}/managers`, { headers })
             .then(res => setReport(res.data?.data || res.data || []))
             .catch(() => setReport([]));
 
-        axios.get(`${BASE_URL}/work`)
+        axios.get(`${BASE_URL}/work`, { headers })
             .then(res => setWork(res.data?.data || res.data || []))
             .catch(() => setWork([]));
 
-        axios.get(`${BASE_URL}/schedules`)
+        axios.get(`${BASE_URL}/schedules`, { headers })
             .then(res => setTime(res.data?.data || res.data || []))
             .catch(() => setTime([]));
     }, []);
@@ -138,10 +140,10 @@ function Employment({ data = {}, onNext, onClose }) {
                         </div>
                         <div className="per-input">
                             <label>Reports To</label>
-                            <select name="report_id" value={formData.report_id} onChange={handleChange}>
+                            <select name="reports_id" value={formData.reports_id} onChange={handleChange}>
                                 <option value="">Select manager</option>
                                 {report.map(r => (
-                                    <option key={r._id} value={r._id}>{r.report}</option>
+                                    <option key={r._id} value={r._id}>{r.manager_name}</option>
                                 ))}
                             </select>
                         </div>
@@ -171,7 +173,7 @@ function Employment({ data = {}, onNext, onClose }) {
                     <div className="person-input-fields">
                         <div className="per-input">
                             <label>Work Schedule *</label>
-                            <select name="schedules_id" value={formData.schedules_id} onChange={handleChange}>
+                            <select name="Schedules_id" value={formData.Schedules_id} onChange={handleChange}>
                                 <option value="" disabled>Select schedule</option>
                                 {time.map(t => (
                                     <option key={t._id} value={t._id}>{t.schedule_time}</option>
@@ -183,6 +185,9 @@ function Employment({ data = {}, onNext, onClose }) {
                     <div className="employee-option-btn">
                         <button type="button" className="cancel-btn" onClick={onClose}>
                             Cancel
+                        </button>
+                        <button type="button" className="cancel-btn" onClick={onPrevious}>
+                            Previous
                         </button>
                         <button type="button" className="cancel-btnn" onClick={handleSubmit}>
                             Next

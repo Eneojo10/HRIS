@@ -1,6 +1,119 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { BASE_URL } from '../Utils/globals'
 
 function Request() {
+
+    const [backup, setBackup] = useState([])
+    const [employees, setEmployees] = useState([])
+    const [vacation, setVacation] = useState([])
+    const [priorities, setPriorities] = useState([])
+    const [managers, setManagers] = useState([])
+
+
+    useEffect(() => {
+        const fetcBackup = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/backups`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setBackup(response.data);
+            } catch (error) {
+                console.error("Error fetching backup employees:", error);
+            }
+        };
+
+
+        fetcBackup();
+    }, []);
+
+
+    useEffect(() => {
+        const fetchEmployees = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/employees`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setEmployees(response.data);
+            } catch (error) {
+                console.error("Error fetching employees:", error);
+            }
+        };
+
+
+        fetchEmployees();
+    }, []);
+
+
+
+    useEffect(() => {
+        const fetchVacation = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/leaves`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setVacation(Array.isArray(response.data) ? response.data : response.data.data);
+            } catch (error) {
+                console.error("Error fetching vacation data:", error);
+                setVacation([]);
+            }
+        };
+
+        fetchVacation();
+    }, []);
+
+
+    useEffect(() => {
+        const fetchPriorities = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/prioritylevels`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setPriorities(response.data);
+            } catch (error) {
+                console.error("Error fetching priorities:", error);
+            }
+        };
+
+        fetchPriorities();
+    }, []);
+
+    useEffect(() => {
+        const fetchManagers = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/managers`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setManagers(response.data);
+            } catch (error) {
+                console.error("Error fetching managers:", error);
+            }
+        };
+
+        fetchManagers();
+    }, []);
+
+
+
+
+
+
+
     return (
         <div>
             <div className='scrollable'>
@@ -10,30 +123,38 @@ function Request() {
                             <label>Employee *</label>
                             <select>
                                 <option>Select employee</option>
-                                <option>David Tunji</option>
-                                <option>David Tunji</option>
-                                <option>David Tunji</option>
-
-
+                                {employees.map(emp => (
+                                    <option key={emp._id} value={emp._id}>
+                                        {emp.firstname} {emp.lastname}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                         <div className='per-inputt' style={{ marginBottom: '15px' }}>
                             <label>Leave Type *</label><br />
-                            <select>
-                                <option>Select leave type</option>
-                                <option>Vacation Leave</option>
-                                <option>Sick Leave </option>
-                                <option>Personal Leave </option>
-                                <option>Maternity Leave </option>
-                                <option>Parternity Leave </option>
-                                <option>Bereavement Leave </option>
-                                <option>Emergency Leave </option>
+                            <select
+                                id="leaveType"
+                                name="leave_type"
+                            // value={formData.leave_type}
+                            // onChange={(e) =>
+                            //     setFormData({ ...formData, leave_type: e.target.value })
+                            // }
+                            // required
+                            >
+                                <option value="">Select leave type</option>
 
+                                {Array.isArray(vacation) &&
+                                    vacation.map((vac) => (
+                                        <option key={vac._id} value={vac._id}>
+                                            {vac.leave_type}
+                                        </option>
+                                    ))}
                             </select>
+
                         </div>
                         <div className='per-inputt' style={{ marginBottom: '15px' }}>
                             <label>Start Date *</label>
-                            <input type='text' placeholder='DD/MM/YYYY'></input>
+                            <input type='date' placeholder='DD/MM/YYYY'></input>
                         </div>
 
 
@@ -104,15 +225,17 @@ function Request() {
                 <div className='person-input-fields'>
                     <div className='per-input'>
                         <label>End Date *</label>
-                        <input type='text' placeholder='DD/MM/YYYY'></input>
+                        <input type='date' placeholder='DD/MM/YYYY'></input>
                     </div>
                     <div className='per-input'>
                         <label>Reporting Manager *</label>
                         <select>
                             <option>Select manager</option>
-                            <option>David Tunde</option>
-                            <option>Elias Martins </option>
-
+                            {managers.map(manager => (
+                                <option key={manager._id} value={manager._id}>
+                                    {manager.manager_name}
+                                </option>
+                            ))}
                         </select>
                     </div>
 
@@ -137,8 +260,11 @@ function Request() {
                         <label>Backup Person</label><br />
                         <select>
                             <option>Select backup (optional)</option>
-                            <option>Alice Johnson</option>
-                            <option>Olawale Adesoji</option>
+                            {backup.map(bck => (
+                                <option key={bck._id} value={bck._id}>
+                                    {bck.backup_name}
+                                </option>
+                            ))}
 
                         </select>
                     </div>
@@ -147,9 +273,12 @@ function Request() {
                     <label>Priority</label><br />
                     <select>
                         <option>Select priority</option>
-                        <option>Urgent</option>
-                        <option>Normal</option>
-                        <option>Low</option>
+
+                        {priorities.map(pri => (
+                            <option key={pri._id} value={pri._id}>
+                                {pri.priority_level}
+                            </option>
+                        ))}
 
                     </select>
                 </div>

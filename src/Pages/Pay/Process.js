@@ -1,8 +1,18 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Progrezz from "./Progrezz"
+import axios from 'axios';
+import { BASE_URL } from '../Utils/globals';
 
 function Process({ onNext, onBack, step }) {
+
+
+
+    
+
+
+   
+
     return (
         <div>
             <div className='scrollable'>

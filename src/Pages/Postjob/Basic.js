@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { LuBriefcase } from "react-icons/lu";
 import axios from 'axios';
-import { BASE_URL } from '../Utils/globals';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -46,11 +46,12 @@ function Basic({ data = {}, onNext, onClose }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                const headers = getAuthHeaders();
                 const [deptRes, typeRes, currRes, expRes] = await Promise.all([
-                    axios.get(`${BASE_URL}/dept`),
-                    axios.get(`${BASE_URL}/type`),
-                    axios.get(`${BASE_URL}/currency`),
-                    axios.get(`${BASE_URL}/experiences`)
+                    axios.get(`${BASE_URL}/dept`, { headers }),
+                    axios.get(`${BASE_URL}/type`, { headers }),
+                    axios.get(`${BASE_URL}/currency`, { headers }),
+                    axios.get(`${BASE_URL}/experiences`, { headers })
                 ]);
                 setDepartment(deptRes.data?.data || deptRes.data || []);
                 setEmploymentType(typeRes.data?.data || typeRes.data || []);

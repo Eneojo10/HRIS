@@ -1,6 +1,71 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
+import axios from 'axios'
+import { BASE_URL, getAuthHeaders } from '../Utils/globals'
 
 function Dept() {
+    const [department, setDepartment] = useState([]);
+    const [departmentManagers, setDepartmentManagers] = useState([]);
+    const [parentDepartments, setParentDepartments] = useState([]);
+    const [primaryLocations, setPrimaryLocations] = useState([]);
+
+    useEffect(() => {
+        const fetchDepartmentManagers = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/department-manager`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setDepartmentManagers(response.data);
+            } catch (error) {
+                console.error("Error fetching department managers:", error);
+            }
+        };
+
+        fetchDepartmentManagers();
+    }, []);
+
+    useEffect(() => {
+        const fetchParentDepartments = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/parent-department`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setParentDepartments(response.data);
+            } catch (error) {
+                console.error("Error fetching parent departments:", error);
+            }
+        };
+
+        fetchParentDepartments();
+    }, []);
+
+    useEffect(() => {
+        const fetchPrimaryLocations = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/primary-location`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setPrimaryLocations(response.data);
+            } catch (error) {
+                console.error("Error fetching primary locations:", error);
+            }
+        };
+
+        fetchPrimaryLocations();
+    }, []);
+
+
+
+
+
     return (
         <div>
             <div className='scrollable'>
@@ -34,21 +99,23 @@ function Dept() {
                             <div className='per-input'>
                                 <label>Department Manager</label>
                                 <select>
-                                    <option>Mike Davis - VP Operations</option>
-
-
+                                    <option>Select manager</option>
+                                    {departmentManagers.map(manager => (
+                                        <option key={manager._id} value={manager._id}>
+                                            {manager.department_manager_name}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
                             <div className='per-input'>
                                 <label>Parent Department</label>
                                 <select>
                                     <option>Select parent (optional)</option>
-                                    <option>Entry Level</option>
-                                    <option>Mid-Level </option>
-                                    <option>Senior-Level </option>
-                                    <option>Lead/Principal </option>
-                                    <option>Executive </option>
-
+                                    {parentDepartments.map(parent => (
+                                        <option key={parent._id} value={parent._id}>
+                                            {parent.parent_department_name}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
 
@@ -73,10 +140,11 @@ function Dept() {
                                 <label>Primary Location</label>
                                 <select>
                                     <option>Select location</option>
-                                    <option>Garki II</option>
-                                    <option>Wuye</option>
-
-
+                                    {primaryLocations.map(location => (
+                                        <option key={location._id} value={location._id}>
+                                            {location.primary_location_name}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
                             <div className='inputfield-dept-one'>

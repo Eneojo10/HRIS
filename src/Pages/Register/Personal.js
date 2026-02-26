@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { IoPerson } from "react-icons/io5";
 import { BiExport } from 'react-icons/bi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
-import { BASE_URL } from '../Utils/globals';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 
 function Personal({ data = {}, onNext, onClose }) {
     const [gender, setGender] = useState([]);
     const [country, setCountry] = useState([]);
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [imagePreview, setImagePreview] = useState(null);
+    const fileInputRef = useRef(null);
 
     const [formData, setFormData] = useState({
         firstname: data.firstname || "",
@@ -23,6 +26,31 @@ function Personal({ data = {}, onNext, onClose }) {
         dob: data.dob || "",
         country_id: data.country_id || "",
     });
+
+    const handleImageClick = () => {
+        fileInputRef.current?.click();
+    };
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            if (file.size > 5 * 1024 * 1024) { // 5MB limit
+                toast.error('Image size should be less than 5MB');
+                return;
+            }
+            
+            const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+            if (!allowedTypes.includes(file.type)) {
+                toast.error('Only JPG, JPEG and PNG files are allowed');
+                return;
+            }
+
+            setSelectedImage(file);
+            const reader = new FileReader();
+            reader.onload = (e) => setImagePreview(e.target.result);
+            reader.readAsDataURL(file);
+        }
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -48,7 +76,8 @@ function Personal({ data = {}, onNext, onClose }) {
     useEffect(() => {
         const fetchGender = async () => {
             try {
-                const res = await axios.get(`${BASE_URL}/gender`);
+                const headers = getAuthHeaders();
+                const res = await axios.get(`${BASE_URL}/gender`, { headers });
                 setGender(Array.isArray(res.data) ? res.data : res.data.data || []);
             } catch (err) {
                 console.error("Gender fetch failed", err);
@@ -61,7 +90,8 @@ function Personal({ data = {}, onNext, onClose }) {
     useEffect(() => {
         const fetchCountry = async () => {
             try {
-                const res = await axios.get(`${BASE_URL}/countries`);
+                const headers = getAuthHeaders();
+                const res = await axios.get(`${BASE_URL}/countries`, { headers });
                 setCountry(Array.isArray(res.data) ? res.data : res.data.data || []);
             } catch (err) {
                 console.error("Country fetch failed", err);
@@ -85,10 +115,27 @@ function Personal({ data = {}, onNext, onClose }) {
 
                         <div className="personimage-holder">
                             <div className="personal-bg-1"></div>
-                            <div className="image-border">
+                            <div className="image-border" onClick={handleImageClick} style={{ cursor: 'pointer' }}>
+                                <input 
+                                    type="file" 
+                                    ref={fileInputRef}
+                                    onChange={handleImageChange}
+                                    accept="image/jpeg,image/jpg,image/png"
+                                    style={{ display: 'none' }}
+                                />
                                 <div className="imgae-holder">
-                                    <BiExport />
-                                    <h4>Upload Photo</h4>
+                                    {imagePreview ? (
+                                        <img 
+                                            src={imagePreview} 
+                                            alt="Preview" 
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
+                                        />
+                                    ) : (
+                                        <>
+                                            <BiExport />
+                                            <h4>Upload Photo</h4>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>

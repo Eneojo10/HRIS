@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Dashboard from '../Menu/Dashboard'
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { AiOutlineEye, AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
 import img1 from '../Images/user2.jpg'
 import { GoPersonAdd } from "react-icons/go";
 import { AiOutlineMail } from "react-icons/ai";
 import { PiExport } from "react-icons/pi";
 import { CiImport } from "react-icons/ci";
-import Personal from './Register/Personal';
-import Employment from './Register/Employment';
-import Contact from './Register/Contact';
-import Compensation from './Register/Compensation';
-import Additional from './Register/Additional';
+import EmployeeWizard from './EmployeeWizard';
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import { BsFillPersonXFill } from "react-icons/bs";
 import { IoMdTime } from "react-icons/io";
@@ -19,152 +16,82 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LiaGiftSolid } from "react-icons/lia";
 import { LuAward } from "react-icons/lu";
 import axios from 'axios';
-import { BASE_URL } from './Utils/globals';
+import { BASE_URL, getAuthHeaders } from './Utils/globals';
+import { employeeService } from './Utils/employeeService';
 
 function Employees() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [activeTab, setActiveTab] = useState('Personal');
     const [firstBatch, setFirstBatch] = useState([]);
     const [remainingBatch, setRemainingBatch] = useState([]);
     const [total, setTotal] = useState(0);
     const [allemployees, setAllEmployees] = useState([]);
     const [department, setDepartment] = useState([])
     const [totaldept, setTotaldept] = useState(0)
-
-    const [formData, setFormData] = useState({
-        firstname: "",
-        lastname: "",
-        email: "",
-        phone: "",
-        gender_id: "",
-        city: "",
-        state: "",
-        zip_code: "",
-        dob: "",
-        job_title: "",
-        date: "",
-        contact_name: "",
-        phone_no: "",
-        annual_salary: "",
-        skill: "",
-        education: "",
-        certifications: "",
-        experience: "",
-        notes: "",
-        type_id: "",
-        location_id: "",
-        package_id: "",
-        dept_id: "",
-        reports_id: "",
-        work_id: "",
-        frequency_id: "",
-        currency_id: "",
-        country_id: "",
-        relationship_id: "",
-    })
-
-    // const [message, setMessage] = useState("");
-
-    // const handleChange = (e) => {
-    //     setFormData({ ...formData, [e.target.name]: e.target.value });
-    // };
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-    //     try {
-    //         const res = await axios.post(`${BASE_URL}/employee`, formData, {
-    //             headers: { "Content-Type": "application/json" },
-    //         });
-    //         setMessage("Employee created successfully!");
-    //         console.log(res.data);
-    //         // Reset form if needed
-    //         setFormData({
-    //             firstname: "",
-    //             lastname: "",
-    //             email: "",
-    //             phone: "",
-    //             gender_id: "",
-    //             city: "",
-    //             state: "",
-    //             zip_code: "",
-    //             dob: "",
-    //             job_title: "",
-    //             date: "",
-    //             contact_name: "",
-    //             phone_no: "",
-    //             annual_salary: "",
-    //             skill: "",
-    //             education: "",
-    //             certifications: "",
-    //             experience: "",
-    //             notes: "",
-    //             type_id: "",
-    //             location_id: "",
-    //             package_id: "",
-    //             dept_id: "",
-    //             reports_id: "",
-    //             work_id: "",
-    //             frequency_id: "",
-    //             currecny_id: "",
-    //             country_id: "",
-    //             relationship_id: "",
-    //         });
-    //     } catch (error) {
-    //         setMessage("Error creating employee. Please try again.");
-    //         console.error(error);
-    //     }
-    // };
-
-
-    const handleTabClick = (tabName) => {
-        setActiveTab(tabName)
-    };
-
-    const handlePersonalNext = (data) => {
-        setFormData(prev => ({ ...prev, ...data }));
-        setActiveTab('Employment');
-    };
-
-    const handleEmploymentNext = (data) => {
-        setFormData(prev => ({ ...prev, ...data }));
-        setActiveTab('Contact');
-    };
-
-    const handleContactNext = (data) => {
-        setFormData(prev => ({ ...prev, ...data }));
-        setActiveTab('Compensation');
-    };
-
-    const handleCompensationNext = (data) => {
-        setFormData(prev => ({ ...prev, ...data }));
-        setActiveTab('Additional');
-    };
+    const [contextMenu, setContextMenu] = useState(null);
+    const [selectedEmployee, setSelectedEmployee] = useState(null);
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
     };
 
+    const handleEllipsisClick = (e, employee) => {
+        e.stopPropagation();
+        setSelectedEmployee(employee);
+        const rect = e.currentTarget.getBoundingClientRect();
+        let x = rect.left - 160;
+        let y = rect.top;
+        
+        if (x < 0) {
+            x = rect.right + 10;
+        }
+        if (y + 120 > window.innerHeight) {
+            y = window.innerHeight - 130;
+        }
+        
+        setContextMenu({ x, y });
+    };
+
+    const handleViewDetails = () => {
+        console.log('View details for:', selectedEmployee);
+        setContextMenu(null);
+    };
+
+    const handleEdit = () => {
+        console.log('Edit employee:', selectedEmployee);
+        setContextMenu(null);
+    };
+
+    const handleDelete = () => {
+        console.log('Delete employee:', selectedEmployee);
+        setContextMenu(null);
+    };
+
+    const closeContextMenu = () => {
+        setContextMenu(null);
+    };
 
     useEffect(() => {
         const fetchAllEmployeeData = async () => {
             try {
-                const [splitRes, allRes, deptRes] = await Promise.all([
-                    axios.get(`${BASE_URL}/employee/split`),
-                    axios.get(`${BASE_URL}/employees`),
-                    axios.get(`${BASE_URL}/dept`)
+                const headers = getAuthHeaders();
+                const [splitData, allEmployees, totalData, deptRes] = await Promise.all([
+                    employeeService.getEmployeesSplit(),
+                    employeeService.getAllEmployees(),
+                    employeeService.getTotalEmployees(),
+                    axios.get(`${BASE_URL}/dept`, { headers })
                 ]);
 
-                setFirstBatch(splitRes.data.firstBatch);
-                setRemainingBatch(splitRes.data.remainingBatch);
-                setTotal(splitRes.data.totalEmployees);
-                setAllEmployees(allRes.data);
-                setDepartment(deptRes.data);
-                setTotaldept(deptRes.data.length);
-                console.log('Department data:', deptRes.data);
-                console.log('Total departments:', deptRes.data.length);
+                setFirstBatch(splitData.firstBatch || []);
+                setRemainingBatch(splitData.remainingBatch || []);
+                setTotal(totalData.totalEmployees || 0);
+                setAllEmployees(allEmployees || []);
+                setDepartment(deptRes.data || []);
+                setTotaldept(deptRes.data?.length || 0);
             } catch (error) {
                 console.error('Error fetching employee data:', error);
+                if (error.response?.status === 401) {
+                    console.log('Please login to access employee data');
+                }
             }
         };
 
@@ -173,7 +100,14 @@ function Employees() {
 
    
     return (
-        <div>
+        <div onClick={closeContextMenu}>
+            {contextMenu && (
+                <div className='context-menu' style={{ top: contextMenu.y, left: contextMenu.x }}>
+                    <button onClick={handleViewDetails}><AiOutlineEye /> View Details</button>
+                    <button onClick={handleEdit}><AiOutlineEdit /> Edit</button>
+                    <button onClick={handleDelete} className='delete-btn'><AiOutlineDelete /> Delete</button>
+                </div>
+            )}
             <div className='employees-container'>
                 <div className='main1'>
                     <Dashboard />
@@ -222,77 +156,12 @@ function Employees() {
                                         <div className='modal-icon' style={{ fontSize: '21px', marginTop: '1px' }}>
                                             <GoPersonAdd />
                                         </div>
-                                        <div
-                                        ><h3>Add New Employee</h3></div>
+                                        <div><h3>Add New Employee</h3></div>
                                     </div>
-                                    <button className='x-btn' onClick={() => setIsModalOpen(false)}>✖</button>
-
+                                    <button className='x-btn' onClick={handleCloseModal}>✖</button>
                                 </div>
-
                                 <br />
-                                <div className='modal-bg'>
-                                    <div className='p-flex'>
-                                        <div onClick={() => handleTabClick('Personal')}
-                                            style={{
-                                                cursor: 'pointer',
-                                                backgroundColor: activeTab === 'Personal' ? 'white' : 'transparent',
-                                                padding: '3px 20px'
-                                            }}
-                                            className='person-one'>
-                                            <h4>Personal</h4>
-                                        </div>
-                                        <div onClick={() => handleTabClick('Employment')}
-                                            style={{
-                                                cursor: 'pointer',
-                                                backgroundColor: activeTab === 'Employment' ? 'white' : 'transparent',
-                                                padding: '3px 20px'
-                                            }}
-                                            className='person-one'>
-                                            <h4>Employment</h4>
-                                        </div>
-                                        <div onClick={() => handleTabClick('Contact')}
-                                            style={{
-                                                cursor: 'pointer',
-                                                backgroundColor: activeTab === 'Contact' ? 'white' : 'transparent',
-                                                padding: '2px 25px'
-                                            }}
-                                            className='person-one'>
-                                            <h4>Contact</h4>
-                                        </div>
-                                        <div onClick={() => handleTabClick('Compensation')}
-                                            style={{
-                                                cursor: 'pointer',
-                                                backgroundColor: activeTab === 'Compensation' ? 'white' : 'transparent',
-                                                padding: '2px 20px'
-                                            }}
-                                            className='person-one'>
-                                            <h4>Compensation</h4>
-                                        </div>
-                                        <div onClick={() => handleTabClick('Additional')}
-                                            style={{
-                                                cursor: 'pointer',
-                                                backgroundColor: activeTab === 'Additional' ? 'white' : 'transparent',
-                                                padding: '3px 20px'
-                                            }}
-                                            className='person-one'>
-                                            <h4>Additional</h4>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <form>
-                                    <div className='performance-content'>
-                                        {activeTab === 'Personal' && <Personal data={formData} onNext={handlePersonalNext} onClose={handleCloseModal} />}
-                                        {activeTab === 'Employment' && <Employment data={formData} onNext={handleEmploymentNext} onClose={handleCloseModal} />}
-                                        {activeTab === 'Contact' && <Contact data={formData} onNext={handleContactNext} onClose={handleCloseModal} />}
-                                        {activeTab === 'Compensation' && <Compensation data={formData} onNext={handleCompensationNext} onClose={handleCloseModal} />}
-                                        {activeTab === 'Additional' && <Additional data={formData} onClose={handleCloseModal} />}
-
-                                    </div>
-
-                                </form>
+                                <EmployeeWizard />
                             </div>
                         </div>
                     )}
@@ -494,15 +363,15 @@ function Employees() {
                                                                 <span className='employee-name'>{employee.firstname} {employee.lastname}</span>
                                                             </div>
                                                         </td>
-                                                        <td>{employee.dept_id?.dept || 'N/A'}</td>
-                                                        <td>{employee.phone}</td>
-                                                        <td>{employee.city}</td>
+                                                        <td>{employee.dept_id?.name || employee.dept_id?.dept || 'N/A'}</td>
+                                                        <td>{employee.email || employee.phone}</td>
+                                                        <td>{employee.location_id?.name || employee.city || 'N/A'}</td>
                                                         <td>{employee.date}</td>
                                                         <td>Active</td>
                                                         <td>Excellent</td>
                                                         <td>${employee.annual_salary}</td>
                                                         <td>2025-07-24</td>
-                                                        <td><HiOutlineDotsHorizontal /></td>
+                                                        <td><button className='ellipsis-btn' onClick={(e) => handleEllipsisClick(e, employee)}><HiOutlineDotsHorizontal /></button></td>
                                                     </tr>
                                                 ))}
                                             </tbody>

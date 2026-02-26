@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 
 function Shift({ data = {}, onNext, onClose }) {
     const [formData, setFormData] = useState({
@@ -12,6 +14,9 @@ function Shift({ data = {}, onNext, onClose }) {
         location: data.location || "",
         notes: data.notes || ""
     });
+
+    const [employees, setEmployees] = useState([]);
+    const [positions, setPositions] = useState([]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -31,6 +36,39 @@ function Shift({ data = {}, onNext, onClose }) {
             onNext(formData);
         }
     };
+
+
+
+    useEffect(() => {
+        const fetchEmployees = async () => {
+            try {
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/employees`, { headers });
+                setEmployees(response.data);
+            }catch (error) {
+                console.error("Error fetching employees:", error);
+            }
+        };
+
+
+        fetchEmployees();
+    },[]);
+
+
+    useEffect(() => {
+        const fetchPositions = async () => {
+            try{
+                const response = await axios.get(`${BASE_URL}/positions`);
+                setPositions(response.data);
+            }catch (error) {
+                console.error("Error fetching positions:", error);
+            }
+        };
+
+        fetchPositions();
+    },[]);
+
+
     return (
         <div>
             <div className='scrollable'>
@@ -45,8 +83,11 @@ function Shift({ data = {}, onNext, onClose }) {
                                 <label>Employee *</label>
                                 <select name='employee_id' value={formData.employee_id} onChange={handleChange}>
                                     <option value=''>Select Employee</option>
-                                    <option value='1'>John Doe</option>
-                                    <option value='2'>Jane Smith</option>
+                                    {employees.map(employee => (
+                                        <option key={employee._id} value={employee._id}>
+                                            {employee.firstname} {employee.lastname}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
                             <div className='per-input'>
@@ -72,26 +113,23 @@ function Shift({ data = {}, onNext, onClose }) {
                         <div className='person-input-fields'>
                             <div className='per-input'>
                                 <label>Position</label>
-                                <select>
-                                    <option>Select Position</option>
-                                    <option>Entry Level</option>
-                                    <option>Mid-Level </option>
-                                    <option>Senior-Level </option>
-                                    <option>Lead/Principal </option>
-                                    <option>Executive </option>
-
+                                <select name='position' value={formData.position} onChange={handleChange}>
+                                    <option value=''>Select Position</option>
+                                    {positions.map(position => (
+                                        <option key={position._id} value={position._id}>
+                                            {position.position_name}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
                             <div className='per-input'>
                                 <label>Location</label>
-                                <select>
-                                    <option>Select Location</option>
-                                    <option>Entry Level</option>
-                                    <option>Mid-Level </option>
-                                    <option>Senior-Level </option>
-                                    <option>Lead/Principal </option>
-                                    <option>Executive </option>
-
+                                <select name='location' value={formData.location} onChange={handleChange}>
+                                    <option value=''>Select Location</option>
+                                    <option value='main_office'>Main Office</option>
+                                    <option value='branch_office'>Branch Office</option>
+                                    <option value='remote'>Remote</option>
+                                    <option value='client_site'>Client Site</option>
                                 </select>
                             </div>
                             {/* <div className='per-input'>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { FiPhone } from "react-icons/fi";
-import { BASE_URL } from '../Utils/globals';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Contact({ data = {}, onNext, onClose }) {
+function Contact({ data = {}, onNext, onPrevious, onClose }) {
     const [relationship, setRelates] = useState([])
     const [relationship_id, setRelate] = useState("");
 
@@ -19,7 +19,8 @@ function Contact({ data = {}, onNext, onClose }) {
     useEffect(() => {
         const fetchRelate = async () => {
             try {
-                const response = await axios.get(`${BASE_URL}/relationship`);
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/relationship`, { headers });
                 console.log(response);
                 setRelates(Array.isArray(response.data) ? response.data : response.data.data || []);
             } catch (error) {
@@ -100,6 +101,7 @@ function Contact({ data = {}, onNext, onClose }) {
                         </div>
                         <div className='employee-option-btn'>
                             <button className='cancel-btn' type='button' onClick={onClose}>Cancel</button>
+                            <button className='cancel-btn' type='button' onClick={onPrevious}>Previous</button>
                             <button className='cancel-btnn' type='button' onClick={handleSubmit}>Next</button>
                         </div>
 

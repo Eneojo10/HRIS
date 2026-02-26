@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
+
+
 
 function Time({ data = {}, onNext, onClose }) {
   const [formData, setFormData] = useState({
@@ -8,10 +12,44 @@ function Time({ data = {}, onNext, onClose }) {
     start_time: data.start_time || "",
     end_time: data.end_time || "",
     project_id: data.project_id || "",
-    task_type: data.task_type || "",
+    task: data.task || "",
     description: data.description || "",
     billable: data.billable || false
   });
+
+  const [projects, setProjects] = useState([]);
+  const [tasks, setTasks] = useState([]);
+
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const headers = getAuthHeaders();
+        const response = await axios.get(`${BASE_URL}/projects`, { headers });
+        setProjects(response.data);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    };
+
+    fetchProjects();
+  },[]);
+
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      try {
+        const headers = getAuthHeaders();
+        const response = await axios.get(`${BASE_URL}/tasks`, { headers });
+        setTasks(response.data);
+      }catch(error) {
+        console.error("Error fetching tasks:", error);
+      }
+    };
+
+
+    fetchTasks();
+  },[]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -23,13 +61,13 @@ function Time({ data = {}, onNext, onClose }) {
 
   const handleNext = (e) => {
     e.preventDefault();
-    
+
     // Validation
     if (!formData.date || !formData.start_time || !formData.end_time || !formData.project_id) {
       toast.error("Please fill all required fields");
       return;
     }
-    
+
     if (typeof onNext === 'function') {
       onNext(formData);
     }
@@ -64,16 +102,22 @@ function Time({ data = {}, onNext, onClose }) {
                 <label>Project *</label>
                 <select name='project_id' value={formData.project_id} onChange={handleChange}>
                   <option value=''>Select project</option>
-                  <option value='1'>Website Redesign - Acme Corp</option>
+                  {projects.map(project => (
+                    <option key={project._id} value={project._id}>
+                      {project.project_name}
+                    </option>
+                  ))}
                 </select>
               </div>
               <div className='per-input'>
                 <label>Task</label>
                 <select name='task_type' value={formData.task_type} onChange={handleChange}>
                   <option value=''>Select task type</option>
-                  <option value='developing'>Developing</option>
-                  <option value='design'>Design</option>
-                  <option value='testing'>Testing</option>
+                  {tasks.map(task => (
+                    <option key={task._id} value={task._id}>
+                      {task.task_name}
+                    </option>
+                  ))}
                 </select>
               </div>
 
@@ -103,7 +147,7 @@ function Time({ data = {}, onNext, onClose }) {
         <br />
         <br />
 
-        <div className='jay-jay' style={{ display: 'flex', justifyContent: 'flex-end',gap:'10px' }}>
+        <div className='jay-jay' style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
           <div>
             <button type='button' className='job-previous' onClick={onClose}>Cancel</button>
           </div>
@@ -111,7 +155,7 @@ function Time({ data = {}, onNext, onClose }) {
             <button type='button' className='job-next' onClick={handleNext}>Next</button>
           </div>
         </div>
-        <br/>
+        <br />
         <ToastContainer position="top-right" autoClose={3000} />
 
       </div>

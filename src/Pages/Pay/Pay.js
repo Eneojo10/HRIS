@@ -1,12 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
+import { BASE_URL } from '../Utils/globals';
 
 
 function Pay({ onNext, onBack }) {
+
+    const [dept, setDept] = useState([]);
+
+
+    useEffect(() => {
+        const fetchDepartments = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${BASE_URL}/dept`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setDept(response.data);
+            } catch (error) {
+                console.error("Error fetching departments:", error);
+            }
+        };
+
+        fetchDepartments();
+    }, []);
+
+
     return (
         <div>
             <div className='scrollable'>
                 <div className='personal-details'>
-                   
+
                     <br />
                     <div className='person-input-fields'>
                         <div className='per-input'>
@@ -21,7 +46,7 @@ function Pay({ onNext, onBack }) {
                         </div>
                         <div className='per-input'>
                             <label>Pay Date</label>
-                            <input placeholder='mm/dd/yyyy'></input>
+                            <input type='date' placeholder='mm/dd/yyyy'></input>
                         </div>
 
 
@@ -30,9 +55,11 @@ function Pay({ onNext, onBack }) {
                         <label>Department Filter</label>
                         <select>
                             <option>Select department</option>
-                            <option>Marketing</option>
-                            <option>Sales</option>
-                            <option>Engineering</option>
+                            {dept.map(department => (
+                                <option key={department._id} value={department._id}>
+                                    {department.dept}
+                                </option>
+                            ))}
                         </select>
 
                     </div>

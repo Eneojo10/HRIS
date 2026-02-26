@@ -1,12 +1,73 @@
 import React, { useState } from 'react';
 import { Users } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { authService } from '../Pages/Utils/authService';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import logo from '../Images/logo-removebg-preview.png'
+import logo from '../Images/enes-flowerHR.png';
 
 
 function Login() {
     const [flipped, setFlipped] = useState(false);
+    const [step, setStep] = useState(1);
+    const [formData, setFormData] = useState({ domain: '', name: '', otp: '' });
+    const [userEmail, setUserEmail] = useState('');
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+
+    const handleDomainSubmit = async (e) => {
+        e.preventDefault();
+        if (!formData.domain) return toast.error('Please enter your domain');
+        setStep(2);
+    };
+
+    const handleNameSubmit = async (e) => {
+        e.preventDefault();
+        if (!formData.name) return toast.error('Please enter your name');
+
+        setLoading(true);
+        try {
+            const response = await authService.verifyDomain(formData.name, formData.domain);
+            setUserEmail(response.email);
+            setStep(3);
+            toast.success('OTP sent! Check console for testing.');
+        } catch (error) {
+            toast.error(error.response?.data?.error || 'Failed to verify domain');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleOTPSubmit = async (e) => {
+        e.preventDefault();
+        if (!formData.otp) return toast.error('Please enter OTP');
+
+        setLoading(true);
+        try {
+            const response = await authService.verifyOTP(userEmail, formData.otp, formData.name, formData.domain);
+            console.log('Login response:', response);
+            
+            if (response.requiresVerification) {
+                toast.info('Verification email sent! Please check your email to complete login.');
+                return;
+            }
+            
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('user', JSON.stringify(response.user));
+            console.log('Token stored:', localStorage.getItem('token'));
+            toast.success('Login successful!');
+            navigate('/mainboard');
+        } catch (error) {
+            toast.error(error.response?.data?.error || 'Invalid OTP');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleInputChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
     return (
         <div className="login-page">
@@ -20,47 +81,75 @@ function Login() {
                             <div className="login-box">
                                 <div className="login-details">
                                     <div className='nav-leaf'>
-                                        <div className='le-af'>
+                                        {/* <div className='le-af'>
                                             <img src={logo} alt='' />
-                                        </div>
-                                        <div className='dropdown'>
-                                            <h2>enesHR</h2>
+                                        </div> */}
+                                        <div className='dropdown-logo'>
+                                            <img src={logo} alt='' className='mobile-logo' />
                                         </div>
                                     </div>
-                                    <br /><br />
+                                    
                                     <div className='login----text'>
-                                        <h4>Enter your EnesHR Domain to login.</h4>
+                                        {step === 1 && <h4>Enter your EnesHR Domain to login.</h4>}
+                                        {step === 2 && <h4>Enter your name for {formData.domain}.eneshr.com</h4>}
+                                        {step === 3 && <h4>Enter OTP sent to {userEmail}</h4>}
                                     </div>
                                 </div>
 
                                 <div className='input-flex'>
-                                    <div className='iput-flex-1'>
-                                        <input type="text" placeholder="companydomain" className="login-input" />
-                                    </div>
-                                    <div className='enes-p'>
-                                        <p>.eneshr.com</p>
-                                    </div>
-                                </div>
+                                    <form onSubmit={step === 1 ? handleDomainSubmit : step === 2 ? handleNameSubmit : handleOTPSubmit}>
+                                        <div className="input-wrapper">
+                                            <input
+                                                type="text"
+                                                name={step === 1 ? "domain" : step === 2 ? "name" : "otp"}
+                                                value={step === 1 ? formData.domain : step === 2 ? formData.name : formData.otp}
+                                                onChange={handleInputChange}
+                                                placeholder={step === 1 ? "companydomain" : step === 2 ? "Your name" : "6-digit OTP"}
+                                                className="login-input"
+                                                maxLength={step === 3 ? "6" : undefined}
+                                            />
 
-                                <div className='domain-text'>
-                                    <div>
-                                        <button className="login-button">Continue</button>
-                                    </div>
-                                    <div className='wid'>
-                                        <Link
-                                            to="#"
-                                            className="text-blue-600 underline cursor-pointer flip-links"
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                setFlipped(true);
-                                            }}
-                                        >
-                                            What's my Domain?
-                                        </Link>
-                                    </div>
+                                            {step === 1 && (
+                                                <span className="enes-suffix">.eneshr.com</span>
+                                            )}
+                                        </div>
+
+                                        <div className='domain-text'>
+                                            <button type="submit" className="login-button" disabled={loading}>
+                                                {loading ? (step === 2 ? 'Sending...' : 'Verifying...') :
+                                                    (step === 1 ? 'Continue' : step === 2 ? 'Send OTP' : 'Login')}
+                                            </button>
+                                            {step === 1 && (
+                                                <div className='wid'>
+                                                    <Link
+                                                        to="#"
+                                                        className="text-blue-600 underline cursor-pointer flip-links"
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            setFlipped(true);
+                                                        }}
+                                                    >
+                                                        What's my Domain?
+                                                    </Link>
+                                                </div>
+                                            )}
+                                            {step > 1 && (
+                                                <div className='wid'>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setStep(step - 1)}
+                                                        className="text-blue-600 underline cursor-pointer flip-links"
+                                                        style={{ background: 'none', border: 'none' }}
+                                                    >
+                                                        Back
+                                                    </button>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        
+
 
                             {/* FOOTER for front side */}
                             <div className='login-footer-box'>
@@ -110,15 +199,15 @@ function Login() {
                         <div className="flip-card-back">
                             <div className="domain-info">
                                 <div className="login_details">
-                                    <div className='nav-leaf'>
-                                        <div className='le-af'>
+                                   <div className='nav-leaf'>
+                                        {/* <div className='le-af'>
                                             <img src={logo} alt='' />
-                                        </div>
-                                        <div className='dropdown'>
-                                            <h2>enesHR</h2>
+                                        </div> */}
+                                        <div className='dropdown-logo'>
+                                            <img src={logo} alt='' className='mobile-logo' />
                                         </div>
                                     </div>
-                                    <br /><br />
+                                
                                     <div className='login----text-'>
                                         <h4>What's my EnesHR domain?</h4>
                                         <div className='flip-input'>
@@ -146,6 +235,7 @@ function Login() {
                 </div>
 
             </div>
+            <ToastContainer position="top-right" autoClose={3000} />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Dashboard from '../Menu/Dashboard'
+import { useNavigate } from 'react-router-dom';
 import { BsPeople } from "react-icons/bs";
 import { BsFillPersonXFill } from "react-icons/bs";
 import { BsFillPersonCheckFill } from "react-icons/bs";
@@ -18,8 +19,10 @@ import { RxEnvelopeClosed } from "react-icons/rx";
 import { BsTelephone } from "react-icons/bs";
 import { BsThreeDots } from "react-icons/bs";
 import { TbCurrencyNaira } from "react-icons/tb";
-import axios from 'axios';
-import { BASE_URL } from './Utils/globals'
+import { IoLogOut } from "react-icons/io5";
+import { BsMoon, BsSun } from "react-icons/bs";
+import { useTheme } from '../ThemeContext';
+import { employeeService } from './Utils/employeeService';
 
 
 function MainDashBoard() {
@@ -27,6 +30,14 @@ function MainDashBoard() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const [currentDate, setCurrentDate] = useState("");
+    const { darkMode, setDarkMode } = useTheme();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        navigate('/');
+    };
 
     useEffect(() => {
         // Set current date
@@ -45,8 +56,9 @@ function MainDashBoard() {
     useEffect(() => {
         const fetchTotalEmployees = async () => {
             try {
-                const response = await axios.get(`${BASE_URL}/employees/total`);
-                setTotal(response.data.totalEmployees);
+                const data = await employeeService.getTotalEmployees();
+                console.log('API Response:', data);
+                setTotal(data.totalEmployees || 0);
             } catch (err) {
                 console.error("Error fetching total employees:", err);
                 setError("Failed to load total employees");
@@ -77,13 +89,36 @@ function MainDashBoard() {
                 <div className='main-detailx'>
                     <div className='main-details'>
                         <div className='hr-welcome'>
-                            <h4>HR Dashboard</h4>
+                            <h4>Dashboard</h4>
                             <p>Welcome back! Here's your HR overview</p>
                         </div>
-                        <div>
+                        <div className='date-theme-container'>
                             <p>{currentDate}</p>
+                            <div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
+                                <button 
+                                    className='theme-toggle'
+                                    onClick={() => setDarkMode(!darkMode)}
+                                >
+                                    {darkMode ? <BsSun /> : <BsMoon />}
+                                </button>
+                                <button 
+                                    onClick={handleLogout}
+                                    style={{
+                                        background: '#ff4757',
+                                        color: 'white',
+                                        border: 'none',
+                                        padding: '8px 12px',
+                                        borderRadius: '6px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '5px'
+                                    }}
+                                >
+                                    <IoLogOut /> Logout
+                                </button>
+                            </div>
                         </div>
-
                     </div>
                     <div className='d-line2'></div><br />
                     <div className='borders'>
@@ -241,7 +276,7 @@ function MainDashBoard() {
                                 <div className='quick-actions'>
                                     <h3>Quick Actions</h3>
                                 </div>
-                                <div className='onboarding'>
+                                <div className='onboarding' onClick={() => navigate('/employees')} style={{cursor: 'pointer'}}>
                                     <div className='add-1'>
                                         <IoMdPersonAdd />
                                     </div>
@@ -250,7 +285,7 @@ function MainDashBoard() {
                                         <span className='on-board'>Onboard new team member</span>
                                     </div>
                                 </div>
-                                <div className='onboarding'>
+                                <div className='onboarding' onClick={() => navigate('/management')} style={{cursor: 'pointer'}}>
                                     <div className='add-2'>
                                         <VscRequestChanges />
                                     </div>
@@ -259,7 +294,7 @@ function MainDashBoard() {
                                         <span className='on-board'>Approve pending request</span>
                                     </div>
                                 </div>
-                                <div className='onboarding'>
+                                <div className='onboarding' onClick={() => navigate('/analytics')} style={{cursor: 'pointer'}}>
                                     <div className='add-3'>
                                         <GoReport />
                                     </div>
@@ -268,7 +303,7 @@ function MainDashBoard() {
                                         <span className='on-board'>Create HR analytics report</span>
                                     </div>
                                 </div>
-                                <div className='onboarding'>
+                                <div className='onboarding' onClick={() => navigate('/payroll')} style={{cursor: 'pointer'}}>
                                     <div className='add-4'>
                                         <TbCurrencyNaira />
                                     </div>
@@ -277,7 +312,7 @@ function MainDashBoard() {
                                         <span className='on-board'>Run monthly payroll</span>
                                     </div>
                                 </div>
-                                <div className='onboarding'>
+                                <div className='onboarding' onClick={() => navigate('/tracking')} style={{cursor: 'pointer'}}>
                                     <div className='add-5'>
                                         <IoMdTime />
                                     </div>
@@ -286,7 +321,7 @@ function MainDashBoard() {
                                         <span className='on-board'>Review attendance logs</span>
                                     </div>
                                 </div>
-                                <div className='onboarding'>
+                                <div className='onboarding' onClick={() => navigate('/performance')} style={{cursor: 'pointer'}}>
                                     <div className='add-6'>
                                         <GrDocumentPerformance />
                                     </div>

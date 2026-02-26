@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { RxCopy } from "react-icons/rx";
 import { AiOutlineDelete } from "react-icons/ai";
+import axios from 'axios';
+import { BASE_URL } from '../Utils/globals';
 
 function Bulk() {
     const [shifts, setShifts] = useState([{ id: 1 }]);
+    const [positions, setPositions] = useState([]);
 
     // Add a new blank shift
     const handleAddShift = () => {
@@ -21,6 +24,21 @@ function Bulk() {
         const updated = shifts.filter((_, i) => i !== index);
         setShifts(updated);
     };
+
+
+
+    useEffect(() => {
+        const fetchEmployees = async () => {
+            try{
+                const response = await axios.get(`${BASE_URL}/positions`);
+                setPositions(response.data);
+            }catch (error) {
+                console.error("Error fetching employees:", error);
+            }
+        };
+
+        fetchEmployees();
+    },[]);
 
     return (
         <div>
@@ -61,7 +79,10 @@ function Bulk() {
                                         <div className='per-input'>
                                             <label>Start Time</label>
                                             <select>
-                                                <option>Select employee</option>
+                                                <option>Select Time</option>
+                                                <option>08:00 AM</option>
+                                                <option>09:00 AM</option>
+                                                <option>10:00 AM</option>
                                             </select>
                                         </div>
                                         <div className='per-input'>
@@ -83,7 +104,11 @@ function Bulk() {
                                             <label>Position</label>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Team Lead</option>
+                                                {positions.map(position => (
+                                                    <option key={position._id} value={position._id}>
+                                                        {position.position_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                         <div className='bulk-input'>

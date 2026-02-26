@@ -1,6 +1,47 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 
 function Blk() {
+
+
+    const [projects, setProjects] = useState([]);
+    const [tasks, setTasks] = useState([]);
+
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/projects`, { headers });
+                setProjects(response.data);
+            } catch (error) {
+                console.error("Error fetching projects:", error);
+            }
+        };
+
+        fetchProjects();
+    }, []);
+
+
+    useEffect(() => {
+        const fetchTasks = async () => {
+            try {
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/tasks`, { headers });
+                setTasks(response.data);
+            } catch (error) {
+                console.error("Error fetching tasks:", error);
+            }
+        };
+
+
+        fetchTasks();
+    }, []);
+
+
+
+
     return (
         <div>
             <div className='scrollable'>
@@ -25,16 +66,22 @@ function Blk() {
                                             <p>Project</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Website Redesign</option>
-                                                <option>Internal Training</option>
+                                                {projects.map(project => (
+                                                    <option key={project._id} value={project._id}>
+                                                        {project.project_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                         <div className='b-input'>
                                             <p>Task</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Meeting</option>
-                                                <option>Training</option>
+                                                {tasks.map(task => (
+                                                    <option key={task._id} value={task._id}>
+                                                        {task.task_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                     </div>
@@ -60,16 +107,22 @@ function Blk() {
                                             <p>Project</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Website Redesign</option>
-                                                <option>Internal Training</option>
+                                                {projects.map(project => (
+                                                    <option key={project._id} value={project._id}>
+                                                        {project.project_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                         <div className='b-input'>
                                             <p>Task</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Meeting</option>
-                                                <option>Training</option>
+                                                {tasks.map(task => (
+                                                    <option key={task._id} value={task._id}>
+                                                        {task.task_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                     </div>
@@ -95,16 +148,22 @@ function Blk() {
                                             <p>Project</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Website Redesign</option>
-                                                <option>Internal Training</option>
+                                                {projects.map(project => (
+                                                    <option key={project._id} value={project._id}>
+                                                        {project.project_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                         <div className='b-input'>
                                             <p>Task</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Meeting</option>
-                                                <option>Training</option>
+                                                {tasks.map(task => (
+                                                    <option key={task._id} value={task._id}>
+                                                        {task.task_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                     </div>
@@ -117,8 +176,8 @@ function Blk() {
                         <div className='perosnal'>
                             <div className='personal-details' style={{ marginTop: '20px' }}>
                                 <div className='bulk-weeks' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className='monday' style={{ marginTop: '20px'}}>
-                                        <p>Thursday</p>                                        
+                                    <div className='monday' style={{ marginTop: '20px' }}>
+                                        <p>Thursday</p>
                                         <span className='mon-day' style={{ fontSize: '12px' }}>2024-01-15</span>
                                     </div>
                                     <div className='blk-two' style={{ display: 'flex', width: '75%' }}>
@@ -130,16 +189,22 @@ function Blk() {
                                             <p>Project</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Website Redesign</option>
-                                                <option>Internal Training</option>
+                                                {projects.map(project => (
+                                                    <option key={project._id} value={project._id}>
+                                                        {project.project_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                         <div className='b-input'>
                                             <p>Task</p>
                                             <select>
                                                 <option>Select</option>
-                                                <option>Meeting</option>
-                                                <option>Training</option>
+                                                {tasks.map(task => (
+                                                    <option key={task._id} value={task._id}>
+                                                        {task.task_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                     </div>

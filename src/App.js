@@ -1,6 +1,7 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './ThemeContext';
 import Dashboard from './Menu/Dashboard';
 import MainDashBoard from './Pages/MainDashBoard';
 import Analytics from './Analytics/Analytics';
@@ -55,6 +56,7 @@ import All from './Recruitment center/All';
 import Chart from './Pages/Chart';
 import HiringTrends from './Pages/Hiringtrends';
 import Login from './Login/Login';
+import VerifyLogin from './Login/VerifyLogin';
 import PayrollDetails from './Payroll/PayrollDetails';
 import System from './Settings/System';
 import Umanagement from './Settings/Umanagement';
@@ -115,138 +117,147 @@ import Bplans from './Pages/Benefitsplans/Bplans';
 import Dependent from './Pages/Benefitsplans/Dependent';
 import Summ from './Pages/Benefitsplans/Summ';
 import Reusable from './Pages/Reusable';
-import EmployeeWizard from './Pages/EmployeeWizard';  
+import EmployeeWizard from './Pages/EmployeeWizard';
+import PrivateRoutes from './Pages/Utils/PrivateRoutes';
 
 function App() {
   return (
-    <div className='App'>
-      <Router>
-        <Routes>
-          <Route index element={<Login />} />
-          <Route path="/" element={<Login />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="mainboard" element={<MainDashBoard />} />
-          <Route path="analytics" element={<Analytics />} />
-          <Route path="employees" element={<Employees />} />
-          <Route path="recruitment" element={<Recruitment />} />
-          <Route path="onboarding" element={<Onboarding />} />
-          <Route path="performance" element={<Performance />} />
-          <Route path="tracking" element={<Tracking />} />
-          <Route path="management" element={<Leave />} />
-          <Route path="schedules" element={<Schedules />} />
-          <Route path="payroll" element={<Payroll />} />
-          <Route path="benefits" element={<Benefits />} />
-          <Route path="departments" element={<Departments />} />
-          <Route path="settings" element={<Settings />} />
-          <Route path="perform" element={<Performancedetails />} />
-          <Route path="HRanalytics" element={<Analyticsdetails />} />
-          <Route path="workforce" element={<Workforce />} />
+    <ThemeProvider>
+      <div className='App'>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route index element={<Login />} />
+            <Route path="/verify-login" element={<VerifyLogin />} />
+            <Route element={<PrivateRoutes />} >
+              
 
-          <Route path="posting" element={<Postingdetails />} />
-          <Route path="interview" element={<Interviewdetails />} />
-          <Route path="employee" element={<Onboardingdetails />} />
-          <Route path="templates" element={<Templatesdetails />} />
-          <Route path="analyst" element={<Analyticdetails />} />
-          <Route path="feedback" element={<Feedback />} />
-          <Route path="analy" element={<Performanceanalytics />} />
-          <Route path="time" element={<Timedetails />} />
-          <Route path="sheet" element={<Sheetdetails />} />
-          <Route path="ana" element={<Anadetails />} />
-          <Route path="payroll" element={<Paydetails />} />
-          <Route path="employeepayroll" element={<Employeedetails />} />
-          <Route path="reportpayroll" element={<Reportdetails />} />
-          <Route path="tics" element={<Ticsdetails />} />
-          <Route path="Leavedetails" element={<Leavedetails />} />
+              <Route path="mainboard" element={<MainDashBoard />} />
+              <Route path="dashboard" element={<Dashboard />} />
 
-          <Route path="calender" element={<Calender />} />
-          <Route path="balance" element={<Balance />} />
-          <Route path="Leaveanalytics" element={<Leaveanalytics />} />
-          <Route path="scheduledetails" element={<Scheduledetails />} />
-          <Route path="Shift" element={<Shiftdetails />} />
-          <Route path="details" element={<Employeedetailz />} />
-          <Route path="sanalytics" element={<Sanalytics />} />
-          <Route path="bene" element={<Benefitsdetails />} />
-          <Route path="plans" element={<Plans />} />
-          <Route path="Reports" element={<Reports />} />
-          <Route path="ben" element={<Benanalytics />} />
-          <Route path="Ddetails" element={<Ddetails />} />
-          <Route path="structure" element={<Structure />} />
-          <Route path="budgets" element={<Budgets />} />
-          <Route path="bana" element={<Banalytics />} />
-          <Route path="today" element={<Today />} />
-          <Route path="tomorrow" element={<Tomorrow />} />
-          <Route path="week" element={<Week />} />
-          <Route path="all" element={<All />} />
-          <Route path="chart" element={<Chart />} />
-          <Route path="pie" element={<HiringTrends />} />
-          <Route path="payrolldetails" element={<PayrollDetails />} />
-          <Route path="system" element={<System />} />
-          <Route path="management" element={<Umanagement />} />
-          <Route path="security" element={<Security />} />
-          <Route path="integration" element={<Integration />} />
-          <Route path="categories" element={<Categories />} />
+              <Route path="analytics" element={<Analytics />} />
+              <Route path="employees" element={<Employees />} />
+              <Route path="recruitment" element={<Recruitment />} />
+              <Route path="onboarding" element={<Onboarding />} />
+              <Route path="performance" element={<Performance />} />
+              <Route path="tracking" element={<Tracking />} />
+              <Route path="management" element={<Leave />} />
+              <Route path="schedules" element={<Schedules />} />
+              <Route path="payroll" element={<Payroll />} />
+              <Route path="benefits" element={<Benefits />} />
+              <Route path="departments" element={<Departments />} />
+              <Route path="settings" element={<Settings />} />
+              <Route path="perform" element={<Performancedetails />} />
+              <Route path="HRanalytics" element={<Analyticsdetails />} />
+              <Route path="workforce" element={<Workforce />} />
 
-          <Route path="docs" element={<Documentation />} />
-          <Route path="equip" element={<Equipment />} />
-          <Route path="training" element={<Training />} />
-          <Route path="meetings" element={<Meetings />} />
-          <Route path="access" element={<SystemAccess />} />
-          <Route path="status" element={<Status />} />
-          <Route path="pending" element={<Pending />} />
-          <Route path="progress" element={<Progress />} />
-          <Route path="complete" element={<Complete />} />
-          <Route path="overdue" element={<Overdue />} />
-          <Route path="alldept" element={<AllDepartment />} />
-          <Route path="engineering" element={<Engineering />} />
-          <Route path="products" element={<Product />} />
-          <Route path="sales" element={<Sales />} />
-          <Route path="design" element={<Design />} />
+              <Route path="posting" element={<Postingdetails />} />
+              <Route path="interview" element={<Interviewdetails />} />
+              <Route path="employee" element={<Onboardingdetails />} />
+              <Route path="templates" element={<Templatesdetails />} />
+              <Route path="analyst" element={<Analyticdetails />} />
+              <Route path="feedback" element={<Feedback />} />
+              <Route path="analy" element={<Performanceanalytics />} />
+              <Route path="time" element={<Timedetails />} />
+              <Route path="sheet" element={<Sheetdetails />} />
+              <Route path="ana" element={<Anadetails />} />
+              <Route path="payroll" element={<Paydetails />} />
+              <Route path="employeepayroll" element={<Employeedetails />} />
+              <Route path="reportpayroll" element={<Reportdetails />} />
+              <Route path="tics" element={<Ticsdetails />} />
+              <Route path="Leavedetails" element={<Leavedetails />} />
 
-          <Route path="marketing" element={<Marketing />} />
-          <Route path="executive" element={<Executive />} />
-          <Route path="metrics" element={<Metrics />} />
-          <Route path="equity" element={<Equity />} />
-          <Route path="trends" element={<PayrollTrends />} />
-          <Route path="distribution" element={<Distribution />} />
-          <Route path="talent" element={<Talent />} />
-          <Route path="personal" element={<Personal onNext={() => {}} onClose={() => {}} />} />
-          <Route path="employment" element={<Employment onNext={() => {}} onClose={() => {}} />} />
-          <Route path="contact" element={<Contact onNext={() => {}} onClose={() => {}} />} />
-          <Route path="compensation" element={<Compensation onNext={() => {}} onClose={() => {}} />} />
-          <Route path="addition" element={<Additional />} />
-          <Route path="job-wizard" element={<JobWizard onClose={() => {}} />} />
-          <Route path="basic" element={<Basic onNext={() => {}} onClose={() => {}}/>} />
-          <Route path="details" element={<Details onNext={() => {}} onBack={() => {}} onClose={() => {}}/>} />
-          <Route path="jobsettings" element={<Jobsettings />} />
-          <Route path="onboard" element={<Onboard />} />
-          <Route path="perform" element={<PerformOne />} />
-          <Route path="goalkpi" element={<GoalsKPIs />} />
-          <Route path="core" element={<Core />} />
+              <Route path="calender" element={<Calender />} />
+              <Route path="balance" element={<Balance />} />
+              <Route path="Leaveanalytics" element={<Leaveanalytics />} />
+              <Route path="scheduledetails" element={<Scheduledetails />} />
+              <Route path="Shift" element={<Shiftdetails />} />
+              <Route path="details" element={<Employeedetailz />} />
+              <Route path="sanalytics" element={<Sanalytics />} />
+              <Route path="bene" element={<Benefitsdetails />} />
+              <Route path="plans" element={<Plans />} />
+              <Route path="Reports" element={<Reports />} />
+              <Route path="ben" element={<Benanalytics />} />
+              <Route path="Ddetails" element={<Ddetails />} />
+              <Route path="structure" element={<Structure />} />
+              <Route path="budgets" element={<Budgets />} />
+              <Route path="bana" element={<Banalytics />} />
+              <Route path="today" element={<Today />} />
+              <Route path="tomorrow" element={<Tomorrow />} />
+              <Route path="week" element={<Week />} />
+              <Route path="all" element={<All />} />
+              <Route path="chart" element={<Chart />} />
+              <Route path="pie" element={<HiringTrends />} />
+              <Route path="payrolldetails" element={<PayrollDetails />} />
+              <Route path="system" element={<System />} />
+              <Route path="management" element={<Umanagement />} />
+              <Route path="security" element={<Security />} />
+              <Route path="integration" element={<Integration />} />
+              <Route path="categories" element={<Categories />} />
 
-          <Route path="perfohmance" element={<Performsettings />} />
-          <Route path="request" element={<Request />} />
-          <Route path="dept" element={<Dept />} />
-          <Route path="pay" element={<Pay />} />
-          <Route path="shift" element={<Shift />} />
-          <Route path="recur" element={<Recurring />} />
-          <Route path="bulk" element={<Bulk />} />
-          <Route path="times" element={<Time />} />
-          <Route path="review" element={<Review />} />
-          <Route path="next" element={<PayrollNext />} />
-          <Route path="process" element={<Process />} />
-          <Route path="progrezz" element={<Progrezz />} />
-          <Route path="final" element={<Final />} />
-          <Route path="timer" element={<Timer />} />
-          <Route path="blk" element={<Blk />} />
-          <Route path="bplans" element={<Bplans />} />
-          <Route path="dependent" element={<Dependent />} />
-          <Route path="summ" element={<Summ />} />
-          <Route path='use' element={<Reusable />} />
-          <Route path="employee-wizard" element={<EmployeeWizard />} />
+              <Route path="docs" element={<Documentation />} />
+              <Route path="equip" element={<Equipment />} />
+              <Route path="training" element={<Training />} />
+              <Route path="meetings" element={<Meetings />} />
+              <Route path="access" element={<SystemAccess />} />
+              <Route path="status" element={<Status />} />
+              <Route path="pending" element={<Pending />} />
+              <Route path="progress" element={<Progress />} />
+              <Route path="complete" element={<Complete />} />
+              <Route path="overdue" element={<Overdue />} />
+              <Route path="alldept" element={<AllDepartment />} />
+              <Route path="engineering" element={<Engineering />} />
+              <Route path="products" element={<Product />} />
+              <Route path="sales" element={<Sales />} />
+              <Route path="design" element={<Design />} />
 
-        </Routes>
-      </Router>
-    </div>
+              <Route path="marketing" element={<Marketing />} />
+              <Route path="executive" element={<Executive />} />
+              <Route path="metrics" element={<Metrics />} />
+              <Route path="equity" element={<Equity />} />
+              <Route path="trends" element={<PayrollTrends />} />
+              <Route path="distribution" element={<Distribution />} />
+              <Route path="talent" element={<Talent />} />
+              <Route path="personal" element={<Personal onNext={() => { }} onClose={() => { }} />} />
+              <Route path="employment" element={<Employment onNext={() => { }} onClose={() => { }} />} />
+              <Route path="contact" element={<Contact onNext={() => { }} onClose={() => { }} />} />
+              <Route path="compensation" element={<Compensation onNext={() => { }} onClose={() => { }} />} />
+              <Route path="addition" element={<Additional />} />
+              <Route path="job-wizard" element={<JobWizard onClose={() => { }} />} />
+              <Route path="basic" element={<Basic onNext={() => { }} onClose={() => { }} />} />
+              <Route path="details" element={<Details onNext={() => { }} onBack={() => { }} onClose={() => { }} />} />
+              <Route path="jobsettings" element={<Jobsettings />} />
+              <Route path="onboard" element={<Onboard />} />
+              <Route path="perform" element={<PerformOne />} />
+              <Route path="goalkpi" element={<GoalsKPIs />} />
+              <Route path="core" element={<Core />} />
+
+              <Route path="perfohmance" element={<Performsettings />} />
+              <Route path="request" element={<Request />} />
+              <Route path="dept" element={<Dept />} />
+              <Route path="pay" element={<Pay />} />
+              <Route path="shift" element={<Shift />} />
+              <Route path="recur" element={<Recurring />} />
+              <Route path="bulk" element={<Bulk />} />
+              <Route path="times" element={<Time />} />
+              <Route path="review" element={<Review />} />
+              <Route path="next" element={<PayrollNext />} />
+              <Route path="process" element={<Process />} />
+              <Route path="progrezz" element={<Progrezz />} />
+              <Route path="final" element={<Final />} />
+              <Route path="timer" element={<Timer />} />
+              <Route path="blk" element={<Blk />} />
+              <Route path="bplans" element={<Bplans />} />
+              <Route path="dependent" element={<Dependent />} />
+              <Route path="summ" element={<Summ />} />
+              <Route path='use' element={<Reusable />} />
+              <Route path="employee-wizard" element={<EmployeeWizard />} />
+
+            </Route>
+          </Routes>
+        </Router>
+      </div>
+    </ThemeProvider>
   );
 }
 

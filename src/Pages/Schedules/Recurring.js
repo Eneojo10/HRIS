@@ -1,6 +1,32 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import { BASE_URL } from '../Utils/globals';
 
 function Recurring() {
+
+
+
+    const [employees, setEmployees] = useState([]);
+
+
+
+
+    useEffect(() => {
+        const fetchEmployees = async () => {
+            try{
+                const response = await axios.get(`${BASE_URL}/employees`);
+                setEmployees(response.data);
+            }catch (error) {
+                console.error("Error fetching employees:", error);
+            }
+        };
+
+        fetchEmployees();
+    },[]);
+
+
     return (
         <div>
             <div className='scrollable'>
@@ -13,10 +39,11 @@ function Recurring() {
                             <label>Employee</label>
                             <select>
                                 <option>Select employee</option>
-                                <option>John Smith - Sales Associate</option>
-                                <option>John Smith - Sales Associate</option>
-                                <option>John Smith - Sales Associate</option>
-
+                                {employees.map(employee => (
+                                    <option key={employee._id} value={employee._id}>
+                                        {employee.firstname} {employee.lastname}
+                                    </option>
+                                ))}
                             </select>
 
                         </div>
