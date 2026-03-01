@@ -5,6 +5,10 @@ import { MdOutlineTrackChanges } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FiAward } from "react-icons/fi";
 import { BiError } from "react-icons/bi";
+import PerformanceTrends from './PerformanceTrends';
+import GoalCompletionStatus from './GoalCompletionStatus';
+import DepartmentPerformance from './DepartmentPerformance';
+import ReviewStatusOverview from './ReviewStatusOverview';
 
 function Analytics() {
   return (
@@ -222,28 +226,28 @@ function Analytics() {
             <div className='pagrid'>
               <div className='pagrid-one'>
                 <h3>Performance Trends</h3>
-
+                <PerformanceTrends />
               </div>
 
             </div>
             <div className='pagrid'>
               <div className='pagrid-one'>
                 <h3>Goal Completion Status</h3>
-
+                <GoalCompletionStatus />
               </div>
 
             </div>
             <div className='pagrid'>
               <div className='pagrid-one'>
                 <h3>Department Performance</h3>
-
+                <DepartmentPerformance />
               </div>
 
             </div>
             <div className='pagrid'>
               <div className='pagrid-one'>
                 <h3>Review Status Overview</h3>
-
+                <ReviewStatusOverview />
               </div>
 
             </div>

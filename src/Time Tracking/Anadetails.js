@@ -4,6 +4,7 @@ import { IoMdTime } from "react-icons/io";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { GiNetworkBars } from "react-icons/gi";
 import { MdOutlineTrackChanges } from "react-icons/md";
+import ProductivityHoursTrends from './ProductivityHoursTrends';
 
 function Anadetails() {
   return (
@@ -77,21 +78,205 @@ function Anadetails() {
             <div className='aone--head' style={{ padding: '20px' }}>
               <h3>Productivity & Hours Trends</h3>
             </div>
+            <ProductivityHoursTrends />
           </div>
           <div className='aone'>
             <div className='aone--head' style={{ padding: '20px' }}>
-              <h3>Hours by Department</h3>
+              <h3>Hours by Department</h3><br />
+              <div>
+                <div className='engine-one'>
+                  <div className='engine--color-flex'>
+                    <div className='engine-color'>
+
+                    </div>
+                    <div>
+                      <h4>Engineering</h4>
+                    </div>
+                  </div>
+                  <div>
+                    <p>2840h  45%</p>
+                  </div>
+                </div>
+                <div className='engine-one'>
+                  <div className='engine--color-flex'>
+                    <div className='engine-color-one'>
+
+                    </div>
+                    <div>
+                      <h4>Sales</h4>
+                    </div>
+                  </div>
+                  <div>
+                    <p>1420h  45%</p>
+                  </div>
+                </div>
+                <div className='engine-one'>
+                  <div className='engine--color-flex'>
+                    <div className='engine-color-two'>
+
+                    </div>
+                    <div>
+                      <h4>Marketing</h4>
+                    </div>
+                  </div>
+                  <div>
+                    <p>240h  45%</p>
+                  </div>
+                </div>
+                <div className='engine-one'>
+                  <div className='engine--color-flex'>
+                    <div className='engine-color-three'>
+
+                    </div>
+                    <div>
+                      <h4>Design</h4>
+                    </div>
+                  </div>
+                  <div>
+                    <p>240h  45%</p>
+                  </div>
+                </div>
+                <div className='engine-one'>
+                  <div className='engine--color-flex'>
+                    <div className='engine-color-four'>
+
+                    </div>
+                    <div>
+                      <h4>HR</h4>
+                    </div>
+                  </div>
+                  <div>
+                    <p>240h 45%</p>
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>
 
         </div><br />
-        <div className='ts-big'>
-          <div className='aone--head' style={{ padding: '20px' }}>
-            <h3>Project Time Analysis</h3>
+        <div className='hay-two'>
+          <div className='hob'>
+            <h3>Project Time Analysis</h3><br />
+            <div className='hob-header-border'>
+              <div className='hob-header'>
+                <div>
+                  <h3>Website Redesign</h3>
+                </div>
+                <div>
+                  <p>52 employees</p>
+                </div>
 
+              </div>
+              <div className='labor--cost'>
+                <div>
+                  <p>Total Hours</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+                <div>
+                  <p>Labor Cost</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+                <div>
+                  <p>Cost Per Hour</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+
+              </div>
+              <div className='labor-progress-bar' style={{ width: '95%', margin: 'auto' }}>
+                <div className='labor-progress-fill' style={{ width: '68.4%' }}></div>
+              </div>
+            </div>
+            <div className='hob-header-border'>
+              <div className='hob-header'>
+                <div>
+                  <h3>Mobile App</h3>
+                </div>
+                <div>
+                  <p>52 employees</p>
+                </div>
+
+              </div>
+              <div className='labor--cost'>
+                <div>
+                  <p>Total Hours</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+                <div>
+                  <p>Labor Cost</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+                <div>
+                  <p>Cost Per Hour</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+
+              </div>
+              <div className='labor-progress-bar' style={{ width: '95%', margin: 'auto' }}>
+                <div className='labor-progress-fill' style={{ width: '68.4%' }}></div>
+              </div>
+            </div>
+            <div className='hob-header-border'>
+              <div className='hob-header'>
+                <div>
+                  <h3>Database Migration</h3>
+                </div>
+                <div>
+                  <p>52 employees</p>
+                </div>
+
+
+              </div>
+              <div className='labor--cost'>
+                <div>
+                  <p>Total Hours</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+                <div>
+                  <p>Labor Cost</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+                <div>
+                  <p>Cost Per Hour</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+
+              </div>
+              <div className='labor-progress-bar' style={{ width: '95%', margin: 'auto' }}>
+                <div className='labor-progress-fill' style={{ width: '68.4%' }}></div>
+              </div>
+
+            </div>
+            <div className='hob-header-border'>
+              <div className='hob-header'>
+                <div>
+                  <h3>Marketing Campaign</h3>
+                </div>
+                <div>
+                  <p>52 employees</p>
+                </div>
+
+              </div>
+              <div className='labor--cost'>
+                <div>
+                  <p>Hours Logged:</p>
+                  <span className='labor-span'>192hrs</span>
+                </div>
+                <div>
+                  <p>Budget:</p>
+                  <span className='labor-span'>N500K</span>
+                </div>
+                <div>
+                  <p>Cost Per Hour</p>
+                  <span className='labor-span'>N100K</span>
+                </div>
+
+              </div>
+              <div className='labor-progress-bar' style={{ width: '95%', margin: 'auto' }}>
+                <div className='labor-progress-fill' style={{ width: '68.4%' }}></div>
+              </div>
+            </div>
           </div>
-
 
         </div>
       </div>

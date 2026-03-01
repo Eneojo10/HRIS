@@ -5,6 +5,7 @@ import { FiAward } from "react-icons/fi";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { FaArrowTrendDown } from "react-icons/fa6";
 import { SiClickhouse } from "react-icons/si";
+import DepartmentCoverage from './DepartmentCoverage';
 
 function Banalytics() {
   return (
@@ -97,6 +98,8 @@ function Banalytics() {
 
 
       </div>
+      <br />
+      <DepartmentCoverage />
       <br />
       <div className='debt-analysis'>
         <div className='deptone' style={{ padding: '20px' }}>

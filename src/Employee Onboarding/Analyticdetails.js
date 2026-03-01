@@ -11,6 +11,13 @@ import { CgDanger } from "react-icons/cg";
 import { BiError } from "react-icons/bi";
 import { FaRegStar } from "react-icons/fa6";
 import HiringTrends from '../Pages/Hiringtrends';
+import OnboardingCompletionTrends from './OnboardingCompletionTrends';
+import OnboardingDepartmentPerformance from './OnboardingDepartmentPerformance';
+import WeeklyProgressOverview from './WeeklyProgressOverview';
+import TaskCompletionByCategory from './TaskCompletionByCategory';
+import SatisfactionDistribution from './SatisfactionDistribution';
+import TimeToProductivityByRole from './TimeToProductivityByRole';
+import DepartmentRetentionRates from './DepartmentRetentionRates';
 
 function Analyticdetails() {
   return (
@@ -285,11 +292,12 @@ function Analyticdetails() {
               <div className='aone--head' style={{ padding: '20px' }}>
                 <h3>Onboarding Completion Trends</h3>
               </div>
+              <OnboardingCompletionTrends />
             </div>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
                 <h3>Department Performance</h3>
-               
+                <OnboardingDepartmentPerformance />
               </div>
             </div>
 
@@ -298,14 +306,14 @@ function Analyticdetails() {
             <div className='aone--head' style={{ padding: '20px' }}>
               <h3>Weekly Progress Review</h3>
             </div>
-
+            <WeeklyProgressOverview />
           </div>
           <br />
           <div className='bOne-holder'>
             <div className='aone--head' style={{ padding: '20px' }}>
               <h3>Task Completion by Category</h3>
             </div>
-
+            <TaskCompletionByCategory />
           </div>
           <br/>
           <div className='aOne-holder'>
@@ -313,11 +321,13 @@ function Analyticdetails() {
               <div className='aone--head' style={{ padding: '20px' }}>
                 <h3>Satisfaction Distribution</h3>
               </div>
+              <SatisfactionDistribution />
             </div>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
                 <h3>Time to Productivity by Role</h3>
               </div>
+              <TimeToProductivityByRole />
             </div>
 
           </div><br />
@@ -325,7 +335,7 @@ function Analyticdetails() {
             <div className='aone--head' style={{ padding: '20px' }}>
               <h3>Department Retention Rates</h3>
             </div>
-
+            <DepartmentRetentionRates />
           </div><br />
 
         </div>
