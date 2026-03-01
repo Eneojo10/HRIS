@@ -59,7 +59,7 @@ function Benanalytics() {
                   <div>
                     <h4>Satisfaction Score</h4>
                     <p>45/7</p>
-                    
+
                   </div>
                   <div className='icon-dept' style={{ marginTop: '20px', color: '#9ca3af', backgroundColor: '#eff6ff', width: '19%', height: '40px', textAlign: 'center', paddingTop: '9px', fontSize: '20px', borderRadius: '8px' }}>
                     <SiClickhouse />
@@ -72,11 +72,335 @@ function Benanalytics() {
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
                 <h2>Plan Enrollment Analysis</h2>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Health Plus Premium</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Health Basic</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Dental Complete</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Vision Standard</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Life Insurance</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>401(k) Retirement</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
               </div>
             </div>
             <div className='aone'>
               <div className='aone--head' style={{ padding: '20px' }}>
                 <h2>Department Enrollment</h2>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Engineering</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Finance</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Sales</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Marketing</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>HR</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <div className='aonedisplay'>
+                    <div>
+                      <p>Operations</p>
+                    </div>
+                    <div className='aonedisplay-number'>
+                      <div>
+                        <p>342/500</p>
+                      </div>
+                      <div>
+                        <p>68.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='aone-progress-bar'>
+                    <div className='aone-progress-fill' style={{ width: '68.4%' }}></div>
+                  </div>
+                  <div className='aonedisplay-numbers'>
+                    <div>
+                      <p>342 enrolled</p>
+                    </div>
+                    <div>
+                      <p>₦206,910/month</p>
+                    </div>
+                  </div>
+                </div>
+                <br/>
 
               </div>
             </div>
@@ -90,9 +414,9 @@ function Benanalytics() {
               <div className='metrics_card'>
                 <h3>1247</h3>
                 <p>Health Claims</p>
-                <div className='metrics-flex'style={{display:'flex',width:'60%',margin:'auto',color:'green'}}>
+                <div className='metrics-flex' style={{ display: 'flex', width: '60%', margin: 'auto', color: 'green' }}>
                   <div>
-                    <FaArrowTrendUp/>
+                    <FaArrowTrendUp />
                   </div>
                   <div>
                     <p>+4.9%</p>
@@ -103,45 +427,45 @@ function Benanalytics() {
               <div className='metrics_card'>
                 <h3>892</h3>
                 <p>Dental Visits</p>
-                <div className='metrics-flex'style={{display:'flex',width:'60%',margin:'auto',color:'green'}}>
+                <div className='metrics-flex' style={{ display: 'flex', width: '60%', margin: 'auto', color: 'green' }}>
                   <div>
-                    <FaArrowTrendUp/>
+                    <FaArrowTrendUp />
                   </div>
                   <div>
                     <p>+4.9%</p>
                   </div>
                 </div>
-                  <span className='vs'>vs previous period</span>
+                <span className='vs'>vs previous period</span>
               </div>
               <div className='metrics_card'>
                 <h3>234</h3>
                 <p>Vision Exams</p>
-                <div className='metrics-flex'style={{display:'flex',width:'60%',margin:'auto',color:'green'}}>
+                <div className='metrics-flex' style={{ display: 'flex', width: '60%', margin: 'auto', color: 'green' }}>
                   <div>
-                    <FaArrowTrendUp/>
+                    <FaArrowTrendUp />
                   </div>
                   <div>
                     <p>+4.9%</p>
                   </div>
                 </div>
-                  <span className='vs'>vs previous period</span>
+                <span className='vs'>vs previous period</span>
               </div>
               <div className='metrics_card'>
                 <h3>567</h3>
                 <p>Preventive Care</p>
-                <div className='metrics-flex'style={{display:'flex',width:'60%',margin:'auto',color:'green'}}>
+                <div className='metrics-flex' style={{ display: 'flex', width: '60%', margin: 'auto', color: 'green' }}>
                   <div>
-                    <FaArrowTrendUp/>
+                    <FaArrowTrendUp />
                   </div>
                   <div>
                     <p>+4.9%</p>
                   </div>
                 </div>
-                  <span className='vs'>vs previous period</span>
+                <span className='vs'>vs previous period</span>
               </div>
 
             </div>
-            <br/>
+            <br />
 
           </div><br />
 
