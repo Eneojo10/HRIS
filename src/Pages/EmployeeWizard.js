@@ -37,6 +37,7 @@ function EmployeeWizard() {
             email: finalData.email,
             phone: finalData.phone,
             gender_id: finalData.gender_id,
+            address: finalData.address,
             city: finalData.city,
             state: finalData.state,
             zip_code: finalData.zip_code,
@@ -58,7 +59,7 @@ function EmployeeWizard() {
             reports_id: finalData.reports_id,
             work_id: finalData.work_id,
             frequency_id: finalData.frequency_id,
-            currecny_id: finalData.currecny_id, // Note: backend has typo "currecny_id"
+            currecny_id: finalData.currecny_id,
             country_id: finalData.country_id,
             relationship_id: finalData.relationship_id,
             Schedules_id: finalData.Schedules_id,

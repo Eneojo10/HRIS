@@ -99,7 +99,7 @@ function Banalytics() {
 
       </div>
       <br />
-      <DepartmentCoverage />
+      {/* <DepartmentCoverage /> */}
       <br />
       <div className='debt-analysis'>
         <div className='deptone' style={{ padding: '20px' }}>

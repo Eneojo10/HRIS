@@ -16,8 +16,41 @@ import { BsListTask } from 'react-icons/bs';
 import { IoPeopleOutline } from "react-icons/io5";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import { FiAward } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL, getAuthHeaders } from "../Pages/Utils/globals";
+import { toast } from "react-toastify";
 
 function Onboardingdetails() {
+
+    const [onboarding, setOnboarding] = useState([]);
+
+    const fetchOnboard = async () => {
+        try {
+            const headers = getAuthHeaders();
+            const response = await axios.get(`${BASE_URL}/onboarding`, { headers });
+            setOnboarding(response.data);
+        }catch (error) {
+            console.error('Error fetching onboarding data:', error);
+        }
+    };
+
+    const handleUpdateStatus = async (id, newStatus) => {
+        try {
+            const headers = getAuthHeaders();
+            await axios.put(`${BASE_URL}/onboarding/${id}`, { status: newStatus }, { headers });
+            toast.success('Status updated successfully!');
+            fetchOnboard();
+        } catch (error) {
+            console.error('Error updating status:', error);
+            toast.error('Error updating status');
+        }
+    };
+
+    useEffect(() => {
+        fetchOnboard();
+    }, []);
+    
     return (
         <div>
             <div className='onboard-background'>
@@ -298,7 +331,11 @@ function Onboardingdetails() {
                                                     <IoMdTime />
                                                 </div>
                                                 <div>
-                                                    <span>On-track</span>
+                                                <select value={onboarding[0]?.status || 'On-track'} onChange={(e) => handleUpdateStatus(onboarding[0]?._id, e.target.value)} style={{ padding: '4px', borderRadius: '4px', border: '1px solid #ccc' }}>
+                                                    <option value='On-track'>On-track</option>
+                                                    <option value='In progress'>In progress</option>
+                                                    <option value='Complete'>Complete</option>
+                                                </select>
                                                 </div>
                                             </div>
                                         </div><br />

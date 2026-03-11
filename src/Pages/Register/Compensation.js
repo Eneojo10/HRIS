@@ -26,7 +26,7 @@ function Compensation({ data = {}, onNext, onPrevious, onClose }) {
                 const headers = getAuthHeaders();
                 const [currRes, freqRes, benRes] = await Promise.all([
                     axios.get(`${BASE_URL}/currency`, { headers }),
-                    axios.get(`${BASE_URL}/periods`, { headers }),
+                    axios.get(`${BASE_URL}/frequency`, { headers }),
                     axios.get(`${BASE_URL}/benefit`, { headers })
                 ]);
 
@@ -46,6 +46,25 @@ function Compensation({ data = {}, onNext, onPrevious, onClose }) {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const formatNumber = (num) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    };
+
+    const getSelectedCurrency = () => {
+        const selected = options.currency.find(cur => cur.id === formData.currecny_id);
+        if (!selected) return '';
+        
+        const symbolMap = {
+            'Naira': '₦',
+            'Dollar': '$',
+            'Euro': '€',
+            'Pound': '£',
+            'Yen': '¥'
+        };
+        
+        return symbolMap[selected.currency] || selected.currency;
     };
 
     const handleSubmit = (e) => {
@@ -81,16 +100,6 @@ function Compensation({ data = {}, onNext, onPrevious, onClose }) {
                         <br />
 
                         <div className='person-input-fields'>
-                            <div className='per-input' style={{ width: '65%' }}>
-                                <label>Annual Salary</label>
-                                <input
-                                    type='number'
-                                    placeholder='0'
-                                    name='annual_salary'
-                                    value={formData.annual_salary}
-                                    onChange={handleChange}
-                                />
-                            </div>
                             <div className='per-input' style={{ width: '35%' }}>
                                 <label>Currency</label>
                                 <select name='currecny_id' value={formData.currecny_id} onChange={handleChange}>
@@ -100,6 +109,21 @@ function Compensation({ data = {}, onNext, onPrevious, onClose }) {
                                     ))}
                                 </select>
                             </div>
+                            <div className='per-input' style={{ width: '65%' }}>
+                                <label>Annual Salary</label>
+                                <input
+                                    type='text'
+                                    placeholder={getSelectedCurrency() || '0'}
+                                    name='annual_salary'
+                                    value={formData.annual_salary ? formatNumber(formData.annual_salary) : ''}
+                                    onChange={(e) => {
+                                        const numValue = e.target.value.replace(/,/g, '');
+                                        if (numValue === '' || /^\d+$/.test(numValue)) {
+                                            handleChange({ target: { name: 'annual_salary', value: numValue } });
+                                        }
+                                    }}
+                                />
+                            </div>
                         </div>
 
                         <div className="person-input-fields">
@@ -108,7 +132,7 @@ function Compensation({ data = {}, onNext, onPrevious, onClose }) {
                                 <select name='frequency_id' value={formData.frequency_id} onChange={handleChange}>
                                     <option value="">Select frequency</option>
                                     {options.frequency.map((freq) => (
-                                        <option key={freq._id} value={freq._id}>{freq.period_name}</option>
+                                        <option key={freq._id} value={freq._id}>{freq.frequency}</option>
                                     ))}
                                 </select>
                             </div>

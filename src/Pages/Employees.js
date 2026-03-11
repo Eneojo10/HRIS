@@ -40,14 +40,14 @@ function Employees() {
         const rect = e.currentTarget.getBoundingClientRect();
         let x = rect.left - 160;
         let y = rect.top;
-        
+
         if (x < 0) {
             x = rect.right + 10;
         }
         if (y + 120 > window.innerHeight) {
             y = window.innerHeight - 130;
         }
-        
+
         setContextMenu({ x, y });
     };
 
@@ -66,8 +66,52 @@ function Employees() {
         setContextMenu(null);
     };
 
+    const handleStatusToggle = async (employee) => {
+        const currentStatus = employee.status || 'Inactive';
+        const newStatus = currentStatus === 'Active' ? 'Inactive' : 'Active';
+        try {
+            const headers = getAuthHeaders();
+            const empId = employee._id || employee.id;
+            await axios.patch(`${BASE_URL}/employee/${empId}`, { status: newStatus }, { headers });
+            setAllEmployees(allemployees.map(emp => (emp._id || emp.id) === empId ? { ...emp, status: newStatus } : emp));
+        } catch (error) {
+            console.error('Error updating status:', error);
+        }
+    };
+
     const closeContextMenu = () => {
         setContextMenu(null);
+    };
+
+    const handleExport = () => {
+        const csvContent = [
+            ['First Name', 'Last Name', 'Email', 'Phone', 'Department', 'Status'],
+            ...allemployees.map(emp => [
+                emp.firstname,
+                emp.lastname,
+                emp.email,
+                emp.phone,
+                emp.dept_id?.name || 'N/A',
+                emp.status || 'Inactive'
+            ])
+        ].map(row => row.join(',')).join('\n');
+
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'employees.csv';
+        a.click();
+    };
+
+    const handleImport = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            console.log('Import file:', event.target.result);
+        };
+        reader.readAsText(file);
     };
 
     useEffect(() => {
@@ -98,7 +142,7 @@ function Employees() {
         fetchAllEmployeeData();
     }, []);
 
-   
+
     return (
         <div onClick={closeContextMenu}>
             {contextMenu && (
@@ -126,17 +170,20 @@ function Employees() {
                                         <span>Bulk Email</span>
                                     </div>
                                 </div>
-                                <div className='b_email'>
+                                <div className='b_email' onClick={handleExport}>
                                     <div className='email_flex'>
                                         <div className='outlineemail'><PiExport /></div>
                                         <span>Export</span>
                                     </div>
                                 </div>
                                 <div className='b_email'>
-                                    <div className='email_flex'>
-                                        <div className='outlineemail'><CiImport /></div>
-                                        <span> Import</span>
-                                    </div>
+                                    <input type='file' accept='.csv' onChange={handleImport} style={{ display: 'none' }} id='import-file' />
+                                    <label htmlFor='import-file' style={{ cursor: 'pointer'}}>
+                                        <div className='email_flex'>
+                                            <div className='outlineemail'><CiImport /></div>
+                                            <span>Import</span>
+                                        </div>
+                                    </label>
                                 </div>
 
                                 <div className='add-people-bg' >
@@ -350,30 +397,40 @@ function Employees() {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {allemployees.map((employee, index) => (
-                                                    <tr key={employee.id || index}>
-                                                        <td>
-                                                            <input type="checkbox" name="subscribe" value="yes" />
-                                                        </td>
-                                                        <td>
-                                                            <div className='image1'>
-                                                                <div className='employee-image01'>
-                                                                    <img src={img1} alt={`${employee.firstname} ${employee.lastname}`} />
+                                                {allemployees.map((employee, index) => {
+                                                    const empStatus = employee.status || 'Inactive';
+                                                    return (
+                                                        <tr key={employee.id || index}>
+                                                            <td>
+                                                                <input type="checkbox" name="subscribe" value="yes" />
+                                                            </td>
+                                                            <td>
+                                                                <div className='image1'>
+                                                                    <div className='employee-image01'>
+                                                                        <img src={img1} alt={`${employee.firstname} ${employee.lastname}`} />
+                                                                    </div>
+                                                                    <span className='employee-name'>{employee.firstname} {employee.lastname}</span>
                                                                 </div>
-                                                                <span className='employee-name'>{employee.firstname} {employee.lastname}</span>
-                                                            </div>
-                                                        </td>
-                                                        <td>{employee.dept_id?.name || employee.dept_id?.dept || 'N/A'}</td>
-                                                        <td>{employee.email || employee.phone}</td>
-                                                        <td>{employee.location_id?.name || employee.city || 'N/A'}</td>
-                                                        <td>{employee.date}</td>
-                                                        <td>Active</td>
-                                                        <td>Excellent</td>
-                                                        <td>${employee.annual_salary}</td>
-                                                        <td>2025-07-24</td>
-                                                        <td><button className='ellipsis-btn' onClick={(e) => handleEllipsisClick(e, employee)}><HiOutlineDotsHorizontal /></button></td>
-                                                    </tr>
-                                                ))}
+                                                            </td>
+                                                            <td>{employee.dept_id?.name || employee.dept_id?.dept || 'N/A'}</td>
+                                                            <td>{employee.email || employee.phone}</td>
+                                                            <td>{employee.location_id?.name || employee.city || 'N/A'}</td>
+                                                            <td>{employee.date}</td>
+                                                            <td>
+                                                                <button
+                                                                    className={`status-toggle ${empStatus === 'Active' ? 'active' : 'inactive'}`}
+                                                                    onClick={() => handleStatusToggle(employee)}
+                                                                >
+                                                                    {empStatus}
+                                                                </button>
+                                                            </td>
+                                                            <td>Excellent</td>
+                                                            <td>₦{Number(employee.annual_salary).toLocaleString()}</td>
+                                                            <td>2025-07-24</td>
+                                                            <td><button className='ellipsis-btn' onClick={(e) => handleEllipsisClick(e, employee)}><HiOutlineDotsHorizontal /></button></td>
+                                                        </tr>
+                                                    );
+                                                })}
                                             </tbody>
                                         </table>
 

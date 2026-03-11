@@ -13,6 +13,7 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
     const [time, setTime] = useState([]);
 
     const [formData, setFormData] = useState({
+        employee_id: data.employee_id || "",
         reports_id: data.reports_id || "",
         job_title: data.job_title || "",
         dept_id: data.dept_id || "",
@@ -54,6 +55,13 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
             console.warn("onNext is not provided");
         }
     };
+
+    useEffect(() => {
+        if (!formData.employee_id) {
+            const randomNum = Math.floor(Math.random() * 100000).toString().padStart(5, '0');
+            setFormData(prev => ({ ...prev, employee_id: `EMP-${randomNum}` }));
+        }
+    }, []);
 
     useEffect(() => {
         const headers = getAuthHeaders();
@@ -108,7 +116,7 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
 
                     <div className="person-input-fields">
                         <div className="per-input">
-                            <label>Start Date *</label>
+                            <label>Start Date<span style={{color: 'red'}}>*</span></label>
                             <input
                                 type="date"
                                 name="date"
@@ -117,7 +125,7 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
                             />
                         </div>
                         <div className="per-input">
-                            <label>Job Title *</label>
+                            <label>Job Title<span style={{color: 'red'}}>*</span></label>
                             <input
                                 type="text"
                                 name="job_title"
@@ -130,7 +138,7 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
 
                     <div className="person-input-fields">
                         <div className="per-input">
-                            <label>Department *</label>
+                            <label>Department<span style={{color: 'red'}}>*</span></label>
                             <select name="dept_id" value={formData.dept_id} onChange={handleChange}>
                                 <option value="" disabled>Select department</option>
                                 {dept.map(d => (
@@ -151,7 +159,7 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
 
                     <div className="person-input-fields">
                         <div className="per-input">
-                            <label>Employment Type *</label>
+                            <label>Employment Type<span style={{color: 'red'}}>*</span></label>
                             <select name="type_id" value={formData.type_id} onChange={handleChange}>
                                 <option value="" disabled>Select type</option>
                                 {types.map(t => (
@@ -160,7 +168,7 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
                             </select>
                         </div>
                         <div className="per-input">
-                            <label>Work Location *</label>
+                            <label>Work Location<span style={{color: 'red'}}>*</span></label>
                             <select name="work_id" value={formData.work_id} onChange={handleChange}>
                                 <option value="" disabled>Select location</option>
                                 {work.map(w => (
@@ -172,7 +180,7 @@ function Employment({ data = {}, onNext, onPrevious, onClose }) {
 
                     <div className="person-input-fields">
                         <div className="per-input">
-                            <label>Work Schedule *</label>
+                            <label>Work Schedule<span style={{color: 'red'}}>*</span></label>
                             <select name="Schedules_id" value={formData.Schedules_id} onChange={handleChange}>
                                 <option value="" disabled>Select schedule</option>
                                 {time.map(t => (

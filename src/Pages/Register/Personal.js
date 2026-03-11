@@ -38,7 +38,7 @@ function Personal({ data = {}, onNext, onClose }) {
                 toast.error('Image size should be less than 5MB');
                 return;
             }
-            
+
             const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
             if (!allowedTypes.includes(file.type)) {
                 toast.error('Only JPG, JPEG and PNG files are allowed');
@@ -116,8 +116,8 @@ function Personal({ data = {}, onNext, onClose }) {
                         <div className="personimage-holder">
                             <div className="personal-bg-1"></div>
                             <div className="image-border" onClick={handleImageClick} style={{ cursor: 'pointer' }}>
-                                <input 
-                                    type="file" 
+                                <input
+                                    type="file"
                                     ref={fileInputRef}
                                     onChange={handleImageChange}
                                     accept="image/jpeg,image/jpg,image/png"
@@ -125,9 +125,9 @@ function Personal({ data = {}, onNext, onClose }) {
                                 />
                                 <div className="imgae-holder">
                                     {imagePreview ? (
-                                        <img 
-                                            src={imagePreview} 
-                                            alt="Preview" 
+                                        <img
+                                            src={imagePreview}
+                                            alt="Preview"
                                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                                         />
                                     ) : (
@@ -140,35 +140,36 @@ function Personal({ data = {}, onNext, onClose }) {
                             </div>
                         </div>
 
-                        <div className="person-input-fields">
+                        <div className='person-input-fields'>
                             <div className="per-input">
-                                <label>First Name*</label>
+                                <label>First Name<span style={{ color: 'red' }}>*</span></label>
                                 <input type="text" name="firstname" value={formData.firstname} onChange={handleChange} />
                             </div>
                             <div className="per-input">
-                                <label>Last Name*</label>
+                                <label>Last Name<span style={{ color: 'red' }}>*</span></label>
                                 <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} />
                             </div>
-                        </div>
 
+
+                        </div>
                         <div className="person-input-fields">
                             <div className="per-input">
-                                <label>Email*</label>
+                                <label>Email<span style={{ color: 'red' }}>*</span></label>
                                 <input type="email" name="email" value={formData.email} onChange={handleChange} />
                             </div>
                             <div className="per-input">
-                                <label>Phone*</label>
+                                <label>Phone<span style={{ color: 'red' }}>*</span></label>
                                 <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
                             </div>
                         </div>
 
                         <div className="person-input-fields">
                             <div className="per-input">
-                                <label>Date of Birth*</label>
+                                <label>Date of Birth<span style={{ color: 'red' }}>*</span></label>
                                 <input type="date" name="dob" value={formData.dob} onChange={handleChange} max={new Date().toISOString().split("T")[0]} />
                             </div>
                             <div className="per-input">
-                                <label>Gender*</label>
+                                <label>Gender<span style={{ color: 'red' }}>*</span></label>
                                 <select name="gender_id" value={formData.gender_id} onChange={handleChange}>
                                     <option value="">Select Gender</option>
                                     {gender.map(gen => (
@@ -179,7 +180,7 @@ function Personal({ data = {}, onNext, onClose }) {
                         </div>
 
                         <div className="per--input">
-                            <label>Address*</label>
+                            <label>Address</label>
                             <input type="text" name="address" value={formData.address} onChange={handleChange} />
                         </div>
 
@@ -197,7 +198,7 @@ function Personal({ data = {}, onNext, onClose }) {
                                 <input type="text" name="zip_code" value={formData.zip_code} onChange={handleChange} />
                             </div>
                             <div className="city-one">
-                                <label>Country*</label>
+                                <label>Country<span style={{ color: 'red' }}>*</span></label>
                                 <select name="country_id" value={formData.country_id} onChange={handleChange}>
                                     <option value="">Select Country</option>
                                     {country.map(c => (

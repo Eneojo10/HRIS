@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Dashboard from '../Menu/Dashboard'
 import { IoPeopleOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
@@ -11,6 +11,8 @@ import Templatesdetails from './Templatesdetails';
 import Analyticdetails from './Analyticdetails';
 import Onboard from '../Pages/Onboard/Onboard';
 import { GoPersonAdd } from "react-icons/go";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -23,8 +25,14 @@ function Onboarding() {
         setActiveTab(tabName);
     };
 
+    const handleOnboardingSuccess = () => {
+        setIsModalOpen(false);
+        setActiveTab('Onboarding');
+    };
+
     return (
         <div>
+            <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
 
             <div className='onboarding--navigations'>
                 <div className='main1'>
@@ -105,7 +113,7 @@ function Onboarding() {
 
                                     <form>
                                         <div className='performance-content'>
-                                            {activeTab === 'Onboard' && <Onboard />}
+                                            {activeTab === 'Onboard' && <Onboard onSuccess={handleOnboardingSuccess} />}
 
 
                                         </div>

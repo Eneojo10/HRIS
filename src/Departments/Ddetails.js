@@ -63,7 +63,7 @@ function Ddetails() {
                             <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
-                                    <p>$4.2M
+                                    <p>₦4.2M
                                         budget</p>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@ function Ddetails() {
                             <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
-                                    <p>$4.2M
+                                    <p>₦4.2M
                                         budget</p>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@ function Ddetails() {
                             <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
-                                    <p>$4.2M
+                                    <p>₦4.2M
                                         budget</p>
                                 </div>
                             </div>
@@ -299,7 +299,7 @@ function Ddetails() {
                             <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
-                                    <p>$4.2M
+                                    <p>₦4.2M
                                         budget</p>
                                 </div>
                             </div>
@@ -378,7 +378,7 @@ function Ddetails() {
                             <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
-                                    <p>$4.2M
+                                    <p>₦4.2M
                                         budget</p>
                                 </div>
                             </div>
@@ -457,7 +457,7 @@ function Ddetails() {
                             <div className='threefourtwo' style={{ display: 'flex', width: '25%', justifyContent: 'space-between', marginTop: '10px' }}>
 
                                 <div>
-                                    <p>$4.2M
+                                    <p>₦4.2M
                                         budget</p>
                                 </div>
                             </div>

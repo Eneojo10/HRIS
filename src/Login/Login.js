@@ -5,7 +5,7 @@ import { authService } from '../Pages/Utils/authService';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import logo from '../Images/enes-flowerHR.png';
+import logo from '../Images/enesHr_logo_image-removebg-preview.png';
 
 
 function Login() {

@@ -70,15 +70,15 @@ function MainDashBoard() {
         fetchTotalEmployees();
     }, []);
 
-    if (loading) return (
-        <div className="loading-container">
-            <div className="loading-logo">
-                <img src={require('../Images/logo-removebg-preview.png')} alt="Loading" />
-            </div>
-            <p>Loading Dashboard...</p>
-        </div>
-    );
-    if (error) return <p>{error}</p>;
+    // if (loading) return (
+    //     <div className="loading-container">
+    //         <div className="loading-logo">
+    //             <img src={require('../Images/logo-removebg-preview.png')} alt="Loading" />
+    //         </div>
+    //         <p>Loading Dashboard...</p>
+    //     </div>
+    // );
+    // if (error) return <p>{error}</p>;
 
     return (
         <div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import img1 from '../Images/hr-logo-removebg-preview.png'
-import img2 from '../Images/enes-flowerHR.png'
+import img2 from '../Images/enesHr_logo_image-removebg-preview.png'
 import { RxDashboard } from "react-icons/rx";
 import { GrSchedules } from "react-icons/gr";
 import { CiTimer } from "react-icons/ci";
