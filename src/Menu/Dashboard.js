@@ -33,7 +33,8 @@ function Dashboard() {
         <div className=''>
             <div className='mm'>
                 <div className='d-main-logo'>
-                    <img src={img2} alt='' />
+                    <a href='/mainboard' className='d-logo'>
+                        <img src={img2} alt='' /></a>
                 </div>
                 <div className='precision'>
                     <p>Reimagining Human Resources</p>

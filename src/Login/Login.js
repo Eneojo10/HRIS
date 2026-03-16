@@ -71,7 +71,13 @@ function Login() {
 
     return (
         <div className="login-page">
+            <div className='login-orb login-orb-one'></div>
+            <div className='login-orb login-orb-two'></div>
             <div className="login-container">
+                <div className='login-hero'>
+                    <h1>Welcome to EnesHR</h1>
+                    <p>Secure workspace access for your HR operations</p>
+                </div>
                 {/* Flip Card (wraps everything INCLUDING footer) */}
                 <div className={`flip-card ${flipped ? 'flipped' : ''}`}>
                     <div className="flip-card-inner">
@@ -81,9 +87,7 @@ function Login() {
                             <div className="login-box">
                                 <div className="login-details">
                                     <div className='nav-leaf'>
-                                        {/* <div className='le-af'>
-                                            <img src={logo} alt='' />
-                                        </div> */}
+                                       
                                         <div className='dropdown-logo'>
                                             <img src={logo} alt='' className='mobile-logo' />
                                         </div>

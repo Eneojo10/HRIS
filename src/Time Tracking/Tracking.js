@@ -162,7 +162,7 @@ function Tracking() {
 
                                 <form>
                                     <div className='performance-content'>
-                                        {modalTab === 'Time' && <Time data={formData} onNext={handleTimeNext} onClose={handleCloseModal} />}
+                                    {modalTab === 'Time' && <Time data={formData} onNext={handleTimeNext} onClose={handleCloseModal} />}
                                         {modalTab === 'Timer' && <Timer data={formData} onNext={handleTimerNext} onClose={handleCloseModal} globalTimer={globalTimer} setGlobalTimer={setGlobalTimer} formatTime={formatTime} />}
                                         {modalTab === 'Blk' && <Blk data={formData} onClose={handleCloseModal} />}
 

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { RxCopy } from "react-icons/rx";
 import { AiOutlineDelete } from "react-icons/ai";
 import axios from 'axios';
-import { BASE_URL } from '../Utils/globals';
+import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 
 function Bulk() {
     const [shifts, setShifts] = useState([{ id: 1 }]);
     const [positions, setPositions] = useState([]);
+    const [locations, setLocations] = useState([]);
 
     // Add a new blank shift
     const handleAddShift = () => {
@@ -28,17 +29,32 @@ function Bulk() {
 
 
     useEffect(() => {
-        const fetchEmployees = async () => {
+        const fetchPositions = async () => {
             try{
-                const response = await axios.get(`${BASE_URL}/positions`);
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/positions`, { headers });
                 setPositions(response.data);
             }catch (error) {
-                console.error("Error fetching employees:", error);
+                console.error("Error fetching positions:", error);
             }
         };
 
-        fetchEmployees();
+        fetchPositions();
     },[]);
+
+    useEffect(() => {
+        const fetchLocations = async () => {
+            try {
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/location`, { headers });
+                setLocations(response.data);
+            } catch (error) {
+                console.error("Error fetching locations:", error);
+            }
+        };
+
+        fetchLocations();
+    }, []);
 
     return (
         <div>
@@ -114,8 +130,12 @@ function Bulk() {
                                         <div className='bulk-input'>
                                             <label>Location</label>
                                             <select>
-                                                <option>Select</option>
-                                                <option>Sales Floor</option>
+                                                <option value=''>Select</option>
+                                                {locations.map(location => (
+                                                    <option key={location._id} value={location._id}>
+                                                        {location.location_name}
+                                                    </option>
+                                                ))}
                                             </select>
                                         </div>
                                     </div>

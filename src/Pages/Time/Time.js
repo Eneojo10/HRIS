@@ -8,6 +8,7 @@ import { BASE_URL, getAuthHeaders } from '../Utils/globals';
 
 function Time({ data = {}, onNext, onClose }) {
   const [formData, setFormData] = useState({
+    employee_id: data.employee_id || "",
     date: data.date || "",
     start_time: data.start_time || "",
     end_time: data.end_time || "",
@@ -17,9 +18,37 @@ function Time({ data = {}, onNext, onClose }) {
     billable: data.billable || false
   });
 
+  useEffect(() => {
+    setFormData({
+      employee_id: data.employee_id || "",
+      date: data.date || "",
+      start_time: data.start_time || "",
+      end_time: data.end_time || "",
+      project_id: data.project_id || "",
+      task: data.task || "",
+      description: data.description || "",
+      billable: data.billable || false
+    });
+  }, [data]);
+
   const [projects, setProjects] = useState([]);
   const [tasks, setTasks] = useState([]);
+  const [employees, setEmployees] = useState([]);
 
+
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const headers = getAuthHeaders();
+        const response = await axios.get(`${BASE_URL}/employees`, { headers });
+        setEmployees(response.data);
+      } catch (error) {
+        console.error("Error fetching employees:", error);
+      }
+    };
+
+    fetchEmployees();
+  }, []);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -62,8 +91,7 @@ function Time({ data = {}, onNext, onClose }) {
   const handleNext = (e) => {
     e.preventDefault();
 
-    // Validation
-    if (!formData.date || !formData.start_time || !formData.end_time || !formData.project_id) {
+    if (!formData.employee_id || !formData.date || !formData.start_time || !formData.end_time || !formData.project_id) {
       toast.error("Please fill all required fields");
       return;
     }
@@ -81,17 +109,35 @@ function Time({ data = {}, onNext, onClose }) {
             <p>Manually enter your time for a specific task</p>
             <br />
 
+            <div className='person-input-fields'>
+              <div className='per-input'>
+                <label>Employee <span style={{color: 'red'}}>*</span></label>
+                <select name='employee_id' value={formData.employee_id} onChange={handleChange}>
+                  <option value=''>Select employee</option>
+                  {employees.map(emp => {
+                    const fullName = `${emp.firstname || ''} ${emp.lastname || ''}`.trim();
+                    return (
+                      <option key={emp._id} value={emp._id}>
+                        {fullName}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+            </div>
+            
+
             <div className='time-inputs' style={{ display: 'flex', gap: '15px' }}>
               <div className='time_inputs-one'>
-                <label>Date *</label><br />
+                <label>Date <span style={{color: 'red'}}>*</span></label><br />
                 <input name='date' value={formData.date} onChange={handleChange} type='date' />
               </div>
               <div className='time_inputs-one'>
-                <label>Start Time *</label><br />
+                <label>Start Time <span style={{color: 'red'}}>*</span></label><br />
                 <input name='start_time' value={formData.start_time} onChange={handleChange} type='time' />
               </div>
               <div className='time_inputs-one'>
-                <label>End Time *</label><br />
+                <label>End Time <span style={{color: 'red'}}>*</span></label><br />
                 <input name='end_time' value={formData.end_time} onChange={handleChange} type='time' />
               </div>
             </div>
@@ -99,7 +145,7 @@ function Time({ data = {}, onNext, onClose }) {
 
             <div className='person-input-fields'>
               <div className='per-input'>
-                <label>Project *</label>
+                <label>Project <span style={{color: 'red'}}>*</span></label>
                 <select name='project_id' value={formData.project_id} onChange={handleChange}>
                   <option value=''>Select project</option>
                   {projects.map(project => (
@@ -111,7 +157,7 @@ function Time({ data = {}, onNext, onClose }) {
               </div>
               <div className='per-input'>
                 <label>Task</label>
-                <select name='task_type' value={formData.task_type} onChange={handleChange}>
+                <select name='task' value={formData.task} onChange={handleChange}>
                   <option value=''>Select task type</option>
                   {tasks.map(task => (
                     <option key={task._id} value={task._id}>

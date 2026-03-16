@@ -17,6 +17,7 @@ function Shift({ data = {}, onNext, onClose }) {
 
     const [employees, setEmployees] = useState([]);
     const [positions, setPositions] = useState([]);
+    const [locations, setLocations] = useState([]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -58,7 +59,8 @@ function Shift({ data = {}, onNext, onClose }) {
     useEffect(() => {
         const fetchPositions = async () => {
             try{
-                const response = await axios.get(`${BASE_URL}/positions`);
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/positions`, { headers });
                 setPositions(response.data);
             }catch (error) {
                 console.error("Error fetching positions:", error);
@@ -67,6 +69,20 @@ function Shift({ data = {}, onNext, onClose }) {
 
         fetchPositions();
     },[]);
+
+    useEffect(() => {
+        const fetchLocations = async () => {
+            try {
+                const headers = getAuthHeaders();
+                const response = await axios.get(`${BASE_URL}/location`, { headers });
+                setLocations(response.data);
+            } catch (error) {
+                console.error("Error fetching locations:", error);
+            }
+        };
+
+        fetchLocations();
+    }, []);
 
 
     return (
@@ -126,10 +142,11 @@ function Shift({ data = {}, onNext, onClose }) {
                                 <label>Location</label>
                                 <select name='location' value={formData.location} onChange={handleChange}>
                                     <option value=''>Select Location</option>
-                                    <option value='main_office'>Main Office</option>
-                                    <option value='branch_office'>Branch Office</option>
-                                    <option value='remote'>Remote</option>
-                                    <option value='client_site'>Client Site</option>
+                                    {locations.map(location => (
+                                        <option key={location._id} value={location._id}>
+                                            {location.location_name}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
                             {/* <div className='per-input'>

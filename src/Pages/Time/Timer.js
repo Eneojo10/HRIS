@@ -8,8 +8,21 @@ function Timer({ data = {}, onNext, onClose, globalTimer, setGlobalTimer, format
     const [formData, setFormData] = useState({
         current_task: data.current_task || "",
         project_id: data.project_id || "",
-        task_type: data.task_type || ""
+        task_type: data.task_type || "",
+        status: data.status || "Active"
     });
+
+    useEffect(() => {
+        if (Object.keys(data).length > 0) {
+            setFormData(prev => ({
+                ...prev,
+                current_task: data.current_task || prev.current_task,
+                project_id: data.project_id || prev.project_id,
+                task_type: data.task_type || prev.task_type,
+                status: data.status || prev.status
+            }));
+        }
+    }, [data]);
 
     const [projects, setProjects] = useState([]);
     const [tasks, setTasks] = useState([]);
@@ -120,10 +133,17 @@ function Timer({ data = {}, onNext, onClose, globalTimer, setGlobalTimer, format
                                             {task.task_name}
                                         </option>
                                     ))}
-                                    <option value='design'>Design</option>
-                                    <option value='testing'>Testing</option>
-                                    <option value='development'>Development</option>
-                                    <option value='meeting'>Meeting</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="person-input-fields" style={{ marginTop: '20px' }}>
+                            <div className='per-input'>
+                                <label>Status</label>
+                                <select name='status' value={formData.status} onChange={handleChange}>
+                                    <option value='Active'>Active</option>
+                                    <option value='approved'>Approved</option>
+                                    <option value='Excellent'>Excellent</option>
                                 </select>
                             </div>
                         </div>
